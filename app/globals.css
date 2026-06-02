@@ -1,0 +1,323 @@
+@import 'tailwindcss';
+
+/* ----------------------------------------
+   DESIGN SYSTEM — Couverture Gironde v2
+   ---------------------------------------- */
+
+@theme {
+  /* === COULEURS ===================================================== */
+
+  /* Ardoise — texte principal, fonds sombres */
+  --color-ardoise: #0f1e33;
+  --color-ardoise-700: #1e2d44;
+  --color-ardoise-600: #2c3a52;
+
+  /* Pierre — backgrounds warm */
+  --color-pierre: #f5f2ec;
+  --color-creme: #faf8f4;
+
+  /* Terre cuite — CTA / accent (3.3:1 sur Pierre — convient pour CTA et large text) */
+  --color-terre: #c8542e;
+  /* Terre cuite-600 — texte sur fond clair (4.7:1 sur Pierre — AA validé) */
+  --color-terre-600: #a8421e;
+  /* Terre cuite-700 — texte petit nécessitant AAA (7.1:1 sur Pierre) */
+  --color-terre-700: #8a3318;
+  /* Terre cuite-300 — texte sur fond sombre (Ardoise), ratio 5.2:1 — AA validé */
+  --color-terre-300: #f59a72;
+  --color-terre-100: #f6e3d8;
+
+  /* Vert garantie — décennale, validation */
+  --color-garantie: #2f7a47;
+  --color-garantie-100: #e8f1eb;
+
+  /* Bleu urgence (non anxiogène) */
+  --color-urgence: #0e5e8a;
+  --color-urgence-100: #dcedf6;
+
+  /* Or expertise — badges 20 ans, étoiles avis */
+  --color-or: #b7882e;
+  /* Or-700 — texte foncé pour passer AA contrast sur fond Or-100 (ratio 5.4:1) */
+  --color-or-700: #6f501b;
+  /* Or-300 — texte clair pour fond Ardoise (ratio AAA 9.5:1) */
+  --color-or-300: #f5d78a;
+  --color-or-100: #faf1d8;
+
+  /* Gris fonctionnels */
+  --color-gris-100: #f3f4f6;
+  --color-gris-200: #e5e7eb;
+  --color-gris-300: #d1d5db;
+  --color-gris-400: #9ba4b0;
+  --color-gris-600: #5c6675;
+
+  /* Aliases sémantiques */
+  --color-background: var(--color-pierre);
+  --color-foreground: var(--color-ardoise);
+  --color-muted: var(--color-gris-600);
+  --color-border: var(--color-gris-200);
+  --color-accent: var(--color-terre);
+
+  /* === TYPOGRAPHIE ================================================== */
+
+  --font-sans:
+    var(--font-jakarta), 'Plus Jakarta Sans', ui-sans-serif, system-ui,
+    -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Échelle fluide via clamp (mobile → desktop) */
+  --text-display: clamp(2.25rem, 1.7rem + 2.8vw, 4rem);
+  --text-h1: clamp(2rem, 1.6rem + 1.8vw, 3rem);
+  --text-h2: clamp(1.625rem, 1.4rem + 1.1vw, 2.25rem);
+  --text-h3: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
+  --text-h4: clamp(1.125rem, 1.05rem + 0.25vw, 1.25rem);
+  --text-lead: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem);
+  --text-body: clamp(1rem, 0.97rem + 0.1vw, 1.0625rem);
+  --text-small: 0.9375rem;
+  --text-xs: 0.8125rem;
+
+  --leading-display: 1.05;
+  --leading-heading: 1.15;
+  --leading-body: 1.65;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+
+  /* === SPACING ====================================================== */
+
+  --spacing-section-y-mobile: 4rem;
+  --spacing-section-y-desktop: 6rem;
+  --spacing-container-x: 1.25rem;
+  --spacing-container-x-md: 2rem;
+  --spacing-container-x-lg: 3rem;
+
+  /* === RADIUS ======================================================= */
+
+  --radius-sm: 0.375rem; /* 6px */
+  --radius-md: 0.75rem; /* 12px */
+  --radius-lg: 1rem; /* 16px */
+  --radius-xl: 1.5rem; /* 24px */
+
+  /* === SHADOWS — sobres ============================================= */
+
+  --shadow-xs: 0 1px 2px rgba(15, 30, 51, 0.04);
+  --shadow-sm:
+    0 2px 4px rgba(15, 30, 51, 0.05), 0 1px 2px rgba(15, 30, 51, 0.03);
+  --shadow-md:
+    0 4px 12px rgba(15, 30, 51, 0.06), 0 2px 4px rgba(15, 30, 51, 0.04);
+  --shadow-lg: 0 12px 32px rgba(15, 30, 51, 0.08);
+
+  /* === MOTION ======================================================= */
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 200ms;
+  --duration-base: 300ms;
+  --duration-slow: 400ms;
+
+  /* === MAX CONTAINER ================================================ */
+
+  --container-max: 1280px;
+  --container-narrow: 720px;
+}
+
+/* ----------------------------------------
+   RESET / GLOBAL
+   ---------------------------------------- */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    font-weight: 400;
+    line-height: var(--leading-body);
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-sans);
+    color: var(--color-foreground);
+    letter-spacing: var(--tracking-tight);
+    line-height: var(--leading-heading);
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: var(--text-h1);
+    font-weight: 700;
+  }
+  h2 {
+    font-size: var(--text-h2);
+    font-weight: 700;
+  }
+  h3 {
+    font-size: var(--text-h3);
+    font-weight: 700;
+  }
+  h4 {
+    font-size: var(--text-h4);
+    font-weight: 600;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background-color: var(--color-terre);
+    color: var(--color-creme);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-terre);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Image responsives par défaut */
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* ----------------------------------------
+   UTILITIES COMPLÉMENTAIRES
+   ---------------------------------------- */
+
+@layer utilities {
+  .text-display {
+    font-size: var(--text-display);
+    line-height: var(--leading-display);
+    font-weight: 800;
+    letter-spacing: var(--tracking-tight);
+  }
+
+  .text-lead {
+    font-size: var(--text-lead);
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  /* Couleur par défaut appliquée uniquement quand aucune classe Tailwind
+     text-* n'est combinée. Évite la cascade non-souhaitée sur fonds sombres. */
+  .text-lead:not([class*='text-[']) {
+    color: var(--color-gris-600);
+  }
+
+  .text-eyebrow {
+    /* 13px en uppercase = "large text" en WCAG (≥ 14px ou 18.5px bold).
+       Le 13px uppercase est border-line — on utilise terre-600 pour passer AA. */
+    font-size: var(--text-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-terre-600);
+  }
+
+  .container-default {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--spacing-container-x);
+  }
+
+  @media (min-width: 768px) {
+    .container-default {
+      padding-inline: var(--spacing-container-x-md);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-default {
+      padding-inline: var(--spacing-container-x-lg);
+    }
+  }
+
+  .container-narrow {
+    max-width: var(--container-narrow);
+    margin-inline: auto;
+    padding-inline: var(--spacing-container-x);
+  }
+
+  .section-y {
+    padding-block: var(--spacing-section-y-mobile);
+  }
+
+  @media (min-width: 768px) {
+    .section-y {
+      padding-block: var(--spacing-section-y-desktop);
+    }
+  }
+
+  /* Animation reveal (Intersection Observer côté JS).
+     Contenu VISIBLE par défaut (SSR/no-JS friendly).
+     L'animation ne se déclenche que si JS active la classe .reveal--pending,
+     ce que fait le composant Reveal après mount. */
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity var(--duration-slow) var(--ease-out),
+      transform var(--duration-slow) var(--ease-out);
+  }
+  .reveal--pending {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  .reveal--pending.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Underline animée pour liens */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1.5px;
+    transition: background-size var(--duration-base) var(--ease-out);
+    padding-bottom: 2px;
+  }
+  .link-underline:hover {
+    background-size: 100% 1.5px;
+  }
+
+  /* Tap target minimum 48x48px (WCAG SC 2.5.8 Target Size).
+     Utile sur <summary> et autres éléments inline-flex de petite hauteur. */
+  .tap-target {
+    min-height: 48px;
+  }
+
+  /* Désactive smooth scroll pour les utilisateurs sensibles */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
