@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import {
   Phone,
-  Mail,
   MapPin,
   Clock,
   MessageCircle,
@@ -89,19 +88,11 @@ export default function Page() {
               <ContactCard
                 icon={<MessageCircle className="w-6 h-6" aria-hidden="true" />}
                 title="WhatsApp — discutez avec nous"
-                primary="Envoyer un message WhatsApp"
+                primary={`WhatsApp · ${NAP.phoneDisplay}`}
                 href={NAP.whatsappHref}
                 cta="Ouvrir WhatsApp"
                 external
                 secondary="Réponse généralement sous 2h en journée"
-              />
-              <ContactCard
-                icon={<Mail className="w-6 h-6" aria-hidden="true" />}
-                title="Email — devis et pièces jointes"
-                primary={NAP.email}
-                href={`mailto:${NAP.email}`}
-                cta="Envoyer un email"
-                secondary="Réponse sous 24h ouvrées"
               />
               <ContactCard
                 icon={<MapPin className="w-6 h-6" aria-hidden="true" />}

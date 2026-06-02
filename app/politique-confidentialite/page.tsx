@@ -32,7 +32,9 @@ export default function Page() {
       <p>
         <strong>{SITE.legalName}</strong> — {NAP.streetAddress},{' '}
         {NAP.postalCode} {NAP.addressLocality}. Pour toute demande relative à
-        vos données : <a href={`mailto:${NAP.email}`}>{NAP.email}</a>.
+        vos données, utilisez notre{' '}
+        <a href="/contact">formulaire de contact</a> ou appelez-nous au{' '}
+        <a href={NAP.phoneHref}>{NAP.phoneDisplay}</a>.
       </p>
 
       <h2>Données collectées</h2>
@@ -96,8 +98,9 @@ export default function Page() {
         <li>droit de retirer votre consentement.</li>
       </ul>
       <p>
-        Pour exercer ces droits, écrivez-nous à{' '}
-        <a href={`mailto:${NAP.email}`}>{NAP.email}</a>. En cas de désaccord,
+        Pour exercer ces droits, contactez-nous via notre{' '}
+        <a href="/contact">formulaire de contact</a> ou par téléphone au{' '}
+        <a href={NAP.phoneHref}>{NAP.phoneDisplay}</a>. En cas de désaccord,
         vous pouvez introduire une réclamation auprès de la{' '}
         <a
           href="https://www.cnil.fr"

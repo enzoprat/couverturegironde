@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { getServicesByPriority } from '@/data/services';
+import { WEB3FORMS_KEY } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
@@ -22,8 +23,8 @@ type DevisFormProps = {
  *   - POST direct vers https://api.web3forms.com/submit
  *   - Pas de serveur intermédiaire nécessaire
  *   - Honeypot intégré (champ `botcheck`)
- *   - Sujet/replyto configurables
- *   - Mail envoyé vers contact@couverturegironde.fr (configuré côté W3F)
+ *   - Sujet et nom d'expéditeur auto-renseignés
+ *   - Mail destinataire configuré côté Web3Forms (non-visible côté site)
  *
  * Variants :
  *   - `long`  : tous les champs (page /demande-devis)
@@ -31,7 +32,7 @@ type DevisFormProps = {
  *
  * Sécurité :
  *   - Honeypot Web3Forms natif (`botcheck`)
- *   - Le NEXT_PUBLIC_WEB3FORMS_KEY est public par design
+ *   - La clé `WEB3FORMS_KEY` est publique par design (côté Web3Forms)
  *   - Validation côté client minimaliste, validation finale côté Web3Forms
  *
  * État UX :
@@ -47,7 +48,6 @@ export function DevisForm({
   const [errorMsg, setErrorMsg] = useState<string>('');
 
   const services = getServicesByPriority();
-  const W3F_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? '';
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -63,24 +63,19 @@ export function DevisForm({
     }
 
     // Champs métadonnées Web3Forms
-    formData.append('access_key', W3F_KEY);
+    formData.append('access_key', WEB3FORMS_KEY);
     formData.append(
       'subject',
       `Nouveau devis Couverture Gironde — ${String(formData.get('service') ?? '?')}`,
     );
     formData.append('from_name', 'couverturegironde.fr');
-    // Replyto = email du client (si fourni) sinon notre adresse
+    // Replyto = email du client (si fourni) pour faciliter la réponse directe
     const clientEmail = String(formData.get('email') ?? '');
     if (clientEmail) {
       formData.append('replyto', clientEmail);
     }
 
     try {
-      if (!W3F_KEY) {
-        throw new Error(
-          "Configuration du formulaire incomplète. Merci de nous appeler directement au 07 68 69 78 48 — nous sommes joignables 7j/7.",
-        );
-      }
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: formData,

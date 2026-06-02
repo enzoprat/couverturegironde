@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, MapPin, Phone, Star } from 'lucide-react';
+import { MapPin, MessageCircle, Phone, Star } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { getFooterSections } from '@/lib/pages';
 import { NAP, SITE, TRUST } from '@/lib/constants';
@@ -77,15 +77,17 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
-                <Mail
+                <MessageCircle
                   className="w-4 h-4 shrink-0 text-[var(--color-terre)]"
                   aria-hidden="true"
                 />
                 <a
-                  href={`mailto:${NAP.email}`}
+                  href={NAP.whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-[var(--color-gris-300)] hover:text-[var(--color-pierre)] transition-colors"
                 >
-                  {NAP.email}
+                  WhatsApp · {NAP.phoneDisplay}
                 </a>
               </li>
             </ul>
@@ -138,10 +140,24 @@ export function Footer() {
 
         {/* Sub-footer */}
         <div className="border-t border-[var(--color-ardoise-700)] py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <p className="text-[0.8125rem] text-[var(--color-gris-400)]">
-            © {year} {SITE.legalName}. Tous droits réservés. Garantie
-            décennale.
-          </p>
+          <div className="text-[0.8125rem] text-[var(--color-gris-400)] space-y-1">
+            <p>
+              © {year} {SITE.legalName}. Tous droits réservés. Garantie
+              décennale.
+            </p>
+            <p>
+              Site conçu et développé par{' '}
+              <a
+                href="https://enzoprat.fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--color-gris-300)] hover:text-[var(--color-terre-300)] underline-offset-4 hover:underline transition-colors font-semibold"
+              >
+                Enzo Prat
+              </a>
+              .
+            </p>
+          </div>
           {sections.legal && sections.legal.length > 0 && (
             <ul className="flex flex-wrap items-center gap-x-5 gap-y-1 text-[0.8125rem]">
               {sections.legal.map((p) => (

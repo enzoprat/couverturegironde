@@ -25,13 +25,20 @@ export const NAP = {
   phone: '+33768697848',
   phoneDisplay: '07 68 69 78 48',
   phoneHref: 'tel:+33768697848',
+  // WhatsApp : format international sans + (0768697848 → 33768697848)
   whatsappHref: 'https://wa.me/33768697848',
-  email: 'contact@couverturegironde.fr',
   geo: {
     latitude: 44.8332,
     longitude: -0.6432,
   },
 } as const;
+
+/**
+ * Clé Web3Forms — backend du formulaire de demande de devis.
+ * Clé publique par design (visible côté client dans le bundle JS).
+ * Le mail destinataire est configuré côté Web3Forms (non-visible côté site).
+ */
+export const WEB3FORMS_KEY = '8fec8ecc-b7b8-4fe4-85cd-021052e0b9ce';
 
 export const OPENING_HOURS = {
   dayOfWeek: [

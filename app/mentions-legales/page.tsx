@@ -36,7 +36,7 @@ export default function Page() {
         <br />
         Téléphone : <a href={NAP.phoneHref}>{NAP.phoneDisplay}</a>
         <br />
-        Email : <a href={`mailto:${NAP.email}`}>{NAP.email}</a>
+        Contact en ligne : <a href="/contact">formulaire de contact</a>
       </p>
       <p>
         Activité : entreprise de couverture, zinguerie, démoussage et entretien
