@@ -4,6 +4,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { StickyPhoneBar } from '@/components/layout/StickyPhoneBar';
+import { WhatsAppButton } from '@/components/layout/WhatsAppButton';
 import {
   getLocalBusinessSchema,
   getOrganizationSchema,
@@ -76,6 +77,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <StickyPhoneBar />
+        <WhatsAppButton />
 
         {/* Schemas globaux — toutes les pages héritent */}
         <JsonLd data={getOrganizationSchema()} />

@@ -3,36 +3,38 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, Phone, X } from 'lucide-react';
+import { ChevronDown, Menu, Phone, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
 import { NAP } from '@/lib/constants';
 import type { PageEntry } from '@/data/types';
 
 type MobileMenuProps = {
-  pages: PageEntry[];
+  topLevel: PageEntry[];
+  entretien: PageEntry[];
+  travaux: PageEntry[];
+  urgence: PageEntry[];
 };
 
 /**
- * MobileMenu — drawer plein écran avec navigation et CTA téléphone.
+ * MobileMenu — drawer plein écran avec navigation hiérarchique.
  *
- * Comportement :
- *  - bouton hamburger dans le header (mobile uniquement)
- *  - drawer slide-in depuis la droite
- *  - bloque le scroll body quand ouvert
- *  - ferme avec ESC, clic à l'extérieur, ou changement de route
- *  - aria-modal pour l'accessibilité
+ * Structure :
+ *   1. Section Services (catégories pliables : Entretien / Travaux / Urgence)
+ *   2. Items top-level (Tarifs, Réalisations, À propos, Contact)
+ *   3. CTA téléphone + devis sticky en bas
+ *
+ * La catégorie Entretien (silo prioritaire) est dépliée par défaut.
  */
-export function MobileMenu({ pages }: MobileMenuProps) {
+export function MobileMenu({ topLevel, entretien, travaux, urgence }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
+  const [openCategory, setOpenCategory] = useState<'entretien' | 'travaux' | 'urgence' | null>('entretien');
   const pathname = usePathname();
 
-  // Ferme automatiquement à chaque changement de route
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
-  // Bloque le scroll body quand ouvert
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
     return () => {
@@ -40,7 +42,6 @@ export function MobileMenu({ pages }: MobileMenuProps) {
     };
   }, [open]);
 
-  // Fermeture clavier (Esc)
   useEffect(() => {
     if (!open) return;
     const handler = (e: KeyboardEvent) => {
@@ -86,7 +87,9 @@ export function MobileMenu({ pages }: MobileMenuProps) {
       >
         <div className="flex items-center justify-between p-5 border-b border-[var(--color-border)]">
           <span className="font-bold text-[var(--color-ardoise)] flex items-center gap-2">
-            <span className="text-[0.6875rem] uppercase tracking-wider text-[var(--color-gris-600)]">Menu</span>
+            <span className="text-[0.6875rem] uppercase tracking-wider text-[var(--color-gris-600)]">
+              Menu
+            </span>
           </span>
           <button
             type="button"
@@ -98,16 +101,58 @@ export function MobileMenu({ pages }: MobileMenuProps) {
           </button>
         </div>
 
-        <nav className="flex-1 overflow-y-auto py-2">
-          <ul className="flex flex-col">
-            {pages.map((page) => {
+        <nav className="flex-1 overflow-y-auto">
+          {/* Section Services avec catégories pliables */}
+          <div className="border-b border-[var(--color-border)] py-2">
+            <div className="px-5 pt-3 pb-2 text-[0.6875rem] uppercase tracking-wider font-bold text-[var(--color-gris-600)]">
+              Nos services
+            </div>
+            <CategoryGroup
+              id="entretien"
+              label="Entretien"
+              subtitle="Notre spécialité"
+              services={entretien}
+              isOpen={openCategory === 'entretien'}
+              onToggle={() =>
+                setOpenCategory(openCategory === 'entretien' ? null : 'entretien')
+              }
+              pathname={pathname}
+              accent
+            />
+            <CategoryGroup
+              id="travaux"
+              label="Travaux"
+              subtitle="Réparation & pose"
+              services={travaux}
+              isOpen={openCategory === 'travaux'}
+              onToggle={() =>
+                setOpenCategory(openCategory === 'travaux' ? null : 'travaux')
+              }
+              pathname={pathname}
+            />
+            <CategoryGroup
+              id="urgence"
+              label="Urgence & Spéciaux"
+              subtitle="Interventions ciblées"
+              services={urgence}
+              isOpen={openCategory === 'urgence'}
+              onToggle={() =>
+                setOpenCategory(openCategory === 'urgence' ? null : 'urgence')
+              }
+              pathname={pathname}
+            />
+          </div>
+
+          {/* Items top-level */}
+          <ul className="flex flex-col py-2">
+            {topLevel.map((page) => {
               const isActive = pathname === page.path;
               return (
                 <li key={page.slug}>
                   <Link
                     href={page.path}
                     className={cn(
-                      'block px-5 py-4 text-[1.0625rem] font-semibold transition-colors',
+                      'block px-5 py-3.5 text-[1.0625rem] font-semibold transition-colors',
                       isActive
                         ? 'text-[var(--color-terre-600)] bg-[var(--color-terre-100)]/70'
                         : 'text-[var(--color-ardoise)] hover:bg-[var(--color-creme)]',
@@ -137,5 +182,81 @@ export function MobileMenu({ pages }: MobileMenuProps) {
         </div>
       </div>
     </>
+  );
+}
+
+function CategoryGroup({
+  id,
+  label,
+  subtitle,
+  services,
+  isOpen,
+  onToggle,
+  pathname,
+  accent = false,
+}: {
+  id: string;
+  label: string;
+  subtitle: string;
+  services: PageEntry[];
+  isOpen: boolean;
+  onToggle: () => void;
+  pathname: string;
+  accent?: boolean;
+}) {
+  const panelId = `mobile-cat-${id}`;
+  return (
+    <div>
+      <button
+        type="button"
+        aria-expanded={isOpen}
+        aria-controls={panelId}
+        onClick={onToggle}
+        className="w-full flex items-center justify-between px-5 py-3 text-left hover:bg-[var(--color-creme)] transition-colors min-h-[48px]"
+      >
+        <span className="flex flex-col leading-tight">
+          <span
+            className={cn(
+              'text-[0.9375rem] font-bold',
+              accent ? 'text-[var(--color-terre-600)]' : 'text-[var(--color-ardoise)]',
+            )}
+          >
+            {label}
+          </span>
+          <span className="text-[0.75rem] text-[var(--color-gris-600)]">
+            {subtitle}
+          </span>
+        </span>
+        <ChevronDown
+          className={cn(
+            'w-4 h-4 text-[var(--color-gris-600)] transition-transform duration-[var(--duration-fast)]',
+            isOpen && 'rotate-180',
+          )}
+          aria-hidden="true"
+        />
+      </button>
+      {isOpen && (
+        <ul id={panelId} className="pb-2 bg-[var(--color-creme)]">
+          {services.map((s) => {
+            const isActive = pathname === s.path;
+            return (
+              <li key={s.slug}>
+                <Link
+                  href={s.path}
+                  className={cn(
+                    'block pl-9 pr-5 py-2.5 text-[0.9375rem] font-medium transition-colors min-h-[44px]',
+                    isActive
+                      ? 'text-[var(--color-terre-600)] font-bold'
+                      : 'text-[var(--color-ardoise)] hover:text-[var(--color-terre-600)]',
+                  )}
+                >
+                  {s.navLabel ?? s.title}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
   );
 }

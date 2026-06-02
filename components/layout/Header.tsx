@@ -4,24 +4,26 @@ import { Phone } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { MobileMenu } from './MobileMenu';
-import { getNavPages } from '@/lib/pages';
+import { ServicesDropdown } from './ServicesDropdown';
+import {
+  getNavServicesByCategory,
+  getNavTopLevelPages,
+} from '@/lib/pages';
 import { NAP } from '@/lib/constants';
 
 /**
  * Header — sticky, data-driven via le registre des pages.
  *
- * AUCUN lien codé en dur : on lit `getNavPages()` qui retourne uniquement
- * les pages marquées `visibleInNav: true`, triées par `navOrder`.
+ * Structure :
+ *   [Logo]  [Services ▾]  [Tarifs]  [Réalisations]  [À propos]  [Contact]  [☎ NAP]  [Devis gratuit]
  *
- * Pour ajouter une page au menu : passer `visibleInNav: true` dans son entrée
- * du registre `data/pages.ts`. Rien à modifier ici.
+ * Le dropdown Services est piloté par les entrées `navCategory` du registre.
+ * Les items top-level (Tarifs, Réalisations, À propos, Contact) le sont par
+ * `visibleInNav: true` sans `navCategory`. Aucun lien codé en dur ici.
  */
 export function Header() {
-  const navPages = getNavPages();
-  // On exclut Accueil (visible déjà via le logo) et la page Devis (CTA dédié)
-  const visibleNav = navPages.filter(
-    (p) => p.slug !== '' && p.slug !== 'demande-devis',
-  );
+  const topLevel = getNavTopLevelPages();
+  const servicesByCategory = getNavServicesByCategory();
 
   return (
     <header className="sticky top-0 z-30 bg-[var(--color-pierre)]/95 backdrop-blur supports-[backdrop-filter]:bg-[var(--color-pierre)]/85 border-b border-[var(--color-border)]">
@@ -53,16 +55,21 @@ export function Header() {
             <span className="sr-only">Couverture Gironde, accueil</span>
           </Link>
 
-          {/* Nav desktop */}
+          {/* Nav desktop : Services dropdown + items top-level */}
           <nav
             className="hidden md:flex items-center gap-1"
             aria-label="Navigation principale"
           >
-            {visibleNav.map((page) => (
+            <ServicesDropdown
+              entretien={servicesByCategory.entretien}
+              travaux={servicesByCategory.travaux}
+              urgence={servicesByCategory.urgence}
+            />
+            {topLevel.map((page) => (
               <Link
                 key={page.slug}
                 href={page.path}
-                className="px-3 py-2 text-[0.9375rem] font-semibold text-[var(--color-ardoise)] hover:text-[var(--color-terre)] transition-colors rounded-[var(--radius-sm)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-terre)]"
+                className="px-3 py-2 text-[0.9375rem] font-semibold text-[var(--color-ardoise)] hover:text-[var(--color-terre-600)] transition-colors rounded-[var(--radius-sm)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-terre)]"
               >
                 {page.title}
               </Link>
@@ -73,7 +80,7 @@ export function Header() {
           <div className="hidden md:flex items-center gap-3 shrink-0">
             <a
               href={NAP.phoneHref}
-              className="hidden lg:inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-[var(--color-ardoise)] hover:text-[var(--color-terre)] transition-colors"
+              className="hidden lg:inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-[var(--color-ardoise)] hover:text-[var(--color-terre-600)] transition-colors"
               aria-label={`Appeler le ${NAP.phoneDisplay}`}
             >
               <Phone className="w-4 h-4" aria-hidden="true" />
@@ -89,11 +96,16 @@ export function Header() {
             <a
               href={NAP.phoneHref}
               aria-label={`Appeler le ${NAP.phoneDisplay}`}
-              className="inline-flex items-center justify-center w-10 h-10 rounded-[var(--radius-md)] bg-[var(--color-terre)] text-[var(--color-creme)] hover:bg-[var(--color-terre-600)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-terre)] focus-visible:ring-offset-2"
+              className="inline-flex items-center justify-center w-10 h-10 rounded-[var(--radius-md)] bg-[var(--color-terre-600)] text-[var(--color-creme)] hover:bg-[var(--color-terre-700)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-terre)] focus-visible:ring-offset-2"
             >
               <Phone className="w-5 h-5" aria-hidden="true" />
             </a>
-            <MobileMenu pages={visibleNav} />
+            <MobileMenu
+              topLevel={topLevel}
+              entretien={servicesByCategory.entretien}
+              travaux={servicesByCategory.travaux}
+              urgence={servicesByCategory.urgence}
+            />
           </div>
         </div>
       </Container>

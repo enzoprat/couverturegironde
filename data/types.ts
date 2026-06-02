@@ -28,6 +28,14 @@ export type ServiceCategory =
   | 'charpente'
   | 'couverture';
 
+/**
+ * Catégories du dropdown nav "Services" (organisation par intention utilisateur).
+ *  - entretien : démoussage, nettoyage, hydrofuge (silo prioritaire)
+ *  - travaux   : réparation, zinguerie, faîtage, ornements, toiture neuve
+ *  - urgence   : urgence fuite, velux, charpente (interventions spécifiques)
+ */
+export type NavCategory = 'entretien' | 'travaux' | 'urgence';
+
 export type PageEntry = {
   /** Slug sans slash initial, ex. `demoussage-toiture-bordeaux`. La home a slug `''`. */
   slug: string;
@@ -51,10 +59,14 @@ export type PageEntry = {
   parentSlug?: string;
   /** Slugs explicitement reliés (override du maillage automatique). */
   relatedSlugs?: string[];
-  /** Visible dans la nav header. Par défaut : false. */
+  /** Visible dans la nav header (item top-level OU dans dropdown). */
   visibleInNav?: boolean;
   /** Position de tri dans la nav (asc). */
   navOrder?: number;
+  /** Si défini, la page est groupée dans le dropdown "Services" sous cette catégorie. */
+  navCategory?: NavCategory;
+  /** Label court pour le dropdown nav (sinon `title`). */
+  navLabel?: string;
   /** Visible dans le footer. Par défaut : false. */
   visibleInFooter?: boolean;
   /** Section du footer où apparaître. */

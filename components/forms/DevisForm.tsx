@@ -18,19 +18,26 @@ type DevisFormProps = {
 /**
  * DevisForm — formulaire de demande de devis.
  *
+ * Backend : Web3Forms (https://web3forms.com)
+ *   - POST direct vers https://api.web3forms.com/submit
+ *   - Pas de serveur intermédiaire nécessaire
+ *   - Honeypot intégré (champ `botcheck`)
+ *   - Sujet/replyto configurables
+ *   - Mail envoyé vers contact@couverturegironde.fr (configuré côté W3F)
+ *
  * Variants :
- *  - `long`  : tous les champs (page /demande-devis)
- *  - `short` : nom + tél + besoin (intégrable en bas de pages services)
+ *   - `long`  : tous les champs (page /demande-devis)
+ *   - `short` : nom + tél + besoin (intégrable en bas de pages services)
  *
  * Sécurité :
- *  - validation côté client minimaliste, validation finale côté API
- *  - honeypot anti-spam (`website` field caché)
- *  - aucun stockage local — submit POST /api/devis
+ *   - Honeypot Web3Forms natif (`botcheck`)
+ *   - Le NEXT_PUBLIC_WEB3FORMS_KEY est public par design
+ *   - Validation côté client minimaliste, validation finale côté Web3Forms
  *
  * État UX :
- *  - feedback visuel inline (success / error)
- *  - bouton désactivé pendant submit
- *  - redirige vers /merci en cas de succès
+ *   - Feedback visuel inline (success / error)
+ *   - Bouton désactivé pendant submit
+ *   - Redirige vers /merci en cas de succès
  */
 export function DevisForm({
   defaultService,
@@ -40,6 +47,7 @@ export function DevisForm({
   const [errorMsg, setErrorMsg] = useState<string>('');
 
   const services = getServicesByPriority();
+  const W3F_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? '';
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -48,27 +56,43 @@ export function DevisForm({
 
     const formData = new FormData(e.currentTarget);
 
-    // Honeypot — si rempli = bot
-    if (formData.get('website')) {
-      // Pas d'erreur visible pour ne pas griller le honeypot
+    // Honeypot Web3Forms natif — si rempli = bot
+    if (formData.get('botcheck')) {
       setStatus('success');
       return;
     }
 
+    // Champs métadonnées Web3Forms
+    formData.append('access_key', W3F_KEY);
+    formData.append(
+      'subject',
+      `Nouveau devis Couverture Gironde — ${String(formData.get('service') ?? '?')}`,
+    );
+    formData.append('from_name', 'couverturegironde.fr');
+    // Replyto = email du client (si fourni) sinon notre adresse
+    const clientEmail = String(formData.get('email') ?? '');
+    if (clientEmail) {
+      formData.append('replyto', clientEmail);
+    }
+
     try {
-      const res = await fetch('/api/devis', {
+      if (!W3F_KEY) {
+        throw new Error(
+          "Configuration du formulaire incomplète. Merci de nous appeler directement au 07 68 69 78 48 — nous sommes joignables 7j/7.",
+        );
+      }
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: formData,
       });
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data?.success) {
         throw new Error(
           data?.message ??
-            "Une erreur est survenue. Merci de réessayer ou de nous appeler directement.",
+            "Une erreur est survenue. Merci de réessayer ou de nous appeler directement au 07 68 69 78 48.",
         );
       }
       setStatus('success');
-      // Redirection sera gérée côté serveur ou via window.location si JS
       window.location.href = '/merci';
     } catch (err) {
       setStatus('error');
@@ -103,17 +127,15 @@ export function DevisForm({
       noValidate
       aria-label="Formulaire de demande de devis"
     >
-      {/* Honeypot anti-bots */}
-      <div className="absolute -left-[9999px] w-px h-px overflow-hidden" aria-hidden="true">
-        <label htmlFor="website">Ne pas remplir</label>
-        <input
-          type="text"
-          id="website"
-          name="website"
-          tabIndex={-1}
-          autoComplete="off"
-        />
-      </div>
+      {/* Honeypot Web3Forms — champ caché que seuls les bots remplissent */}
+      <input
+        type="checkbox"
+        name="botcheck"
+        className="hidden"
+        style={{ display: 'none' }}
+        tabIndex={-1}
+        autoComplete="off"
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field
@@ -176,16 +198,6 @@ export function DevisForm({
         rows={variant === 'long' ? 5 : 3}
       />
 
-      {variant === 'long' && (
-        <FileField
-          id="photos"
-          name="photos"
-          label="Photos de la toiture (facultatif, mais très utile)"
-          accept="image/*"
-          multiple
-        />
-      )}
-
       {status === 'error' && errorMsg && (
         <div
           role="alert"
@@ -218,7 +230,7 @@ export function DevisForm({
           tiers. Voir notre{' '}
           <a
             href="/politique-confidentialite"
-            className="underline hover:text-[var(--color-terre)]"
+            className="underline hover:text-[var(--color-terre-600)]"
           >
             politique de confidentialité
           </a>
@@ -353,36 +365,6 @@ function SelectField({
           </option>
         ))}
       </select>
-    </div>
-  );
-}
-
-function FileField({
-  id,
-  name,
-  label,
-  accept,
-  multiple,
-}: {
-  id: string;
-  name: string;
-  label: string;
-  accept?: string;
-  multiple?: boolean;
-}) {
-  return (
-    <div>
-      <label htmlFor={id} className={labelClass}>
-        {label}
-      </label>
-      <input
-        id={id}
-        name={name}
-        type="file"
-        accept={accept}
-        multiple={multiple}
-        className="block w-full text-[0.9375rem] text-[var(--color-gris-600)] file:mr-4 file:py-2.5 file:px-4 file:rounded-[var(--radius-md)] file:border-0 file:text-[0.875rem] file:font-semibold file:bg-[var(--color-ardoise)] file:text-[var(--color-pierre)] hover:file:bg-[var(--color-ardoise-700)] file:cursor-pointer cursor-pointer"
-      />
     </div>
   );
 }

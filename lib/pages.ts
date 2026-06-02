@@ -54,6 +54,48 @@ export function getNavPages(): PageEntry[] {
   );
 }
 
+/**
+ * Pages services groupées par catégorie pour le dropdown nav.
+ * Retourne uniquement les services avec `navCategory` définie.
+ */
+export type NavServicesByCategory = {
+  entretien: PageEntry[];
+  travaux: PageEntry[];
+  urgence: PageEntry[];
+};
+
+export function getNavServicesByCategory(): NavServicesByCategory {
+  const result: NavServicesByCategory = {
+    entretien: [],
+    travaux: [],
+    urgence: [],
+  };
+  for (const p of PAGES) {
+    if (p.visibleInNav && p.navCategory && !p.draft) {
+      result[p.navCategory].push(p);
+    }
+  }
+  for (const key of Object.keys(result) as Array<keyof NavServicesByCategory>) {
+    result[key].sort((a, b) => (a.navOrder ?? 9999) - (b.navOrder ?? 9999));
+  }
+  return result;
+}
+
+/**
+ * Pages top-level de la nav (PAS dans le dropdown Services).
+ * Triées par navOrder. Exclut la home (logo) et la page conversion devis (CTA séparé).
+ */
+export function getNavTopLevelPages(): PageEntry[] {
+  return PAGES.filter(
+    (p) =>
+      p.visibleInNav &&
+      !p.navCategory &&
+      !p.draft &&
+      p.slug !== '' &&
+      p.slug !== 'demande-devis',
+  ).sort((a, b) => (a.navOrder ?? 9999) - (b.navOrder ?? 9999));
+}
+
 /** Pages destinées au footer, regroupées par section. */
 export function getFooterSections(): Record<string, PageEntry[]> {
   const sections: Record<string, PageEntry[]> = {

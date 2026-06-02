@@ -317,6 +317,198 @@ export default function Page() {
         </Container>
       </section>
 
+      {/* SECTION — Notre équipe */}
+      <section className="section-y">
+        <Container>
+          <div className="max-w-3xl mb-12">
+            <Eyebrow className="mb-3">Notre équipe</Eyebrow>
+            <h2 className="mb-4">
+              Les artisans qui interviendront chez vous
+            </h2>
+            <p className="text-lead">
+              Nous travaillons en direct sans sous-traitance. L'artisan qui
+              vous reçoit pour le diagnostic est celui qui réalise les
+              travaux. Cette continuité est notre signature depuis 2005.
+            </p>
+          </div>
+
+          {/*
+            Cartes équipe — placeholder structuré. Remplacer les contenus
+            par les vrais prénoms / rôles / années d'expérience, et drop les
+            photos dans /public/images/team/{prenom}.webp. SmartImage gérera
+            le fallback en placeholder SVG si la photo n'existe pas encore.
+          */}
+          <ul
+            role="list"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {[
+              {
+                name: 'Le couvreur principal',
+                role: 'Couvreur-zingueur · Fondateur',
+                years: 'Depuis 2005',
+                bio: "Forme l'équipe et supervise chaque chantier. Spécialité : démoussage, tuile canal, zinguerie traditionnelle.",
+              },
+              {
+                name: 'L\u2019équipe technique',
+                role: 'Couvreurs qualifiés',
+                years: 'Interventions quotidiennes',
+                bio: 'Équipe stable, formée sur place. Maîtrise tous matériaux : tuile canal et mécanique, ardoise, zinc, bac acier.',
+              },
+              {
+                name: 'Le pôle administratif',
+                role: 'Devis, factures, suivi',
+                years: 'Réponse sous 24h',
+                bio: "Réception des appels, élaboration des devis, suivi administratif. C'est nous que vous joignez par téléphone.",
+              },
+            ].map((member) => (
+              <li
+                key={member.name}
+                className="rounded-[var(--radius-lg)] bg-[var(--color-creme)] border border-[var(--color-border)] p-6"
+              >
+                {/* Avatar placeholder — couleur Ardoise avec initiale.
+                    Remplacer par <SmartImage variant="hero" slug={...} /> quand photo dispo. */}
+                <div
+                  aria-hidden="true"
+                  className="w-20 h-20 rounded-full bg-[var(--color-ardoise)] text-[var(--color-pierre)] grid place-items-center text-[1.75rem] font-bold mb-4"
+                >
+                  {member.name.charAt(0)}
+                </div>
+                <h3 className="text-[1.0625rem] font-bold text-[var(--color-ardoise)] mb-1">
+                  {member.name}
+                </h3>
+                <div className="text-[0.8125rem] font-semibold text-[var(--color-terre-600)] uppercase tracking-wider mb-1">
+                  {member.role}
+                </div>
+                <div className="text-[0.8125rem] text-[var(--color-gris-600)] mb-3">
+                  {member.years}
+                </div>
+                <p className="text-[0.9375rem] text-[var(--color-gris-600)] leading-relaxed">
+                  {member.bio}
+                </p>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-8 p-5 rounded-[var(--radius-md)] bg-[var(--color-creme)] border border-dashed border-[var(--color-gris-300)] text-[0.875rem] text-[var(--color-gris-600)]">
+            💡 <strong className="text-[var(--color-ardoise)]">Note interne</strong> :
+            cette section attend tes vraies infos. Donne-moi les prénoms,
+            rôles, années d'expérience et photos de l'équipe (smartphone OK)
+            et je remplace le contenu en 5 min. Les photos vont dans{' '}
+            <code>/public/images/team/</code>.
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION — Assurances et garanties (Attestations) */}
+      <section className="section-y bg-[var(--color-creme)] border-y border-[var(--color-border)]">
+        <Container>
+          <div className="max-w-3xl mb-12">
+            <Eyebrow className="mb-3">Assurances et garanties</Eyebrow>
+            <h2 className="mb-4">
+              Vous êtes protégé sur l'ensemble de nos interventions
+            </h2>
+            <p className="text-lead">
+              Chaque chantier que nous réalisons est couvert par notre
+              assurance décennale et par les garanties légales du bâtiment.
+              Les attestations sont disponibles à tout moment sur simple
+              demande.
+            </p>
+          </div>
+
+          <ul
+            role="list"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          >
+            {[
+              {
+                title: 'Assurance décennale',
+                duration: '10 ans après réception',
+                description:
+                  "Couvre les dommages affectant la solidité de l'ouvrage ou le rendant impropre à sa destination. Attestation jointe au devis sur demande.",
+              },
+              {
+                title: 'Garantie de parfait achèvement',
+                duration: '1 an après réception',
+                description:
+                  "Nous reprenons sans frais tout désordre constaté dans l'année qui suit la réception du chantier.",
+              },
+              {
+                title: 'Garantie de bon fonctionnement',
+                duration: '2 ans après réception',
+                description:
+                  "Couvre les éléments d'équipement dissociables (Velux, gouttières, etc.) pendant 2 ans.",
+              },
+              {
+                title: 'Responsabilité civile professionnelle',
+                duration: 'En permanence',
+                description:
+                  "Couvre les dommages causés à des tiers ou aux biens des tiers pendant les travaux.",
+              },
+            ].map((item) => (
+              <li
+                key={item.title}
+                className="flex gap-4 p-6 rounded-[var(--radius-lg)] bg-[var(--color-pierre)] border border-[var(--color-border)]"
+              >
+                <div className="shrink-0 w-12 h-12 rounded-[var(--radius-md)] bg-[var(--color-garantie-100)] text-[var(--color-garantie)] grid place-items-center">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.75"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 3L20 6V12C20 16 16.5 19.5 12 21C7.5 19.5 4 16 4 12V6L12 3Z" />
+                    <path d="M9 12L11 14L15 10" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-[1.0625rem] font-bold text-[var(--color-ardoise)] mb-1">
+                    {item.title}
+                  </h3>
+                  <div className="text-[0.75rem] uppercase tracking-wider font-bold text-[var(--color-terre-600)] mb-2">
+                    {item.duration}
+                  </div>
+                  <p className="text-[0.9375rem] text-[var(--color-gris-600)] leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-10 rounded-[var(--radius-lg)] bg-[var(--color-ardoise)] text-[var(--color-pierre)] p-6 md:p-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
+            <div>
+              <h3 className="font-bold mb-1">
+                Besoin de nos attestations d'assurance ?
+              </h3>
+              <p className="text-[0.9375rem] text-[var(--color-gris-300)]">
+                Nous les fournissons sur simple demande, par email ou
+                jointes au devis.
+              </p>
+            </div>
+            <a
+              href="/contact"
+              className="inline-flex shrink-0 items-center gap-2 px-5 py-3 rounded-[var(--radius-md)] bg-[var(--color-terre-600)] text-[var(--color-pierre)] font-semibold hover:bg-[var(--color-terre-700)] transition-colors"
+            >
+              Demander les attestations →
+            </a>
+          </div>
+
+          <div className="mt-6 p-5 rounded-[var(--radius-md)] bg-[var(--color-pierre)] border border-dashed border-[var(--color-gris-300)] text-[0.875rem] text-[var(--color-gris-600)]">
+            💡 <strong className="text-[var(--color-ardoise)]">Note interne</strong> :
+            envoie-moi le scan de ton attestation décennale et de toute
+            certification dont tu disposes (RGE, Qualibat, Capeb, FFB) et
+            j'ajoute les logos officiels à cette section. C'est un signal
+            de confiance énorme.
+          </div>
+        </Container>
+      </section>
+
       <AvisGoogle
         eyebrow="Ils nous ont fait confiance"
         title={`${TRUST.googleReviewCount} avis Google 5/5 vérifiés`}
