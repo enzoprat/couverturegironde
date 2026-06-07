@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ChevronDown, Menu, Phone, X } from 'lucide-react';
@@ -19,17 +20,36 @@ type MobileMenuProps = {
 /**
  * MobileMenu — drawer plein écran avec navigation hiérarchique.
  *
+ * IMPORTANT : le drawer + backdrop sont rendus via React Portal dans
+ * `document.body`. Sinon, comme le composant est rendu DANS le Header qui
+ * possède `backdrop-blur`, ce dernier crée un nouveau containing block CSS
+ * pour les éléments fixed-positioned. Conséquence : le drawer `fixed inset-y-0`
+ * serait limité à la hauteur du Header (64 px) au lieu du viewport entier.
+ *
+ * C'est un bug subtil de la spec CSS Containing Block (backdrop-filter,
+ * transform, filter, perspective forcent tous le containing block).
+ *
  * Structure :
- *   1. Section Services (catégories pliables : Entretien / Travaux / Urgence)
- *   2. Items top-level (Tarifs, Réalisations, À propos, Contact)
- *   3. CTA téléphone + devis sticky en bas
+ *   1. Bouton hamburger (rendu en place dans Header)
+ *   2. Backdrop + drawer (portalés sur document.body, hors Header)
+ *
+ * Le drawer affiche :
+ *   - Section Services (catégories pliables : Entretien / Travaux / Urgence)
+ *   - Items top-level (Tarifs, Réalisations, À propos, Contact)
+ *   - CTA téléphone + devis sticky en bas
  *
  * La catégorie Entretien (silo prioritaire) est dépliée par défaut.
  */
 export function MobileMenu({ topLevel, entretien, travaux, urgence }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [openCategory, setOpenCategory] = useState<'entretien' | 'travaux' | 'urgence' | null>('entretien');
   const pathname = usePathname();
+
+  // Mount flag pour le Portal (SSR-safe)
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     setOpen(false);
@@ -51,20 +71,9 @@ export function MobileMenu({ topLevel, entretien, travaux, urgence }: MobileMenu
     return () => window.removeEventListener('keydown', handler);
   }, [open]);
 
-  return (
+  const drawerContent = (
     <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        aria-label="Ouvrir le menu"
-        aria-expanded={open}
-        aria-controls="mobile-menu"
-        className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-[var(--radius-md)] text-[var(--color-ardoise)] hover:bg-[var(--color-gris-100)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-terre)]"
-      >
-        <Menu className="w-6 h-6" aria-hidden="true" />
-      </button>
-
-      {/* Backdrop */}
+      {/* Backdrop — couvre tout le viewport */}
       <div
         className={cn(
           'fixed inset-0 z-40 bg-[var(--color-ardoise)]/60 backdrop-blur-sm md:hidden transition-opacity',
@@ -74,7 +83,7 @@ export function MobileMenu({ topLevel, entretien, travaux, urgence }: MobileMenu
         aria-hidden="true"
       />
 
-      {/* Drawer */}
+      {/* Drawer plein écran à droite */}
       <div
         id="mobile-menu"
         role="dialog"
@@ -85,7 +94,7 @@ export function MobileMenu({ topLevel, entretien, travaux, urgence }: MobileMenu
           open ? 'translate-x-0' : 'translate-x-full',
         )}
       >
-        <div className="flex items-center justify-between p-5 border-b border-[var(--color-border)]">
+        <div className="flex items-center justify-between p-5 border-b border-[var(--color-border)] bg-[var(--color-pierre)]">
           <span className="font-bold text-[var(--color-ardoise)] flex items-center gap-2">
             <span className="text-[0.6875rem] uppercase tracking-wider text-[var(--color-gris-600)]">
               Menu
@@ -101,7 +110,7 @@ export function MobileMenu({ topLevel, entretien, travaux, urgence }: MobileMenu
           </button>
         </div>
 
-        <nav className="flex-1 overflow-y-auto">
+        <nav className="flex-1 overflow-y-auto bg-[var(--color-pierre)]">
           {/* Section Services avec catégories pliables */}
           <div className="border-b border-[var(--color-border)] py-2">
             <div className="px-5 pt-3 pb-2 text-[0.6875rem] uppercase tracking-wider font-bold text-[var(--color-gris-600)]">
@@ -166,7 +175,7 @@ export function MobileMenu({ topLevel, entretien, travaux, urgence }: MobileMenu
           </ul>
         </nav>
 
-        <div className="p-5 border-t border-[var(--color-border)] flex flex-col gap-3">
+        <div className="p-5 border-t border-[var(--color-border)] flex flex-col gap-3 bg-[var(--color-pierre)]">
           <Button
             href={NAP.phoneHref}
             variant="primary"
@@ -181,6 +190,24 @@ export function MobileMenu({ topLevel, entretien, travaux, urgence }: MobileMenu
           </Button>
         </div>
       </div>
+    </>
+  );
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        aria-label="Ouvrir le menu"
+        aria-expanded={open}
+        aria-controls="mobile-menu"
+        className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-[var(--radius-md)] text-[var(--color-ardoise)] hover:bg-[var(--color-gris-100)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-terre)]"
+      >
+        <Menu className="w-6 h-6" aria-hidden="true" />
+      </button>
+      {/* Le drawer est porté hors du Header pour ne pas être contraint par
+          le containing block créé par `backdrop-blur` sur le Header. */}
+      {mounted ? createPortal(drawerContent, document.body) : null}
     </>
   );
 }

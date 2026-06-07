@@ -131,7 +131,15 @@ export function getBreadcrumbSchema(
   };
 }
 
-/** Service générique (pages service Bordeaux). */
+/** Service générique (pages service Bordeaux).
+ *
+ * NOTE : on ne joint PAS d'`aggregateRating` ici. Google ne supporte pas les
+ * rich results review snippet sur le type `Service` (uniquement Book, Course,
+ * Event, HowTo, LocalBusiness, Movie, Product, Recipe, SoftwareApplication).
+ * Ajouter aggregateRating sur Service génère l'erreur "Type d'objet non valide
+ * pour le champ <parent_node>" dans Google Search Console.
+ * L'AggregateRating est porté par LocalBusiness@sitewide (cf. layout root).
+ */
 export function getServiceSchema(params: {
   name: string;
   description: string;
@@ -152,13 +160,6 @@ export function getServiceSchema(params: {
       '@type': 'City',
       name: l.name,
     })),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: TRUST.googleRating,
-      reviewCount: TRUST.googleReviewCount,
-      bestRating: 5,
-      worstRating: 1,
-    },
   };
 }
 
