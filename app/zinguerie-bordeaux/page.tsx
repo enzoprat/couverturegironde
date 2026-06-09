@@ -96,12 +96,12 @@ export default function Page() {
           {
             title: 'Infiltrations en pied de mur',
             description:
-              "L'eau qui déborde des gouttières crée des infiltrations en pied de mur et dans les fondations. Humidité chronique, salpêtre, dégâts d'enduit — chaîne de dommages très coûteuse.",
+              "L'eau qui déborde des gouttières crée des infiltrations en pied de mur et dans les fondations. Humidité chronique, salpêtre, dégâts d'enduit, chaîne de dommages très coûteuse.",
           },
           {
             title: 'Mauvaise évacuation en cas d\u2019orage',
             description:
-              "Une gouttière sous-dimensionnée déborde dès la première pluie intense. Vos voisins, votre jardin, vos plantations — tout en pâtit. Le dimensionnement est non négociable.",
+              "Une gouttière sous-dimensionnée déborde dès la première pluie intense. Vos voisins, votre jardin, vos plantations, tout en pâtit. Le dimensionnement est non négociable.",
           },
         ],
         methode: [

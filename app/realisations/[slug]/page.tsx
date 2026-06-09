@@ -33,7 +33,7 @@ import { getPageBySlug } from '@/lib/pages';
 import { SITE, NAP } from '@/lib/constants';
 
 /**
- * /realisations/[slug] — page individuelle d'un chantier.
+ * /realisations/[slug], page individuelle d'un chantier.
  *
  * Génération statique de toutes les réalisations existantes au build.
  * Chaque réalisation reçoit son URL canonical, ses schemas Article + ImageObject,
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
   const service = SERVICES[realisation.service as keyof typeof SERVICES];
   return buildMetadata({
-    title: `${realisation.title} à ${realisation.villeName} — Couverture Gironde`,
+    title: `${realisation.title} à ${realisation.villeName}, Couverture Gironde`,
     description: `${realisation.description} Couverture Gironde, artisan couvreur depuis 2005 sur Bordeaux Métropole. ${service?.name ?? 'Toiture'} à ${realisation.villeName}.`,
     path: `/realisations/${realisation.slug}`,
     type: 'article',
@@ -180,22 +180,22 @@ export default async function Page({ params }: PageProps) {
                 <SmartImage
                   variant="realisation"
                   slug={`${realisation.slug}-avant`}
-                  alt={`Toiture avant intervention — ${realisation.title} à ${realisation.villeName}`}
+                  alt={`Toiture avant intervention, ${realisation.title} à ${realisation.villeName}`}
                   aspect="4/3"
                 />
                 <figcaption className="mt-3 text-[0.875rem] text-[var(--color-gris-600)] font-semibold">
-                  AVANT — état initial de la toiture
+                  AVANT, état initial de la toiture
                 </figcaption>
               </figure>
               <figure>
                 <SmartImage
                   variant="realisation"
                   slug={`${realisation.slug}-apres`}
-                  alt={`Toiture après intervention — ${realisation.title} à ${realisation.villeName}`}
+                  alt={`Toiture après intervention, ${realisation.title} à ${realisation.villeName}`}
                   aspect="4/3"
                 />
                 <figcaption className="mt-3 text-[0.875rem] text-[var(--color-gris-600)] font-semibold">
-                  APRÈS — résultat final
+                  APRÈS, résultat final
                 </figcaption>
               </figure>
             </div>
@@ -368,7 +368,7 @@ export default async function Page({ params }: PageProps) {
       <JsonLd
         data={getImageObjectSchema({
           url: imageUrl,
-          caption: `${realisation.title} — chantier réalisé par Couverture Gironde à ${realisation.villeName}`,
+          caption: `${realisation.title}, chantier réalisé par Couverture Gironde à ${realisation.villeName}`,
           width: 1200,
           height: 900,
         })}

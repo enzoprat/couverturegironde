@@ -25,7 +25,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 /**
- * /realisations — galerie filtrable des chantiers récents.
+ * /realisations, galerie filtrable des chantiers récents.
  *
  * Les facets (services + villes disponibles avec compteurs) sont calculées
  * côté serveur à partir de REALISATIONS, puis passées au client component

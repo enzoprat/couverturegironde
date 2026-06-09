@@ -10,7 +10,7 @@ import { NAP } from '@/lib/constants';
 const PAGE = requirePage('merci');
 
 /**
- * /merci — page de remerciement post-conversion.
+ * /merci, page de remerciement post-conversion.
  *
  * noindex obligatoire : on ne veut pas qu'elle ranke ni qu'elle dilue le jus
  * SEO. Idéal pour brancher un événement de conversion GA4 / GTM / Plausible.

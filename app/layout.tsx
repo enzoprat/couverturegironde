@@ -24,7 +24,7 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — Couvreur à Bordeaux et en Gironde depuis 2005`,
+    default: `${SITE.name}, Couvreur à Bordeaux et en Gironde depuis 2005`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.tagline,
@@ -79,7 +79,7 @@ export default function RootLayout({
         <StickyPhoneBar />
         <WhatsAppButton />
 
-        {/* Schemas globaux — toutes les pages héritent */}
+        {/* Schemas globaux, toutes les pages héritent */}
         <JsonLd data={getOrganizationSchema()} />
         <JsonLd data={getWebSiteSchema()} />
         <JsonLd data={getLocalBusinessSchema()} />

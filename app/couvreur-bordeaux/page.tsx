@@ -67,7 +67,7 @@ export default function Page() {
               Notre prestation phare reste l'<strong>entretien préventif
               de toiture</strong> : démoussage professionnel, nettoyage
               maîtrisé et traitement hydrofuge garanti 10 ans. Le climat
-              océanique humide de la Gironde — 930 mm de pluie par an,
+              océanique humide de la Gironde, 930 mm de pluie par an,
               hivers doux, couvert végétal dense sur Bordeaux Métropole —
               fait que les toitures locales se dégradent 30 à 50 % plus
               vite que la moyenne nationale sans entretien régulier.

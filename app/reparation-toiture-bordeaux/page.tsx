@@ -112,7 +112,7 @@ export default function Page() {
           {
             title: 'Appel et description du problème',
             description:
-              "Décrivez ce que vous observez (photos bienvenues). Nous évaluons l'urgence et planifions une visite — immédiate si urgence, sous 48h sinon.",
+              "Décrivez ce que vous observez (photos bienvenues). Nous évaluons l'urgence et planifions une visite, immédiate si urgence, sous 48h sinon.",
           },
           {
             title: 'Diagnostic sur place',

@@ -31,7 +31,7 @@ export default function Page() {
           <>
             <p>
               La charpente est l'<strong>ossature de votre toiture</strong>{' '}
-              — invisible mais structurelle. Une charpente saine peut
+             , invisible mais structurelle. Une charpente saine peut
               durer plus de 100 ans (et le bâti bordelais ancien en
               témoigne). Mais une charpente non entretenue, attaquée par
               les insectes xylophages, les champignons ou affaiblie par
@@ -58,14 +58,14 @@ export default function Page() {
               <strong>chêne</strong> dans les bâtiments anciens (XVIIIe et
               XIXe siècles), <strong>pin maritime des Landes</strong> dans
               le bâti plus récent. Ces charpentes ont parfois 100 à 200
-              ans d'âge et ont conservé leur solidité d'origine — à
+              ans d'âge et ont conservé leur solidité d'origine, à
               condition d'avoir été correctement entretenues. Les
               charpentes industrielles à fermettes ne se rencontrent que
               sur les constructions postérieures à 1970.
             </p>
             <p>
-              Le <strong>climat océanique girondin</strong> — humidité
-              élevée, hivers doux — favorise la prolifération des{' '}
+              Le <strong>climat océanique girondin</strong>, humidité
+              élevée, hivers doux, favorise la prolifération des{' '}
               <strong>insectes xylophages</strong> et des champignons. Le
               <strong> capricorne des maisons</strong> attaque
               spécifiquement le pin et les bois résineux, et représente
@@ -135,7 +135,7 @@ export default function Page() {
           {
             title: 'Effondrement de toiture',
             description:
-              "Une charpente fortement attaquée par les xylophages perd sa résistance mécanique. Risque d'effondrement partiel ou total — danger direct pour les occupants.",
+              "Une charpente fortement attaquée par les xylophages perd sa résistance mécanique. Risque d'effondrement partiel ou total, danger direct pour les occupants.",
           },
           {
             title: 'Propagation termites au bâti voisin',

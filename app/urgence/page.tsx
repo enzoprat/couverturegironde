@@ -36,7 +36,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 /**
- * /urgence — page d'urgence avec CTA téléphone XXL.
+ * /urgence, page d'urgence avec CTA téléphone XXL.
  *
  * Direction artistique : fond Ardoise pour contraste immédiat,
  * Terre cuite pour le téléphone (action principale), bleu urgence
@@ -194,12 +194,12 @@ export default function Page() {
             <p>
               Notre service d'urgence est conçu autour d'un principe simple :{' '}
               <strong>séparer l'urgence de la décision</strong>. Une fuite de
-              toiture est un événement stressant — c'est précisément le pire
+              toiture est un événement stressant, c'est précisément le pire
               moment pour signer des travaux importants. Notre méthode évite
               cette précipitation et vous laisse le temps de décider à froid.
             </p>
             <p>
-              <strong>Temps 1 — Mise hors d'eau immédiate (jour J).</strong>{' '}
+              <strong>Temps 1, Mise hors d'eau immédiate (jour J).</strong>{' '}
               Dès notre arrivée, nous identifions la source de la fuite,
               sécurisons la zone et posons une <strong>bâche technique
               ancrée correctement</strong>, en remplaçant provisoirement les
@@ -208,7 +208,7 @@ export default function Page() {
               complexité, devis chiffré sur place avant intervention.
             </p>
             <p>
-              <strong>Temps 2 — Devis de réparation définitive (sous 48h).</strong>{' '}
+              <strong>Temps 2, Devis de réparation définitive (sous 48h).</strong>{' '}
               Une fois l'urgence traitée, nous prenons le temps d'établir un
               diagnostic complet de la toiture, identifions la cause réelle
               de la fuite (souvent différente de la zone observée) et vous
@@ -302,7 +302,7 @@ export default function Page() {
               Chaque heure compte. Un appel direct nous permet d'évaluer
               l'urgence, de vous conseiller les gestes immédiats et de
               planifier notre arrivée. Pas de formulaire à remplir, pas de
-              répondeur — un humain au bout du fil.
+              répondeur, un humain au bout du fil.
             </p>
             <Button
               href={NAP.phoneHref}
@@ -310,14 +310,14 @@ export default function Page() {
               size="lg"
               iconLeft={<Phone className="w-5 h-5" />}
             >
-              {NAP.phoneDisplay} — Appel direct
+              {NAP.phoneDisplay}, Appel direct
             </Button>
           </div>
         </Container>
       </section>
 
       <AvisGoogle
-        title="Ils nous ont appelés en urgence — ils témoignent"
+        title="Ils nous ont appelés en urgence, ils témoignent"
         intro="Témoignages de clients ayant fait appel à notre service urgence ces derniers mois."
       />
 

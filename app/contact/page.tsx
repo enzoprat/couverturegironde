@@ -28,7 +28,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 /**
- * /contact — page coordonnées + accès atelier Mérignac + Maps embed.
+ * /contact, page coordonnées + accès atelier Mérignac + Maps embed.
  *
  * Compléte la page /demande-devis (formulaire long) pour les visiteurs qui
  * cherchent juste à joindre ou à vérifier la légitimité de l'entreprise.
@@ -78,7 +78,7 @@ export default function Page() {
             <div className="space-y-4">
               <ContactCard
                 icon={<Phone className="w-6 h-6" aria-hidden="true" />}
-                title="Téléphone — appel direct, sans répondeur"
+                title="Téléphone, appel direct, sans répondeur"
                 primary={NAP.phoneDisplay}
                 href={NAP.phoneHref}
                 cta="Appeler maintenant"
@@ -87,7 +87,7 @@ export default function Page() {
               />
               <ContactCard
                 icon={<MessageCircle className="w-6 h-6" aria-hidden="true" />}
-                title="WhatsApp — discutez avec nous"
+                title="WhatsApp, discutez avec nous"
                 primary={`WhatsApp · ${NAP.phoneDisplay}`}
                 href={NAP.whatsappHref}
                 cta="Ouvrir WhatsApp"
@@ -96,7 +96,7 @@ export default function Page() {
               />
               <ContactCard
                 icon={<MapPin className="w-6 h-6" aria-hidden="true" />}
-                title="Adresse — atelier sur place"
+                title="Adresse, atelier sur place"
                 primary={`${NAP.streetAddress}, ${NAP.postalCode} ${NAP.addressLocality}`}
                 href={mapsLink}
                 cta="Itinéraire Google Maps"
@@ -171,7 +171,7 @@ export default function Page() {
         </Container>
       </section>
 
-      {/* DEVIS REDIRECT — pour les visiteurs qui cherchent un devis spécifique */}
+      {/* DEVIS REDIRECT, pour les visiteurs qui cherchent un devis spécifique */}
       <section className="section-y bg-[var(--color-creme)] border-y border-[var(--color-border)]">
         <Container size="narrow">
           <div className="text-center">

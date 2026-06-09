@@ -91,7 +91,7 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
         title={
           <>
             Couvreur à{' '}
-            <span className="text-[var(--color-terre)]">{ville.name}</span> —
+            <span className="text-[var(--color-terre)]">{ville.name}</span> :
             démoussage, nettoyage et réparation toiture
           </>
         }
@@ -231,9 +231,7 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
             <p className="text-lead">
               Nous intervenons sur l'ensemble du territoire communal de{' '}
               {ville.nameInflected}, du centre-ville aux quartiers
-              périphériques. Notre dépôt à Mérignac (à{' '}
-              {ville.distanceFromMerignac} km de {ville.name}) permet une
-              réactivité optimale en cas d'urgence.
+              périphériques, avec une réactivité optimale en cas d'urgence.
             </p>
           </div>
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -258,9 +256,9 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
               aria-hidden="true"
             />
             <p className="text-[0.9375rem] text-[var(--color-ardoise)]">
-              <strong>Distance depuis notre dépôt Mérignac :</strong>{' '}
-              {ville.distanceFromMerignac} km. Intervention urgence sous 2–4h
-              en moyenne en heures ouvrées.
+              <strong>Couvreur de proximité à {ville.name} :</strong>{' '}
+              intervention urgence sous 2 à 4h en moyenne en heures ouvrées,
+              déplacement inclus dans le devis.
             </p>
           </div>
         </Container>
@@ -290,7 +288,7 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
       {/* SECTION 8 — FAQ locale */}
       <FAQ
         items={content.faqLocale}
-        title={`Questions fréquentes — couvreur ${ville.name}`}
+        title={`Questions fréquentes : couvreur ${ville.name}`}
         intro={`Tout ce que vous devez savoir avant de nous confier un projet de toiture à ${ville.nameInflected}.`}
         background="creme"
       />

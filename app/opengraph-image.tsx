@@ -8,7 +8,7 @@ import { SITE, NAP, TRUST } from '@/lib/constants';
  * Évite de devoir uploader un fichier .jpg statique.
  */
 export const runtime = 'edge';
-export const alt = `${SITE.name} — Couvreur à Bordeaux et en Gironde`;
+export const alt = `${SITE.name}, Couvreur à Bordeaux et en Gironde`;
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -118,7 +118,7 @@ export default async function OGImage() {
               alignItems: 'center',
             }}
           >
-            ✦ {TRUST.googleRating}/5 — {TRUST.googleReviewCount} avis Google
+            ✦ {TRUST.googleRating}/5, {TRUST.googleReviewCount} avis Google
           </div>
           <div
             style={{

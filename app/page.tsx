@@ -24,7 +24,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 /**
- * Homepage — page la plus stratégique du site.
+ * Homepage, page la plus stratégique du site.
  *
  * Structure (validée brief utilisateur) :
  *   Hero → Services → Reassurance → Avant/Après* → Avis → Réalisations →
@@ -42,7 +42,7 @@ export default function HomePage() {
         eyebrow="Bordeaux · Mérignac · Pessac · Talence · Bègles"
         title={
           <>
-            Couvreur à Bordeaux —{' '}
+            Couvreur à Bordeaux :{' '}
             <span className="text-[var(--color-terre)]">
               nettoyage, démoussage
             </span>{' '}

@@ -38,8 +38,8 @@ export default function Page() {
               <strong>en tuile canal traditionnelle</strong> sur les
               pavillons anciens et <strong>en tuile mécanique</strong> sur
               les lotissements plus récents. Le couvert végétal dense qui
-              caractérise la ville — héritage des grands parcs et de la
-              proximité avec la forêt landaise — favorise particulièrement{' '}
+              caractérise la ville, héritage des grands parcs et de la
+              proximité avec la forêt landaise, favorise particulièrement{' '}
               <strong>la prolifération des mousses</strong> sur les versants
               ombragés. Une grande proportion de nos chantiers démoussage à
               Villenave-d'Ornon concerne des toitures jamais entretenues
@@ -60,11 +60,11 @@ export default function Page() {
               mousses.
             </p>
             <p>
-              Notre <strong>dépôt à Mérignac</strong> est à 13 km de
-              Villenave-d'Ornon. En heures ouvrées, nous sommes sur place
-              en 30 à 45 minutes pour les urgences. Pour les{' '}
+              Nous intervenons à Villenave-d'Ornon quotidiennement. En heures
+              ouvrées, nous sommes sur place en 30 à 45 minutes pour les
+              urgences. Pour les{' '}
               <strong>chantiers programmés</strong>, nous intervenons
-              régulièrement sur la commune — la zone fait partie de notre
+              régulièrement sur la commune, la zone fait partie de notre
               périmètre habituel et nous y avons traité des dizaines de
               toitures depuis 2005. Aucun surcoût de déplacement n'est
               appliqué.
@@ -72,9 +72,9 @@ export default function Page() {
             <p>
               Côté <strong>typologie de demandes</strong>, Villenave-d'Ornon
               concentre 3 besoins récurrents : (1) <strong>démoussage et
-              hydrofuge</strong> sur pavillon individuel — c'est notre
+              hydrofuge</strong> sur pavillon individuel, c'est notre
               prestation la plus demandée ; (2){' '}
-              <strong>réparation après tempête</strong> — la commune est
+              <strong>réparation après tempête</strong>, la commune est
               exposée aux vents d'ouest en hiver et les chutes d'arbres ou
               de tuiles sont fréquentes ; (3){' '}
               <strong>étanchéité de toits-terrasses</strong> sur les
@@ -178,7 +178,7 @@ export default function Page() {
             question:
               "Combien de temps mettez-vous pour intervenir en urgence ?",
             answer:
-              "En heures ouvrées, nous sommes sur place en 30 à 45 minutes depuis notre atelier de Mérignac. Pour les urgences nocturnes ou de week-end, laissez un message vocal au 07 68 69 78 48 — rappel prioritaire dès la première heure de la journée suivante avec créneau d'intervention.",
+              "En heures ouvrées, nous sommes sur place en 30 à 45 minutes. Pour les urgences nocturnes ou de week-end, laissez un message vocal au 07 68 69 78 48, rappel prioritaire dès la première heure de la journée suivante avec créneau d'intervention.",
           },
           {
             question:

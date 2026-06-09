@@ -19,7 +19,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 /**
- * /demande-devis — page de conversion principale.
+ * /demande-devis, page de conversion principale.
  *
  * Mise en page conçue pour maximiser la conversion :
  *  - hero allégé (peu de distraction)
@@ -53,14 +53,14 @@ export default function Page() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14">
-            {/* Formulaire — 3 colonnes desktop */}
+            {/* Formulaire, 3 colonnes desktop */}
             <div className="lg:col-span-3">
               <div className="rounded-[var(--radius-xl)] bg-[var(--color-creme)] border border-[var(--color-border)] p-6 md:p-8 lg:p-10">
                 <DevisForm variant="long" />
               </div>
             </div>
 
-            {/* Réassurance latérale — 2 colonnes desktop */}
+            {/* Réassurance latérale, 2 colonnes desktop */}
             <aside className="lg:col-span-2 space-y-6">
               <a
                 href={NAP.phoneHref}

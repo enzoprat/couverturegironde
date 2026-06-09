@@ -193,14 +193,14 @@ export default function Page() {
                   est appliquée directement par l'artisan sur la facture,
                   sans démarche administrative de votre part.
                 </p>
-                <h3>TVA à 5,5 % — rénovation énergétique</h3>
+                <h3>TVA à 5,5 %, rénovation énergétique</h3>
                 <p>S'applique aux travaux suivants :</p>
                 <ul>
                   <li>Isolation de la toiture (combles, rampants, sarking)</li>
                   <li>Pose de Velux pour amélioration énergétique</li>
                   <li>Étanchéité visant à améliorer la performance thermique</li>
                 </ul>
-                <h3>TVA à 10 % — entretien et amélioration</h3>
+                <h3>TVA à 10 %, entretien et amélioration</h3>
                 <p>S'applique aux travaux suivants :</p>
                 <ul>
                   <li>Démoussage et nettoyage de toiture</li>
@@ -341,7 +341,7 @@ export default function Page() {
                 <p>
                   Dans cet exemple, le ménage finance{' '}
                   <strong>54 % du coût</strong> par les aides, et emprunte
-                  le solde à taux zéro sur 10 ans — soit{' '}
+                  le solde à taux zéro sur 10 ans, soit{' '}
                   <strong>32 €/mois</strong>. Le rentabilité énergétique
                   (économie de chauffage) dépasse souvent la mensualité.
                 </p>

@@ -86,7 +86,7 @@ export default function Page() {
               ouate de cellulose, PIR) selon les exigences de votre
               permis de construire et selon l'usage prévu (résidence
               principale, secondaire, location). L'isolation est intégrée
-              dès la conception, pas ajoutée a posteriori — gage
+              dès la conception, pas ajoutée a posteriori, gage
               d'efficacité thermique réelle.
             </p>
           </>
@@ -105,7 +105,7 @@ export default function Page() {
           {
             title: 'Dimensionnement charpente professionnel',
             description:
-              "Calcul Eurocode 1 selon les charges climatiques bordelaises. Charpente ni sous- ni sur-dimensionnée — durabilité et budget optimisés.",
+              "Calcul Eurocode 1 selon les charges climatiques bordelaises. Charpente ni sous- ni sur-dimensionnée, durabilité et budget optimisés.",
           },
           {
             title: 'Conformité RE 2020',

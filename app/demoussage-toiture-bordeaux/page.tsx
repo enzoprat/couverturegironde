@@ -30,8 +30,8 @@ export default function Page() {
         presentation: (
           <>
             <p>
-              Le climat océanique de la Gironde — humidité quasi-permanente,
-              hivers doux, alternance pluies-soleil — crée des conditions
+              Le climat océanique de la Gironde, humidité quasi-permanente,
+              hivers doux, alternance pluies-soleil, crée des conditions
               idéales pour la prolifération des mousses, lichens et algues sur
               les toitures bordelaises. À Bordeaux comme à Mérignac, Pessac ou
               Talence, une toiture non entretenue se voit envahir en quelques
@@ -43,7 +43,7 @@ export default function Page() {
               Les végétaux retiennent l'eau, accélèrent le vieillissement des
               tuiles, infiltrent les joints et favorisent les micro-fissures
               que le gel transforme en cassures. Une démousse régulière n'est
-              pas un luxe — c'est l'entretien de base d'une toiture en bon
+              pas un luxe, c'est l'entretien de base d'une toiture en bon
               état.
             </p>
             <p>

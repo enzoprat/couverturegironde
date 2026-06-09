@@ -71,7 +71,7 @@ export default function Page() {
                 ventilation continue de la sous-toiture, durabilité accrue,
                 pas de mortier à reprendre
               </strong>
-              . En revanche, l'aspect est moins traditionnel — à éviter
+              . En revanche, l'aspect est moins traditionnel, à éviter
               en secteur ABF strict.
             </p>
             <p>

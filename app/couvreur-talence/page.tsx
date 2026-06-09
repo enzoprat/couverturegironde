@@ -112,7 +112,7 @@ export default function Page() {
           {
             service: 'Démoussage toiture (avec brossage manuel)',
             range: '13 – 19 €/m²',
-            note: 'Tarif urbain — accessibilité parfois complexe',
+            note: 'Tarif urbain, accessibilité parfois complexe',
           },
           {
             service: 'Démoussage + traitement hydrofuge',

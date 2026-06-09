@@ -33,8 +33,8 @@ export default function Page() {
               L'installation d'une fenêtre de toit Velux est une opération
               technique qui combine{' '}
               <strong>menuiserie, couverture et étanchéité</strong>. Une
-              pose mal réalisée — étanchéité défaillante, raccord
-              approximatif, dimensionnement inadapté — se traduit
+              pose mal réalisée, étanchéité défaillante, raccord
+              approximatif, dimensionnement inadapté, se traduit
               inévitablement par des infiltrations dans les années qui
               suivent. C'est pourquoi cette prestation doit être confiée à
               un couvreur expérimenté, pas à un simple poseur généraliste.
@@ -47,8 +47,8 @@ export default function Page() {
               et <strong>zinc</strong>. Chaque matériau a son
               encastrement spécifique, son raccord à la couverture
               existante et son traitement d'étanchéité. La marque Velux est
-              notre référence — kit d'étanchéité éprouvé, finitions de
-              qualité, SAV constructeur efficace — mais nous travaillons
+              notre référence, kit d'étanchéité éprouvé, finitions de
+              qualité, SAV constructeur efficace, mais nous travaillons
               aussi avec Roto et Fakro selon les contraintes du projet.
             </p>
             <p>
@@ -82,7 +82,7 @@ export default function Page() {
               sauvegardés ou abords de monuments classés (centre Bordeaux,
               quartier Saint-Michel, etc.), l'<strong>avis de l'ABF</strong>{' '}
               est requis. Nous prenons en charge l'intégralité des
-              démarches administratives — vous n'avez qu'à signer.
+              démarches administratives, vous n'avez qu'à signer.
             </p>
           </>
         ),

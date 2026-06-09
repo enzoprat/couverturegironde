@@ -139,7 +139,7 @@ export default function Page() {
             note: 'Demi-rondes Ø 25, soudure étain',
           },
           {
-            service: "Urgence fuite — mise hors d'eau",
+            service: "Urgence fuite, mise hors d'eau",
             range: '250 – 600 €',
             note: 'Bâche + sécurisation, devis répa. à part',
           },
@@ -153,7 +153,7 @@ export default function Page() {
           {
             question: 'Quel est votre délai d\u2019intervention à Pessac ?',
             answer:
-              "Notre dépôt étant à Mérignac (à 7 km), nous intervenons en 30 à 60 minutes en heures ouvrées pour les urgences (fuite déclarée, dégât de tempête). Pour les visites de diagnostic gratuit, nous proposons un rendez-vous sous 48h ouvrées.",
+              "Nous intervenons à Pessac en 30 à 60 minutes en heures ouvrées pour les urgences (fuite déclarée, dégât de tempête). Pour les visites de diagnostic gratuit, nous proposons un rendez-vous sous 48h ouvrées.",
           },
           {
             question:

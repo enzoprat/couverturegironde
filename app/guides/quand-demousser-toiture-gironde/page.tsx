@@ -90,34 +90,34 @@ export default function Page() {
                 <ol>
                   <li>
                     <strong>Tâches vertes ou noires visibles depuis la rue</strong>{' '}
-                    — c'est le signe le plus évident. Sur tuile, ce sont
+                   , c'est le signe le plus évident. Sur tuile, ce sont
                     généralement des mousses (vert) ou des algues type
                     gleocapsa magma (noir).
                   </li>
                   <li>
                     <strong>Lichens blanchâtres en disques</strong> sur les
-                    tuiles ou ardoises — colonies qui s'étendent
+                    tuiles ou ardoises, colonies qui s'étendent
                     progressivement. Plus présents en zone calcaire et
                     pollution modérée.
                   </li>
                   <li>
                     <strong>Coulures noires sur les murs et façades</strong>{' '}
-                    en dessous de la toiture — provoquées par le lessivage des
+                    en dessous de la toiture, provoquées par le lessivage des
                     mousses et lichens lors des pluies.
                   </li>
                   <li>
                     <strong>Gouttières qui débordent ou se bouchent</strong>{' '}
-                    après les pluies — débris végétaux décrochés de la
+                    après les pluies, débris végétaux décrochés de la
                     toiture qui obstruent les chéneaux.
                   </li>
                   <li>
                     <strong>Tuiles décolorées ou patinées de manière irrégulière</strong>{' '}
-                    — la mousse retient l'humidité et altère l'engobe
+                   , la mousse retient l'humidité et altère l'engobe
                     protecteur de la tuile.
                   </li>
                   <li>
                     <strong>Tuiles cassées ou déplacées</strong> dans les
-                    zones très colonisées — la mousse s'infiltre dans les
+                    zones très colonisées, la mousse s'infiltre dans les
                     recouvrements et soulève les tuiles.
                   </li>
                   <li>
@@ -140,7 +140,7 @@ export default function Page() {
                   deux dépend de l'état de votre toiture et de votre
                   emplacement.
                 </p>
-                <h3>Printemps (mars à mai) — la fenêtre idéale</h3>
+                <h3>Printemps (mars à mai), la fenêtre idéale</h3>
                 <p>
                   C'est la meilleure période pour démousser à Bordeaux. Les
                   mousses sont en pleine croissance après les pluies
@@ -156,7 +156,7 @@ export default function Page() {
                   (2-4 semaines), tarifs parfois légèrement plus élevés en
                   pic de demande.
                 </p>
-                <h3>Fin d'été — début automne (septembre à mi-octobre)</h3>
+                <h3>Fin d'été, début automne (septembre à mi-octobre)</h3>
                 <p>
                   Excellente période pour préparer la toiture aux pluies
                   d'automne et au gel d'hiver. Températures clémentes

@@ -8,7 +8,7 @@ import { getPageBySlug } from '@/lib/pages';
 import Link from 'next/link';
 
 /**
- * 404 — page introuvable.
+ * 404, page introuvable.
  *
  * Stratégie : ne JAMAIS être un cul-de-sac. Le visiteur arrivé ici (souvent
  * via un ancien lien externe ou un typo) doit pouvoir repartir vers un

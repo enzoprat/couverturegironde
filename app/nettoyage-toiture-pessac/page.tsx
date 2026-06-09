@@ -49,13 +49,13 @@ export default function Page() {
               <strong> ardoise</strong> sur quelques maisons bourgeoises : chaque
               matériau a sa pression idéale, son produit complémentaire et son
               temps de séchage spécifique. Nous adaptons systématiquement nos
-              réglages — c'est ce qui distingue un nettoyage professionnel
+              réglages, c'est ce qui distingue un nettoyage professionnel
               durable d'un "passage au karcher" qui détruit la couverture en
               quelques minutes.
             </p>
             <p>
-              Le climat pessacais — humidité élevée, couvert végétal dense, pluviométrie
-              annuelle de 930 mm — provoque l'apparition rapide de{' '}
+              Le climat pessacais, humidité élevée, couvert végétal dense, pluviométrie
+              annuelle de 930 mm, provoque l'apparition rapide de{' '}
               <strong>dépôts complexes</strong> : pollution atmosphérique,
               suies, traînées noires (gleocapsa magma), lichens, mousses et
               algues. Notre intervention combine systématiquement{' '}
@@ -66,13 +66,13 @@ export default function Page() {
               restantes recolonisent la toiture en deux ans à peine.
             </p>
             <p>
-              Notre dépôt à Mérignac, à seulement 7 km de Pessac, permet une{' '}
-              <strong>présence quasi-quotidienne</strong> sur la commune. Nous
+              Nous assurons une <strong>présence quasi-quotidienne</strong> sur
+              Pessac. Nous
               connaissons les contraintes spécifiques des différents quartiers
               : accès parfois étroits dans le vieux Pessac, riverains à
               informer dans les copropriétés de Saige, autorisations
               d'occupation de voirie auprès des services municipaux. Toutes ces
-              démarches sont incluses dans notre prestation — vous n'avez
+              démarches sont incluses dans notre prestation, vous n'avez
               qu'à signer le devis.
             </p>
             <p>
@@ -83,7 +83,7 @@ export default function Page() {
               l'accessibilité et l'état initial. Si vous voulez prolonger
               durablement l'effet du nettoyage, nous recommandons un{' '}
               <strong>traitement hydrofuge professionnel</strong> appliqué dans
-              la foulée — comptez 6 à 10 €/m² supplémentaires, et vous obtenez
+              la foulée, comptez 6 à 10 €/m² supplémentaires, et vous obtenez
               une garantie 10 ans contre la réapparition rapide des mousses.
             </p>
           </>

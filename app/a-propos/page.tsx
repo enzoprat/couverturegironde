@@ -31,7 +31,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 /**
- * /a-propos — page E-E-A-T critique.
+ * /a-propos, page E-E-A-T critique.
  *
  * Google scrute aujourd'hui Experience, Expertise, Authoritativeness,
  * Trustworthiness, particulièrement pour les métiers manuels.
@@ -54,7 +54,7 @@ export default function Page() {
         breadcrumbSlug={PAGE.slug}
       />
 
-      {/* SECTION — Notre histoire */}
+      {/* SECTION, Notre histoire */}
       <section className="section-y">
         <Container size="narrow">
           <Eyebrow className="mb-3">Notre histoire</Eyebrow>
@@ -92,14 +92,14 @@ export default function Page() {
               et l'ensemble de Bordeaux Métropole. Cette ancrage local n'est
               pas accessoire : c'est ce qui nous permet d'être réactifs en
               urgence (intervention sous 2-4h en heures ouvrées) et de
-              connaître intimement les contraintes de chaque commune — du bâti
+              connaître intimement les contraintes de chaque commune, du bâti
               haussmannien bordelais aux toitures pavillonnaires de Saige.
             </p>
           </div>
         </Container>
       </section>
 
-      {/* SECTION — Notre savoir-faire */}
+      {/* SECTION, Notre savoir-faire */}
       <section className="section-y bg-[var(--color-creme)] border-y border-[var(--color-border)]">
         <Container>
           <div className="max-w-3xl mb-12">
@@ -110,7 +110,7 @@ export default function Page() {
             <p className="text-lead">
               Notre équipe maîtrise l'ensemble des techniques traditionnelles
               et contemporaines de la couverture. Pas de spécialisation
-              partielle qui obligerait à sous-traiter — chez nous, on règle
+              partielle qui obligerait à sous-traiter, chez nous, on règle
               le projet de A à Z.
             </p>
           </div>
@@ -176,7 +176,7 @@ export default function Page() {
         </Container>
       </section>
 
-      {/* SECTION — Nos engagements */}
+      {/* SECTION, Nos engagements */}
       <section className="section-y">
         <Container size="narrow">
           <Eyebrow className="mb-3">Nos engagements</Eyebrow>
@@ -240,7 +240,7 @@ export default function Page() {
 
       <ChiffresCles variant="light" />
 
-      {/* SECTION — Atelier */}
+      {/* SECTION, Atelier */}
       <section className="section-y bg-[var(--color-ardoise)] text-[var(--color-pierre)]">
         <Container>
           <div className="max-w-3xl mb-10">
@@ -317,7 +317,7 @@ export default function Page() {
         </Container>
       </section>
 
-      {/* SECTION — Notre équipe */}
+      {/* SECTION, Notre équipe */}
       <section className="section-y">
         <Container>
           <div className="max-w-3xl mb-12">
@@ -333,7 +333,7 @@ export default function Page() {
           </div>
 
           {/*
-            Cartes équipe — placeholder structuré. Remplacer les contenus
+            Cartes équipe, placeholder structuré. Remplacer les contenus
             par les vrais prénoms / rôles / années d'expérience, et drop les
             photos dans /public/images/team/{prenom}.webp. SmartImage gérera
             le fallback en placeholder SVG si la photo n'existe pas encore.
@@ -366,7 +366,7 @@ export default function Page() {
                 key={member.name}
                 className="rounded-[var(--radius-lg)] bg-[var(--color-creme)] border border-[var(--color-border)] p-6"
               >
-                {/* Avatar placeholder — couleur Ardoise avec initiale.
+                {/* Avatar placeholder, couleur Ardoise avec initiale.
                     Remplacer par <SmartImage variant="hero" slug={...} /> quand photo dispo. */}
                 <div
                   aria-hidden="true"
@@ -400,7 +400,7 @@ export default function Page() {
         </Container>
       </section>
 
-      {/* SECTION — Assurances et garanties (Attestations) */}
+      {/* SECTION, Assurances et garanties (Attestations) */}
       <section className="section-y bg-[var(--color-creme)] border-y border-[var(--color-border)]">
         <Container>
           <div className="max-w-3xl mb-12">

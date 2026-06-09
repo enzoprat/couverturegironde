@@ -20,7 +20,7 @@ export default function Page() {
         h1: (
           <>
             Urgence fuite toiture à{' '}
-            <span className="text-[var(--color-terre)]">Bordeaux</span> — 7j/7
+            <span className="text-[var(--color-terre)]">Bordeaux</span>, 7j/7
           </>
         ),
         heroSubtitle:
@@ -43,7 +43,7 @@ export default function Page() {
               Nous intervenons 7 jours sur 7, de 6h à 22h, sur tout Bordeaux
               Métropole. Le délai moyen d'intervention est de{' '}
               <strong>2 à 4 heures en heures ouvrées</strong>. Pour les
-              urgences nocturnes, laissez un message vocal — vous êtes rappelé
+              urgences nocturnes, laissez un message vocal, vous êtes rappelé
               dès la première heure de la journée avec un créneau prioritaire.
             </p>
             <p>

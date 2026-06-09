@@ -30,7 +30,7 @@ export default function Page() {
 
       <h2>Responsable du traitement</h2>
       <p>
-        <strong>{SITE.legalName}</strong> — {NAP.streetAddress},{' '}
+        <strong>{SITE.legalName}</strong>, {NAP.streetAddress},{' '}
         {NAP.postalCode} {NAP.addressLocality}. Pour toute demande relative à
         vos données, utilisez notre{' '}
         <a href="/contact">formulaire de contact</a> ou appelez-nous au{' '}

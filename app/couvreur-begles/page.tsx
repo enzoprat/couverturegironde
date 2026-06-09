@@ -55,13 +55,12 @@ export default function Page() {
               l'entretien préventif.
             </p>
             <p>
-              Notre dépôt à Mérignac est à <strong>11 km</strong> de Bègles
-              (65 rue de Malbos, 33700). En heures ouvrées, nous sommes sur
-              place en moins d'une heure, ce qui nous permet de traiter
-              efficacement les <strong>urgences fuite</strong> particulièrement
-              fréquentes à Bègles en cas de tempête ou de fortes pluies
-              automnales. Mise hors d'eau dans les 2 à 4 heures, devis de
-              réparation détaillé sous 48h.
+              Nous intervenons quotidiennement à Bègles. En heures ouvrées,
+              nous sommes sur place en moins d'une heure, ce qui nous permet
+              de traiter efficacement les <strong>urgences fuite</strong>{' '}
+              particulièrement fréquentes à Bègles en cas de tempête ou de
+              fortes pluies automnales. Mise hors d'eau dans les 2 à 4 heures,
+              devis de réparation détaillé sous 48h.
             </p>
             <p>
               Bègles connaît également une{' '}

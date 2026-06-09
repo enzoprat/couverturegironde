@@ -27,7 +27,7 @@ export default function Page() {
               <strong>65 rue de Malbos</strong>. Nous y stockons nos
               matériaux, préparons nos zingueries sur mesure, organisons nos
               chantiers du quotidien. Cette ancrage géographique n'est pas
-              accessoire — c'est ce qui nous distingue des structures
+              accessoire, c'est ce qui nous distingue des structures
               franchisées ou des sociétés bordelaises qui considèrent
               Mérignac comme une zone périphérique à servir au coup par
               coup. Pour nous, c'est l'inverse : Mérignac est le centre, et
@@ -55,7 +55,7 @@ export default function Page() {
               doux rarement sous 0°C, étés tempérés mais avec des épisodes
               orageux soudains pouvant déposer 30-50 mm en quelques heures.
               Ce profil pluviométrique sollicite particulièrement les{' '}
-              <strong>gouttières et descentes</strong> — un{' '}
+              <strong>gouttières et descentes</strong>, un{' '}
               dimensionnement insuffisant ou une zinguerie vieillissante se
               traduit immédiatement par des débordements, des coulures sur
               les façades et des infiltrations en pied de mur. Le couvert
@@ -70,7 +70,7 @@ export default function Page() {
               concret au quotidien. Pour les{' '}
               <strong>urgences fuite ou tempête</strong>, nos équipes sont
               généralement sur place en{' '}
-              <strong>15 à 30 minutes</strong> en heures ouvrées — délai
+              <strong>15 à 30 minutes</strong> en heures ouvrées, délai
               inégalable par les entreprises bordelaises qui doivent
               traverser la rocade. Pour les <strong>devis</strong>, nous
               passons souvent dans la journée de la demande quand un autre
@@ -92,7 +92,7 @@ export default function Page() {
               Bourran ou du château Bourran peuvent être soumis à l'avis de
               l'ABF si périmètre de protection autour de monuments
               historiques. Nous gérons systématiquement ces démarches dans
-              le cadre de nos devis — vous n'avez qu'à signer.
+              le cadre de nos devis, vous n'avez qu'à signer.
             </p>
             <p>
               Couverture Gironde travaille en{' '}
@@ -103,7 +103,7 @@ export default function Page() {
               combinée à notre ancrage merignacais, est ce qui nous a permis
               d'atteindre la <strong>note 5/5 sur 54 avis Google</strong>{' '}
               que vous pouvez vérifier publiquement. Sur Mérignac
-              particulièrement, le bouche-à-oreille fonctionne — nous
+              particulièrement, le bouche-à-oreille fonctionne, nous
               intervenons régulièrement sur recommandation de
               voisins satisfaits, à quelques rues près.
             </p>
@@ -113,7 +113,7 @@ export default function Page() {
           {
             title: 'Atelier sur place rue de Malbos',
             description:
-              "Notre dépôt et notre atelier sont à Mérignac depuis 2005. Pas de déplacement intersites à facturer, pas de logistique à coordonner — vous nous joignez et on est là.",
+              "Notre dépôt et notre atelier sont à Mérignac depuis 2005. Pas de déplacement intersites à facturer, pas de logistique à coordonner, vous nous joignez et on est là.",
           },
           {
             title: 'Intervention urgence en 15-30 minutes',
@@ -173,7 +173,7 @@ export default function Page() {
             note: 'Section adaptée pluviométrie Mérignac',
           },
           {
-            service: "Urgence fuite — mise hors d'eau",
+            service: "Urgence fuite, mise hors d'eau",
             range: '250 – 550 €',
             note: "Tarif réduit vs hors-zone (proximité)",
           },
@@ -223,7 +223,7 @@ export default function Page() {
             question:
               "Vous êtes vraiment basés à Mérignac depuis 2005 ?",
             answer:
-              "Oui, notre atelier et notre siège social sont au 65 rue de Malbos, 33700 Mérignac, depuis 2005. C'est public, vérifiable sur les registres du commerce et sur notre fiche Google Business Profile. Vous pouvez passer voir l'atelier — c'est un dépôt de couvreur classique avec stock matériaux, pas un bureau de façade.",
+              "Oui, notre atelier et notre siège social sont au 65 rue de Malbos, 33700 Mérignac, depuis 2005. C'est public, vérifiable sur les registres du commerce et sur notre fiche Google Business Profile. Vous pouvez passer voir l'atelier, c'est un dépôt de couvreur classique avec stock matériaux, pas un bureau de façade.",
           },
         ],
       }}

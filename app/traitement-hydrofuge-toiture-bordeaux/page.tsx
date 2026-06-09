@@ -54,7 +54,7 @@ export default function Page() {
               (siloxanes ou polymères selon le support), jamais de produit
               grand public. Application au pulvérisateur basse pression en
               deux passages croisés pour garantir l'uniformité. Et toujours
-              après un démoussage complet — un hydrofuge sur tuile sale ne
+              après un démoussage complet, un hydrofuge sur tuile sale ne
               sert à rien.
             </p>
           </>
@@ -83,7 +83,7 @@ export default function Page() {
           {
             title: 'Démoussage inclus impérativement',
             description:
-              "Un hydrofuge sur tuile sale piège les mousses sous le film — désastre garanti. Nous incluons toujours un démoussage complet en amont, garantie d'efficacité.",
+              "Un hydrofuge sur tuile sale piège les mousses sous le film, désastre garanti. Nous incluons toujours un démoussage complet en amont, garantie d'efficacité.",
           },
         ],
         risques: [

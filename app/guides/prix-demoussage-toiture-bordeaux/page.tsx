@@ -107,7 +107,7 @@ export default function Page() {
                   C'est le facteur n°1. La surface se calcule en mètres carrés
                   développés (et non au sol), incluant les versants, les
                   noues et les abergements. Plus la surface est grande, plus
-                  le prix au m² est dégressif — les artisans amortissent
+                  le prix au m² est dégressif, les artisans amortissent
                   l'installation du chantier (échafaudage, lignes de vie) sur
                   une plus grande quantité de travail.
                 </p>
@@ -153,7 +153,7 @@ export default function Page() {
                 <p>
                   Les artisans bordelais sont les plus chargés au{' '}
                   <strong>printemps (mars-mai)</strong> et à la{' '}
-                  <strong>fin d'été (septembre-octobre)</strong> — c'est la
+                  <strong>fin d'été (septembre-octobre)</strong>, c'est la
                   haute saison du démoussage. En basse saison (novembre,
                   janvier-février hors gel), certains artisans pratiquent des
                   tarifs légèrement plus accessibles, mais les conditions
@@ -175,7 +175,7 @@ export default function Page() {
                   plus de 2 ans.
                 </p>
 
-                <h3>Exemple 1 — Pavillon Pessac, 110 m² tuile canal</h3>
+                <h3>Exemple 1, Pavillon Pessac, 110 m² tuile canal</h3>
                 <ul>
                   <li>Surface développée : 110 m²</li>
                   <li>Matériau : tuile canal traditionnelle, état moyen</li>
@@ -186,7 +186,7 @@ export default function Page() {
                   </li>
                 </ul>
 
-                <h3>Exemple 2 — Maison bourgeoise Talence, 160 m² ardoise</h3>
+                <h3>Exemple 2, Maison bourgeoise Talence, 160 m² ardoise</h3>
                 <ul>
                   <li>Surface développée : 160 m²</li>
                   <li>Matériau : ardoise naturelle, exposition nord</li>
@@ -197,7 +197,7 @@ export default function Page() {
                   </li>
                 </ul>
 
-                <h3>Exemple 3 — Échoppe bordelaise centre Bordeaux, 75 m² tuile canal</h3>
+                <h3>Exemple 3, Échoppe bordelaise centre Bordeaux, 75 m² tuile canal</h3>
                 <ul>
                   <li>Surface développée : 75 m²</li>
                   <li>Matériau : tuile canal ancienne, toiture jamais traitée</li>
@@ -309,7 +309,7 @@ export default function Page() {
                   dire que votre toiture est en mauvais état. Les meilleurs
                   couvreurs ont leur agenda plein et travaillent sur
                   recommandation. Si quelqu'un démarche, c'est un commercial
-                  payé à la commission — méfiance absolue.
+                  payé à la commission, méfiance absolue.
                 </p>
                 <h3>Devis gonflés artificiellement</h3>
                 <p>
@@ -432,7 +432,7 @@ export default function Page() {
           {
             question: "Quels sont les tarifs spécifiques en copropriété ?",
             answer:
-              "En copropriété, les tarifs au m² sont généralement plus avantageux (économie d'échelle sur grandes surfaces) — comptez 12 à 18 €/m² en formule standard. La logistique est en revanche plus lourde : demande de devis par syndic, validation en AG, planning compatible avec les copropriétaires. Comptez 3-6 mois entre la première demande et le chantier.",
+              "En copropriété, les tarifs au m² sont généralement plus avantageux (économie d'échelle sur grandes surfaces), comptez 12 à 18 €/m² en formule standard. La logistique est en revanche plus lourde : demande de devis par syndic, validation en AG, planning compatible avec les copropriétaires. Comptez 3-6 mois entre la première demande et le chantier.",
           },
         ],
       }}

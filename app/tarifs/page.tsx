@@ -106,7 +106,7 @@ const TARIF_SECTIONS = [
         details: 'Closoirs ventilés, idéal rénovation énergétique.',
       },
       {
-        name: "Urgence fuite — mise hors d'eau",
+        name: "Urgence fuite, mise hors d'eau",
         range: '250 – 650 €',
         details: 'Bâche technique + sécurisation. Réparation chiffrée à part.',
       },
@@ -195,7 +195,7 @@ export default function Page() {
         breadcrumbSlug={PAGE.slug}
       />
 
-      {/* SECTION — Engagement transparence */}
+      {/* SECTION, Engagement transparence */}
       <section className="section-y">
         <Container>
           <div className="grid md:grid-cols-3 gap-6">
@@ -214,7 +214,7 @@ export default function Page() {
               },
               {
                 icon: Calculator,
-                title: 'Tarifs HT — TVA détaillée',
+                title: 'Tarifs HT, TVA détaillée',
                 description:
                   "10 % de TVA pour l'entretien, 20 % pour le neuf. Toujours mentionné clairement sur le devis.",
               },

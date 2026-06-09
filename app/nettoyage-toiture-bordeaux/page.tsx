@@ -32,8 +32,8 @@ export default function Page() {
             <p>
               Le nettoyage de toiture est un acte technique : il ne s'agit pas
               de "passer le karcher" comme on lave une terrasse. Une toiture
-              mal nettoyée — pression trop forte, angle inadapté, matériau
-              maltraité — c'est plusieurs années d'usure gagnée pour rien et
+              mal nettoyée, pression trop forte, angle inadapté, matériau
+              maltraité, c'est plusieurs années d'usure gagnée pour rien et
               parfois des tuiles à remplacer dès la fin du chantier.
             </p>
             <p>
@@ -48,7 +48,7 @@ export default function Page() {
             <p>
               Nous combinons systématiquement nettoyage et démoussage dans la
               même intervention. Nettoyer sans démousser, c'est laisser les
-              spores en place — la mousse revient en deux ans.{' '}
+              spores en place, la mousse revient en deux ans.{' '}
               <strong>
                 Démousser sans nettoyer, c'est laisser les dépôts de pollution,
                 les coulures et les algues sur la tuile.
@@ -62,7 +62,7 @@ export default function Page() {
           {
             title: 'Buse et pression adaptées au matériau',
             description:
-              "Tuile canal : 80-100 bars. Ardoise : 60-80 bars. Zinc : <50 bars et buse spéciale. Nous n'utilisons jamais une pression standard sur tous les matériaux — c'est la cause n°1 de dégradations après nettoyage.",
+              "Tuile canal : 80-100 bars. Ardoise : 60-80 bars. Zinc : <50 bars et buse spéciale. Nous n'utilisons jamais une pression standard sur tous les matériaux, c'est la cause n°1 de dégradations après nettoyage.",
           },
           {
             title: 'Nettoyage + démoussage en une intervention',
