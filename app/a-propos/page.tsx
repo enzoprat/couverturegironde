@@ -99,6 +99,50 @@ export default function Page() {
         </Container>
       </section>
 
+      {/* SECTION, Liroy Delsuc — Fondateur (signal E-E-A-T fort pour Google) */}
+      <section className="section-y bg-[var(--color-creme)] border-y border-[var(--color-border)]">
+        <Container size="narrow">
+          <Eyebrow className="mb-3">L'artisan</Eyebrow>
+          <h2 className="mb-6">Liroy Delsuc, fondateur de Couverture Gironde</h2>
+          <div className="prose prose-lg max-w-none text-[1.0625rem] text-[var(--color-gris-600)] leading-relaxed space-y-4 [&_strong]:text-[var(--color-ardoise)]">
+            <p>
+              <strong>Liroy Delsuc</strong> est couvreur-zingueur et fondateur
+              de Couverture Gironde. Installé à Mérignac depuis 2005, il a
+              construit l'entreprise sur une conviction simple : un artisan
+              doit rester proche de ses clients, accessible et responsable de
+              chaque chantier qu'il signe. C'est cette ligne directrice qui
+              guide l'entreprise depuis deux décennies.
+            </p>
+            <p>
+              Formé aux <strong>techniques traditionnelles de couverture
+              girondine</strong> (tuile canal, tuile mécanique, ardoise
+              naturelle), Liroy a progressivement développé une expertise en
+              zinguerie sur mesure avec soudure étain sur place, étanchéité
+              de toits-terrasses et charpente. Cette polyvalence permet
+              aujourd'hui à Couverture Gironde de traiter des projets très
+              variés sans jamais sous-traiter : des échoppes bordelaises
+              centenaires aux toits-terrasses des copropriétés récentes.
+            </p>
+            <p>
+              Au quotidien, Liroy reste{' '}
+              <strong>l'interlocuteur unique de chaque client</strong> : il
+              prend les appels, se déplace pour les diagnostics, rédige les
+              devis, supervise les chantiers et assure le suivi
+              post-intervention. Pour les urgences (fuites, tempêtes), il est
+              joignable directement au 07 68 69 78 48. Cette accessibilité
+              directe est ce qui distingue Couverture Gironde des structures
+              franchisées ou commerciales.
+            </p>
+            <p>
+              Sa philosophie : <em>« Une toiture bien entretenue tient 60 ans,
+              une toiture négligée se refait à 25 ans. Mon métier, c'est
+              d'aider les propriétaires girondins à faire les bons choix au
+              bon moment, sans leur vendre du superflu. »</em>
+            </p>
+          </div>
+        </Container>
+      </section>
+
       {/* SECTION, Notre savoir-faire */}
       <section className="section-y bg-[var(--color-creme)] border-y border-[var(--color-border)]">
         <Container>

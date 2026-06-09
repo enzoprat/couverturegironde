@@ -39,25 +39,23 @@ export default function HomePage() {
     <>
       <Hero
         variant="home"
-        eyebrow="Bordeaux · Mérignac · Pessac · Talence · Bègles"
+        eyebrow="Bordeaux · Gironde · 5/5 sur 54 avis Google"
         title={
           <>
-            Couvreur à Bordeaux :{' '}
-            <span className="text-[var(--color-terre)]">
-              nettoyage, démoussage
-            </span>{' '}
-            et entretien de toiture.
+            Couvreur à Bordeaux et en{' '}
+            <span className="text-[var(--color-terre)]">Gironde</span> :
+            démoussage, nettoyage et entretien de toiture
           </>
         }
-        subtitle="Artisan couvreur-zingueur en Gironde depuis 2005. Intervention rapide, devis gratuit sous 24h et garantie décennale sur chaque chantier. Atelier à Mérignac, intervention sur tout Bordeaux Métropole."
+        subtitle="Artisan couvreur-zingueur en Gironde depuis 2005. Intervention rapide 7j/7, devis gratuit sous 24h et garantie décennale sur chaque chantier. Atelier à Mérignac, intervention sur Bordeaux Métropole et tout le département (33)."
         imageSlug="home"
         secondaryCtaLabel="Demander un devis gratuit"
       />
 
       <ServicesGrid
-        eyebrow="Nos services"
-        title="Démoussage, nettoyage et entretien de toiture"
-        intro="Notre spécialité : préserver et prolonger la vie de votre toiture. Démoussage professionnel, nettoyage maîtrisé et traitement hydrofuge longue durée, complétés par toutes les prestations de couverture et zinguerie."
+        eyebrow="Nos services en Gironde"
+        title="Démoussage, nettoyage et entretien de toiture à Bordeaux et en Gironde"
+        intro="Notre spécialité : préserver et prolonger la vie de votre toiture. Démoussage professionnel, nettoyage maîtrisé et traitement hydrofuge longue durée, complétés par toutes les prestations de couverture et zinguerie sur l'ensemble de la Gironde."
         scope="all"
       />
 

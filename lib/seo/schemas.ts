@@ -36,6 +36,13 @@ export function getOrganizationSchema(): WithContext<Organization> {
     url: SITE.url,
     logo: `${SITE.url}/logo.png`,
     foundingDate: String(SITE.foundingYear),
+    // E-E-A-T : signaler explicitement le fondateur (Person) pour Google.
+    founder: {
+      '@type': 'Person',
+      name: 'Liroy Delsuc',
+      jobTitle: 'Couvreur-zingueur, fondateur',
+      worksFor: { '@id': `${SITE.url}/#organization` },
+    },
     address: {
       '@type': 'PostalAddress',
       streetAddress: NAP.streetAddress,
