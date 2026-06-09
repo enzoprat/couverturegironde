@@ -170,6 +170,115 @@ export const FAQ_ZINGUERIE: FAQItem[] = [
     answer:
       "Pour les façades anciennes bordelaises et le bâti traditionnel, le zinc est notre recommandation : esthétique, durable, conforme. L'aluminium convient sur le neuf. Le PVC est à réserver à des annexes secondaires.",
   },
+  {
+    question: "Combien coûte la pose de gouttières en zinc à Bordeaux ?",
+    answer:
+      "Le tarif moyen est de 50 à 85 €/ml pour des gouttières demi-rondes Ø 25 en zinc avec soudure étain, fournitures et pose comprises. Pour une maison standard de 100 m² au sol, comptez entre 1 500 et 2 800 € selon le linéaire et les contraintes d'accès.",
+  },
+];
+
+/** FAQ Couverture (générale, utilisée par /couvreur-bordeaux + /couvreur-gironde). */
+export const FAQ_COUVERTURE: FAQItem[] = [
+  {
+    question: 'Quelle est la différence entre un couvreur et un zingueur ?',
+    answer:
+      "Le couvreur pose et répare la toiture (tuiles, ardoises, bac acier). Le zingueur travaille les éléments métalliques (gouttières, descentes, faîtage scellé, noues, habillages). Aujourd'hui, la plupart des artisans cumulent les deux métiers : on parle alors de couvreur-zingueur, comme nous.",
+  },
+  {
+    question: "Combien coûte une toiture neuve à Bordeaux ?",
+    answer:
+      "Le coût d'une toiture neuve en Gironde varie de 85 à 150 €/m² selon le matériau (tuile canal, tuile mécanique, ardoise, zinc) et la complexité (pans, lucarnes, faîtage). Pour une maison de 100 m² au sol avec 130 m² de toiture, l'enveloppe se situe entre 11 000 et 19 500 € HT, charpente non comprise.",
+  },
+  {
+    question: "À quelle fréquence faut-il faire entretenir sa toiture ?",
+    answer:
+      "Un démoussage tous les 3 à 5 ans est recommandé en Gironde, plus fréquent (2-3 ans) si votre toiture est exposée au nord ou sous couvert d'arbres. Le climat océanique humide accélère la prolifération des mousses et lichens.",
+  },
+  {
+    question: "Comment savoir si ma toiture a besoin d'être refaite ?",
+    answer:
+      "Plusieurs signes : tuiles cassées ou glissées visibles depuis le sol, mousse abondante sur les pans nord, traces d'humidité dans les combles, gouttières débordantes, perte d'éléments après tempête. Un diagnostic gratuit par un couvreur permet d'évaluer si une réparation suffit ou si une réfection complète s'impose.",
+  },
+  {
+    question: 'Êtes-vous certifié RGE ?',
+    answer:
+      "Nous ne disposons pas de la certification RGE à ce jour, qui concerne essentiellement les travaux liés à l'isolation thermique. Pour tous les travaux de couverture classique (démoussage, nettoyage, réparation, zinguerie, neuf), nos prestations sont couvertes par notre assurance décennale, justificatifs fournis avec le devis.",
+  },
+  {
+    question: "Quelles aides existent pour rénover sa toiture en 2026 ?",
+    answer:
+      "MaPrimeRénov' (si travaux d'isolation associés), éco-prêt à taux zéro (jusqu'à 30 000 € sans intérêts), TVA réduite à 5,5 % ou 10 % selon les travaux, certificats d'économies d'énergie (CEE). Les aides MaPrimeRénov' nécessitent un artisan RGE pour la partie isolation.",
+  },
+];
+
+export const FAQ_VELUX: FAQItem[] = [
+  {
+    question: 'Combien coûte la pose d\'un Velux à Bordeaux ?',
+    answer:
+      "L'installation d'un Velux standard coûte entre 1 200 et 2 500 € pose comprise, selon le modèle (basique, confort, motorisé), les dimensions et les travaux annexes (raccord d'étanchéité, plaquerie intérieure, écran sous-toiture). Le remplacement d'un Velux existant est souvent moins coûteux que la création d'un nouveau.",
+  },
+  {
+    question: 'Faut-il un permis de construire pour poser un Velux ?',
+    answer:
+      "Une déclaration préalable de travaux suffit dans la majorité des cas. Le permis n'est nécessaire qu'en zone protégée (secteur ABF) ou si la fenêtre modifie l'aspect extérieur de manière notable. Nous gérons ces démarches administratives dans le cadre de nos prestations.",
+  },
+  {
+    question: "Quelle est la durée de vie d'un Velux ?",
+    answer:
+      "Un Velux de qualité bien entretenu tient 20 à 25 ans. Au-delà, les joints d'étanchéité commencent à fatiguer et le bois ou le PVC se fragilise. Un remplacement préventif vers 20 ans évite les infiltrations.",
+  },
+  {
+    question: 'Quelles sont les meilleures orientations pour un Velux ?',
+    answer:
+      "Pour une pièce de vie, privilégier le sud-est ou le sud-ouest (luminosité maximale, chaleur en hiver). Pour une chambre, le nord ou l'est (moins de surchauffe l'été). Sur une toiture orientée plein sud, prévoir un store occultant ou un Velux à protection solaire intégrée.",
+  },
+];
+
+export const FAQ_CHARPENTE: FAQItem[] = [
+  {
+    question: 'Comment savoir si ma charpente est endommagée ?',
+    answer:
+      "Signes d'alerte : fissures sur les murs porteurs, déformation visible du toit (pannes affaissées, faîtage de travers), grincements anormaux, présence de sciure ou de petits trous dans les bois (capricornes, vrillettes), humidité chronique en sous-toiture. Un diagnostic professionnel permet d'évaluer la gravité.",
+  },
+  {
+    question: 'Quel est le prix d\'un traitement de charpente ?',
+    answer:
+      "Le traitement curatif contre les insectes xylophages et les champignons coûte généralement entre 25 et 50 €/m² selon le volume traité, la nature des bois et l'accessibilité. Pour une maison standard, l'enveloppe se situe entre 1 500 et 3 500 € avec garantie 10 ans sur l'efficacité du traitement.",
+  },
+  {
+    question: 'Peut-on rénover une charpente sans déposer la toiture ?',
+    answer:
+      "Oui, pour la majorité des interventions : traitement curatif, remplacement de pièces, renforcement structurel. Seules les rénovations lourdes (transformation, surélévation) imposent une dépose de la couverture. Notre équipe optimise toujours pour limiter les nuisances pour vous.",
+  },
+];
+
+/** FAQ /a-propos — Questions E-E-A-T sur Liroy Delsuc + entreprise. */
+export const FAQ_APROPOS: FAQItem[] = [
+  {
+    question: 'Qui est Liroy Delsuc ?',
+    answer:
+      "Liroy Delsuc est l'artisan-couvreur fondateur de Couverture Gironde, entreprise basée à Mérignac (33700) depuis 2005. Couvreur-zingueur de formation, il dirige et exécute personnellement chaque chantier, sans sous-traitance. Il est joignable directement au 07 68 69 78 48.",
+  },
+  {
+    question: 'Depuis combien d\'années êtes-vous couvreur en Gironde ?',
+    answer:
+      "Couverture Gironde est active à Mérignac depuis 2005, soit 20 ans d'exercice continu sur Bordeaux Métropole et le département de la Gironde. Nous totalisons plusieurs centaines de chantiers de toiture livrés et une note de 5/5 sur 54 avis Google.",
+  },
+  {
+    question: 'Où est situé votre atelier ?',
+    answer:
+      "Notre atelier et notre dépôt sont au 65 rue de Malbos, 33700 Mérignac, à proximité immédiate de l'A630 et de la rocade bordelaise. Cette position permet une couverture rapide de tout Bordeaux Métropole en moins d'une heure.",
+  },
+  {
+    question: 'Travaillez-vous avec de la sous-traitance ?',
+    answer:
+      "Non, jamais. C'est notre équipe interne qui réalise chaque chantier, de A à Z. L'artisan qui rédige le devis est celui qui exécute les travaux et qui assure le SAV. Cette continuité est notre signature et notre différenciateur principal vs les structures franchisées.",
+  },
+  {
+    question: 'Quelles garanties offrez-vous ?',
+    answer:
+      "Garantie décennale obligatoire (assurance en cours de validité, justificatifs fournis avec le devis), garantie biennale sur les éléments d'équipement (Velux, gouttières), garantie 10 ans sur les traitements hydrofuges professionnels. Pour les démoussages, l'efficacité du traitement chimique est garantie minimum 3 ans selon exposition.",
+  },
 ];
 
 /** Map service → FAQ associée. */
@@ -182,6 +291,9 @@ export const FAQ_BY_SERVICE: Partial<Record<ServiceCategory, FAQItem[]>> = {
   reparation: FAQ_REPARATION,
   urgence: FAQ_URGENCE,
   zinguerie: FAQ_ZINGUERIE,
+  couverture: FAQ_COUVERTURE,
+  velux: FAQ_VELUX,
+  charpente: FAQ_CHARPENTE,
 };
 
 /** Helper : récupère la FAQ d'un service (avec fallback sur la FAQ générale). */

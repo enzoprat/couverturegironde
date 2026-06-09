@@ -17,7 +17,9 @@ import { ChiffresCles } from '@/components/sections/ChiffresCles';
 import { AvisGoogle } from '@/components/sections/AvisGoogle';
 import { CTAFinal } from '@/components/sections/CTAFinal';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { getPlaceSchema } from '@/lib/seo/schemas';
+import { getFAQSchema, getPlaceSchema } from '@/lib/seo/schemas';
+import { FAQ } from '@/components/sections/FAQ';
+import { FAQ_APROPOS } from '@/data/faq';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
 import { NAP, SITE, TRUST } from '@/lib/constants';
@@ -561,12 +563,21 @@ export default function Page() {
 
       <Reassurance />
 
+      <FAQ
+        items={FAQ_APROPOS}
+        eyebrow="Questions fréquentes"
+        title="Questions fréquentes sur Liroy Delsuc et Couverture Gironde"
+        intro="Tout ce qu'il faut savoir avant de nous confier un projet de toiture."
+        background="creme"
+      />
+
       <CTAFinal
         title="Un projet ? Un doute ? Une urgence ?"
         subtitle="Décrivez-nous votre besoin en 2 minutes. Nous revenons vers vous sous 24h ouvrées avec un devis détaillé ou un conseil immédiat."
       />
 
       <JsonLd data={getPlaceSchema()} />
+      <JsonLd data={getFAQSchema(FAQ_APROPOS)} />
     </>
   );
 }
