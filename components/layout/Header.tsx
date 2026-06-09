@@ -49,7 +49,7 @@ export function Header() {
                 Couverture Gironde
               </span>
               <span className="text-[0.6875rem] text-[var(--color-gris-600)] uppercase tracking-wider">
-                Couvreur Mérignac
+                Bordeaux · Gironde
               </span>
             </span>
             <span className="sr-only">Couverture Gironde, accueil</span>

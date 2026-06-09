@@ -18,7 +18,7 @@ export default function Page() {
         slug: PAGE.slug,
         villeSlug: 'talence',
         heroSubtitle:
-          "Couvreur-zingueur à Talence depuis 2005. Démoussage, nettoyage, réparation et zinguerie sur l'ensemble de la commune et des quartiers proches. Intervention rapide depuis Mérignac, garantie décennale.",
+          "Couvreur-zingueur à Talence depuis 2005. Démoussage, nettoyage, réparation et zinguerie sur l'ensemble de la commune et des quartiers proches. Intervention rapide, garantie décennale, devis gratuit sous 24h.",
         contexteLocal: (
           <>
             <p>
@@ -40,8 +40,8 @@ export default function Page() {
               pas dénaturer le caractère du bâti. Quelques toitures en{' '}
               <strong>ardoise</strong> subsistent sur des maisons de maître,
               notamment vers la Médoquine, et nécessitent une approche encore
-              différente — pression réduite à 60-80 bars maximum, buse adaptée,
-              outillage spécifique.
+              différente, avec une pression réduite à 60-80 bars maximum, une
+              buse adaptée et un outillage spécifique.
             </p>
             <p>
               Le climat océanique de Talence est très proche de celui de
@@ -55,12 +55,10 @@ export default function Page() {
               5 ans.
             </p>
             <p>
-              Notre dépôt est à <strong>9 km</strong> de Talence à Mérignac
-              (65 rue de Malbos, 33700). Nous intervenons quotidiennement sur
-              la commune en moins d'une heure depuis l'atelier. Cette
-              proximité permet une vraie réactivité pour les{' '}
+              Nous intervenons quotidiennement à Talence en moins d'une heure
+              de délai. Cette proximité permet une vraie réactivité pour les{' '}
               <strong>urgences fuite</strong> qui sont fréquentes après les
-              tempêtes ou les fortes pluies d'automne — mise hors d'eau
+              tempêtes ou les fortes pluies d'automne : mise hors d'eau
               généralement réalisée dans les 2 à 4 heures suivant l'appel,
               devis de réparation détaillé sous 48h.
             </p>
@@ -90,9 +88,9 @@ export default function Page() {
               "Tuile canal : 80-100 bars. Ardoise : 60-80 bars. Pas de nettoyage agressif standard. C'est la garantie d'une toiture qui dure.",
           },
           {
-            title: 'Réactivité 9 km depuis Mérignac',
+            title: 'Couvreur de proximité à Talence',
             description:
-              "Intervention urgence en 30-60 minutes en heures ouvrées. Notre proximité géographique évite les surcoûts de déplacement.",
+              "Intervention urgence en 30 à 60 minutes en heures ouvrées sur toute la commune. Notre proximité géographique évite les surcoûts de déplacement.",
           },
           {
             title: 'Gestion complète des démarches administratives',

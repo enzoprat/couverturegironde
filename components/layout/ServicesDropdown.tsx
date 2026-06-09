@@ -149,14 +149,14 @@ function DropdownColumn({
   return (
     <div className="bg-[var(--color-pierre)] p-5">
       <div className="mb-4">
-        <h3
+        <p
           className={cn(
             'text-[0.8125rem] font-bold uppercase tracking-wider mb-0.5',
             accent ? 'text-[var(--color-terre-600)]' : 'text-[var(--color-ardoise)]',
           )}
         >
           {title}
-        </h3>
+        </p>
         <p className="text-[0.75rem] text-[var(--color-gris-600)]">{subtitle}</p>
       </div>
       <ul className="space-y-1">

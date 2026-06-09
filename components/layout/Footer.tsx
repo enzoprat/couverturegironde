@@ -145,18 +145,6 @@ export function Footer() {
               © {year} {SITE.legalName}. Tous droits réservés. Garantie
               décennale.
             </p>
-            <p>
-              Site conçu et développé par{' '}
-              <a
-                href="https://enzoprat.fr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--color-gris-300)] hover:text-[var(--color-terre-300)] underline-offset-4 hover:underline transition-colors font-semibold"
-              >
-                Enzo Prat
-              </a>
-              .
-            </p>
           </div>
           {sections.legal && sections.legal.length > 0 && (
             <ul className="flex flex-wrap items-center gap-x-5 gap-y-1 text-[0.8125rem]">

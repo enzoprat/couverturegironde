@@ -98,9 +98,9 @@ export default function Page() {
               "Photos, devis, attestations, échanges avec l'expert : nous constituons un dossier solide pour vos déclarations de sinistre suite à tempête.",
           },
           {
-            title: 'Réactivité 11 km depuis Mérignac',
+            title: 'Couvreur de proximité à Bègles',
             description:
-              "Intervention urgence en 30-60 minutes en heures ouvrées. Présence quasi-quotidienne sur la commune.",
+              "Intervention urgence en 30 à 60 minutes en heures ouvrées. Présence quasi-quotidienne sur la commune.",
           },
           {
             title: 'Garantie décennale + RC professionnelle',

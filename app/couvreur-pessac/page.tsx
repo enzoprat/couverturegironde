@@ -18,7 +18,7 @@ export default function Page() {
         slug: PAGE.slug,
         villeSlug: 'pessac',
         heroSubtitle:
-          "Couvreur-zingueur basé à Mérignac, nous intervenons à Pessac tous les jours pour le démoussage, le nettoyage, la réparation et la zinguerie. 20 ans d'expérience, garantie décennale, devis gratuit sous 24h.",
+          "Couvreur-zingueur à Pessac, intervention chaque jour sur les toitures du centre, de Saige, Cap-de-Bos et Toctoucau. Démoussage, nettoyage, réparation et zinguerie. 20 ans d'expérience, garantie décennale, devis gratuit sous 24h.",
         contexteLocal: (
           <>
             <p>
@@ -43,8 +43,8 @@ export default function Page() {
               manière entre une échoppe Saige et une villa Bourgailh.
             </p>
             <p>
-              Le climat océanique de Pessac — pluviométrie annuelle moyenne de
-              930 mm, hivers doux et humides — favorise particulièrement la
+              Le climat océanique de Pessac, avec une pluviométrie annuelle
+              moyenne de 930 mm et des hivers doux et humides, favorise particulièrement la
               prolifération des mousses, lichens et algues sur les versants
               nord et les pans ombragés.{' '}
               <strong>
@@ -56,11 +56,10 @@ export default function Page() {
               vite que la moyenne.
             </p>
             <p>
-              Notre dépôt est situé à seulement <strong>7 km</strong> de Pessac
-              à Mérignac (65 rue de Malbos, 33700). Cette proximité garantit
-              une <strong>intervention rapide en cas d'urgence</strong> (fuite
-              déclarée, tempête, dégât des eaux) : nos équipes peuvent être sur
-              place en 30 à 60 minutes en heures ouvrées pour une mise hors
+              Nos équipes desservent Pessac quotidiennement. Cette proximité
+              garantit une <strong>intervention rapide en cas d'urgence</strong>
+              {' '}(fuite déclarée, tempête, dégât des eaux) : nous pouvons être
+              sur place en 30 à 60 minutes en heures ouvrées pour une mise hors
               d'eau immédiate. La connaissance fine du territoire pessacais
               permet aussi d'anticiper les contraintes d'accès (rues étroites
               dans certains quartiers, riverains à informer).
@@ -83,9 +82,9 @@ export default function Page() {
               "Tuile canal du centre, tuiles mécaniques des pavillons Saige, ardoise des maisons bourgeoises. Chaque matériau a sa technique, sa pression, son produit. Nous traitons les trois quotidiennement.",
           },
           {
-            title: 'Réactivité 7 km depuis Mérignac',
+            title: 'Couvreur de proximité à Pessac',
             description:
-              "Notre dépôt à Mérignac est à 7 km de Pessac. En urgence, 30-60 min de délai d'intervention en heures ouvrées. Pas de déplacement coûteux à vous facturer.",
+              "Intervention rapide sur toute la commune. En urgence, 30 à 60 min de délai d'intervention en heures ouvrées. Pas de déplacement coûteux à vous facturer.",
           },
           {
             title: 'Expertise climat océanique humide',

@@ -28,7 +28,7 @@ type ZonesDesserviesProps = {
 export function ZonesDesservies({
   eyebrow = "Zones d'intervention",
   title = 'Bordeaux Métropole et toute la Gironde',
-  intro = "Couverture Gironde intervient depuis Mérignac sur l'ensemble de Bordeaux Métropole et les communes de la Gironde. Découvrez notre couverture géographique.",
+  intro = "Couverture Gironde intervient sur l'ensemble de Bordeaux Métropole et les communes de la Gironde. Découvrez notre couverture géographique.",
   excludeSlug,
   limit,
 }: ZonesDesserviesProps) {

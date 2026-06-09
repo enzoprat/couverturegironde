@@ -25,7 +25,7 @@ export const FAQ_GENERAL: FAQItem[] = [
   {
     question: 'Sur quel secteur intervenez-vous ?',
     answer:
-      "Atelier basé à Mérignac, nous intervenons sur tout Bordeaux Métropole : Bordeaux, Mérignac, Pessac, Talence, Bègles, Villenave-d'Ornon, Le Bouscat, Gradignan, Eysines, Bruges, et toute la Gironde sur devis (Sud-Gironde, Médoc, Libournais).",
+      "Nous intervenons sur tout Bordeaux Métropole : Bordeaux, Mérignac, Pessac, Talence, Bègles, Villenave-d'Ornon, Le Bouscat, Gradignan, Eysines, Bruges, et toute la Gironde sur devis (Sud-Gironde, Médoc, Libournais).",
   },
   {
     question: 'Quel est le délai pour obtenir un devis ?',

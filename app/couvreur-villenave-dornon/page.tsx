@@ -18,7 +18,7 @@ export default function Page() {
         slug: PAGE.slug,
         villeSlug: 'villenave-dornon',
         heroSubtitle:
-          "Couvreur-zingueur à Villenave-d'Ornon depuis 2005. Démoussage, nettoyage, réparation toiture et zinguerie sur l'ensemble de la commune. Intervention rapide depuis Mérignac (13 km), garantie décennale, devis gratuit sous 24h.",
+          "Couvreur-zingueur à Villenave-d'Ornon depuis 2005. Démoussage, nettoyage, réparation toiture et zinguerie sur l'ensemble de la commune. Intervention rapide, garantie décennale, devis gratuit sous 24h.",
         contexteLocal: (
           <>
             <p>

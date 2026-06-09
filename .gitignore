@@ -52,3 +52,4 @@ next-env.d.ts
 
 # Claude Code working files (configurations locales)
 /.claude/scheduled_tasks.json
+_gsc-data/

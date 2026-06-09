@@ -110,9 +110,9 @@ export default function Page() {
               "Repérage des tuiles fissurées, joints défaillants, points faibles. Rapport remis en fin de chantier avec photos pour anticiper les futurs travaux.",
           },
           {
-            title: 'Réactivité 7 km depuis Mérignac',
+            title: 'Couvreur de proximité à Pessac',
             description:
-              "Présence quotidienne sur Pessac. Intervention urgence en 30-60 minutes en heures ouvrées. Pas de surcoût de déplacement.",
+              "Présence quotidienne sur Pessac. Intervention urgence en 30 à 60 minutes en heures ouvrées. Pas de surcoût de déplacement.",
           },
           {
             title: 'Tarif transparent ligne par ligne',
