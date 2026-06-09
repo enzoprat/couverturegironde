@@ -53,3 +53,7 @@ next-env.d.ts
 # Claude Code working files (configurations locales)
 /.claude/scheduled_tasks.json
 _gsc-data/
+
+# Service account keys et secrets (ne JAMAIS committer)
+/_secrets/
+*service-account*.json
