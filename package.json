@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "seo:gsc": "node scripts/gsc-pull.mjs"
+    "seo:gsc": "node scripts/gsc-pull.mjs",
+    "seo:gsc:auth": "node scripts/gsc-auth.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",

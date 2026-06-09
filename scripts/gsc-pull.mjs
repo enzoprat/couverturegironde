@@ -61,18 +61,41 @@ function daysAgoISO(n) {
   return isoDate(d);
 }
 
-if (!fs.existsSync(KEY_PATH)) {
-  console.error(`❌ Clé service account introuvable : ${KEY_PATH}`);
-  console.error(`   → Suis la procédure setup en tête de scripts/gsc-pull.mjs`);
-  process.exit(1);
-}
+const OAUTH_CLIENT_PATH = path.join(projectRoot, '_secrets', 'gsc-oauth-client.json');
+const OAUTH_TOKEN_PATH = path.join(projectRoot, '_secrets', 'gsc-oauth-token.json');
 
 fs.mkdirSync(OUT_DIR, { recursive: true });
 
-const auth = new google.auth.GoogleAuth({
-  keyFile: KEY_PATH,
-  scopes: ['https://www.googleapis.com/auth/webmasters.readonly'],
-});
+/**
+ * Stratégie d'auth :
+ *  1. Si refresh_token OAuth dispo → l'utiliser (mode utilisateur, fiable
+ *     avec Domain Properties).
+ *  2. Sinon, fallback sur Service Account (mode app, mais nécessite que
+ *     l'email du SA soit ajouté à la propriété GSC, ce que GSC refuse
+ *     parfois sur Domain Properties).
+ */
+let auth;
+if (fs.existsSync(OAUTH_TOKEN_PATH) && fs.existsSync(OAUTH_CLIENT_PATH)) {
+  const clientJson = JSON.parse(fs.readFileSync(OAUTH_CLIENT_PATH, 'utf8'));
+  const { client_id, client_secret } = clientJson.installed ?? clientJson.web ?? {};
+  const tokens = JSON.parse(fs.readFileSync(OAUTH_TOKEN_PATH, 'utf8'));
+  const oauth2 = new google.auth.OAuth2(client_id, client_secret);
+  oauth2.setCredentials(tokens);
+  auth = oauth2;
+  console.log(`🔑 Auth : OAuth user (refresh_token)`);
+} else if (fs.existsSync(KEY_PATH)) {
+  auth = new google.auth.GoogleAuth({
+    keyFile: KEY_PATH,
+    scopes: ['https://www.googleapis.com/auth/webmasters.readonly'],
+  });
+  console.log(`🔑 Auth : Service Account`);
+} else {
+  console.error(`❌ Aucune auth configurée.`);
+  console.error(`   → Soit clé service account : ${KEY_PATH}`);
+  console.error(`   → Soit OAuth : lance \`npm run seo:gsc:auth\` après avoir`);
+  console.error(`     déposé _secrets/gsc-oauth-client.json (cf. scripts/SETUP-GSC.md)`);
+  process.exit(1);
+}
 
 const webmasters = google.webmasters({ version: 'v3', auth });
 
