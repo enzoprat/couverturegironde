@@ -8,9 +8,10 @@ import { Reassurance } from '@/components/sections/Reassurance';
 import { FAQ } from '@/components/sections/FAQ';
 import { CTAFinal } from '@/components/sections/CTAFinal';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { getFAQSchema } from '@/lib/seo/schemas';
+import { getFAQSchema, getPriceCatalogSchema } from '@/lib/seo/schemas';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { SITE } from '@/lib/constants';
 
 const PAGE = requirePage('tarifs');
 
@@ -329,6 +330,9 @@ export default function Page() {
       <CTAFinal />
 
       <JsonLd data={getFAQSchema(TARIFS_FAQ)} />
+      <JsonLd
+        data={getPriceCatalogSchema(TARIF_SECTIONS, `${SITE.url}${PAGE.path}`)}
+      />
     </>
   );
 }

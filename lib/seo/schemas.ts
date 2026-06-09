@@ -224,6 +224,105 @@ export function getFAQSchema(
   };
 }
 
+/* ============================================================
+   PRICE CATALOG — page /tarifs
+   ============================================================ */
+
+export type TarifSection = {
+  title: string;
+  services: Array<{ name: string; range: string; details: string }>;
+};
+
+/**
+ * Parse une chaîne de range type "12 – 19 €/m²", "180 – 480 €", "Gratuit".
+ * Retourne { min, max, unit } ou null si non parsable.
+ */
+function parsePriceRange(
+  range: string,
+): { min: number; max: number; unit: string | null } | null {
+  if (/gratuit/i.test(range)) {
+    return { min: 0, max: 0, unit: null };
+  }
+  // "12 – 19 €/m²" or "180 – 480 €" — supporte tiret simple et demi-cadratin
+  const m = range.match(/(\d[\d\s]*)\s*[–-]\s*(\d[\d\s]*)\s*€(?:\s*\/\s*(\S+))?/);
+  if (!m || !m[1] || !m[2]) return null;
+  const min = Number(m[1].replace(/\s/g, ''));
+  const max = Number(m[2].replace(/\s/g, ''));
+  const unit = m[3] ?? null;
+  if (!Number.isFinite(min) || !Number.isFinite(max)) return null;
+  return { min, max, unit };
+}
+
+/**
+ * OfferCatalog pour /tarifs. Aide les LLMs (ChatGPT/Perplexity/Claude/AIO) à
+ * citer notre grille tarifaire au lieu de moyennes génériques.
+ *
+ * Note : typage en `Record<string, unknown>` car schema-dts n'a pas de type
+ * pratique pour OfferCatalog avec sous-catalogues récursifs. Le JSON émis est
+ * valide schema.org (vérifié rich-results validator).
+ */
+export function getPriceCatalogSchema(
+  sections: TarifSection[],
+  pageUrl: string,
+): WithContext<Thing> {
+  // schema-dts est strict sur les sous-types ; on construit en objet ouvert
+  // puis on cast en WithContext<Thing>. Le JSON émis est valide schema.org
+  // (vérifié rich-results validator).
+  const schema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'OfferCatalog',
+    name: `Tarifs Couverture Gironde ${new Date().getFullYear()}`,
+    url: pageUrl,
+    provider: { '@id': `${SITE.url}/#localbusiness` },
+    itemListElement: sections.map((section, sIdx) => ({
+      '@type': 'OfferCatalog',
+      name: section.title,
+      itemListElement: section.services.map((s, idx) => {
+        const parsed = parsePriceRange(s.range);
+        const offer: Record<string, unknown> = {
+          '@type': 'Offer',
+          position: sIdx * 100 + idx + 1,
+          itemOffered: {
+            '@type': 'Service',
+            name: s.name,
+            description: s.details,
+            provider: { '@id': `${SITE.url}/#localbusiness` },
+            areaServed: [
+              { '@type': 'City', name: 'Bordeaux' },
+              { '@type': 'AdministrativeArea', name: 'Gironde' },
+            ],
+          },
+        };
+        if (parsed) {
+          if (parsed.min === 0 && parsed.max === 0) {
+            offer.price = '0';
+            offer.priceCurrency = 'EUR';
+          } else {
+            offer.priceSpecification = {
+              '@type': 'PriceSpecification',
+              priceCurrency: 'EUR',
+              minPrice: parsed.min,
+              maxPrice: parsed.max,
+              valueAddedTaxIncluded: false,
+              ...(parsed.unit
+                ? {
+                    referenceQuantity: {
+                      '@type': 'QuantitativeValue',
+                      value: 1,
+                      unitText: parsed.unit,
+                    },
+                  }
+                : {}),
+            };
+          }
+        }
+        return offer;
+      }),
+    })),
+  };
+  return schema as unknown as WithContext<Thing>;
+}
+
 /** Article — pour guides et pages détaillées éventuelles. */
 export function getArticleSchema(params: {
   headline: string;

@@ -19,13 +19,13 @@ export default function Page() {
         slug: PAGE.slug,
         h1: (
           <>
-            Couvreur en{' '}
+            Artisan couvreur-zingueur en{' '}
             <span className="text-[var(--color-terre)]">Gironde (33)</span>{' '}
             depuis 2005
           </>
         ),
         heroSubtitle:
-          "Couvreur-zingueur artisan en Gironde depuis 2005. Bordeaux Métropole, Médoc, Bassin d'Arcachon, Libournais, Sud-Gironde. Démoussage, nettoyage, réparation, urgence fuite 7j/7. Devis gratuit sous 24h, garantie décennale.",
+          "Artisan couvreur-zingueur en Gironde (33) depuis 2005, spécialiste démoussage et nettoyage de toiture. Interventions sur Bordeaux Métropole, Médoc, Bassin d'Arcachon, Libournais et Sud-Gironde. Urgence fuite 7j/7, devis gratuit sous 24h, garantie décennale.",
         shortTitle: 'Couvreur Gironde',
         presentation: (
           <>

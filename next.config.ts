@@ -144,6 +144,32 @@ const nextConfig: NextConfig = {
         destination: '/urgence-fuite-toiture-bordeaux',
         permanent: true,
       },
+      // Long-tail captures (audit AI Citability, juin 2026)
+      {
+        source: '/artisan-couvreur-zingueur-33',
+        destination: '/couvreur-gironde',
+        permanent: true,
+      },
+      {
+        source: '/artisan-couvreur-bordeaux',
+        destination: '/couvreur-bordeaux',
+        permanent: true,
+      },
+      {
+        source: '/artisan-couvreur-gironde',
+        destination: '/couvreur-gironde',
+        permanent: true,
+      },
+      {
+        source: '/couvreur-zingueur-bordeaux',
+        destination: '/couvreur-bordeaux',
+        permanent: true,
+      },
+      {
+        source: '/couvreur-zingueur-33',
+        destination: '/couvreur-gironde',
+        permanent: true,
+      },
     ];
   },
 };
