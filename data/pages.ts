@@ -20,9 +20,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'home',
     title: 'Accueil',
     seoTitle:
-      'Couvreur à Bordeaux : Démoussage, nettoyage et entretien toiture',
+      'Couvreur Bordeaux Gironde 7j/7 : devis 24h, 5/5 sur 54 avis',
     seoDescription:
-      'Couvreur-zingueur à Bordeaux et en Gironde depuis 2005. Démoussage, nettoyage, traitement hydrofuge, réparation, urgence fuite 7j/7. Devis gratuit en 24h, garantie décennale.',
+      "Couvreur-zingueur à Bordeaux et en Gironde depuis 2005. Démoussage, nettoyage, réparation, urgence fuite 7j/7. Note 5/5 sur 54 avis Google. Devis gratuit en 24h, garantie décennale.",
     visibleInNav: true,
     navOrder: 10,
     indexable: true,
@@ -38,12 +38,27 @@ const STATIC_PAGES: PageEntry[] = [
     service: 'couverture',
     title: 'Couvreur Bordeaux',
     seoTitle:
-      'Couvreur à Bordeaux : Entreprise de couverture Gironde depuis 2005',
+      'Couvreur Bordeaux : entreprise couverture depuis 2005 | 5/5 avis',
     seoDescription:
-      "Entreprise de couverture à Bordeaux et en Gironde depuis 2005. Tous travaux de toiture : démoussage, nettoyage, réparation, zinguerie. Devis gratuit, garantie décennale.",
+      "Couvreur-zingueur à Bordeaux depuis 2005. Tous travaux de toiture : démoussage, nettoyage, réparation, zinguerie, urgence 7j/7. Note 5/5 sur 54 avis Google. Devis gratuit 24h, garantie décennale.",
     indexable: true,
     visibleInFooter: true,
     footerSection: 'services',
+  },
+  {
+    slug: 'couvreur-gironde',
+    path: '/couvreur-gironde',
+    type: 'service',
+    service: 'couverture',
+    title: 'Couvreur Gironde',
+    seoTitle:
+      'Couvreur Gironde (33) : 5/5 sur 54 avis | Devis 24h, urgence 7j/7',
+    seoDescription:
+      "Couvreur-zingueur en Gironde (33) depuis 2005 : Bordeaux Métropole, Médoc, Bassin d'Arcachon, Libournais, Sud-Gironde. Démoussage, nettoyage, réparation, urgence 7j/7. Note 5/5 sur 54 avis. Devis gratuit 24h.",
+    indexable: true,
+    visibleInFooter: true,
+    footerSection: 'services',
+    sitemapPriority: 0.9,
   },
 
   // ============ SILO PRIORITAIRE (démoussage / nettoyage / hydrofuge) ============
@@ -55,9 +70,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Démoussage toiture Bordeaux',
     navLabel: 'Démoussage toiture',
     seoTitle:
-      'Démoussage de toiture à Bordeaux : Élimination mousse et lichens',
+      'Démoussage toiture Bordeaux : 12-18 €/m² | Devis 24h, 5/5 avis',
     seoDescription:
-      "Démoussage professionnel de toiture à Bordeaux et en Gironde. Élimination de la mousse et des lichens, traitement préventif. Devis gratuit, garantie décennale.",
+      "Démoussage professionnel de toiture à Bordeaux et en Gironde par couvreur depuis 2005. Tarif 12 à 18 €/m². Note 5/5 sur 54 avis Google. Devis gratuit 24h, garantie décennale.",
     visibleInNav: true,
     navCategory: 'entretien',
     navOrder: 20,
@@ -73,9 +88,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Nettoyage toiture Bordeaux',
     navLabel: 'Nettoyage toiture',
     seoTitle:
-      'Nettoyage de toiture à Bordeaux : Démoussage et rinçage haute pression',
+      'Nettoyage toiture Bordeaux : 15-22 €/m² | Devis 24h, 5/5 avis',
     seoDescription:
-      "Nettoyage de toiture à Bordeaux et en Gironde par artisan couvreur. Nettoyage haute pression maîtrisé, démoussage et rinçage. Devis gratuit en 24h.",
+      "Nettoyage de toiture à Bordeaux et en Gironde par couvreur depuis 2005. Nettoyage haute pression maîtrisé, démoussage et rinçage. Note 5/5 sur 54 avis. Devis gratuit 24h, garantie décennale.",
     visibleInNav: true,
     navCategory: 'entretien',
     navOrder: 21,
@@ -91,9 +106,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Traitement hydrofuge Bordeaux',
     navLabel: 'Traitement hydrofuge',
     seoTitle:
-      'Traitement hydrofuge toiture à Bordeaux : Protection longue durée',
+      'Traitement hydrofuge toiture Bordeaux : protection 10 ans',
     seoDescription:
-      "Traitement hydrofuge de toiture à Bordeaux et en Gironde. Protection longue durée contre l'humidité et les mousses. Application professionnelle, garantie décennale.",
+      "Traitement hydrofuge professionnel à Bordeaux et en Gironde. Protection 10 ans contre l'humidité et les mousses. Note 5/5 sur 54 avis Google. Devis gratuit 24h, garantie décennale.",
     visibleInNav: true,
     navCategory: 'entretien',
     navOrder: 22,
@@ -111,9 +126,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Réparation toiture Bordeaux',
     navLabel: 'Réparation toiture',
     seoTitle:
-      'Réparation de toiture à Bordeaux : Tuiles, fuite, faîtage',
+      'Réparation toiture Bordeaux : intervention 24h, diagnostic gratuit',
     seoDescription:
-      "Réparation de toiture à Bordeaux et en Gironde. Remplacement de tuiles, étanchéité, reprise de faîtage. Diagnostic gratuit, intervention rapide, garantie décennale.",
+      "Réparation toiture à Bordeaux et en Gironde : tuiles cassées, fuite, faîtage, étanchéité. Intervention sous 24h, diagnostic gratuit. Note 5/5 sur 54 avis Google. Garantie décennale.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 30,
@@ -129,9 +144,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Urgence fuite toiture',
     navLabel: 'Urgence fuite 7j/7',
     seoTitle:
-      'Urgence fuite toiture Bordeaux : Intervention rapide 7j/7',
+      'Urgence fuite toiture Bordeaux 7j/7 : couvreur en 1h',
     seoDescription:
-      "Urgence fuite toiture à Bordeaux et en Gironde. Intervention rapide 7j/7, mise hors d'eau immédiate, devis de réparation détaillé. Couvreur depuis 2005.",
+      "Urgence fuite toiture à Bordeaux et en Gironde 7j/7. Couvreur sur place en 1h, mise hors d'eau immédiate. Appel direct : 07 68 69 78 48. Note 5/5 sur 54 avis Google.",
     visibleInNav: true,
     navCategory: 'urgence',
     navOrder: 40,
@@ -147,9 +162,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Zinguerie Bordeaux',
     navLabel: 'Zinguerie & gouttières',
     seoTitle:
-      'Zinguerie et gouttières à Bordeaux : Pose, rénovation, étanchéité',
+      'Zinguerie & gouttières Bordeaux : pose, réparation | Devis 24h',
     seoDescription:
-      "Zinguerie à Bordeaux et en Gironde : gouttières, descentes, noues, chéneaux, habillages zinc. Garantie d'étanchéité, finition soignée.",
+      "Zinguerie et gouttières à Bordeaux : gouttières zinc, noues, chéneaux, habillages, descentes. Soudure étain, étanchéité garantie. Note 5/5 sur 54 avis. Devis gratuit 24h, garantie décennale.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 31,
@@ -165,9 +180,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Installation Velux Bordeaux',
     navLabel: 'Pose Velux',
     seoTitle:
-      'Installation Velux à Bordeaux : Pose et remplacement de fenêtres de toit',
+      'Pose Velux Bordeaux : installation et remplacement | Devis 24h',
     seoDescription:
-      "Installation et remplacement de Velux à Bordeaux et en Gironde. Étanchéité garantie, conseil sur le modèle adapté. Devis gratuit, garantie décennale.",
+      "Installation et remplacement de Velux à Bordeaux et en Gironde par couvreur certifié. Étanchéité garantie, conseil sur modèle. Note 5/5 sur 54 avis. Devis gratuit 24h, garantie décennale.",
     visibleInNav: true,
     navCategory: 'urgence',
     navOrder: 41,
@@ -182,9 +197,9 @@ const STATIC_PAGES: PageEntry[] = [
     service: 'neuve',
     title: 'Toiture neuve Bordeaux',
     navLabel: 'Toiture neuve',
-    seoTitle: 'Toiture neuve à Bordeaux : Construction et extension',
+    seoTitle: 'Toiture neuve Bordeaux : construction clé en main | Devis 24h',
     seoDescription:
-      "Construction de toiture neuve à Bordeaux et en Gironde : charpente, couverture, zinguerie, isolation. Maîtrise d'œuvre globale, garantie décennale.",
+      "Construction de toiture neuve à Bordeaux et en Gironde : charpente, couverture, zinguerie, isolation. Maîtrise d'œuvre globale. Note 5/5 sur 54 avis. Devis gratuit 24h, garantie décennale.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 32,
@@ -199,9 +214,9 @@ const STATIC_PAGES: PageEntry[] = [
     service: 'faitage',
     title: 'Faîtage toiture Bordeaux',
     navLabel: 'Faîtage toiture',
-    seoTitle: 'Faîtage de toiture à Bordeaux : Rénovation et étanchéité',
+    seoTitle: 'Faîtage toiture Bordeaux : rénovation et étanchéité garantie',
     seoDescription:
-      "Rénovation de faîtage de toiture à Bordeaux et en Gironde. Faîtage scellé ou à sec, étanchéité garantie. Devis gratuit, intervention partout en Gironde.",
+      "Rénovation de faîtage à Bordeaux : faîtage scellé ou à sec, étanchéité garantie. Couvreur depuis 2005. Note 5/5 sur 54 avis Google. Devis gratuit 24h, garantie décennale.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 33,
@@ -217,9 +232,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Ornements de toiture Bordeaux',
     navLabel: 'Ornements traditionnels',
     seoTitle:
-      'Ornements de toiture à Bordeaux : Épis, lambrequins, girouettes',
+      'Ornements toiture Bordeaux : épis, lambrequins, girouettes',
     seoDescription:
-      "Ornements de toiture à Bordeaux : épis, lambrequins, girouettes, rives décoratives. Travail traditionnel et soigné, respect du bâti girondin.",
+      "Ornements de toiture à Bordeaux : épis, lambrequins, girouettes, rives décoratives. Travail traditionnel et soigné, respect du bâti girondin. Note 5/5 sur 54 avis. Devis gratuit 24h.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 34,
@@ -233,9 +248,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Charpente Bordeaux',
     navLabel: 'Charpente',
     seoTitle:
-      'Charpente Bordeaux : Rénovation, traitement, renforcement',
+      'Charpente Bordeaux : rénovation, traitement, renforcement | Devis 24h',
     seoDescription:
-      "Travaux de charpente à Bordeaux et en Gironde : diagnostic, traitement des bois, remplacement de pièces, renforcement structurel. Garantie décennale.",
+      "Travaux de charpente à Bordeaux et en Gironde : diagnostic, traitement bois, renforcement structurel. Couvreur-charpentier depuis 2005. Note 5/5 sur 54 avis. Devis gratuit, garantie décennale.",
     visibleInNav: true,
     navCategory: 'urgence',
     navOrder: 42,
@@ -290,9 +305,9 @@ const STATIC_PAGES: PageEntry[] = [
     ville: 'merignac',
     title: 'Couvreur Mérignac',
     seoTitle:
-      'Couvreur à Mérignac : Démoussage, nettoyage, réparation toiture',
+      'Couvreur Mérignac : atelier rue de Malbos | 5/5 sur 54 avis',
     seoDescription:
-      "Couvreur à Mérignac depuis 2005. Démoussage, nettoyage, réparation toiture et zinguerie. Atelier sur place rue de Malbos. Devis gratuit, garantie décennale.",
+      "Couvreur à Mérignac depuis 2005, atelier rue de Malbos. Démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Note 5/5 sur 54 avis Google. Devis gratuit 24h, garantie décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -303,9 +318,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'ville',
     ville: 'pessac',
     title: 'Couvreur Pessac',
-    seoTitle: 'Couvreur à Pessac : Démoussage, nettoyage, réparation toiture',
+    seoTitle: 'Couvreur Pessac : démoussage, réparation | 5/5 sur 54 avis',
     seoDescription:
-      "Couvreur à Pessac : démoussage, nettoyage, réparation toiture et zinguerie. Intervention rapide, devis gratuit, garantie décennale.",
+      "Couvreur à Pessac depuis 2005 : démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Note 5/5 sur 54 avis Google. Devis gratuit 24h, garantie décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -316,9 +331,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'ville',
     ville: 'talence',
     title: 'Couvreur Talence',
-    seoTitle: 'Couvreur à Talence : Démoussage, nettoyage, réparation toiture',
+    seoTitle: 'Couvreur Talence : démoussage, réparation | 5/5 sur 54 avis',
     seoDescription:
-      "Couvreur à Talence : démoussage, nettoyage, réparation toiture et zinguerie. Intervention rapide, devis gratuit, garantie décennale.",
+      "Couvreur à Talence depuis 2005 : démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Note 5/5 sur 54 avis Google. Devis gratuit 24h, garantie décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -329,9 +344,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'ville',
     ville: 'begles',
     title: 'Couvreur Bègles',
-    seoTitle: 'Couvreur à Bègles : Démoussage, nettoyage, réparation toiture',
+    seoTitle: 'Couvreur Bègles : démoussage, réparation | 5/5 sur 54 avis',
     seoDescription:
-      "Couvreur à Bègles : démoussage, nettoyage, réparation toiture et zinguerie. Intervention rapide, devis gratuit, garantie décennale.",
+      "Couvreur à Bègles depuis 2005 : démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Note 5/5 sur 54 avis Google. Devis gratuit 24h, garantie décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -343,9 +358,9 @@ const STATIC_PAGES: PageEntry[] = [
     ville: 'villenave-dornon',
     title: "Couvreur Villenave-d'Ornon",
     seoTitle:
-      "Couvreur à Villenave-d'Ornon : Démoussage, réparation, zinguerie",
+      "Couvreur Villenave-d'Ornon : démoussage, réparation | 5/5 avis",
     seoDescription:
-      "Couvreur à Villenave-d'Ornon : démoussage, nettoyage, réparation toiture et zinguerie. Intervention rapide, devis gratuit, garantie décennale.",
+      "Couvreur à Villenave-d'Ornon depuis 2005 : démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Note 5/5 sur 54 avis Google. Devis gratuit 24h, garantie décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -359,9 +374,9 @@ const STATIC_PAGES: PageEntry[] = [
     parentSlug: 'nettoyage-toiture-bordeaux',
     title: 'Nettoyage toiture Pessac',
     seoTitle:
-      'Nettoyage de toiture à Pessac : Démoussage et rinçage haute pression',
+      'Nettoyage toiture Pessac : démoussage + hydrofuge | 5/5 avis',
     seoDescription:
-      "Nettoyage de toiture à Pessac par artisan couvreur depuis 2005. Démoussage, rinçage haute pression maîtrisé. Devis gratuit en 24h, garantie décennale.",
+      "Nettoyage de toiture à Pessac par couvreur depuis 2005. Démoussage, rinçage haute pression maîtrisé, hydrofuge longue durée. Note 5/5 sur 54 avis. Devis gratuit 24h, garantie décennale.",
     indexable: true,
   },
 
@@ -386,9 +401,9 @@ const STATIC_PAGES: PageEntry[] = [
     path: '/contact',
     type: 'conversion',
     title: 'Contact',
-    seoTitle: 'Contact Couverture Gironde : Mérignac, Bordeaux Métropole',
+    seoTitle: 'Contact Couverture Gironde : 07 68 69 78 48 | Bordeaux',
     seoDescription:
-      "Contactez Couverture Gironde à Mérignac : adresse, téléphone, email, formulaire. Couvreur sur Bordeaux Métropole depuis 2005. Réponse sous 24h.",
+      "Contactez Couverture Gironde au 07 68 69 78 48. Couvreur Bordeaux Métropole depuis 2005, atelier à Mérignac. Note 5/5 sur 54 avis. Réponse sous 24h, devis gratuit.",
     visibleInNav: true,
     navOrder: 80,
     visibleInFooter: true,
@@ -401,9 +416,9 @@ const STATIC_PAGES: PageEntry[] = [
     path: '/a-propos',
     type: 'institutional',
     title: 'À propos',
-    seoTitle: 'À propos de Couverture Gironde : Artisan couvreur depuis 2005',
+    seoTitle: 'À propos : Liroy Delsuc, couvreur Bordeaux depuis 2005',
     seoDescription:
-      "Couverture Gironde, artisan couvreur-zingueur depuis 2005 à Mérignac. Notre équipe, nos valeurs, notre engagement qualité. 20 ans d'expérience en Gironde.",
+      "Couverture Gironde, fondée par Liroy Delsuc en 2005 à Mérignac. 20 ans d'expérience en Gironde, atelier rue de Malbos. Note 5/5 sur 54 avis Google. Garantie décennale.",
     visibleInNav: true,
     navOrder: 70,
     visibleInFooter: true,
@@ -416,9 +431,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'institutional',
     title: 'Tarifs',
     seoTitle:
-      'Tarifs couverture, démoussage et zinguerie à Bordeaux : Prix 2026',
+      'Tarifs couvreur Bordeaux 2026 : démoussage dès 12 €/m² | Devis gratuit',
     seoDescription:
-      "Tarifs indicatifs 2026 d'un couvreur à Bordeaux et en Gironde : démoussage, nettoyage, hydrofuge, réparation, zinguerie. Prix transparents, devis gratuit personnalisé.",
+      "Tarifs 2026 d'un couvreur à Bordeaux : démoussage 12-18 €/m², nettoyage 15-22 €/m², hydrofuge dès 6 €/m². Prix transparents ligne par ligne. Note 5/5 sur 54 avis. Devis gratuit 24h.",
     visibleInNav: true,
     navOrder: 50,
     visibleInFooter: true,
@@ -432,9 +447,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'institutional',
     title: 'Urgence toiture',
     seoTitle:
-      'Urgence toiture Bordeaux : Intervention rapide 7j/7 fuite et tempête',
+      'Urgence toiture Bordeaux 7j/7 : couvreur en 1h | 07 68 69 78 48',
     seoDescription:
-      "Urgence toiture à Bordeaux et en Gironde : intervention rapide 7j/7, mise hors d'eau immédiate, devis de réparation détaillé. Couvreur depuis 2005, garantie décennale.",
+      "Urgence toiture à Bordeaux 7j/7 : couvreur sur place en 1h, mise hors d'eau immédiate, fuite, tempête. Appel direct : 07 68 69 78 48. Couvreur depuis 2005, garantie décennale.",
     visibleInFooter: true,
     footerSection: 'entreprise',
     indexable: true,
@@ -445,9 +460,9 @@ const STATIC_PAGES: PageEntry[] = [
     path: '/demande-devis',
     type: 'conversion',
     title: 'Demande de devis',
-    seoTitle: 'Demande de devis gratuit : Couverture Gironde',
+    seoTitle: 'Devis toiture Bordeaux Gironde gratuit : réponse en 24h',
     seoDescription:
-      "Demandez votre devis gratuit pour démoussage, nettoyage, réparation ou réfection de toiture en Gironde. Réponse sous 24h ouvrées, sans engagement.",
+      "Demandez votre devis toiture gratuit en Gironde : démoussage, nettoyage, réparation, réfection, zinguerie. Réponse sous 24h ouvrées, sans engagement. Note 5/5 sur 54 avis Google.",
     visibleInNav: true,
     navOrder: 60,
     visibleInFooter: true,

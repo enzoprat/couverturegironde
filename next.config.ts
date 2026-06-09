@@ -103,6 +103,47 @@ const nextConfig: NextConfig = {
         destination: '/politique-confidentialite',
         permanent: true,
       },
+      // Requêtes GSC sans page : on capte le trafic vers la bonne destination
+      {
+        source: '/couvreur-33',
+        destination: '/couvreur-gironde',
+        permanent: true,
+      },
+      {
+        source: '/charpentier-couvreur-bordeaux',
+        destination: '/charpente-bordeaux',
+        permanent: true,
+      },
+      {
+        source: '/charpentier-couvreur-gironde',
+        destination: '/charpente-bordeaux',
+        permanent: true,
+      },
+      {
+        source: '/devis-toiture-bordeaux',
+        destination: '/demande-devis',
+        permanent: true,
+      },
+      {
+        source: '/entretien-toiture-bordeaux',
+        destination: '/demoussage-toiture-bordeaux',
+        permanent: true,
+      },
+      {
+        source: '/nettoyage-toiture-gironde',
+        destination: '/nettoyage-toiture-bordeaux',
+        permanent: true,
+      },
+      {
+        source: '/reparation-toiture-gironde',
+        destination: '/reparation-toiture-bordeaux',
+        permanent: true,
+      },
+      {
+        source: '/urgence-toiture-bordeaux',
+        destination: '/urgence-fuite-toiture-bordeaux',
+        permanent: true,
+      },
     ];
   },
 };
