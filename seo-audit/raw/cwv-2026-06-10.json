@@ -1,0 +1,11 @@
+{
+  "runAt": "2026-06-10T09:08:49.312Z",
+  "base": "https://www.couverturegironde.fr",
+  "results": [
+    {
+      "url": "/",
+      "strategy": "mobile",
+      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'pagespeedonline.googleapis.com' for consumer 'project_number:583797351"
+    }
+  ]
+}
