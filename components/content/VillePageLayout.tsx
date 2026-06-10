@@ -88,13 +88,20 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
       <Hero
         variant="ville"
         eyebrow={`Couvreur · ${ville.nameInflected} · ${ville.postalCode}`}
-        title={
-          <>
-            Couvreur à{' '}
-            <span className="text-[var(--color-terre)]">{ville.name}</span> :
-            démoussage, nettoyage et réparation toiture
-          </>
-        }
+        title={(() => {
+          // Contraction française : "à + Le X" devient "au X".
+          // Ex: "à Le Bouscat" → "au Bouscat".
+          const startsWithLe = ville.name.startsWith('Le ');
+          const prep = startsWithLe ? 'au ' : 'à ';
+          const cityForTitle = startsWithLe ? ville.name.slice(3) : ville.name;
+          return (
+            <>
+              Couvreur {prep}
+              <span className="text-[var(--color-terre)]">{cityForTitle}</span> :
+              démoussage, nettoyage et réparation toiture
+            </>
+          );
+        })()}
         subtitle={content.heroSubtitle}
         breadcrumbSlug={content.slug}
         secondaryCtaLabel={`Devis couvreur ${ville.name}`}
