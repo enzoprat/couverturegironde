@@ -39,6 +39,28 @@ const BASE_URL = arg('base', 'https://www.couverturegironde.fr');
 const PAGES = arg('urls', '/,/a-propos,/couvreur-bordeaux,/couvreur-gironde,/tarifs,/urgence-fuite-toiture-bordeaux,/realisations,/mentions-legales')
   .split(',');
 
+/**
+ * Pages où certains signaux ne s'appliquent pas (page légale, index).
+ * Évite de pénaliser un score E-E-A-T sur des pages qui n'ont pas vocation
+ * à porter ces signaux (par ex. /mentions-legales n'a pas à faire 1500 mots).
+ */
+const PAGE_KIND = {
+  '/mentions-legales': 'legal',
+  '/politique-confidentialite': 'legal',
+  '/cookies': 'legal',
+  '/realisations': 'index',
+  '/merci': 'legal',
+};
+
+// Skip rules : signal_id → list of page kinds where it doesn't apply
+const SKIP_RULES = {
+  'EXPER-CONTENT-DEPTH': ['legal', 'index'],
+  'EXPER-HOWTO': ['legal', 'index'],
+  'EXP-REVIEWS': ['legal'],
+  'EXP-REALISATIONS': ['legal'],
+  'TRUST-FAQ': ['legal', 'index'],
+};
+
 const USER_AGENT = 'CouvertureGirondeEEATBot/1.0';
 
 async function fetchPage(url) {
@@ -93,7 +115,7 @@ function deepFindString(obj, predicate) {
 // ============================================================
 // Scoring heuristics
 // ============================================================
-function scoreExperience(html, jsonLd) {
+function scoreExperience(html, jsonLd, pageKind = 'default') {
   const checks = [];
 
   // Signal 1: "depuis YEAR" pattern (longévité affichée)
@@ -147,10 +169,10 @@ function scoreExperience(html, jsonLd) {
     detail: reviewCount?.[0] ?? null,
   });
 
-  return computeScore(checks);
+  return computeScore(checks, pageKind);
 }
 
-function scoreExpertise(html, jsonLd) {
+function scoreExpertise(html, jsonLd, pageKind = 'default') {
   const checks = [];
 
   // Signal 1: Bio fondateur / Person schema avec founder
@@ -215,10 +237,10 @@ function scoreExpertise(html, jsonLd) {
     detail: hasHowTo ? 'HowTo JSON-LD' : null,
   });
 
-  return computeScore(checks);
+  return computeScore(checks, pageKind);
 }
 
-function scoreAuthority(html, jsonLd, headers) {
+function scoreAuthority(html, jsonLd, headers, pageKind = 'default') {
   const checks = [];
 
   // Signal 1: NAP cohérent (téléphone + adresse + nom dans schemas)
@@ -273,10 +295,10 @@ function scoreAuthority(html, jsonLd, headers) {
     detail: null,
   });
 
-  return computeScore(checks);
+  return computeScore(checks, pageKind);
 }
 
-function scoreTrust(html, jsonLd, headers, url) {
+function scoreTrust(html, jsonLd, headers, url, pageKind = 'default') {
   const checks = [];
 
   // Signal 1: HTTPS
@@ -359,14 +381,20 @@ function scoreTrust(html, jsonLd, headers, url) {
     detail: null,
   });
 
-  return computeScore(checks);
+  return computeScore(checks, pageKind);
 }
 
-function computeScore(checks) {
-  const totalWeight = checks.reduce((s, c) => s + c.weight, 0);
-  const earned = checks.reduce((s, c) => s + (c.pass ? c.weight : 0), 0);
-  const score = Math.round((earned / totalWeight) * 100);
-  return { score, checks, totalWeight, earned };
+function computeScore(checks, pageKind) {
+  // Marque les checks N/A pour ce type de page sans les compter dans le score.
+  const annotated = checks.map((c) => {
+    const skip = (SKIP_RULES[c.id] || []).includes(pageKind);
+    return { ...c, skipped: skip };
+  });
+  const considered = annotated.filter((c) => !c.skipped);
+  const totalWeight = considered.reduce((s, c) => s + c.weight, 0);
+  const earned = considered.reduce((s, c) => s + (c.pass ? c.weight : 0), 0);
+  const score = totalWeight > 0 ? Math.round((earned / totalWeight) * 100) : 100;
+  return { score, checks: annotated, totalWeight, earned };
 }
 
 // ============================================================
@@ -386,16 +414,18 @@ async function main() {
       continue;
     }
     const jsonLd = extractJsonLd(html);
-    const experience = scoreExperience(html, jsonLd);
-    const expertise = scoreExpertise(html, jsonLd);
-    const authority = scoreAuthority(html, jsonLd, headers);
-    const trust = scoreTrust(html, jsonLd, headers, fullUrl);
+    const pageKind = PAGE_KIND[urlPath] ?? 'default';
+    const experience = scoreExperience(html, jsonLd, pageKind);
+    const expertise = scoreExpertise(html, jsonLd, pageKind);
+    const authority = scoreAuthority(html, jsonLd, headers, pageKind);
+    const trust = scoreTrust(html, jsonLd, headers, fullUrl, pageKind);
     const global = Math.round(
       (experience.score + expertise.score + authority.score + trust.score) / 4,
     );
     console.log(`E:${experience.score} Ex:${expertise.score} A:${authority.score} T:${trust.score} → ${global}/100`);
     pageResults.push({
       url: urlPath,
+      pageKind,
       jsonLdTypes: jsonLd.types,
       experience,
       expertise,
@@ -460,7 +490,9 @@ function renderMarkdown(pages) {
       lines.push(`| ✓ | Signal | Poids | Détail |`);
       lines.push(`|---|---|---|---|`);
       for (const c of data.checks) {
-        lines.push(`| ${c.pass ? '✅' : '❌'} | ${c.label} | ${c.weight} | ${c.detail ?? '—'} |`);
+        const mark = c.skipped ? '➖ N/A' : c.pass ? '✅' : '❌';
+        const detail = c.skipped ? `non applicable (page ${p.pageKind})` : (c.detail ?? '—');
+        lines.push(`| ${mark} | ${c.label} | ${c.weight} | ${detail} |`);
       }
       lines.push(``);
     }
@@ -473,7 +505,8 @@ function renderMarkdown(pages) {
   for (const p of valid) {
     for (const pillar of ['experience', 'expertise', 'authority', 'trust']) {
       for (const c of p[pillar].checks) {
-        if (!c.pass) {
+        // On ignore les checks N/A pour la page (légale/index) dans les recos
+        if (!c.pass && !c.skipped) {
           failCounts[c.id] = failCounts[c.id] ?? { label: c.label, weight: c.weight, count: 0 };
           failCounts[c.id].count++;
         }

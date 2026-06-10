@@ -10,8 +10,9 @@ import { ZonesDesservies } from '@/components/sections/ZonesDesservies';
 import { Urgence } from '@/components/sections/Urgence';
 import { CTAFinal } from '@/components/sections/CTAFinal';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { getFAQSchema } from '@/lib/seo/schemas';
+import { getFAQSchema, getHowToSchema, getReviewSchemas } from '@/lib/seo/schemas';
 import { FAQ_GENERAL } from '@/data/faq';
+import { AVIS } from '@/data/avis';
 import { requirePage } from '@/lib/pages';
 import { buildMetadata } from '@/lib/seo/metadata';
 
@@ -84,7 +85,53 @@ export default function HomePage() {
 
       <CTAFinal />
 
+      {/* SEO E-E-A-T : Review + HowTo + FAQ enrichissent les signaux
+          Experience + Expertise sur la homepage (cf. seo-audit/eeat-*.md) */}
       <JsonLd data={getFAQSchema(FAQ_GENERAL)} />
+      {getReviewSchemas(
+        AVIS.map((a) => ({
+          author: a.author,
+          rating: a.rating,
+          date: a.date,
+          text: a.text,
+        })),
+      ).map((schema, i) => (
+        <JsonLd key={`review-${i}`} data={schema} />
+      ))}
+      <JsonLd
+        data={getHowToSchema({
+          name: "Comment se déroule un démoussage de toiture en Gironde",
+          description:
+            "Méthode professionnelle Couverture Gironde pour un démoussage durable, du diagnostic au traitement hydrofuge final.",
+          totalTime: "P1D",
+          steps: [
+            {
+              name: "Diagnostic gratuit sur site",
+              text: "Visite technique sans engagement : état général de la couverture, points faibles, accessibilité, photos et mesures précises. Compte rendu remis avec recommandation.",
+            },
+            {
+              name: "Devis détaillé sous 24h",
+              text: "Devis chiffré ligne par ligne, sans ambiguïté : type de prestation, surface, matériel utilisé, garantie. Devis personnalisé adapté à votre toiture.",
+            },
+            {
+              name: "Brossage manuel des zones critiques",
+              text: "Élimination mécanique des mousses installées sur les versants nord, autour des cheminées et des zones ombragées. Pas de pression destructrice : on respecte la tuile.",
+            },
+            {
+              name: "Application du produit anti-mousse",
+              text: "Traitement chimique professionnel longue durée (3-5 ans d'efficacité), adapté au matériau (tuile canal, mécanique, ardoise). Application par pulvérisation basse pression.",
+            },
+            {
+              name: "Rinçage et inspection finale",
+              text: "Rinçage des descentes et des chéneaux, inspection des points sensibles (faîtage, noues, raccords zinc). Photos avant/après remises en fin de chantier.",
+            },
+            {
+              name: "Option : traitement hydrofuge garanti 10 ans",
+              text: "Application d'un hydrofuge incolore ou coloré pour imperméabiliser la couverture, ralentir la recolonisation des mousses et raviver la teinte. Garantie 10 ans.",
+            },
+          ],
+        })}
+      />
     </>
   );
 }
