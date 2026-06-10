@@ -1,0 +1,1614 @@
+{
+  "runAt": "2026-06-10T09:08:11.326Z",
+  "base": "https://www.couverturegironde.fr",
+  "results": [
+    {
+      "url": "/",
+      "jsonLdTypes": [
+        "FAQPage",
+        "Organization",
+        "WebSite",
+        "RoofingContractor"
+      ],
+      "experience": {
+        "score": 75,
+        "checks": [
+          {
+            "id": "EXP-YEARS",
+            "label": "Affiche les années d'expérience",
+            "pass": true,
+            "weight": 10,
+            "detail": "depuis 2005"
+          },
+          {
+            "id": "EXP-REALISATIONS",
+            "label": "Lien vers réalisations / chantiers",
+            "pass": true,
+            "weight": 8,
+            "detail": "18 liens trouvés"
+          },
+          {
+            "id": "EXP-REVIEWS",
+            "label": "Témoignages clients structurés (Review schema)",
+            "pass": false,
+            "weight": 10,
+            "detail": null
+          },
+          {
+            "id": "EXP-RATING",
+            "label": "Note agrégée affichée (AggregateRating)",
+            "pass": true,
+            "weight": 8,
+            "detail": "AggregateRating présent"
+          },
+          {
+            "id": "EXP-REVIEW-COUNT",
+            "label": "Nombre d'avis affiché en clair",
+            "pass": true,
+            "weight": 4,
+            "detail": "54 avis"
+          }
+        ],
+        "totalWeight": 40,
+        "earned": 30
+      },
+      "expertise": {
+        "score": 86,
+        "checks": [
+          {
+            "id": "EXPER-FOUNDER",
+            "label": "Founder Person déclaré dans Organization schema",
+            "pass": true,
+            "weight": 12,
+            "detail": "founder Person trouvé"
+          },
+          {
+            "id": "EXPER-APROPOS",
+            "label": "Lien vers /a-propos visible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "EXPER-CONTENT-DEPTH",
+            "label": "Contenu profond (≥ 1500 mots)",
+            "pass": true,
+            "weight": 10,
+            "detail": "1510 mots"
+          },
+          {
+            "id": "EXPER-VOCABULARY",
+            "label": "Vocabulaire technique métier (≥ 6 termes)",
+            "pass": true,
+            "weight": 8,
+            "detail": "11/12 termes détectés"
+          },
+          {
+            "id": "EXPER-HOWTO",
+            "label": "Schema HowTo (méthode détaillée)",
+            "pass": false,
+            "weight": 6,
+            "detail": null
+          }
+        ],
+        "totalWeight": 42,
+        "earned": 36
+      },
+      "authority": {
+        "score": 86,
+        "checks": [
+          {
+            "id": "AUTH-ORG-SCHEMA",
+            "label": "Organization + LocalBusiness schemas",
+            "pass": true,
+            "weight": 10,
+            "detail": "Schemas complets"
+          },
+          {
+            "id": "AUTH-PHONE",
+            "label": "Téléphone cliquable (tel:)",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "AUTH-ADDRESS",
+            "label": "Adresse postale complète (CP)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-BREADCRUMB",
+            "label": "BreadcrumbList schema",
+            "pass": false,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-EXTERNAL",
+            "label": "Présence externe affichée (WhatsApp / réseaux)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 28,
+        "earned": 24
+      },
+      "trust": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "TRUST-HTTPS",
+            "label": "HTTPS actif",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-HSTS",
+            "label": "HSTS configuré",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-CSP",
+            "label": "Content-Security-Policy",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-LEGAL",
+            "label": "Lien Mentions légales accessible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-RGPD",
+            "label": "Politique de confidentialité / RGPD",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-WARRANTY",
+            "label": "Garantie décennale affichée explicitement",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-PRICING",
+            "label": "Tarification transparente affichée",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-FAQ",
+            "label": "FAQ schema (questions clients anticipées)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 44,
+        "earned": 44
+      },
+      "global": 87
+    },
+    {
+      "url": "/a-propos",
+      "jsonLdTypes": [
+        "BreadcrumbList",
+        "Place",
+        "FAQPage",
+        "Organization",
+        "WebSite",
+        "RoofingContractor"
+      ],
+      "experience": {
+        "score": 55,
+        "checks": [
+          {
+            "id": "EXP-YEARS",
+            "label": "Affiche les années d'expérience",
+            "pass": true,
+            "weight": 10,
+            "detail": "depuis 2005"
+          },
+          {
+            "id": "EXP-REALISATIONS",
+            "label": "Lien vers réalisations / chantiers",
+            "pass": false,
+            "weight": 8,
+            "detail": "0 liens trouvés"
+          },
+          {
+            "id": "EXP-REVIEWS",
+            "label": "Témoignages clients structurés (Review schema)",
+            "pass": false,
+            "weight": 10,
+            "detail": null
+          },
+          {
+            "id": "EXP-RATING",
+            "label": "Note agrégée affichée (AggregateRating)",
+            "pass": true,
+            "weight": 8,
+            "detail": "AggregateRating présent"
+          },
+          {
+            "id": "EXP-REVIEW-COUNT",
+            "label": "Nombre d'avis affiché en clair",
+            "pass": true,
+            "weight": 4,
+            "detail": "54 avis"
+          }
+        ],
+        "totalWeight": 40,
+        "earned": 22
+      },
+      "expertise": {
+        "score": 86,
+        "checks": [
+          {
+            "id": "EXPER-FOUNDER",
+            "label": "Founder Person déclaré dans Organization schema",
+            "pass": true,
+            "weight": 12,
+            "detail": "founder Person trouvé"
+          },
+          {
+            "id": "EXPER-APROPOS",
+            "label": "Lien vers /a-propos visible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "EXPER-CONTENT-DEPTH",
+            "label": "Contenu profond (≥ 1500 mots)",
+            "pass": true,
+            "weight": 10,
+            "detail": "2213 mots"
+          },
+          {
+            "id": "EXPER-VOCABULARY",
+            "label": "Vocabulaire technique métier (≥ 6 termes)",
+            "pass": true,
+            "weight": 8,
+            "detail": "10/12 termes détectés"
+          },
+          {
+            "id": "EXPER-HOWTO",
+            "label": "Schema HowTo (méthode détaillée)",
+            "pass": false,
+            "weight": 6,
+            "detail": null
+          }
+        ],
+        "totalWeight": 42,
+        "earned": 36
+      },
+      "authority": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "AUTH-ORG-SCHEMA",
+            "label": "Organization + LocalBusiness schemas",
+            "pass": true,
+            "weight": 10,
+            "detail": "Schemas complets"
+          },
+          {
+            "id": "AUTH-PHONE",
+            "label": "Téléphone cliquable (tel:)",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "AUTH-ADDRESS",
+            "label": "Adresse postale complète (CP)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-BREADCRUMB",
+            "label": "BreadcrumbList schema",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-EXTERNAL",
+            "label": "Présence externe affichée (WhatsApp / réseaux)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 28,
+        "earned": 28
+      },
+      "trust": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "TRUST-HTTPS",
+            "label": "HTTPS actif",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-HSTS",
+            "label": "HSTS configuré",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-CSP",
+            "label": "Content-Security-Policy",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-LEGAL",
+            "label": "Lien Mentions légales accessible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-RGPD",
+            "label": "Politique de confidentialité / RGPD",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-WARRANTY",
+            "label": "Garantie décennale affichée explicitement",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-PRICING",
+            "label": "Tarification transparente affichée",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-FAQ",
+            "label": "FAQ schema (questions clients anticipées)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 44,
+        "earned": 44
+      },
+      "global": 85
+    },
+    {
+      "url": "/couvreur-bordeaux",
+      "jsonLdTypes": [
+        "BreadcrumbList",
+        "Service",
+        "FAQPage",
+        "HowTo",
+        "Review",
+        "Organization",
+        "WebSite",
+        "RoofingContractor"
+      ],
+      "experience": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "EXP-YEARS",
+            "label": "Affiche les années d'expérience",
+            "pass": true,
+            "weight": 10,
+            "detail": "depuis 2005"
+          },
+          {
+            "id": "EXP-REALISATIONS",
+            "label": "Lien vers réalisations / chantiers",
+            "pass": true,
+            "weight": 8,
+            "detail": "18 liens trouvés"
+          },
+          {
+            "id": "EXP-REVIEWS",
+            "label": "Témoignages clients structurés (Review schema)",
+            "pass": true,
+            "weight": 10,
+            "detail": "Review JSON-LD présent"
+          },
+          {
+            "id": "EXP-RATING",
+            "label": "Note agrégée affichée (AggregateRating)",
+            "pass": true,
+            "weight": 8,
+            "detail": "AggregateRating présent"
+          },
+          {
+            "id": "EXP-REVIEW-COUNT",
+            "label": "Nombre d'avis affiché en clair",
+            "pass": true,
+            "weight": 4,
+            "detail": "5 avis"
+          }
+        ],
+        "totalWeight": 40,
+        "earned": 40
+      },
+      "expertise": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "EXPER-FOUNDER",
+            "label": "Founder Person déclaré dans Organization schema",
+            "pass": true,
+            "weight": 12,
+            "detail": "founder Person trouvé"
+          },
+          {
+            "id": "EXPER-APROPOS",
+            "label": "Lien vers /a-propos visible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "EXPER-CONTENT-DEPTH",
+            "label": "Contenu profond (≥ 1500 mots)",
+            "pass": true,
+            "weight": 10,
+            "detail": "2167 mots"
+          },
+          {
+            "id": "EXPER-VOCABULARY",
+            "label": "Vocabulaire technique métier (≥ 6 termes)",
+            "pass": true,
+            "weight": 8,
+            "detail": "11/12 termes détectés"
+          },
+          {
+            "id": "EXPER-HOWTO",
+            "label": "Schema HowTo (méthode détaillée)",
+            "pass": true,
+            "weight": 6,
+            "detail": "HowTo JSON-LD"
+          }
+        ],
+        "totalWeight": 42,
+        "earned": 42
+      },
+      "authority": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "AUTH-ORG-SCHEMA",
+            "label": "Organization + LocalBusiness schemas",
+            "pass": true,
+            "weight": 10,
+            "detail": "Schemas complets"
+          },
+          {
+            "id": "AUTH-PHONE",
+            "label": "Téléphone cliquable (tel:)",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "AUTH-ADDRESS",
+            "label": "Adresse postale complète (CP)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-BREADCRUMB",
+            "label": "BreadcrumbList schema",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-EXTERNAL",
+            "label": "Présence externe affichée (WhatsApp / réseaux)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 28,
+        "earned": 28
+      },
+      "trust": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "TRUST-HTTPS",
+            "label": "HTTPS actif",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-HSTS",
+            "label": "HSTS configuré",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-CSP",
+            "label": "Content-Security-Policy",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-LEGAL",
+            "label": "Lien Mentions légales accessible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-RGPD",
+            "label": "Politique de confidentialité / RGPD",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-WARRANTY",
+            "label": "Garantie décennale affichée explicitement",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-PRICING",
+            "label": "Tarification transparente affichée",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-FAQ",
+            "label": "FAQ schema (questions clients anticipées)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 44,
+        "earned": 44
+      },
+      "global": 100
+    },
+    {
+      "url": "/couvreur-gironde",
+      "jsonLdTypes": [
+        "BreadcrumbList",
+        "Service",
+        "FAQPage",
+        "HowTo",
+        "Review",
+        "Organization",
+        "WebSite",
+        "RoofingContractor"
+      ],
+      "experience": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "EXP-YEARS",
+            "label": "Affiche les années d'expérience",
+            "pass": true,
+            "weight": 10,
+            "detail": "depuis 2005"
+          },
+          {
+            "id": "EXP-REALISATIONS",
+            "label": "Lien vers réalisations / chantiers",
+            "pass": true,
+            "weight": 8,
+            "detail": "18 liens trouvés"
+          },
+          {
+            "id": "EXP-REVIEWS",
+            "label": "Témoignages clients structurés (Review schema)",
+            "pass": true,
+            "weight": 10,
+            "detail": "Review JSON-LD présent"
+          },
+          {
+            "id": "EXP-RATING",
+            "label": "Note agrégée affichée (AggregateRating)",
+            "pass": true,
+            "weight": 8,
+            "detail": "AggregateRating présent"
+          },
+          {
+            "id": "EXP-REVIEW-COUNT",
+            "label": "Nombre d'avis affiché en clair",
+            "pass": true,
+            "weight": 4,
+            "detail": "54 avis"
+          }
+        ],
+        "totalWeight": 40,
+        "earned": 40
+      },
+      "expertise": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "EXPER-FOUNDER",
+            "label": "Founder Person déclaré dans Organization schema",
+            "pass": true,
+            "weight": 12,
+            "detail": "founder Person trouvé"
+          },
+          {
+            "id": "EXPER-APROPOS",
+            "label": "Lien vers /a-propos visible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "EXPER-CONTENT-DEPTH",
+            "label": "Contenu profond (≥ 1500 mots)",
+            "pass": true,
+            "weight": 10,
+            "detail": "2227 mots"
+          },
+          {
+            "id": "EXPER-VOCABULARY",
+            "label": "Vocabulaire technique métier (≥ 6 termes)",
+            "pass": true,
+            "weight": 8,
+            "detail": "11/12 termes détectés"
+          },
+          {
+            "id": "EXPER-HOWTO",
+            "label": "Schema HowTo (méthode détaillée)",
+            "pass": true,
+            "weight": 6,
+            "detail": "HowTo JSON-LD"
+          }
+        ],
+        "totalWeight": 42,
+        "earned": 42
+      },
+      "authority": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "AUTH-ORG-SCHEMA",
+            "label": "Organization + LocalBusiness schemas",
+            "pass": true,
+            "weight": 10,
+            "detail": "Schemas complets"
+          },
+          {
+            "id": "AUTH-PHONE",
+            "label": "Téléphone cliquable (tel:)",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "AUTH-ADDRESS",
+            "label": "Adresse postale complète (CP)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-BREADCRUMB",
+            "label": "BreadcrumbList schema",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-EXTERNAL",
+            "label": "Présence externe affichée (WhatsApp / réseaux)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 28,
+        "earned": 28
+      },
+      "trust": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "TRUST-HTTPS",
+            "label": "HTTPS actif",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-HSTS",
+            "label": "HSTS configuré",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-CSP",
+            "label": "Content-Security-Policy",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-LEGAL",
+            "label": "Lien Mentions légales accessible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-RGPD",
+            "label": "Politique de confidentialité / RGPD",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-WARRANTY",
+            "label": "Garantie décennale affichée explicitement",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-PRICING",
+            "label": "Tarification transparente affichée",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-FAQ",
+            "label": "FAQ schema (questions clients anticipées)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 44,
+        "earned": 44
+      },
+      "global": 100
+    },
+    {
+      "url": "/tarifs",
+      "jsonLdTypes": [
+        "BreadcrumbList",
+        "FAQPage",
+        "OfferCatalog",
+        "Organization",
+        "WebSite",
+        "RoofingContractor"
+      ],
+      "experience": {
+        "score": 55,
+        "checks": [
+          {
+            "id": "EXP-YEARS",
+            "label": "Affiche les années d'expérience",
+            "pass": true,
+            "weight": 10,
+            "detail": "depuis 2005"
+          },
+          {
+            "id": "EXP-REALISATIONS",
+            "label": "Lien vers réalisations / chantiers",
+            "pass": false,
+            "weight": 8,
+            "detail": "0 liens trouvés"
+          },
+          {
+            "id": "EXP-REVIEWS",
+            "label": "Témoignages clients structurés (Review schema)",
+            "pass": false,
+            "weight": 10,
+            "detail": null
+          },
+          {
+            "id": "EXP-RATING",
+            "label": "Note agrégée affichée (AggregateRating)",
+            "pass": true,
+            "weight": 8,
+            "detail": "AggregateRating présent"
+          },
+          {
+            "id": "EXP-REVIEW-COUNT",
+            "label": "Nombre d'avis affiché en clair",
+            "pass": true,
+            "weight": 4,
+            "detail": "54 avis"
+          }
+        ],
+        "totalWeight": 40,
+        "earned": 22
+      },
+      "expertise": {
+        "score": 62,
+        "checks": [
+          {
+            "id": "EXPER-FOUNDER",
+            "label": "Founder Person déclaré dans Organization schema",
+            "pass": true,
+            "weight": 12,
+            "detail": "founder Person trouvé"
+          },
+          {
+            "id": "EXPER-APROPOS",
+            "label": "Lien vers /a-propos visible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "EXPER-CONTENT-DEPTH",
+            "label": "Contenu profond (≥ 1500 mots)",
+            "pass": false,
+            "weight": 10,
+            "detail": "1295 mots"
+          },
+          {
+            "id": "EXPER-VOCABULARY",
+            "label": "Vocabulaire technique métier (≥ 6 termes)",
+            "pass": true,
+            "weight": 8,
+            "detail": "11/12 termes détectés"
+          },
+          {
+            "id": "EXPER-HOWTO",
+            "label": "Schema HowTo (méthode détaillée)",
+            "pass": false,
+            "weight": 6,
+            "detail": null
+          }
+        ],
+        "totalWeight": 42,
+        "earned": 26
+      },
+      "authority": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "AUTH-ORG-SCHEMA",
+            "label": "Organization + LocalBusiness schemas",
+            "pass": true,
+            "weight": 10,
+            "detail": "Schemas complets"
+          },
+          {
+            "id": "AUTH-PHONE",
+            "label": "Téléphone cliquable (tel:)",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "AUTH-ADDRESS",
+            "label": "Adresse postale complète (CP)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-BREADCRUMB",
+            "label": "BreadcrumbList schema",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-EXTERNAL",
+            "label": "Présence externe affichée (WhatsApp / réseaux)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 28,
+        "earned": 28
+      },
+      "trust": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "TRUST-HTTPS",
+            "label": "HTTPS actif",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-HSTS",
+            "label": "HSTS configuré",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-CSP",
+            "label": "Content-Security-Policy",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-LEGAL",
+            "label": "Lien Mentions légales accessible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-RGPD",
+            "label": "Politique de confidentialité / RGPD",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-WARRANTY",
+            "label": "Garantie décennale affichée explicitement",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-PRICING",
+            "label": "Tarification transparente affichée",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-FAQ",
+            "label": "FAQ schema (questions clients anticipées)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 44,
+        "earned": 44
+      },
+      "global": 79
+    },
+    {
+      "url": "/urgence-fuite-toiture-bordeaux",
+      "jsonLdTypes": [
+        "BreadcrumbList",
+        "Service",
+        "FAQPage",
+        "HowTo",
+        "Review",
+        "Organization",
+        "WebSite",
+        "RoofingContractor"
+      ],
+      "experience": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "EXP-YEARS",
+            "label": "Affiche les années d'expérience",
+            "pass": true,
+            "weight": 10,
+            "detail": "depuis 2005"
+          },
+          {
+            "id": "EXP-REALISATIONS",
+            "label": "Lien vers réalisations / chantiers",
+            "pass": true,
+            "weight": 8,
+            "detail": "18 liens trouvés"
+          },
+          {
+            "id": "EXP-REVIEWS",
+            "label": "Témoignages clients structurés (Review schema)",
+            "pass": true,
+            "weight": 10,
+            "detail": "Review JSON-LD présent"
+          },
+          {
+            "id": "EXP-RATING",
+            "label": "Note agrégée affichée (AggregateRating)",
+            "pass": true,
+            "weight": 8,
+            "detail": "AggregateRating présent"
+          },
+          {
+            "id": "EXP-REVIEW-COUNT",
+            "label": "Nombre d'avis affiché en clair",
+            "pass": true,
+            "weight": 4,
+            "detail": "54 avis"
+          }
+        ],
+        "totalWeight": 40,
+        "earned": 40
+      },
+      "expertise": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "EXPER-FOUNDER",
+            "label": "Founder Person déclaré dans Organization schema",
+            "pass": true,
+            "weight": 12,
+            "detail": "founder Person trouvé"
+          },
+          {
+            "id": "EXPER-APROPOS",
+            "label": "Lien vers /a-propos visible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "EXPER-CONTENT-DEPTH",
+            "label": "Contenu profond (≥ 1500 mots)",
+            "pass": true,
+            "weight": 10,
+            "detail": "1729 mots"
+          },
+          {
+            "id": "EXPER-VOCABULARY",
+            "label": "Vocabulaire technique métier (≥ 6 termes)",
+            "pass": true,
+            "weight": 8,
+            "detail": "11/12 termes détectés"
+          },
+          {
+            "id": "EXPER-HOWTO",
+            "label": "Schema HowTo (méthode détaillée)",
+            "pass": true,
+            "weight": 6,
+            "detail": "HowTo JSON-LD"
+          }
+        ],
+        "totalWeight": 42,
+        "earned": 42
+      },
+      "authority": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "AUTH-ORG-SCHEMA",
+            "label": "Organization + LocalBusiness schemas",
+            "pass": true,
+            "weight": 10,
+            "detail": "Schemas complets"
+          },
+          {
+            "id": "AUTH-PHONE",
+            "label": "Téléphone cliquable (tel:)",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "AUTH-ADDRESS",
+            "label": "Adresse postale complète (CP)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-BREADCRUMB",
+            "label": "BreadcrumbList schema",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-EXTERNAL",
+            "label": "Présence externe affichée (WhatsApp / réseaux)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 28,
+        "earned": 28
+      },
+      "trust": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "TRUST-HTTPS",
+            "label": "HTTPS actif",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-HSTS",
+            "label": "HSTS configuré",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-CSP",
+            "label": "Content-Security-Policy",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-LEGAL",
+            "label": "Lien Mentions légales accessible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-RGPD",
+            "label": "Politique de confidentialité / RGPD",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-WARRANTY",
+            "label": "Garantie décennale affichée explicitement",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-PRICING",
+            "label": "Tarification transparente affichée",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-FAQ",
+            "label": "FAQ schema (questions clients anticipées)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 44,
+        "earned": 44
+      },
+      "global": 100
+    },
+    {
+      "url": "/realisations",
+      "jsonLdTypes": [
+        "BreadcrumbList",
+        "Organization",
+        "WebSite",
+        "RoofingContractor"
+      ],
+      "experience": {
+        "score": 75,
+        "checks": [
+          {
+            "id": "EXP-YEARS",
+            "label": "Affiche les années d'expérience",
+            "pass": true,
+            "weight": 10,
+            "detail": "depuis 2005"
+          },
+          {
+            "id": "EXP-REALISATIONS",
+            "label": "Lien vers réalisations / chantiers",
+            "pass": true,
+            "weight": 8,
+            "detail": "20 liens trouvés"
+          },
+          {
+            "id": "EXP-REVIEWS",
+            "label": "Témoignages clients structurés (Review schema)",
+            "pass": false,
+            "weight": 10,
+            "detail": null
+          },
+          {
+            "id": "EXP-RATING",
+            "label": "Note agrégée affichée (AggregateRating)",
+            "pass": true,
+            "weight": 8,
+            "detail": "AggregateRating présent"
+          },
+          {
+            "id": "EXP-REVIEW-COUNT",
+            "label": "Nombre d'avis affiché en clair",
+            "pass": true,
+            "weight": 4,
+            "detail": "54 avis"
+          }
+        ],
+        "totalWeight": 40,
+        "earned": 30
+      },
+      "expertise": {
+        "score": 62,
+        "checks": [
+          {
+            "id": "EXPER-FOUNDER",
+            "label": "Founder Person déclaré dans Organization schema",
+            "pass": true,
+            "weight": 12,
+            "detail": "founder Person trouvé"
+          },
+          {
+            "id": "EXPER-APROPOS",
+            "label": "Lien vers /a-propos visible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "EXPER-CONTENT-DEPTH",
+            "label": "Contenu profond (≥ 1500 mots)",
+            "pass": false,
+            "weight": 10,
+            "detail": "1075 mots"
+          },
+          {
+            "id": "EXPER-VOCABULARY",
+            "label": "Vocabulaire technique métier (≥ 6 termes)",
+            "pass": true,
+            "weight": 8,
+            "detail": "11/12 termes détectés"
+          },
+          {
+            "id": "EXPER-HOWTO",
+            "label": "Schema HowTo (méthode détaillée)",
+            "pass": false,
+            "weight": 6,
+            "detail": null
+          }
+        ],
+        "totalWeight": 42,
+        "earned": 26
+      },
+      "authority": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "AUTH-ORG-SCHEMA",
+            "label": "Organization + LocalBusiness schemas",
+            "pass": true,
+            "weight": 10,
+            "detail": "Schemas complets"
+          },
+          {
+            "id": "AUTH-PHONE",
+            "label": "Téléphone cliquable (tel:)",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "AUTH-ADDRESS",
+            "label": "Adresse postale complète (CP)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-BREADCRUMB",
+            "label": "BreadcrumbList schema",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-EXTERNAL",
+            "label": "Présence externe affichée (WhatsApp / réseaux)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 28,
+        "earned": 28
+      },
+      "trust": {
+        "score": 91,
+        "checks": [
+          {
+            "id": "TRUST-HTTPS",
+            "label": "HTTPS actif",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-HSTS",
+            "label": "HSTS configuré",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-CSP",
+            "label": "Content-Security-Policy",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-LEGAL",
+            "label": "Lien Mentions légales accessible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-RGPD",
+            "label": "Politique de confidentialité / RGPD",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-WARRANTY",
+            "label": "Garantie décennale affichée explicitement",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-PRICING",
+            "label": "Tarification transparente affichée",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-FAQ",
+            "label": "FAQ schema (questions clients anticipées)",
+            "pass": false,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 44,
+        "earned": 40
+      },
+      "global": 82
+    },
+    {
+      "url": "/mentions-legales",
+      "jsonLdTypes": [
+        "BreadcrumbList",
+        "Organization",
+        "WebSite",
+        "RoofingContractor"
+      ],
+      "experience": {
+        "score": 55,
+        "checks": [
+          {
+            "id": "EXP-YEARS",
+            "label": "Affiche les années d'expérience",
+            "pass": true,
+            "weight": 10,
+            "detail": "depuis 2005"
+          },
+          {
+            "id": "EXP-REALISATIONS",
+            "label": "Lien vers réalisations / chantiers",
+            "pass": false,
+            "weight": 8,
+            "detail": "0 liens trouvés"
+          },
+          {
+            "id": "EXP-REVIEWS",
+            "label": "Témoignages clients structurés (Review schema)",
+            "pass": false,
+            "weight": 10,
+            "detail": null
+          },
+          {
+            "id": "EXP-RATING",
+            "label": "Note agrégée affichée (AggregateRating)",
+            "pass": true,
+            "weight": 8,
+            "detail": "AggregateRating présent"
+          },
+          {
+            "id": "EXP-REVIEW-COUNT",
+            "label": "Nombre d'avis affiché en clair",
+            "pass": true,
+            "weight": 4,
+            "detail": "5 avis"
+          }
+        ],
+        "totalWeight": 40,
+        "earned": 22
+      },
+      "expertise": {
+        "score": 62,
+        "checks": [
+          {
+            "id": "EXPER-FOUNDER",
+            "label": "Founder Person déclaré dans Organization schema",
+            "pass": true,
+            "weight": 12,
+            "detail": "founder Person trouvé"
+          },
+          {
+            "id": "EXPER-APROPOS",
+            "label": "Lien vers /a-propos visible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "EXPER-CONTENT-DEPTH",
+            "label": "Contenu profond (≥ 1500 mots)",
+            "pass": false,
+            "weight": 10,
+            "detail": "460 mots"
+          },
+          {
+            "id": "EXPER-VOCABULARY",
+            "label": "Vocabulaire technique métier (≥ 6 termes)",
+            "pass": true,
+            "weight": 8,
+            "detail": "9/12 termes détectés"
+          },
+          {
+            "id": "EXPER-HOWTO",
+            "label": "Schema HowTo (méthode détaillée)",
+            "pass": false,
+            "weight": 6,
+            "detail": null
+          }
+        ],
+        "totalWeight": 42,
+        "earned": 26
+      },
+      "authority": {
+        "score": 100,
+        "checks": [
+          {
+            "id": "AUTH-ORG-SCHEMA",
+            "label": "Organization + LocalBusiness schemas",
+            "pass": true,
+            "weight": 10,
+            "detail": "Schemas complets"
+          },
+          {
+            "id": "AUTH-PHONE",
+            "label": "Téléphone cliquable (tel:)",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "AUTH-ADDRESS",
+            "label": "Adresse postale complète (CP)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-BREADCRUMB",
+            "label": "BreadcrumbList schema",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "AUTH-EXTERNAL",
+            "label": "Présence externe affichée (WhatsApp / réseaux)",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 28,
+        "earned": 28
+      },
+      "trust": {
+        "score": 91,
+        "checks": [
+          {
+            "id": "TRUST-HTTPS",
+            "label": "HTTPS actif",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-HSTS",
+            "label": "HSTS configuré",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-CSP",
+            "label": "Content-Security-Policy",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-LEGAL",
+            "label": "Lien Mentions légales accessible",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-RGPD",
+            "label": "Politique de confidentialité / RGPD",
+            "pass": true,
+            "weight": 4,
+            "detail": null
+          },
+          {
+            "id": "TRUST-WARRANTY",
+            "label": "Garantie décennale affichée explicitement",
+            "pass": true,
+            "weight": 8,
+            "detail": null
+          },
+          {
+            "id": "TRUST-PRICING",
+            "label": "Tarification transparente affichée",
+            "pass": true,
+            "weight": 6,
+            "detail": null
+          },
+          {
+            "id": "TRUST-FAQ",
+            "label": "FAQ schema (questions clients anticipées)",
+            "pass": false,
+            "weight": 4,
+            "detail": null
+          }
+        ],
+        "totalWeight": 44,
+        "earned": 40
+      },
+      "global": 77
+    }
+  ]
+}

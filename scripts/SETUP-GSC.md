@@ -8,7 +8,17 @@ Ce dossier est dans le `.gitignore`. Il contient les secrets nécessaires aux sc
 
 Clé JSON du service account Google Cloud utilisé par `scripts/gsc-pull.mjs` pour lire l'API Search Console.
 
-## Setup étape par étape
+### `psi-api-key.txt` (optionnel — pour `npm run seo:cwv`)
+
+Une seule ligne avec la clé API PageSpeed Insights. Sans clé, le quota anonyme est ~25 req/jour. Avec clé, 25 000 req/jour gratuites.
+
+Setup (2 minutes) :
+1. https://console.cloud.google.com/apis/library/pagespeedonline.googleapis.com?project=couverture-gironde
+2. Clic **ACTIVER**
+3. Menu **APIs & Services → Identifiants → CRÉER DES IDENTIFIANTS → Clé API**
+4. Copie la clé dans `_secrets/psi-api-key.txt`
+
+## Setup étape par étape (Search Console)
 
 ### 1. Activer l'API Google Search Console
 
