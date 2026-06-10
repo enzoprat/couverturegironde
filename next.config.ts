@@ -170,6 +170,12 @@ const nextConfig: NextConfig = {
         destination: '/couvreur-gironde',
         permanent: true,
       },
+      // Sprint 2 communes : variante "le bouscat" (avec article) → bouscat (slug court)
+      {
+        source: '/couvreur-le-bouscat',
+        destination: '/couvreur-bouscat',
+        permanent: true,
+      },
     ];
   },
 };

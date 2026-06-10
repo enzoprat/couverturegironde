@@ -152,6 +152,8 @@ export const LOCATIONS: Record<string, LocationDefinition> = {
   bouscat: {
     slug: 'bouscat',
     name: 'Le Bouscat',
+    // Forme contractée pour "à + Le Bouscat" = "au Bouscat" (grammaire FR).
+    // Utilisé dans les phrases courantes ("intervention au Bouscat").
     nameInflected: 'Le Bouscat',
     postalCode: '33110',
     inseeCode: '33069',
@@ -192,6 +194,36 @@ export const LOCATIONS: Record<string, LocationDefinition> = {
     geo: { lat: 44.8856, lng: -0.6486 },
     neighbors: ['bouscat', 'merignac', 'bruges', 'saint-medard-en-jalles'],
     distanceFromMerignac: 4,
+    tier: 2,
+  },
+  arcachon: {
+    slug: 'arcachon',
+    name: 'Arcachon',
+    nameInflected: 'Arcachon',
+    postalCode: '33120',
+    inseeCode: '33009',
+    population: 11000,
+    quartiers: ['Ville d\u2019Hiver', 'Pereire', 'Le Moulleau', 'Aiguillon', 'Abatilles'],
+    habitatNotes:
+      "Bâti balnéaire : villas Belle Époque protégées dans la Ville d'Hiver, maisons ostréicoles, pavillons contemporains. Air salin agressif sur la zinguerie : préférer zinc patiné/pré-oxydé ou alliage marine.",
+    geo: { lat: 44.6582, lng: -1.1684 },
+    neighbors: [],
+    distanceFromMerignac: 60,
+    tier: 2,
+  },
+  libourne: {
+    slug: 'libourne',
+    name: 'Libourne',
+    nameInflected: 'Libourne',
+    postalCode: '33500',
+    inseeCode: '33243',
+    population: 25000,
+    quartiers: ['Centre', 'Sud', 'Gare', 'Verdet'],
+    habitatNotes:
+      "Bâti girondin : maisons en pierre et tuile romane/canal, échoppes typiques du Libournais, châteaux viticoles environnants. Sensibilité aux orages d'été et coups de vent sur faîtage et zinguerie.",
+    geo: { lat: 44.9133, lng: -0.2436 },
+    neighbors: [],
+    distanceFromMerignac: 45,
     tier: 2,
   },
 };
