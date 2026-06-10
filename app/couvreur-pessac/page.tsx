@@ -149,6 +149,66 @@ export default function Page() {
             note: 'Selon matériau : tuile, ardoise, zinc',
           },
         ],
+        reparationFuite: {
+          intro: (
+            <>
+              <p>
+                Une fuite de toiture à Pessac est presque toujours une urgence
+                à traiter dans les 24 à 48 heures pour éviter l'aggravation des
+                dégâts en sous-face : isolant gorgé d'eau, plaques de plâtre
+                qui s'effondrent, charpente fragilisée. Nous intervenons sur
+                Pessac <strong>chaque jour</strong> pour des urgences fuite, et
+                la proximité de notre atelier (7 km à Mérignac) permet une
+                <strong> mise hors d'eau en 30 à 60 minutes</strong> en heures
+                ouvrées.
+              </p>
+              <p>
+                La majorité des fuites pessacaises que nous traitons concernent
+                les <strong>versants nord</strong> exposés au couvert arboré
+                dense de la commune (Saige, Bourgailh, secteur universitaire),
+                les <strong>joints de faîtage</strong> dégradés sur le bâti
+                ancien du centre, et les <strong>noues zinc</strong> fatiguées
+                sur les villas Cap-de-Bos. Nous procédons toujours dans cet
+                ordre : sécurisation + bâche, diagnostic précis, devis
+                réparation détaillé sous 48h, puis exécution une fois validé.
+              </p>
+            </>
+          ),
+          casTypiques: [
+            {
+              title: 'Tuile cassée par chute de branche',
+              description:
+                "Très fréquent sous le couvert arboré pessacais. Diagnostic en 30 min, remplacement de la tuile et inspection des tuiles adjacentes pour anticiper de futures fissures.",
+            },
+            {
+              title: 'Joint de faîtage défaillant',
+              description:
+                "Sur le bâti ancien du centre, le mortier ciment dur fissure avec les cycles gel-dégel. Reprise au mortier chaux compatible bâti ancien.",
+            },
+            {
+              title: 'Noue zinc percée',
+              description:
+                "Zone critique d'évacuation d'eau. Soudure étain in situ si la noue est encore récupérable, sinon remplacement complet avec zinc de qualité.",
+            },
+            {
+              title: 'Faîtage envolé après tempête',
+              description:
+                "Sécurisation immédiate par bâche, dossier assurance constitué (photos + devis), réfection de faîtage scellé chaux ou à sec selon configuration.",
+            },
+            {
+              title: 'Infiltration autour de Velux',
+              description:
+                "Reprise du raccord d'étanchéité périphérique. Si le Velux a plus de 20 ans, devis de remplacement complet en parallèle (plus durable).",
+            },
+            {
+              title: 'Débordement de gouttière à la jonction',
+              description:
+                "Bouchage par feuilles d'automne ou raccord descellé. Nettoyage des descentes + reprise du raccord soudé étain.",
+            },
+          ],
+          tarifIndicatif:
+            "Mise hors d'eau : 250 – 600 € · Réparation définitive sur devis",
+        },
         faqLocale: [
           {
             question: 'Quel est votre délai d\u2019intervention à Pessac ?',
