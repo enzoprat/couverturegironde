@@ -431,6 +431,51 @@ const STATIC_PAGES: PageEntry[] = [
     footerSection: 'villes',
     indexable: true,
   },
+  // === Sprint 3.2 : sub-quartiers Bordeaux (juin 2026, audit Autocomplete) ===
+  {
+    slug: 'couvreur-bordeaux-centre',
+    path: '/couvreur-bordeaux-centre',
+    type: 'ville',
+    ville: 'bordeaux',
+    title: 'Couvreur Bordeaux Centre',
+    seoTitle: 'Couvreur Bordeaux Centre : échoppes, ABF | 5/5 (54 avis)',
+    seoDescription:
+      "Couvreur à Bordeaux Centre depuis 2005 : échoppes, hôtels particuliers, ABF, tuile canal. Démoussage, réparation, urgence 7j/7. Note 5/5 (54 avis). Devis 24h.",
+    indexable: true,
+  },
+  {
+    slug: 'couvreur-bordeaux-chartrons',
+    path: '/couvreur-bordeaux-chartrons',
+    type: 'ville',
+    ville: 'bordeaux',
+    title: 'Couvreur Bordeaux Chartrons',
+    seoTitle: 'Couvreur Bordeaux Chartrons : ardoise, ABF | 5/5 (54 avis)',
+    seoDescription:
+      "Couvreur Bordeaux Chartrons depuis 2005 : ardoise, hôtels particuliers, quai des Chartrons, secteur ABF. Démoussage, réparation. Note 5/5 (54 avis). Devis 24h.",
+    indexable: true,
+  },
+  {
+    slug: 'couvreur-bordeaux-rive-droite',
+    path: '/couvreur-bordeaux-rive-droite',
+    type: 'ville',
+    ville: 'bordeaux',
+    title: 'Couvreur Bordeaux Rive Droite',
+    seoTitle: 'Couvreur Bordeaux Rive Droite Bastide | 5/5 (54 avis)',
+    seoDescription:
+      "Couvreur Bordeaux Rive Droite depuis 2005 : Bastide, Brazza, Niel, Benauge. Démoussage, réparation toiture, zinguerie, urgence 7j/7. Note 5/5 (54 avis). Devis 24h.",
+    indexable: true,
+  },
+  {
+    slug: 'couvreur-bordeaux-lac',
+    path: '/couvreur-bordeaux-lac',
+    type: 'ville',
+    ville: 'bordeaux',
+    title: 'Couvreur Bordeaux Lac',
+    seoTitle: 'Couvreur Bordeaux Lac : toitures terrasses | 5/5 (54 avis)',
+    seoDescription:
+      "Couvreur Bordeaux Lac depuis 2005 : Quartier des Bassins à flot, Ginko, toits-terrasses copropriétés, étanchéité. Note 5/5 (54 avis). Devis 24h.",
+    indexable: true,
+  },
   {
     slug: 'nettoyage-toiture-pessac',
     path: '/nettoyage-toiture-pessac',
