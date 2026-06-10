@@ -60,9 +60,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     });
   }
   const service = SERVICES[realisation.service as keyof typeof SERVICES];
+  // Description trimée pour ne pas dépasser ~180 chars (limite SERP Google).
+  // La description chantier brute peut faire 200-280 chars : on tronque puis
+  // on ajoute un suffixe ville/service court.
+  const suffix = `. ${service?.name ?? 'Toiture'} à ${realisation.villeName} par Couverture Gironde.`;
+  const maxBase = 180 - suffix.length;
+  const baseDesc = realisation.description.length > maxBase
+    ? realisation.description.slice(0, maxBase - 1).replace(/[\s,.;:]+$/, '') + '…'
+    : realisation.description;
+  // Le title brut "Réfection complète toiture bâtisse ancienne à Villenave-d'Ornon"
+  // peut déjà faire 65+ chars. Pas de suffixe brand ici (déjà implicite via le
+  // contexte SERP + brandée par couvreur).
   return buildMetadata({
-    title: `${realisation.title} à ${realisation.villeName}, Couverture Gironde`,
-    description: `${realisation.description} Couverture Gironde, artisan couvreur depuis 2005 sur Bordeaux Métropole. ${service?.name ?? 'Toiture'} à ${realisation.villeName}.`,
+    title: `${realisation.title} à ${realisation.villeName}`,
+    description: `${baseDesc}${suffix}`,
     path: `/realisations/${realisation.slug}`,
     type: 'article',
   });

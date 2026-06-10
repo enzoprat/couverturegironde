@@ -9,7 +9,11 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "seo:gsc": "node scripts/gsc-pull.mjs",
-    "seo:gsc:auth": "node scripts/gsc-auth.mjs"
+    "seo:gsc:auth": "node scripts/gsc-auth.mjs",
+    "seo:crawl": "node scripts/seo-crawler.mjs",
+    "seo:autocomplete": "node scripts/seo-autocomplete.mjs",
+    "seo:quickwins": "node scripts/seo-quickwins.mjs",
+    "seo:matrix": "node scripts/seo-matrix.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
