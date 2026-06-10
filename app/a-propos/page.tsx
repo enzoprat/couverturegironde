@@ -15,11 +15,13 @@ import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Reassurance } from '@/components/sections/Reassurance';
 import { ChiffresCles } from '@/components/sections/ChiffresCles';
 import { AvisGoogle } from '@/components/sections/AvisGoogle';
+import { RealisationsCarousel } from '@/components/sections/RealisationsCarousel';
 import { CTAFinal } from '@/components/sections/CTAFinal';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { getFAQSchema, getPlaceSchema } from '@/lib/seo/schemas';
+import { getFAQSchema, getPlaceSchema, getReviewSchemas } from '@/lib/seo/schemas';
 import { FAQ } from '@/components/sections/FAQ';
 import { FAQ_APROPOS } from '@/data/faq';
+import { AVIS } from '@/data/avis';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
 import { NAP, SITE, TRUST } from '@/lib/constants';
@@ -561,6 +563,12 @@ export default function Page() {
         intro="La satisfaction client est notre meilleure publicité. Voici quelques témoignages récents."
       />
 
+      <RealisationsCarousel
+        eyebrow="Nos chantiers récents"
+        title="Quelques réalisations en Gironde"
+        intro="Démoussage, nettoyage, réparation, zinguerie : nos derniers chantiers sur Bordeaux Métropole et le département."
+      />
+
       <Reassurance />
 
       <FAQ
@@ -578,6 +586,17 @@ export default function Page() {
 
       <JsonLd data={getPlaceSchema()} />
       <JsonLd data={getFAQSchema(FAQ_APROPOS)} />
+      {/* Review schemas — signaux Experience pour E-E-A-T (cf. seo-audit/eeat-*.md) */}
+      {getReviewSchemas(
+        AVIS.map((a) => ({
+          author: a.author,
+          rating: a.rating,
+          date: a.date,
+          text: a.text,
+        })),
+      ).map((schema, i) => (
+        <JsonLd key={`review-${i}`} data={schema} />
+      ))}
     </>
   );
 }

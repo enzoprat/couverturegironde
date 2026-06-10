@@ -8,10 +8,11 @@ import { Reassurance } from '@/components/sections/Reassurance';
 import { FAQ } from '@/components/sections/FAQ';
 import { CTAFinal } from '@/components/sections/CTAFinal';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { getFAQSchema, getPriceCatalogSchema } from '@/lib/seo/schemas';
+import { getFAQSchema, getPriceCatalogSchema, getReviewSchemas } from '@/lib/seo/schemas';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
 import { SITE } from '@/lib/constants';
+import { AVIS } from '@/data/avis';
 
 const PAGE = requirePage('tarifs');
 
@@ -333,6 +334,17 @@ export default function Page() {
       <JsonLd
         data={getPriceCatalogSchema(TARIF_SECTIONS, `${SITE.url}${PAGE.path}`)}
       />
+      {/* Review schemas — preuve sociale couplée aux tarifs (E-E-A-T) */}
+      {getReviewSchemas(
+        AVIS.map((a) => ({
+          author: a.author,
+          rating: a.rating,
+          date: a.date,
+          text: a.text,
+        })),
+      ).map((schema, i) => (
+        <JsonLd key={`review-${i}`} data={schema} />
+      ))}
     </>
   );
 }
