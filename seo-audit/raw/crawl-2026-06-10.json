@@ -1,0 +1,4732 @@
+{
+  "summary": {
+    "base": "http://localhost:53385",
+    "runAt": "2026-06-10T04:59:42.146Z",
+    "totalAnalyzed": 40,
+    "fromSitemap": 40,
+    "discoveredByLinks": 0,
+    "statusCounts": {
+      "200": 40
+    },
+    "issuesBySeverity": {
+      "high": 2,
+      "medium": 1,
+      "low": 80,
+      "info": 0
+    },
+    "issuesByCode": {
+      "CANONICAL_DIFFERS": 40,
+      "IMG_MISSING_ALT": 40,
+      "DESC_TOO_SHORT": 1,
+      "TITLE_TOO_LONG": 2
+    },
+    "jsonLdTypes": {
+      "FAQPage": 26,
+      "Organization": 40,
+      "WebSite": 40,
+      "RoofingContractor": 40,
+      "BreadcrumbList": 39,
+      "Service": 15,
+      "HowTo": 14,
+      "Review": 17,
+      "Article": 11,
+      "Place": 2,
+      "ContactPage": 1,
+      "OfferCatalog": 1,
+      "ImageObject": 8
+    },
+    "avgHtmlSize": 457036
+  },
+  "pages": [
+    {
+      "url": "http://localhost:53385/",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:33.882Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "3/9"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/",
+      "title": "Couvreur Bordeaux Gironde 7j/7 : devis 24h, 5/5 sur 54 avis",
+      "titleLen": 59,
+      "description": "Couvreur-zingueur à Bordeaux et en Gironde depuis 2005. Démoussage, nettoyage, réparation, urgence fuite 7j/7. Note 5/5 (54 avis). Devis gratuit en 24h, garantie décennale.",
+      "descLen": 172,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 8,
+        "h3": 22,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Couvreur à Bordeaux et en Gironde : démoussage, nettoyage et entretien de toiture",
+      "images": {
+        "total": 9,
+        "missingCount": 3,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Fhero%2Fhome.webp&amp;w=1920&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 68,
+        "external": 2,
+        "mailto": 0,
+        "tel": 7,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+          "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+          "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+          "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+          "http://localhost:53385/realisations/renovation-faitage-bordeaux-centre-2024",
+          "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 4,
+        "parsed": 4,
+        "errored": 0,
+        "types": [
+          "FAQPage",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 569486
+    },
+    {
+      "url": "http://localhost:53385/couvreur-bordeaux",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:33.882Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/couvreur-bordeaux"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "3/9"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/couvreur-bordeaux",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/couvreur-bordeaux",
+      "title": "Couvreur Bordeaux : entreprise couverture depuis 2005 | 5/5 avis",
+      "titleLen": 64,
+      "description": "Couvreur-zingueur à Bordeaux depuis 2005. Travaux de toiture : démoussage, nettoyage, réparation, zinguerie, urgence 7j/7. Note 5/5 (54 avis). Devis 24h.",
+      "descLen": 153,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/couvreur-bordeaux",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/couvreur-bordeaux"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/couvreur-bordeaux"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 11,
+        "h3": 31,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Entreprise de couverture à Bordeaux et en Gironde depuis 2005",
+      "images": {
+        "total": 9,
+        "missingCount": 3,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Fservices%2Fcouvreur-bordeaux.webp&amp;w=1920&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 67,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+          "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+          "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+          "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+          "http://localhost:53385/realisations/renovation-faitage-bordeaux-centre-2024",
+          "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 8,
+        "parsed": 8,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Service",
+          "FAQPage",
+          "HowTo",
+          "Review",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 618619
+    },
+    {
+      "url": "http://localhost:53385/couvreur-gironde",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:33.882Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/couvreur-gironde"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "3/9"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/couvreur-gironde",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/couvreur-gironde",
+      "title": "Couvreur Gironde (33) : 5/5 sur 54 avis | Devis 24h, urgence 7j/7",
+      "titleLen": 65,
+      "description": "Couvreur-zingueur en Gironde (33) depuis 2005 : Bordeaux Métropole, Médoc, Bassin, Libournais, Sud-Gironde. Démoussage, urgence 7j/7. Note 5/5 (54 avis). Devis 24h.",
+      "descLen": 164,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/couvreur-gironde",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/couvreur-gironde"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/couvreur-gironde"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 11,
+        "h3": 31,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Artisan couvreur-zingueur en Gironde (33) depuis 2005",
+      "images": {
+        "total": 9,
+        "missingCount": 3,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Fservices%2Fcouvreur-bordeaux.webp&amp;w=1920&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 67,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+          "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+          "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+          "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+          "http://localhost:53385/realisations/renovation-faitage-bordeaux-centre-2024",
+          "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 8,
+        "parsed": 8,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Service",
+          "FAQPage",
+          "HowTo",
+          "Review",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 619458
+    },
+    {
+      "url": "http://localhost:53385/demoussage-toiture-bordeaux",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:33.883Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/demoussage-toiture-bordeaux"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "3/6"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/demoussage-toiture-bordeaux",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/demoussage-toiture-bordeaux",
+      "title": "Démoussage toiture Bordeaux : 12-18 €/m² | Devis 24h, 5/5 avis",
+      "titleLen": 62,
+      "description": "Démoussage professionnel de toiture à Bordeaux et en Gironde par couvreur depuis 2005. Tarif 12 à 18 €/m². Note 5/5 (54 avis). Devis gratuit 24h, garantie décennale.",
+      "descLen": 165,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/demoussage-toiture-bordeaux",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/demoussage-toiture-bordeaux"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/demoussage-toiture-bordeaux"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 11,
+        "h3": 28,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Démoussage de toiture à Bordeaux et en Gironde",
+      "images": {
+        "total": 6,
+        "missingCount": 3,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Fservices%2Fdemoussage-toiture.webp&amp;w=1920&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 64,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/demoussage-toiture-pessac-vignoble-velux-2024",
+          "http://localhost:53385/realisations/demoussage-toiture-merignac-2024",
+          "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 8,
+        "parsed": 8,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Service",
+          "FAQPage",
+          "HowTo",
+          "Review",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 580464
+    },
+    {
+      "url": "http://localhost:53385/nettoyage-toiture-bordeaux",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:33.883Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/nettoyage-toiture-bordeaux"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "3/9"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/nettoyage-toiture-bordeaux",
+      "title": "Nettoyage toiture Bordeaux : 15-22 €/m² | Devis 24h, 5/5 avis",
+      "titleLen": 61,
+      "description": "Nettoyage toiture à Bordeaux et en Gironde par couvreur depuis 2005. Haute pression maîtrisée, démoussage et rinçage. Note 5/5 (54 avis). Devis gratuit 24h.",
+      "descLen": 156,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/nettoyage-toiture-bordeaux",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/nettoyage-toiture-bordeaux"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/nettoyage-toiture-bordeaux"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 11,
+        "h3": 30,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Nettoyage de toiture à Bordeaux et en Gironde",
+      "images": {
+        "total": 9,
+        "missingCount": 3,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Fservices%2Fnettoyage-toiture.webp&amp;w=1920&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 68,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+          "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+          "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+          "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+          "http://localhost:53385/realisations/renovation-faitage-bordeaux-centre-2024",
+          "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/nettoyage-toiture-pessac",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 8,
+        "parsed": 8,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Service",
+          "FAQPage",
+          "HowTo",
+          "Review",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 600652
+    },
+    {
+      "url": "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:35.327Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/traitement-hydrofuge-toiture-bordeaux"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "3/9"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+      "title": "Traitement hydrofuge toiture Bordeaux : protection 10 ans",
+      "titleLen": 57,
+      "description": "Traitement hydrofuge professionnel à Bordeaux et en Gironde. Protection 10 ans contre l'humidité et les mousses. Note 5/5 (54 avis). Devis gratuit 24h, garantie décennale.",
+      "descLen": 171,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/traitement-hydrofuge-toiture-bordeaux",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/traitement-hydrofuge-toiture-bordeaux"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/traitement-hydrofuge-toiture-bordeaux"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 11,
+        "h3": 30,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Traitement hydrofuge de toiture à Bordeaux",
+      "images": {
+        "total": 9,
+        "missingCount": 3,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Fservices%2Ftraitement-hydrofuge.webp&amp;w=1920&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 67,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+          "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+          "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+          "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+          "http://localhost:53385/realisations/renovation-faitage-bordeaux-centre-2024",
+          "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 8,
+        "parsed": 8,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Service",
+          "FAQPage",
+          "HowTo",
+          "Review",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 592248
+    },
+    {
+      "url": "http://localhost:53385/reparation-toiture-bordeaux",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:35.327Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/reparation-toiture-bordeaux"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "3/4"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/reparation-toiture-bordeaux",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/reparation-toiture-bordeaux",
+      "title": "Réparation toiture Bordeaux : intervention 24h, diagnostic gratuit",
+      "titleLen": 66,
+      "description": "Réparation toiture à Bordeaux et en Gironde : tuiles cassées, fuite, faîtage, étanchéité. Intervention sous 24h, diagnostic gratuit. Note 5/5 (54 avis). Garantie décennale.",
+      "descLen": 172,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/reparation-toiture-bordeaux",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/reparation-toiture-bordeaux"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/reparation-toiture-bordeaux"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 11,
+        "h3": 25,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Réparation de toiture à Bordeaux et en Gironde",
+      "images": {
+        "total": 4,
+        "missingCount": 3,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Fservices%2Freparation-toiture.webp&amp;w=1920&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 62,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 8,
+        "parsed": 8,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Service",
+          "FAQPage",
+          "HowTo",
+          "Review",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 545031
+    },
+    {
+      "url": "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:35.327Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/urgence-fuite-toiture-bordeaux"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "3/9"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+      "title": "Urgence fuite toiture Bordeaux 7j/7 : couvreur en 1h",
+      "titleLen": 52,
+      "description": "Urgence fuite toiture à Bordeaux et en Gironde 7j/7. Couvreur sur place en 1h, mise hors d'eau immédiate. Appel direct : 07 68 69 78 48. Note 5/5 (54 avis).",
+      "descLen": 156,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/urgence-fuite-toiture-bordeaux",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/urgence-fuite-toiture-bordeaux"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/urgence-fuite-toiture-bordeaux"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 11,
+        "h3": 30,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Urgence fuite toiture à Bordeaux, 7j/7",
+      "images": {
+        "total": 9,
+        "missingCount": 3,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Fservices%2Furgence-fuite-toiture.webp&amp;w=1920&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 67,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+          "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+          "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+          "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+          "http://localhost:53385/realisations/renovation-faitage-bordeaux-centre-2024",
+          "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 8,
+        "parsed": 8,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Service",
+          "FAQPage",
+          "HowTo",
+          "Review",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 590707
+    },
+    {
+      "url": "http://localhost:53385/zinguerie-bordeaux",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:35.327Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/zinguerie-bordeaux"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "3/4"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/zinguerie-bordeaux",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/zinguerie-bordeaux",
+      "title": "Zinguerie & gouttières Bordeaux : pose, réparation | Devis 24h",
+      "titleLen": 62,
+      "description": "Zinguerie et gouttières à Bordeaux : gouttières zinc, noues, chéneaux, habillages. Soudure étain, étanchéité garantie. Note 5/5 (54 avis). Devis gratuit 24h.",
+      "descLen": 157,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/zinguerie-bordeaux",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/zinguerie-bordeaux"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/zinguerie-bordeaux"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 11,
+        "h3": 25,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Zinguerie à Bordeaux — gouttières, descentes, finitions zinc",
+      "images": {
+        "total": 4,
+        "missingCount": 3,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Fservices%2Fzinguerie-gouttieres.webp&amp;w=1920&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 62,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 8,
+        "parsed": 8,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Service",
+          "FAQPage",
+          "HowTo",
+          "Review",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 549938
+    },
+    {
+      "url": "http://localhost:53385/installation-velux-bordeaux",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:35.327Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/installation-velux-bordeaux"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "3/9"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/installation-velux-bordeaux",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/installation-velux-bordeaux",
+      "title": "Pose Velux Bordeaux : installation et remplacement | Devis 24h",
+      "titleLen": 62,
+      "description": "Pose et remplacement de Velux à Bordeaux et en Gironde par couvreur certifié. Étanchéité garantie, conseil modèle. Note 5/5 (54 avis). Devis gratuit 24h.",
+      "descLen": 153,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/installation-velux-bordeaux",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/installation-velux-bordeaux"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/installation-velux-bordeaux"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 11,
+        "h3": 31,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Installation Velux à Bordeaux — pose, remplacement, étanchéité",
+      "images": {
+        "total": 9,
+        "missingCount": 3,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Fservices%2Finstallation-velux.webp&amp;w=1920&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 66,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+          "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+          "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+          "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+          "http://localhost:53385/realisations/renovation-faitage-bordeaux-centre-2024",
+          "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 8,
+        "parsed": 8,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Service",
+          "FAQPage",
+          "HowTo",
+          "Review",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 601107
+    },
+    {
+      "url": "http://localhost:53385/toiture-neuve-bordeaux",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:36.698Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/toiture-neuve-bordeaux"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "3/5"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/toiture-neuve-bordeaux",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/toiture-neuve-bordeaux",
+      "title": "Toiture neuve Bordeaux : construction clé en main | Devis 24h",
+      "titleLen": 61,
+      "description": "Construction de toiture neuve à Bordeaux et en Gironde : charpente, couverture, zinguerie, isolation. Maîtrise d'œuvre globale. Note 5/5 (54 avis). Devis 24h.",
+      "descLen": 158,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/toiture-neuve-bordeaux",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/toiture-neuve-bordeaux"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/toiture-neuve-bordeaux"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 11,
+        "h3": 27,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Toiture neuve à Bordeaux — construction et extension sur mesure",
+      "images": {
+        "total": 5,
+        "missingCount": 3,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Fservices%2Ftoiture-neuve.webp&amp;w=1920&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 63,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+          "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 8,
+        "parsed": 8,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Service",
+          "FAQPage",
+          "HowTo",
+          "Review",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 578232
+    },
+    {
+      "url": "http://localhost:53385/faitage-toiture-bordeaux",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:36.699Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/faitage-toiture-bordeaux"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "3/4"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/faitage-toiture-bordeaux",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/faitage-toiture-bordeaux",
+      "title": "Faîtage toiture Bordeaux : rénovation et étanchéité garantie",
+      "titleLen": 60,
+      "description": "Rénovation de faîtage à Bordeaux : faîtage scellé ou à sec, étanchéité garantie. Couvreur depuis 2005. Note 5/5 (54 avis). Devis gratuit 24h, garantie décennale.",
+      "descLen": 161,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/faitage-toiture-bordeaux",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/faitage-toiture-bordeaux"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/faitage-toiture-bordeaux"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 11,
+        "h3": 26,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Faîtage de toiture à Bordeaux — rénovation, étanchéité, mise aux normes",
+      "images": {
+        "total": 4,
+        "missingCount": 3,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Fservices%2Ffaitage-toiture.webp&amp;w=1920&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 62,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/renovation-faitage-bordeaux-centre-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 8,
+        "parsed": 8,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Service",
+          "FAQPage",
+          "HowTo",
+          "Review",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 569819
+    },
+    {
+      "url": "http://localhost:53385/ornements-toiture-bordeaux",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:36.699Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/ornements-toiture-bordeaux"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "3/9"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/ornements-toiture-bordeaux",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/ornements-toiture-bordeaux",
+      "title": "Ornements toiture Bordeaux : épis, lambrequins, girouettes",
+      "titleLen": 58,
+      "description": "Ornements de toiture à Bordeaux : épis, lambrequins, girouettes, rives décoratives. Travail traditionnel et soigné, respect du bâti girondin. Note 5/5 (54 avis). Devis gratuit 24h.",
+      "descLen": 180,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/ornements-toiture-bordeaux",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/ornements-toiture-bordeaux"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/ornements-toiture-bordeaux"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 11,
+        "h3": 31,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Ornements de toiture à Bordeaux — épis, lambrequins, girouettes",
+      "images": {
+        "total": 9,
+        "missingCount": 3,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Fservices%2Fornements-toiture.webp&amp;w=1920&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 67,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+          "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+          "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+          "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+          "http://localhost:53385/realisations/renovation-faitage-bordeaux-centre-2024",
+          "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 8,
+        "parsed": 8,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Service",
+          "FAQPage",
+          "HowTo",
+          "Review",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 616950
+    },
+    {
+      "url": "http://localhost:53385/charpente-bordeaux",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:36.699Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/charpente-bordeaux"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "3/9"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/charpente-bordeaux",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/charpente-bordeaux",
+      "title": "Charpente Bordeaux : rénovation, traitement, renforcement | Devis 24h",
+      "titleLen": 69,
+      "description": "Travaux de charpente à Bordeaux et en Gironde : diagnostic, traitement bois, renforcement. Couvreur-charpentier depuis 2005. Note 5/5 (54 avis). Devis gratuit 24h.",
+      "descLen": 163,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/charpente-bordeaux",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/charpente-bordeaux"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/charpente-bordeaux"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 11,
+        "h3": 31,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Charpente à Bordeaux — rénovation, traitement, renforcement structurel",
+      "images": {
+        "total": 9,
+        "missingCount": 3,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Fservices%2Fcharpente.webp&amp;w=1920&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 67,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+          "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+          "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+          "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+          "http://localhost:53385/realisations/renovation-faitage-bordeaux-centre-2024",
+          "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 8,
+        "parsed": 8,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Service",
+          "FAQPage",
+          "HowTo",
+          "Review",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 602633
+    },
+    {
+      "url": "http://localhost:53385/guides/prix-demoussage-toiture-bordeaux",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:36.699Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/guides/prix-demoussage-toiture-bordeaux"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/2"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/guides/prix-demoussage-toiture-bordeaux",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/guides/prix-demoussage-toiture-bordeaux",
+      "title": "Prix démoussage toiture Bordeaux 2026 : Tarifs et facteurs de prix",
+      "titleLen": 66,
+      "description": "Combien coûte un démoussage de toiture à Bordeaux en 2026 ? Tarifs au m², facteurs de prix, exemples chiffrés, conseils pour comparer les devis.",
+      "descLen": 144,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/guides/prix-demoussage-toiture-bordeaux",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/guides/prix-demoussage-toiture-bordeaux"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/guides/prix-demoussage-toiture-bordeaux"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 13,
+        "h3": 22,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Prix d&#x27;un démoussage de toiture à Bordeaux en 2026",
+      "images": {
+        "total": 2,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 49,
+        "external": 2,
+        "mailto": 0,
+        "tel": 7,
+        "anchor": 7,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 6,
+        "parsed": 6,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Article",
+          "FAQPage",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 426561
+    },
+    {
+      "url": "http://localhost:53385/guides/aides-renovation-toiture-2026",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:37.919Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/guides/aides-renovation-toiture-2026"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/2"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/guides/aides-renovation-toiture-2026",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/guides/aides-renovation-toiture-2026",
+      "title": "Aides rénovation toiture 2026 : MaPrimeRénov, éco-PTZ, TVA réduite",
+      "titleLen": 66,
+      "description": "Quelles aides pour rénover votre toiture en 2026 ? MaPrimeRénov', éco-prêt à taux zéro, TVA 5,5 %, CEE. Conditions, montants et démarches détaillés.",
+      "descLen": 148,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/guides/aides-renovation-toiture-2026",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/guides/aides-renovation-toiture-2026"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/guides/aides-renovation-toiture-2026"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 14,
+        "h3": 21,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Aides rénovation toiture 2026 : MaPrimeRénov&#x27;, éco-PTZ, TVA réduite",
+      "images": {
+        "total": 2,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 49,
+        "external": 2,
+        "mailto": 0,
+        "tel": 7,
+        "anchor": 8,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 6,
+        "parsed": 6,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Article",
+          "FAQPage",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 438393
+    },
+    {
+      "url": "http://localhost:53385/guides/quand-demousser-toiture-gironde",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:37.919Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/guides/quand-demousser-toiture-gironde"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/2"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/guides/quand-demousser-toiture-gironde",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/guides/quand-demousser-toiture-gironde",
+      "title": "Quand démousser sa toiture en Gironde ? : Saison et fréquence idéales",
+      "titleLen": 69,
+      "description": "Quand démousser sa toiture à Bordeaux et en Gironde ? Quelle saison, quelle fréquence ? Signes d'alerte, conseils d'expert, calendrier d'entretien optimal.",
+      "descLen": 155,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/guides/quand-demousser-toiture-gironde",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/guides/quand-demousser-toiture-gironde"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/guides/quand-demousser-toiture-gironde"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 13,
+        "h3": 21,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Quand démousser sa toiture en Gironde ?",
+      "images": {
+        "total": 2,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 49,
+        "external": 2,
+        "mailto": 0,
+        "tel": 7,
+        "anchor": 7,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 6,
+        "parsed": 6,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Article",
+          "FAQPage",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 430608
+    },
+    {
+      "url": "http://localhost:53385/couvreur-merignac",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:37.919Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/couvreur-merignac"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/5"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/couvreur-merignac",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/couvreur-merignac",
+      "title": "Couvreur Mérignac : atelier rue de Malbos | 5/5 sur 54 avis",
+      "titleLen": 59,
+      "description": "Couvreur à Mérignac depuis 2005, atelier rue de Malbos. Démoussage, nettoyage, réparation, zinguerie, urgence 7j/7. Note 5/5 (54 avis). Devis 24h.",
+      "descLen": 146,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/couvreur-merignac",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/couvreur-merignac"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/couvreur-merignac"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 12,
+        "h3": 24,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Couvreur à Mérignac : démoussage, nettoyage et réparation toiture",
+      "images": {
+        "total": 5,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 63,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/demoussage-toiture-merignac-2024",
+          "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+          "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 7,
+        "parsed": 7,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "RoofingContractor",
+          "FAQPage",
+          "Review",
+          "Organization",
+          "WebSite"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 511474
+    },
+    {
+      "url": "http://localhost:53385/couvreur-pessac",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:37.919Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/couvreur-pessac"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/3"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/couvreur-pessac",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/couvreur-pessac",
+      "title": "Couvreur Pessac : démoussage, réparation | 5/5 sur 54 avis",
+      "titleLen": 58,
+      "description": "Couvreur à Pessac depuis 2005 : démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Note 5/5 (54 avis). Devis gratuit 24h, garantie décennale.",
+      "descLen": 158,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/couvreur-pessac",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/couvreur-pessac"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/couvreur-pessac"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 12,
+        "h3": 22,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Couvreur à Pessac : démoussage, nettoyage et réparation toiture",
+      "images": {
+        "total": 3,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 64,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/nettoyage-toiture-pessac",
+          "http://localhost:53385/realisations/demoussage-toiture-pessac-vignoble-velux-2024",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 7,
+        "parsed": 7,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "RoofingContractor",
+          "FAQPage",
+          "Review",
+          "Organization",
+          "WebSite"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 499860
+    },
+    {
+      "url": "http://localhost:53385/couvreur-talence",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:37.919Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/couvreur-talence"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/3"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/couvreur-talence",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/couvreur-talence",
+      "title": "Couvreur Talence : démoussage, réparation | 5/5 sur 54 avis",
+      "titleLen": 59,
+      "description": "Couvreur à Talence depuis 2005 : démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Note 5/5 (54 avis). Devis gratuit 24h, garantie décennale.",
+      "descLen": 159,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/couvreur-talence",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/couvreur-talence"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/couvreur-talence"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 12,
+        "h3": 22,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Couvreur à Talence : démoussage, nettoyage et réparation toiture",
+      "images": {
+        "total": 3,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 63,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 7,
+        "parsed": 7,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "RoofingContractor",
+          "FAQPage",
+          "Review",
+          "Organization",
+          "WebSite"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 488221
+    },
+    {
+      "url": "http://localhost:53385/couvreur-begles",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:38.974Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/couvreur-begles"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/3"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/couvreur-begles",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/couvreur-begles",
+      "title": "Couvreur Bègles : démoussage, réparation | 5/5 sur 54 avis",
+      "titleLen": 58,
+      "description": "Couvreur à Bègles depuis 2005 : démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Note 5/5 (54 avis). Devis gratuit 24h, garantie décennale.",
+      "descLen": 158,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/couvreur-begles",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/couvreur-begles"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/couvreur-begles"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 12,
+        "h3": 22,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Couvreur à Bègles : démoussage, nettoyage et réparation toiture",
+      "images": {
+        "total": 3,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 63,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 6,
+        "parsed": 6,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "RoofingContractor",
+          "FAQPage",
+          "Organization",
+          "WebSite"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 566404
+    },
+    {
+      "url": "http://localhost:53385/couvreur-villenave-dornon",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:38.974Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/couvreur-villenave-dornon"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/3"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/couvreur-villenave-dornon",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/couvreur-villenave-dornon",
+      "title": "Couvreur Villenave-d'Ornon : démoussage, réparation | 5/5 avis",
+      "titleLen": 62,
+      "description": "Couvreur à Villenave-d'Ornon depuis 2005 : démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Note 5/5 (54 avis). Devis gratuit 24h, garantie décennale.",
+      "descLen": 169,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/couvreur-villenave-dornon",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/couvreur-villenave-dornon"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/couvreur-villenave-dornon"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 12,
+        "h3": 22,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Couvreur à Villenave-d&#x27;Ornon : démoussage, nettoyage et réparation toiture",
+      "images": {
+        "total": 3,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 64,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 7,
+        "parsed": 7,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "RoofingContractor",
+          "FAQPage",
+          "Review",
+          "Organization",
+          "WebSite"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 498593
+    },
+    {
+      "url": "http://localhost:53385/nettoyage-toiture-pessac",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:38.974Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/nettoyage-toiture-pessac"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "3/9"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/nettoyage-toiture-pessac",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/nettoyage-toiture-pessac",
+      "title": "Nettoyage toiture Pessac : démoussage + hydrofuge | 5/5 avis",
+      "titleLen": 60,
+      "description": "Nettoyage toiture à Pessac par couvreur depuis 2005. Démoussage, haute pression maîtrisée, hydrofuge longue durée. Note 5/5 (54 avis). Devis gratuit 24h.",
+      "descLen": 153,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/nettoyage-toiture-pessac",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/nettoyage-toiture-pessac"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/nettoyage-toiture-pessac"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 11,
+        "h3": 31,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Nettoyage de toiture à Pessac — démoussage et rinçage haute pression",
+      "images": {
+        "total": 9,
+        "missingCount": 3,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Fservices%2Fnettoyage-toiture.webp&amp;w=1920&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 60,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+          "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+          "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+          "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+          "http://localhost:53385/realisations/renovation-faitage-bordeaux-centre-2024",
+          "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 7,
+        "parsed": 7,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Service",
+          "HowTo",
+          "FAQPage",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 498352
+    },
+    {
+      "url": "http://localhost:53385/realisations",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:38.974Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/realisations"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/10"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/realisations",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/realisations",
+      "title": "Nos réalisations de toiture à Bordeaux et en Gironde",
+      "titleLen": 52,
+      "description": "Découvrez nos chantiers récents : démoussage, nettoyage, réparation et zinguerie à Bordeaux et en Gironde. Photos avant/après et détails par projet.",
+      "descLen": 148,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/realisations",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/realisations"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/realisations"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 17,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Nos chantiers récents en Gironde",
+      "images": {
+        "total": 10,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 64,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+          "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+          "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+          "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+          "http://localhost:53385/realisations/renovation-faitage-bordeaux-centre-2024",
+          "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+          "http://localhost:53385/realisations/demoussage-toiture-merignac-2024",
+          "http://localhost:53385/realisations/demoussage-toiture-pessac-vignoble-velux-2024",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 4,
+        "parsed": 4,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 444230
+    },
+    {
+      "url": "http://localhost:53385/contact",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:38.974Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/contact"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/2"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/contact",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/contact",
+      "title": "Contact Couverture Gironde : 07 68 69 78 48 | Bordeaux",
+      "titleLen": 54,
+      "description": "Contactez Couverture Gironde au 07 68 69 78 48. Couvreur Bordeaux Métropole depuis 2005, atelier à Mérignac. Note 5/5 (54 avis). Réponse sous 24h, devis gratuit.",
+      "descLen": 161,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/contact",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/contact"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/contact"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 9,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Joindre Couverture Gironde — artisan couvreur à Mérignac",
+      "images": {
+        "total": 2,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 49,
+        "external": 5,
+        "mailto": 0,
+        "tel": 7,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 6,
+        "parsed": 6,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Place",
+          "ContactPage",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 374019
+    },
+    {
+      "url": "http://localhost:53385/a-propos",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:40.026Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/a-propos"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/2"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/a-propos",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/a-propos",
+      "title": "À propos : Liroy Delsuc, couvreur Bordeaux depuis 2005",
+      "titleLen": 54,
+      "description": "Couverture Gironde, fondée par Liroy Delsuc en 2005 à Mérignac. 20 ans d'expérience en Gironde, atelier rue de Malbos. Note 5/5 (54 avis). Garantie décennale.",
+      "descLen": 158,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/a-propos",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/a-propos"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/a-propos"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 12,
+        "h3": 29,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "20 ans de toiture en Gironde, une équipe locale, un engagement clair.",
+      "images": {
+        "total": 2,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 50,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 6,
+        "parsed": 6,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Place",
+          "FAQPage",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 502588
+    },
+    {
+      "url": "http://localhost:53385/tarifs",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:40.026Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/tarifs"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/2"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/tarifs",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/tarifs",
+      "title": "Tarifs couvreur Bordeaux 2026 : démoussage dès 12 €/m² | Devis gratuit",
+      "titleLen": 70,
+      "description": "Tarifs 2026 d'un couvreur à Bordeaux : démoussage 12-18 €/m², nettoyage 15-22 €/m², hydrofuge dès 6 €/m². Prix transparents ligne par ligne. Note 5/5 (54 avis). Devis gratuit 24h.",
+      "descLen": 179,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/tarifs",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/tarifs"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/tarifs"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 8,
+        "h3": 12,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Tarifs couverture, démoussage et zinguerie à Bordeaux",
+      "images": {
+        "total": 2,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 49,
+        "external": 2,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 6,
+        "parsed": 6,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "FAQPage",
+          "OfferCatalog",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 383018
+    },
+    {
+      "url": "http://localhost:53385/urgence",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:40.026Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/urgence"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/2"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/urgence",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/urgence",
+      "title": "Urgence toiture Bordeaux 7j/7 : couvreur en 1h | 07 68 69 78 48",
+      "titleLen": 63,
+      "description": "Urgence toiture à Bordeaux 7j/7 : couvreur sur place en 1h, mise hors d'eau immédiate, fuite, tempête. Appel direct : 07 68 69 78 48. Couvreur depuis 2005, garantie décennale.",
+      "descLen": 175,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/urgence",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/urgence"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/urgence"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 8,
+        "h3": 19,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Toiture qui fuit ? Tempête ? Sinistre ? Appelez maintenant.",
+      "images": {
+        "total": 2,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 48,
+        "external": 2,
+        "mailto": 0,
+        "tel": 7,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 6,
+        "parsed": 6,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Service",
+          "FAQPage",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 408388
+    },
+    {
+      "url": "http://localhost:53385/demande-devis",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:40.026Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/demande-devis"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/2"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/demande-devis",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/demande-devis",
+      "title": "Devis toiture Bordeaux Gironde gratuit : réponse en 24h",
+      "titleLen": 55,
+      "description": "Demandez votre devis toiture gratuit en Gironde : démoussage, nettoyage, réparation, réfection, zinguerie. Réponse sous 24h ouvrées, sans engagement. Note 5/5 (54 avis).",
+      "descLen": 169,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/demande-devis",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/demande-devis"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/demande-devis"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 9,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Décrivez votre projet, nous revenons vers vous sous 24h",
+      "images": {
+        "total": 2,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 48,
+        "external": 2,
+        "mailto": 0,
+        "tel": 5,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 4,
+        "parsed": 4,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 335039
+    },
+    {
+      "url": "http://localhost:53385/mentions-legales",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:40.026Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/mentions-legales"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/2"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/mentions-legales",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/mentions-legales",
+      "title": "Mentions légales : Couverture Gironde",
+      "titleLen": 37,
+      "description": "Mentions légales du site couverturegironde.fr : informations éditeur, hébergeur et responsabilité.",
+      "descLen": 98,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/mentions-legales",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/mentions-legales"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/mentions-legales"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 7,
+        "h3": 3,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Mentions légales",
+      "images": {
+        "total": 2,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 48,
+        "external": 4,
+        "mailto": 0,
+        "tel": 5,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 4,
+        "parsed": 4,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 165613
+    },
+    {
+      "url": "http://localhost:53385/politique-confidentialite",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:40.847Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/politique-confidentialite"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/2"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/politique-confidentialite",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/politique-confidentialite",
+      "title": "Politique de confidentialité : Couverture Gironde",
+      "titleLen": 49,
+      "description": "Politique de confidentialité du site couverturegironde.fr : traitement des données personnelles, droits RGPD.",
+      "descLen": 109,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/politique-confidentialite",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/politique-confidentialite"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/politique-confidentialite"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 9,
+        "h3": 3,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Politique de confidentialité",
+      "images": {
+        "total": 2,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 49,
+        "external": 4,
+        "mailto": 0,
+        "tel": 6,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/cookies",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite"
+        ]
+      },
+      "jsonLd": {
+        "count": 4,
+        "parsed": 4,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 171629
+    },
+    {
+      "url": "http://localhost:53385/cookies",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:40.848Z",
+      "issues": [
+        {
+          "severity": "medium",
+          "code": "DESC_TOO_SHORT",
+          "detail": "Politique de gestion des cookies sur le site couverturegironde.fr."
+        },
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/cookies"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/2"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/cookies",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/cookies",
+      "title": "Politique cookies : Couverture Gironde",
+      "titleLen": 38,
+      "description": "Politique de gestion des cookies sur le site couverturegironde.fr.",
+      "descLen": 66,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/cookies",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/cookies"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/cookies"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 5,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Politique de cookies",
+      "images": {
+        "total": 2,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 46,
+        "external": 6,
+        "mailto": 0,
+        "tel": 4,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 4,
+        "parsed": 4,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 164399
+    },
+    {
+      "url": "http://localhost:53385/realisations/demoussage-toiture-pessac-vignoble-velux-2024",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:40.848Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/realisations/demoussage-toiture-pessac-vignoble-velux-2024"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/5"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/realisations/demoussage-toiture-pessac-vignoble-velux-2024",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/realisations/demoussage-toiture-pessac-vignoble-velux-2024",
+      "title": "Démoussage toiture tuile canal avec Velux à Pessac, Couverture Gironde",
+      "titleLen": 70,
+      "description": "Démoussage complet d'une toiture en tuiles canal avec Velux, sur une maison face aux vignobles de Pessac-Léognan. Avant/après…. Démoussage toiture à Pessac par Couverture Gironde.",
+      "descLen": 179,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/realisations/demoussage-toiture-pessac-vignoble-velux-2024",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/realisations/demoussage-toiture-pessac-vignoble-velux-2024"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/realisations/demoussage-toiture-pessac-vignoble-velux-2024"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 11,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Démoussage toiture tuile canal avec Velux à Pessac",
+      "images": {
+        "total": 5,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 56,
+        "external": 2,
+        "mailto": 0,
+        "tel": 7,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/nettoyage-toiture-pessac",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 7,
+        "parsed": 7,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Article",
+          "ImageObject",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 338360
+    },
+    {
+      "url": "http://localhost:53385/realisations/demoussage-toiture-merignac-2024",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:40.848Z",
+      "issues": [
+        {
+          "severity": "high",
+          "code": "TITLE_TOO_LONG",
+          "detail": "Démoussage toiture pavillon avec cheminée à Mérignac, Couverture Gironde"
+        },
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/realisations/demoussage-toiture-merignac-2024"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/5"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/realisations/demoussage-toiture-merignac-2024",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/realisations/demoussage-toiture-merignac-2024",
+      "title": "Démoussage toiture pavillon avec cheminée à Mérignac, Couverture Gironde",
+      "titleLen": 72,
+      "description": "Démoussage et nettoyage complet d'une toiture en tuile canal sur pavillon merignacais. Brossage manuel des zones critiques a…. Démoussage toiture à Mérignac par Couverture Gironde.",
+      "descLen": 180,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/realisations/demoussage-toiture-merignac-2024",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/realisations/demoussage-toiture-merignac-2024"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/realisations/demoussage-toiture-merignac-2024"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 11,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Démoussage toiture pavillon avec cheminée à Mérignac",
+      "images": {
+        "total": 5,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 54,
+        "external": 2,
+        "mailto": 0,
+        "tel": 7,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 7,
+        "parsed": 7,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Article",
+          "ImageObject",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 328483
+    },
+    {
+      "url": "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:40.848Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/realisations/demoussage-toiture-talence-lichens-2026"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/5"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/realisations/demoussage-toiture-talence-lichens-2026",
+      "title": "Démoussage toiture fortement lichénifiée à Talence, Couverture Gironde",
+      "titleLen": 70,
+      "description": "Démoussage d'une toiture talençaise envahie par les lichens blancs après plusieurs années sans entretien. Brossage manuel int…. Démoussage toiture à Talence par Couverture Gironde.",
+      "descLen": 180,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/realisations/demoussage-toiture-talence-lichens-2026",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/realisations/demoussage-toiture-talence-lichens-2026"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/realisations/demoussage-toiture-talence-lichens-2026"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 11,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Démoussage toiture fortement lichénifiée à Talence",
+      "images": {
+        "total": 5,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 55,
+        "external": 2,
+        "mailto": 0,
+        "tel": 7,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 7,
+        "parsed": 7,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Article",
+          "ImageObject",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 333538
+    },
+    {
+      "url": "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:41.437Z",
+      "issues": [
+        {
+          "severity": "high",
+          "code": "TITLE_TOO_LONG",
+          "detail": "Réfection complète toiture bâtisse ancienne à Villenave-d'Ornon, Couverture Gironde"
+        },
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/realisations/refection-complete-toiture-villenave-dornon-2024"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/5"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/realisations/refection-complete-toiture-villenave-dornon-2024",
+      "title": "Réfection complète toiture bâtisse ancienne à Villenave-d'Ornon, Couverture Gironde",
+      "titleLen": 83,
+      "description": "Réfection complète d'une toiture en tuile canal sur bâtisse traditionnelle. Dépose de la couverture défoncée, trait…. Réparation toiture à Villenave-d'Ornon par Couverture Gironde.",
+      "descLen": 180,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/realisations/refection-complete-toiture-villenave-dornon-2024",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/realisations/refection-complete-toiture-villenave-dornon-2024"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/realisations/refection-complete-toiture-villenave-dornon-2024"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 11,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Réfection complète toiture bâtisse ancienne à Villenave-d&#x27;Ornon",
+      "images": {
+        "total": 5,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 56,
+        "external": 2,
+        "mailto": 0,
+        "tel": 7,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 7,
+        "parsed": 7,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Article",
+          "ImageObject",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 339983
+    },
+    {
+      "url": "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:41.437Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/realisations/toiture-neuve-charpente-begles-2024"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/3"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/realisations/toiture-neuve-charpente-begles-2024",
+      "title": "Toiture neuve avec charpente et isolation à Bègles, Couverture Gironde",
+      "titleLen": 70,
+      "description": "Construction d'une toiture neuve sur extension béglaise : charpente bois traditionnelle, voligeage chêne, écran sous-toiture HPV ha…. Toiture neuve à Bègles par Couverture Gironde.",
+      "descLen": 180,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/realisations/toiture-neuve-charpente-begles-2024",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/realisations/toiture-neuve-charpente-begles-2024"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/realisations/toiture-neuve-charpente-begles-2024"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 11,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Toiture neuve avec charpente et isolation à Bègles",
+      "images": {
+        "total": 3,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 55,
+        "external": 2,
+        "mailto": 0,
+        "tel": 7,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 7,
+        "parsed": 7,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Article",
+          "ImageObject",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 403706
+    },
+    {
+      "url": "http://localhost:53385/realisations/renovation-faitage-bordeaux-centre-2024",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:41.437Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/realisations/renovation-faitage-bordeaux-centre-2024"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/5"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/realisations/renovation-faitage-bordeaux-centre-2024",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/realisations/renovation-faitage-bordeaux-centre-2024",
+      "title": "Rénovation faîtage centre Bordeaux à Bordeaux, Couverture Gironde",
+      "titleLen": 65,
+      "description": "Rénovation complète du faîtage d'une échoppe bordelaise du centre-ville. Dépose du faîtage scellé ancien, contrôle de la sous-f…. Faîtage toiture à Bordeaux par Couverture Gironde.",
+      "descLen": 180,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/realisations/renovation-faitage-bordeaux-centre-2024",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/realisations/renovation-faitage-bordeaux-centre-2024"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/realisations/renovation-faitage-bordeaux-centre-2024"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 11,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Rénovation faîtage centre Bordeaux à Bordeaux",
+      "images": {
+        "total": 5,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 56,
+        "external": 2,
+        "mailto": 0,
+        "tel": 7,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 7,
+        "parsed": 7,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Article",
+          "ImageObject",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 338727
+    },
+    {
+      "url": "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:41.437Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/realisations/toiture-bac-acier-merignac-2024"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/5"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/realisations/toiture-bac-acier-merignac-2024",
+      "title": "Toiture bac acier extension à Mérignac, Couverture Gironde",
+      "titleLen": 58,
+      "description": "Pose d'une toiture en bac acier teinte rouge brique sur une extension contemporaine à Mérignac. Voligeage, écran HPV, fixation mé…. Toiture neuve à Mérignac par Couverture Gironde.",
+      "descLen": 180,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/realisations/toiture-bac-acier-merignac-2024",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/realisations/toiture-bac-acier-merignac-2024"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/realisations/toiture-bac-acier-merignac-2024"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 11,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Toiture bac acier extension à Mérignac",
+      "images": {
+        "total": 5,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 54,
+        "external": 2,
+        "mailto": 0,
+        "tel": 7,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 7,
+        "parsed": 7,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Article",
+          "ImageObject",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 327785
+    },
+    {
+      "url": "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+      "depth": 0,
+      "timestamp": "2026-06-10T04:59:41.437Z",
+      "issues": [
+        {
+          "severity": "low",
+          "code": "CANONICAL_DIFFERS",
+          "detail": "https://www.couverturegironde.fr/realisations/zinguerie-abergement-cheminee-merignac-2024"
+        },
+        {
+          "severity": "low",
+          "code": "IMG_MISSING_ALT",
+          "detail": "2/5"
+        }
+      ],
+      "status": 200,
+      "redirectChain": [
+        {
+          "url": "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+          "status": 200
+        }
+      ],
+      "finalUrl": "http://localhost:53385/realisations/zinguerie-abergement-cheminee-merignac-2024",
+      "title": "Zinguerie et abergement cheminée à Mérignac, Couverture Gironde",
+      "titleLen": 63,
+      "description": "Reprise complète de l'abergement zinc d'une cheminée briques sur pavillon merignacais. Dépose de l'ancienne zinguerie dé…. Zinguerie & gouttières à Mérignac par Couverture Gironde.",
+      "descLen": 180,
+      "robots": "index, follow",
+      "canonical": "https://www.couverturegironde.fr/realisations/zinguerie-abergement-cheminee-merignac-2024",
+      "hreflang": [
+        {
+          "lang": "fr-FR",
+          "href": "https://www.couverturegironde.fr/realisations/zinguerie-abergement-cheminee-merignac-2024"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.couverturegironde.fr/realisations/zinguerie-abergement-cheminee-merignac-2024"
+        }
+      ],
+      "headings": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 11,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "firstH1Text": "Zinguerie et abergement cheminée à Mérignac",
+      "images": {
+        "total": 5,
+        "missingCount": 2,
+        "missingExamples": [
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75",
+          "/_next/image?url=%2Fimages%2Flogo.webp&amp;w=96&amp;q=75"
+        ]
+      },
+      "links": {
+        "internal": 54,
+        "external": 2,
+        "mailto": 0,
+        "tel": 7,
+        "anchor": 0,
+        "internalHrefs": [
+          "http://localhost:53385/",
+          "http://localhost:53385/demoussage-toiture-bordeaux",
+          "http://localhost:53385/nettoyage-toiture-bordeaux",
+          "http://localhost:53385/traitement-hydrofuge-toiture-bordeaux",
+          "http://localhost:53385/reparation-toiture-bordeaux",
+          "http://localhost:53385/zinguerie-bordeaux",
+          "http://localhost:53385/toiture-neuve-bordeaux",
+          "http://localhost:53385/faitage-toiture-bordeaux",
+          "http://localhost:53385/ornements-toiture-bordeaux",
+          "http://localhost:53385/urgence-fuite-toiture-bordeaux",
+          "http://localhost:53385/installation-velux-bordeaux",
+          "http://localhost:53385/charpente-bordeaux",
+          "http://localhost:53385/tarifs",
+          "http://localhost:53385/realisations",
+          "http://localhost:53385/a-propos",
+          "http://localhost:53385/contact",
+          "http://localhost:53385/demande-devis",
+          "http://localhost:53385/couvreur-merignac",
+          "http://localhost:53385/couvreur-pessac",
+          "http://localhost:53385/couvreur-bordeaux",
+          "http://localhost:53385/couvreur-gironde",
+          "http://localhost:53385/couvreur-talence",
+          "http://localhost:53385/couvreur-begles",
+          "http://localhost:53385/couvreur-villenave-dornon",
+          "http://localhost:53385/urgence",
+          "http://localhost:53385/mentions-legales",
+          "http://localhost:53385/politique-confidentialite",
+          "http://localhost:53385/cookies"
+        ]
+      },
+      "jsonLd": {
+        "count": 7,
+        "parsed": 7,
+        "errored": 0,
+        "types": [
+          "BreadcrumbList",
+          "Article",
+          "ImageObject",
+          "Organization",
+          "WebSite",
+          "RoofingContractor"
+        ]
+      },
+      "mixedContent": {
+        "found": false,
+        "count": 0,
+        "examples": []
+      },
+      "htmlSize": 328128
+    }
+  ]
+}

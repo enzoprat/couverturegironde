@@ -20,6 +20,8 @@ type HeroProps = {
   subtitle: string;
   /** Slug d'image pour SmartImage. */
   imageSlug?: string;
+  /** Alt SEO de l'image hero. Si non fourni, dérivé du imageSlug. */
+  imageAlt?: string;
   /** Pour le breadcrumb dynamique. Optionnel — vide = pas de fil d'Ariane. */
   breadcrumbSlug?: string;
   /** Override l'image variant (par défaut : service-ville et home ont des layouts différents). */
@@ -43,11 +45,23 @@ export function Hero({
   title,
   subtitle,
   imageSlug,
+  imageAlt,
   breadcrumbSlug,
   secondaryCtaLabel = 'Demander un devis gratuit',
   secondaryCtaHref = '/demande-devis',
 }: HeroProps) {
   const isUrgence = variant === 'urgence';
+
+  // SEO : un alt descriptif est indispensable. Si l'appelant ne fournit pas
+  // d'imageAlt, on dérive depuis le slug (ex: "demoussage-toiture" → "Démoussage
+  // de toiture par Couverture Gironde à Bordeaux").
+  const derivedAlt = imageAlt
+    ?? (imageSlug
+      ? `${imageSlug
+          .replace(/^home$/, 'Couverture toiture à Bordeaux')
+          .replace(/-/g, ' ')
+          .replace(/^\w/, (c) => c.toUpperCase())} par Couverture Gironde, couvreur à Bordeaux et en Gironde`
+      : '');
 
   return (
     <section
@@ -150,7 +164,7 @@ export function Hero({
               <SmartImage
                 variant="hero"
                 slug={imageSlug}
-                alt=""
+                alt={derivedAlt}
                 aspect="5/4"
                 priority
                 sizes="(min-width: 1024px) 40vw, 100vw"

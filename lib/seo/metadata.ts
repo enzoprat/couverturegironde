@@ -36,7 +36,11 @@ export function buildMetadata({
     : `${SITE.url}${DEFAULT_OG}`;
 
   return {
-    title,
+    // `absolute` bypass le template `%s | Couverture Gironde` du layout root.
+    // Nos seoTitles sont déjà self-contained et ciblés ≤ 60 chars : on évite le
+    // " | Couverture Gironde" qui ferait déborder au-dessus des 65-70 chars que
+    // Google affiche dans les SERPs.
+    title: { absolute: title },
     description,
     metadataBase: new URL(SITE.url),
     alternates: {
