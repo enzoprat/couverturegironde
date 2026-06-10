@@ -150,6 +150,68 @@ export default function Page() {
             note: 'Conservation matériau d\u2019origine',
           },
         ],
+        reparationFuite: {
+          intro: (
+            <>
+              <p>
+                Une fuite de toiture à Talence est presque toujours une urgence
+                à traiter dans les 24 à 48 heures. Sur un bâti talençais
+                souvent en <strong>tuile canal traditionnelle</strong> et en
+                centre urbain dense, l'eau qui passe au-delà du voligeage
+                atteint vite la sous-toiture, les plafonds et les murs
+                intérieurs. Nous intervenons sur Talence{' '}
+                <strong>chaque jour</strong> pour des urgences fuite, avec une
+                <strong> mise hors d'eau en 30 à 60 minutes</strong> en heures
+                ouvrées depuis notre atelier de Mérignac (9 km).
+              </p>
+              <p>
+                Les fuites talençaises que nous traitons le plus souvent
+                concernent les <strong>faîtages scellés au mortier ciment</strong>{' '}
+                qui fissurent avec les cycles gel-dégel, les{' '}
+                <strong>tuiles canal cassées</strong> sur les versants nord
+                exposés aux mousses du parc Peixotto et de la Médoquine, et
+                les <strong>raccords zinc</strong> autour des cheminées
+                d'échoppes anciennes. Nous procédons toujours en deux temps :
+                sécurisation immédiate par bâche, puis devis de réparation
+                détaillé sous 48h.
+              </p>
+            </>
+          ),
+          casTypiques: [
+            {
+              title: 'Tuile canal cassée (versant nord)',
+              description:
+                "Le pan nord des échoppes talençaises se charge en mousses et fragilise les tuiles. Remplacement à l'identique en récupérant les tuiles d'origine adjacentes.",
+            },
+            {
+              title: 'Faîtage scellé fissuré',
+              description:
+                "Mortier ciment ancien qui fissure et laisse passer l'eau. Reprise au mortier chaux (compatible bâti ancien) sur ligne complète si nécessaire.",
+            },
+            {
+              title: 'Raccord zinc cheminée détérioré',
+              description:
+                "Sur les échoppes du centre, abergement zinc fatigué après 25-30 ans. Dépose et pose d'un abergement neuf avec soudure étain sur place.",
+            },
+            {
+              title: 'Faîtage envolé après coup de vent',
+              description:
+                "Sécurisation immédiate, photos + devis pour dossier assurance, réfection complète scellée chaux ou faîtage à sec selon configuration toiture.",
+            },
+            {
+              title: 'Infiltration en sous-face de noue',
+              description:
+                "Diagnostic par démontage partiel de quelques tuiles pour examiner la noue. Soudure de réparation ou remplacement de la noue zinc.",
+            },
+            {
+              title: 'Gouttière débordante / descente bouchée',
+              description:
+                "Nettoyage complet du circuit eaux pluviales (gouttière + descente + regard), reprise des raccords descellés, vérification des fixations.",
+            },
+          ],
+          tarifIndicatif:
+            "Mise hors d'eau : 250 – 600 € · Réparation définitive sur devis",
+        },
         faqLocale: [
           {
             question: 'Intervenez-vous dans toute Talence ?',

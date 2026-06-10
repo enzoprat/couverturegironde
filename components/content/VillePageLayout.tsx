@@ -64,6 +64,21 @@ export type VillePageContent = {
   faqLocale: FAQItem[];
   /** Quartiers à mettre en avant — par défaut tirés de LocationDefinition. */
   quartiersFocus?: string[];
+  /**
+   * Section "Réparation fuite toiture {ville}" optionnelle.
+   * Ajoutée sur les villes où on a un signal GSC fort sur la requête
+   * `réparation fuite toiture {ville}` (ex: Pessac, Talence en pos 5.0).
+   * Quand fourni, injectée juste après le contexte local avec son propre H2
+   * pour capter exactly l'intent.
+   */
+  reparationFuite?: {
+    /** Court paragraphe d'intro (60-100 mots). */
+    intro: ReactNode;
+    /** 3-5 cas typiques de fuite avec délai d'intervention attendu. */
+    casTypiques: Array<{ title: string; description: string }>;
+    /** Tarif indicatif "intervention urgence" pour cette ville. */
+    tarifIndicatif: string;
+  };
 };
 
 export function VillePageLayout({ content }: { content: VillePageContent }) {
@@ -119,6 +134,59 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
           </div>
         </Container>
       </section>
+
+      {/* SECTION 1bis — Réparation fuite (optionnelle, sur villes à pos GSC favorable) */}
+      {content.reparationFuite && (
+        <section className="section-y bg-[var(--color-creme)] border-y border-[var(--color-border)]">
+          <Container size="narrow">
+            <Eyebrow className="mb-3">Urgence fuite · {ville.name}</Eyebrow>
+            <h2 className="mb-5">
+              Réparation fuite toiture à {ville.name} :
+              intervention rapide 7j/7
+            </h2>
+            <div className="prose prose-lg max-w-none text-[1.0625rem] text-[var(--color-gris-600)] leading-relaxed space-y-4 [&_strong]:text-[var(--color-ardoise)] mb-8">
+              {content.reparationFuite.intro}
+            </div>
+            <h3 className="text-[1.125rem] font-bold text-[var(--color-ardoise)] mb-4">
+              Cas typiques de fuite toiture à {ville.name}
+            </h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              {content.reparationFuite.casTypiques.map((cas) => (
+                <li key={cas.title} className="flex gap-3">
+                  <div className="shrink-0 w-8 h-8 rounded-[var(--radius-md)] bg-[var(--color-terre)]/10 text-[var(--color-terre)] grid place-items-center mt-0.5">
+                    <Wrench className="w-4 h-4" strokeWidth={2} aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h4 className="text-[1rem] font-bold text-[var(--color-ardoise)] mb-1">
+                      {cas.title}
+                    </h4>
+                    <p className="text-[0.9375rem] text-[var(--color-gris-600)] leading-relaxed">
+                      {cas.description}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between p-5 rounded-[var(--radius-lg)] bg-[var(--color-pierre)] border border-[var(--color-border)]">
+              <div>
+                <p className="text-[0.8125rem] uppercase tracking-wider text-[var(--color-gris-600)] mb-1">
+                  Tarif indicatif fuite {ville.nameInflected}
+                </p>
+                <p className="text-[1.25rem] font-bold text-[var(--color-terre-600)]">
+                  {content.reparationFuite.tarifIndicatif}
+                </p>
+              </div>
+              <Button
+                href="/urgence"
+                variant="primary"
+                iconRight={<ArrowRight className="w-4 h-4" />}
+              >
+                Appeler en urgence
+              </Button>
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* SECTION 2 — Services proposés sur cette ville */}
       <section className="section-y bg-[var(--color-creme)] border-y border-[var(--color-border)]">
