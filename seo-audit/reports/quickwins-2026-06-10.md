@@ -1,7 +1,7 @@
 # Quick Wins — Analyse GSC + Autocomplete
 
-**Date** : 2026-06-10T05:07:26.201Z
-**Période GSC** : 332 requêtes, 31 pages
+**Date** : 2026-06-10T06:34:15.479Z
+**Période GSC** : 327 requêtes, 31 pages
 
 ## 1. Quick wins requêtes (position 4-20, ≥ 30 impressions, manque-à-gagner > 0)
 
@@ -9,9 +9,7 @@ Hypothèse CTR attendu : pos 1-3 = 25%, pos 4-5 = 10%, pos 6-10 = 4%, pos 11-15 
 
 | Requête | Pos | Imp | Clics | CTR | CTR attendu | Manque-à-gagner |
 |---|---|---|---|---|---|---|
-| `gironde-toiture-service.fr cuisine` | 4.1 | 988 | 0 | 0.00% | 10% | **+99** |
 | `couvreur gironde` | 8.9 | 806 | 3 | 0.37% | 4% | **+29** |
-| `gironde-toiture-service.fr expert en renovation` | 7.1 | 627 | 0 | 0.00% | 4% | **+25** |
 | `charpentier couvreur dans la gironde` | 4.9 | 51 | 0 | 0.00% | 10% | **+5** |
 | `réparation charpente gironde` | 4.3 | 46 | 0 | 0.00% | 10% | **+5** |
 | `fuite toiture bordeaux` | 4.4 | 39 | 0 | 0.00% | 10% | **+4** |
@@ -39,8 +37,10 @@ Hypothèse CTR attendu : pos 1-3 = 25%, pos 4-5 = 10%, pos 6-10 = 4%, pos 11-15 
 | `installation zinguerie gironde` | 6.9 | 33 | 0 | 0.00% | 4% | **+1** |
 | `nettoyage toiture gironde` | 10.6 | 77 | 0 | 0.00% | 1.5% | **+1** |
 | `pose de gouttière bordeaux` | 5.1 | 32 | 0 | 0.00% | 4% | **+1** |
+| `pose de velux gironde` | 13.4 | 36 | 0 | 0.00% | 1.5% | **+1** |
+| `pose velux bordeaux` | 11.2 | 48 | 0 | 0.00% | 1.5% | **+1** |
 
-**Total manque-à-gagner mensuel estimé : 220 clics sur 28 jours**
+**Total manque-à-gagner mensuel estimé : 96 clics sur 28 jours**
 
 ## 2. Pages à fort potentiel (≥ 100 imp, 0 clic)
 
@@ -179,20 +179,20 @@ Hypothèse CTR attendu : pos 1-3 = 25%, pos 4-5 = 10%, pos 6-10 = 4%, pos 11-15 
 
 ## 5. Top requêtes par page (croisé)
 
-### `/` (5920 imp)
+### `/` (2714 imp)
 
 | Requête | Pos | Imp | Clics | CTR |
 |---|---|---|---|---|
-| `gironde-toiture-service.fr charpente et toiture` | 2.3 | 1553 | 0 | 0.00% |
-| `gironde-toiture-service.fr cuisine` | 3.9 | 975 | 0 | 0.00% |
 | `couvreur gironde` | 6.7 | 709 | 1 | 0.14% |
 | `couvreur bordeaux` | 17.8 | 646 | 1 | 0.15% |
-| `gironde-toiture-service.fr expert en renovation` | 7.0 | 621 | 0 | 0.00% |
 | `entreprise de couverture bordeaux` | 16.9 | 112 | 0 | 0.00% |
 | `couverture gironde` | 5.0 | 78 | 4 | 5.13% |
 | `couvreur` | 9.9 | 78 | 0 | 0.00% |
 | `couvreur 33` | 12.3 | 60 | 0 | 0.00% |
 | `couverture toiture gironde` | 3.0 | 55 | 0 | 0.00% |
+| `service couverture gironde` | 1.1 | 49 | 0 | 0.00% |
+| `charpentier couvreur dans la gironde` | 3.6 | 48 | 0 | 0.00% |
+| `couverture toiture bordeaux` | 18.3 | 46 | 0 | 0.00% |
 
 ### `/nettoyage-toiture-bordeaux` (631 imp)
 
@@ -209,7 +209,7 @@ Hypothèse CTR attendu : pos 1-3 = 25%, pos 4-5 = 10%, pos 6-10 = 4%, pos 11-15 
 | `demoussage toiture bordeaux` | 8.1 | 11 | 0 | 0.00% |
 | `artisan nettoyage toiture` | 29.5 | 10 | 0 | 0.00% |
 
-### `/reparation-toiture-bordeaux` (557 imp)
+### `/reparation-toiture-bordeaux` (556 imp)
 
 | Requête | Pos | Imp | Clics | CTR |
 |---|---|---|---|---|
@@ -223,21 +223,6 @@ Hypothèse CTR attendu : pos 1-3 = 25%, pos 4-5 = 10%, pos 6-10 = 4%, pos 11-15 
 | `réparation de toiture` | 25.8 | 19 | 0 | 0.00% |
 | `réparation toit aquitaine` | 13.1 | 17 | 0 | 0.00% |
 | `travaux toiture bordeaux` | 15.2 | 15 | 0 | 0.00% |
-
-### `/devis-couvreur-gironde` (457 imp)
-
-| Requête | Pos | Imp | Clics | CTR |
-|---|---|---|---|---|
-| `couvreur gironde` | 22.6 | 176 | 1 | 0.57% |
-| `devis couvreur` | 27.2 | 65 | 0 | 0.00% |
-| `devis toiture bordeaux` | 13.4 | 60 | 0 | 0.00% |
-| `pose couverture gironde` | 18.8 | 34 | 0 | 0.00% |
-| `devis couvreur 0` | 11.3 | 18 | 0 | 0.00% |
-| `gironde-toiture-service.fr "charpente" et toiture` | 11.3 | 15 | 0 | 0.00% |
-| `artisan couvreur gironde` | 26.6 | 13 | 0 | 0.00% |
-| `gironde-toiture-service.fr cuisine` | 18.4 | 13 | 0 | 0.00% |
-| `couverture toiture gironde` | 24.5 | 10 | 0 | 0.00% |
-| `couverture gironde` | 27.7 | 9 | 0 | 0.00% |
 
 ### `/installation-velux-bordeaux` (451 imp)
 
@@ -253,6 +238,21 @@ Hypothèse CTR attendu : pos 1-3 = 25%, pos 4-5 = 10%, pos 6-10 = 4%, pos 11-15 
 | `pose de velux langon` | 22.4 | 15 | 0 | 0.00% |
 | `pose de fenêtres de toit langon` | 34.0 | 7 | 0 | 0.00% |
 | `réparation velux gironde` | 10.3 | 7 | 0 | 0.00% |
+
+### `/devis-couvreur-gironde` (422 imp)
+
+| Requête | Pos | Imp | Clics | CTR |
+|---|---|---|---|---|
+| `couvreur gironde` | 22.6 | 176 | 1 | 0.57% |
+| `devis couvreur` | 27.2 | 65 | 0 | 0.00% |
+| `devis toiture bordeaux` | 13.4 | 60 | 0 | 0.00% |
+| `pose couverture gironde` | 18.8 | 34 | 0 | 0.00% |
+| `devis couvreur 0` | 11.3 | 18 | 0 | 0.00% |
+| `artisan couvreur gironde` | 26.6 | 13 | 0 | 0.00% |
+| `couverture toiture gironde` | 24.5 | 10 | 0 | 0.00% |
+| `couverture gironde` | 27.7 | 9 | 0 | 0.00% |
+| `devis zinguerie` | 31.2 | 9 | 0 | 0.00% |
+| `omavar couverture à bordeaux et en gironde` | 16.5 | 8 | 0 | 0.00% |
 
 ### `/urgence-fuite-toiture-bordeaux` (391 imp)
 

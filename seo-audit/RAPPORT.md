@@ -214,6 +214,28 @@ Concurrents identifiés sur les SERPs prioritaires :
 
 ---
 
+## Investigation bruit GSC `gironde-toiture-service.fr` (résolue)
+
+**Symptôme** : 5 requêtes de la forme `gironde-toiture-service.fr X` (charpente, cuisine, expert en renovation…) captent **3 242 impressions sur 28 jours** dans notre GSC, soit **~35 % de nos impressions totales**. CTR 0 % sur l'intégralité.
+
+**Investigation** (10 juin 2026) :
+- `gironde-toiture-service.fr` est un site **éditorial généraliste** appartenant au réseau **Byaeni.fr** (lifestyle, déco, finance, voitures, et entre autres "habitat/rénovation").
+- Pas un couvreur de Bordeaux, pas un concurrent métier, pas un ancien site lié à Couverture Gironde.
+- Les utilisateurs cherchent l'URL exacte de ce blog par "navigation brand". Google fait remonter notre homepage en pos 2-7 par **similarité de nom de domaine** (couverturegironde.fr ↔ gironde-toiture-service.fr) + autorité locale acquise.
+
+**Décision** : aucune action prod possible (on ne contrôle ni les recherches utilisateur ni l'algo Google). On **filtre ces requêtes** dans les analyses internes pour ne pas fausser les KPIs.
+
+**Implémentation** :
+- `scripts/seo-quickwins.mjs` : ajout d'un filtre `NOISE_PATTERNS` (regex `/gironde-toiture-service\.fr/i`) qui exclut ces requêtes des calculs de manque-à-gagner.
+- **KPIs corrigés (hors bruit)** :
+  - Impressions réelles : **5 867** (vs 9 109 affichées dans GSC brut)
+  - CTR réel : **0.17 %** (vs 0.11 % brut)
+  - Manque-à-gagner réel : **96 clics / 28j** (vs 220 fantôme)
+
+**Note** : si le bruit s'intensifie (>10 000 imp/mois), envisager un Disavow plus actif côté GSC (signaler à Google) ou enrichir la homepage pour la dissocier sémantiquement du blog Byaeni. Pour l'instant, c'est non-bloquant.
+
+---
+
 ## Honnêteté des données
 
 **Mesuré (data réelle)** :

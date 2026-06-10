@@ -79,9 +79,25 @@ function main() {
   console.log(`   Pages CSV    : ${path.relative(projectRoot, pagesFile.path)}`);
   console.log(`   QbP CSV      : ${path.relative(projectRoot, qbpFile.path)}\n`);
 
-  const queries = parseCSV(queriesFile.content).map(parseGSCRow);
+  // Patterns à exclure : requêtes brand parasites qui captent des impressions
+  // hors thématique sans aucune chance de clic vers nous.
+  // Voir seo-audit/RAPPORT.md → "Investigation bruit GSC gironde-toiture-service.fr"
+  // (2026-06-10 : 3242 imp/mois sur des requêtes blog éditorial Byaeni).
+  const NOISE_PATTERNS = [
+    /gironde-toiture-service\.fr/i,
+  ];
+  const isNoise = (query) =>
+    !!query && NOISE_PATTERNS.some((re) => re.test(query));
+
+  const queriesRaw = parseCSV(queriesFile.content).map(parseGSCRow);
+  const queries = queriesRaw.filter((q) => !isNoise(q.query));
+  const noiseCount = queriesRaw.length - queries.length;
+  if (noiseCount > 0) {
+    const noiseImp = queriesRaw.filter((q) => isNoise(q.query)).reduce((s, q) => s + q.impressions, 0);
+    console.log(`   ⚠ Filtré ${noiseCount} requêtes bruit (${noiseImp} imp) → cf. RAPPORT.md\n`);
+  }
   const pages = parseCSV(pagesFile.content).map(parseGSCRow);
-  const qbp = parseCSV(qbpFile.content).map(parseGSCRow);
+  const qbp = parseCSV(qbpFile.content).map(parseGSCRow).filter((r) => !isNoise(r.query));
 
   // 1. Quick wins : position 5-20 + impressions ≥ 30 + CTR faible
   const quickWins = queries
