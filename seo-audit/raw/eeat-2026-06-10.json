@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-06-10T09:47:08.424Z",
+  "runAt": "2026-06-10T09:50:16.458Z",
   "base": "https://www.couverturegironde.fr",
   "results": [
     {
@@ -7,12 +7,14 @@
       "pageKind": "default",
       "jsonLdTypes": [
         "FAQPage",
+        "Review",
+        "HowTo",
         "Organization",
         "WebSite",
         "RoofingContractor"
       ],
       "experience": {
-        "score": 75,
+        "score": 100,
         "checks": [
           {
             "id": "EXP-YEARS",
@@ -33,9 +35,9 @@
           {
             "id": "EXP-REVIEWS",
             "label": "Témoignages clients structurés (Review schema)",
-            "pass": false,
+            "pass": true,
             "weight": 10,
-            "detail": null,
+            "detail": "Review JSON-LD présent",
             "skipped": false
           },
           {
@@ -56,10 +58,10 @@
           }
         ],
         "totalWeight": 40,
-        "earned": 30
+        "earned": 40
       },
       "expertise": {
-        "score": 86,
+        "score": 100,
         "checks": [
           {
             "id": "EXPER-FOUNDER",
@@ -96,14 +98,14 @@
           {
             "id": "EXPER-HOWTO",
             "label": "Schema HowTo (méthode détaillée)",
-            "pass": false,
+            "pass": true,
             "weight": 6,
-            "detail": null,
+            "detail": "HowTo JSON-LD",
             "skipped": false
           }
         ],
         "totalWeight": 42,
-        "earned": 36
+        "earned": 42
       },
       "authority": {
         "score": 86,
@@ -223,7 +225,7 @@
         "totalWeight": 44,
         "earned": 44
       },
-      "global": 87
+      "global": 97
     },
     {
       "url": "/a-propos",
@@ -232,12 +234,13 @@
         "BreadcrumbList",
         "Place",
         "FAQPage",
+        "Review",
         "Organization",
         "WebSite",
         "RoofingContractor"
       ],
       "experience": {
-        "score": 55,
+        "score": 100,
         "checks": [
           {
             "id": "EXP-YEARS",
@@ -250,17 +253,17 @@
           {
             "id": "EXP-REALISATIONS",
             "label": "Lien vers réalisations / chantiers",
-            "pass": false,
+            "pass": true,
             "weight": 8,
-            "detail": "0 liens trouvés",
+            "detail": "18 liens trouvés",
             "skipped": false
           },
           {
             "id": "EXP-REVIEWS",
             "label": "Témoignages clients structurés (Review schema)",
-            "pass": false,
+            "pass": true,
             "weight": 10,
-            "detail": null,
+            "detail": "Review JSON-LD présent",
             "skipped": false
           },
           {
@@ -281,7 +284,7 @@
           }
         ],
         "totalWeight": 40,
-        "earned": 22
+        "earned": 40
       },
       "expertise": {
         "score": 86,
@@ -307,7 +310,7 @@
             "label": "Contenu profond (≥ 1500 mots)",
             "pass": true,
             "weight": 10,
-            "detail": "2213 mots",
+            "detail": "2457 mots",
             "skipped": false
           },
           {
@@ -315,7 +318,7 @@
             "label": "Vocabulaire technique métier (≥ 6 termes)",
             "pass": true,
             "weight": 8,
-            "detail": "10/12 termes détectés",
+            "detail": "11/12 termes détectés",
             "skipped": false
           },
           {
@@ -448,7 +451,7 @@
         "totalWeight": 44,
         "earned": 44
       },
-      "global": 85
+      "global": 97
     },
     {
       "url": "/couvreur-bordeaux",
@@ -911,12 +914,13 @@
         "BreadcrumbList",
         "FAQPage",
         "OfferCatalog",
+        "Review",
         "Organization",
         "WebSite",
         "RoofingContractor"
       ],
       "experience": {
-        "score": 55,
+        "score": 80,
         "checks": [
           {
             "id": "EXP-YEARS",
@@ -937,9 +941,9 @@
           {
             "id": "EXP-REVIEWS",
             "label": "Témoignages clients structurés (Review schema)",
-            "pass": false,
+            "pass": true,
             "weight": 10,
-            "detail": null,
+            "detail": "Review JSON-LD présent",
             "skipped": false
           },
           {
@@ -960,7 +964,7 @@
           }
         ],
         "totalWeight": 40,
-        "earned": 22
+        "earned": 32
       },
       "expertise": {
         "score": 62,
@@ -1127,7 +1131,7 @@
         "totalWeight": 44,
         "earned": 44
       },
-      "global": 79
+      "global": 86
     },
     {
       "url": "/urgence-fuite-toiture-bordeaux",
