@@ -104,13 +104,15 @@ export function getLocalBusinessSchema(): WithContext<LocalBusiness> {
         closes: OPENING_HOURS.closes,
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: TRUST.googleRating,
-      reviewCount: TRUST.googleReviewCount,
-      bestRating: 5,
-      worstRating: 1,
-    },
+    // NOTE : aggregateRating retiré du LocalBusiness sitewide.
+    // Quand un Service schema référence le LocalBusiness via @id, Google
+    // résout la référence et rattache aggregateRating au contexte Service,
+    // ce qui est invalide ("Type d'objet non valide" dans GSC sur
+    // /charpente-bordeaux et autres pages service).
+    // L'AggregateRating + Reviews individuels sont injectés sur les pages
+    // où c'est pertinent (home, /a-propos, /tarifs) via getReviewSchemas
+    // qui produit des Review individuels. Google peut afficher les étoiles
+    // à partir de ces Reviews + AggregateRating visible dans le HTML.
     areaServed: Object.values(LOCATIONS).map((l) => ({
       '@type': 'City',
       name: l.name,
