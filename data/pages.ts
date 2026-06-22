@@ -20,9 +20,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'home',
     title: 'Accueil',
     seoTitle:
-      'Couvreur Bordeaux Gironde 7j/7 : devis 24h, 5/5 sur 54 avis',
+      'Couvreur Bordeaux ★ 5/5 sur 54 avis ★ Devis 24h, urgence 7j/7',
     seoDescription:
-      "Couvreur-zingueur à Bordeaux et en Gironde depuis 2005. Démoussage, nettoyage, réparation, urgence fuite 7j/7. Note 5/5 (54 avis). Devis gratuit en 24h, garantie décennale.",
+      "Couvreur-zingueur à Bordeaux depuis 2005 ✓ Démoussage, nettoyage, réparation toiture ✓ Urgence fuite 7j/7 sous 1h ✓ Note 5/5 sur 54 avis Google ✓ Devis gratuit 24h, garantie décennale.",
     visibleInNav: true,
     navOrder: 10,
     indexable: true,
@@ -88,9 +88,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Nettoyage toiture Bordeaux',
     navLabel: 'Nettoyage toiture',
     seoTitle:
-      'Nettoyage toiture Bordeaux : 15-22 €/m² | Devis 24h, 5/5 avis',
+      'Nettoyage toiture Bordeaux : 15-22 €/m² | Démoussage + hydrofuge',
     seoDescription:
-      "Nettoyage toiture à Bordeaux et en Gironde par couvreur depuis 2005. Haute pression maîtrisée, démoussage et rinçage. Note 5/5 (54 avis). Devis gratuit 24h.",
+      "★ Nettoyage toiture Bordeaux 15-22 €/m² ★ Démoussage + rinçage haute pression + hydrofuge longue durée ✓ Couvreur depuis 2005 ✓ Note 5/5 (54 avis) ✓ Devis gratuit 24h.",
     visibleInNav: true,
     navCategory: 'entretien',
     navOrder: 21,
@@ -128,7 +128,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Réparation toiture Bordeaux : intervention 24h, diagnostic gratuit',
     seoDescription:
-      "Réparation toiture à Bordeaux et en Gironde : tuiles cassées, fuite, faîtage, étanchéité. Intervention sous 24h, diagnostic gratuit. Note 5/5 (54 avis). Garantie décennale.",
+      "★ Réparation toiture Bordeaux ★ Tuiles cassées, fuite, faîtage, étanchéité ✓ Intervention sous 24h ✓ Diagnostic gratuit ✓ Note 5/5 (54 avis) ✓ Garantie décennale.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 30,
@@ -144,9 +144,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Urgence fuite toiture',
     navLabel: 'Urgence fuite 7j/7',
     seoTitle:
-      'Urgence fuite toiture Bordeaux 7j/7 : couvreur en 1h',
+      'Urgence fuite toiture Bordeaux 7j/7 : couvreur en 1h, devis 24h',
     seoDescription:
-      "Urgence fuite toiture à Bordeaux et en Gironde 7j/7. Couvreur sur place en 1h, mise hors d'eau immédiate. Appel direct : 07 68 69 78 48. Note 5/5 (54 avis).",
+      "★ Urgence toiture Bordeaux 7j/7 ★ Couvreur sur place en 1h ✓ Mise hors d'eau immédiate ✓ Appel direct 07 68 69 78 48 ✓ Note 5/5 (54 avis). Couverture Gironde.",
     visibleInNav: true,
     navCategory: 'urgence',
     navOrder: 40,
@@ -162,9 +162,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Zinguerie Bordeaux',
     navLabel: 'Zinguerie & gouttières',
     seoTitle:
-      'Zinguerie & gouttières Bordeaux : pose, réparation | Devis 24h',
+      'Zinguerie & gouttières Bordeaux : zinc, soudure étain | 50-85 €/ml',
     seoDescription:
-      "Zinguerie et gouttières à Bordeaux : gouttières zinc, noues, chéneaux, habillages. Soudure étain, étanchéité garantie. Note 5/5 (54 avis). Devis gratuit 24h.",
+      "★ Zinguerie Bordeaux et Gironde ★ Gouttières zinc + noues + chéneaux + habillages ✓ Soudure étain sur place ✓ Étanchéité garantie 30 ans ✓ Note 5/5 ✓ Devis 24h.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 31,
@@ -180,9 +180,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Installation Velux Bordeaux',
     navLabel: 'Pose Velux',
     seoTitle:
-      'Pose Velux Bordeaux : installation et remplacement | Devis 24h',
+      'Pose Velux Bordeaux : installation et remplacement | 850-1600 €',
     seoDescription:
-      "Pose et remplacement de Velux à Bordeaux et en Gironde par couvreur certifié. Étanchéité garantie, conseil modèle. Note 5/5 (54 avis). Devis gratuit 24h.",
+      "★ Pose Velux Bordeaux et Gironde 850-1600 € ★ Installation + remplacement par couvreur certifié ✓ Étanchéité garantie ✓ Conseil modèle ✓ Note 5/5 (54 avis) ✓ Devis 24h.",
     visibleInNav: true,
     navCategory: 'urgence',
     navOrder: 41,
@@ -197,9 +197,9 @@ const STATIC_PAGES: PageEntry[] = [
     service: 'neuve',
     title: 'Toiture neuve Bordeaux',
     navLabel: 'Toiture neuve',
-    seoTitle: 'Toiture neuve Bordeaux : construction clé en main | Devis 24h',
+    seoTitle: 'Toiture neuve Bordeaux et Gironde : construction clé en main',
     seoDescription:
-      "Construction de toiture neuve à Bordeaux et en Gironde : charpente, couverture, zinguerie, isolation. Maîtrise d'œuvre globale. Note 5/5 (54 avis). Devis 24h.",
+      "★ Toiture neuve à Bordeaux et en Gironde ★ Construction clé en main : charpente + couverture + zinguerie + isolation ✓ Maîtrise d'œuvre globale ✓ Note 5/5 (54 avis) ✓ Devis 24h.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 32,
@@ -278,9 +278,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'guide',
     title: 'Aides rénovation toiture 2026',
     seoTitle:
-      'Aides rénovation toiture 2026 : MaPrimeRénov, éco-PTZ, TVA réduite',
+      'Aides pour refaire sa toiture 2026 : MaPrimeRénov, éco-PTZ, CEE',
     seoDescription:
-      "Quelles aides pour rénover votre toiture en 2026 ? MaPrimeRénov', éco-prêt à taux zéro, TVA 5,5 %, CEE. Conditions, montants et démarches détaillés.",
+      "★ Aides pour refaire sa toiture en 2026 ★ MaPrimeRénov' + éco-PTZ + TVA 5,5 % + CEE. Conditions, montants, démarches détaillés par un couvreur Gironde depuis 2005.",
     indexable: true,
     sitemapPriority: 0.7,
   },
@@ -290,9 +290,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'guide',
     title: 'Quand démousser sa toiture en Gironde',
     seoTitle:
-      'Quand démousser sa toiture en Gironde ? : Saison et fréquence idéales',
+      'Nettoyer toiture verte de mousse en Gironde : quand, comment, prix',
     seoDescription:
-      "Quand démousser sa toiture à Bordeaux et en Gironde ? Quelle saison, quelle fréquence ? Signes d'alerte, conseils d'expert, calendrier d'entretien optimal.",
+      "★ Comment nettoyer une toiture verte de mousse en Gironde ? Quand démousser, quelle fréquence, quels signes d'alerte ? Conseils couvreur Gironde depuis 2005.",
     indexable: true,
     sitemapPriority: 0.7,
   },

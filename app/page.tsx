@@ -40,15 +40,15 @@ export default function HomePage() {
     <>
       <Hero
         variant="home"
-        eyebrow="Bordeaux · Gironde · 5/5 sur 54 avis Google"
+        eyebrow="Mérignac · Bordeaux · 5/5 sur 54 avis Google"
         title={
           <>
-            Couvreur à Bordeaux et en{' '}
-            <span className="text-[var(--color-terre)]">Gironde</span> :
-            démoussage, nettoyage et entretien de toiture
+            Couvreur à{' '}
+            <span className="text-[var(--color-terre)]">Bordeaux</span> :
+            démoussage, nettoyage et entretien de toiture en Gironde
           </>
         }
-        subtitle="Artisan couvreur-zingueur en Gironde depuis 2005. Intervention rapide 7j/7, devis gratuit sous 24h et garantie décennale sur chaque chantier. Atelier à Mérignac, intervention sur Bordeaux Métropole et tout le département (33)."
+        subtitle="Artisan couvreur-zingueur à Bordeaux depuis 2005, atelier à Mérignac. Intervention rapide 7j/7, devis gratuit sous 24h et garantie décennale. Présent sur tout Bordeaux Métropole et le département (33)."
         imageSlug="home"
         secondaryCtaLabel="Demander un devis gratuit"
       />
