@@ -29,7 +29,11 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 31536000,
     // SVG placeholders : on autorise le contenu SVG inline servi par /api/placeholder
     dangerouslyAllowSVG: true,
-    contentDispositionType: 'attachment',
+    // 'inline' (et non 'attachment') pour que Googlebot Image affiche les
+    // images directement, condition critique pour l'indexation correcte
+    // de la page et son rendu mobile-first. 'attachment' provoquait
+    // l'erreur "Autre erreur" sur les ressources image dans GSC.
+    contentDispositionType: 'inline',
     contentSecurityPolicy:
       "default-src 'self'; script-src 'none'; sandbox;",
   },
