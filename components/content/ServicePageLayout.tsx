@@ -20,7 +20,8 @@ import { AVIS } from '@/data/avis';
 import { SERVICES, type ServiceDefinition } from '@/data/services';
 import type { ServiceCategory } from '@/data/types';
 import type { ReactNode } from 'react';
-import { Check, AlertTriangle, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { Check, AlertTriangle, ArrowRight, MapPin, Euro } from 'lucide-react';
 import { SITE } from '@/lib/constants';
 import { Button } from '@/components/ui/Button';
 import { requirePage } from '@/lib/pages';
@@ -54,6 +55,17 @@ export type ServicePageContent = {
   risques: Array<{ title: string; description: string }>;
   /** Méthode d'intervention en N étapes (4-6 recommandé). */
   methode: Array<{ title: string; description: string }>;
+  /** Bloc tarifs locaux optionnel (booste rich snippets prix + signal local). */
+  tarifs?: {
+    intro?: string;
+    lines: Array<{ service: string; range: string; note?: string }>;
+    disclaimer?: string;
+  };
+  /** Bloc quartiers desservis optionnel (booste signal local + maillage interne). */
+  quartiersBordeaux?: {
+    intro?: string;
+    items: Array<{ nom: string; description: string; href?: string }>;
+  };
 };
 
 export function ServicePageLayout({ content }: { content: ServicePageContent }) {
@@ -190,6 +202,130 @@ export function ServicePageLayout({ content }: { content: ServicePageContent }) 
           </div>
         </Container>
       </section>
+
+      {/* Tarifs locaux (optionnel) — booste signal prix + rich snippets */}
+      {content.tarifs && (
+        <section className="section-y bg-[var(--color-creme)] border-y border-[var(--color-border)]">
+          <Container size="narrow">
+            <div className="mb-8">
+              <Eyebrow className="mb-3">Tarifs indicatifs Bordeaux</Eyebrow>
+              <h2 className="mb-4">
+                Prix {service.name.toLowerCase()} à Bordeaux et en Gironde
+              </h2>
+              {content.tarifs.intro && (
+                <p className="text-[1.0625rem] text-[var(--color-gris-600)] leading-relaxed">
+                  {content.tarifs.intro}
+                </p>
+              )}
+            </div>
+            <div className="overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-pierre)]">
+              <table className="w-full text-left">
+                <thead className="bg-[var(--color-ardoise)] text-[var(--color-pierre)] text-[0.875rem] uppercase tracking-wider">
+                  <tr>
+                    <th className="px-4 py-3 font-semibold">Prestation</th>
+                    <th className="px-4 py-3 font-semibold whitespace-nowrap">
+                      Fourchette
+                    </th>
+                    <th className="px-4 py-3 font-semibold hidden md:table-cell">
+                      Détail
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="text-[0.9375rem] text-[var(--color-gris-600)]">
+                  {content.tarifs.lines.map((line) => (
+                    <tr
+                      key={line.service}
+                      className="border-t border-[var(--color-border)]"
+                    >
+                      <td className="px-4 py-3 font-semibold text-[var(--color-ardoise)]">
+                        {line.service}
+                      </td>
+                      <td className="px-4 py-3 whitespace-nowrap inline-flex items-center gap-1.5 text-[var(--color-terre-700)] font-semibold">
+                        <Euro
+                          className="w-4 h-4"
+                          strokeWidth={2}
+                          aria-hidden="true"
+                        />
+                        {line.range}
+                      </td>
+                      <td className="px-4 py-3 hidden md:table-cell text-[var(--color-gris-600)]">
+                        {line.note ?? '—'}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {content.tarifs.disclaimer && (
+              <p className="mt-4 text-[0.875rem] text-[var(--color-gris-500)] italic">
+                {content.tarifs.disclaimer}
+              </p>
+            )}
+          </Container>
+        </section>
+      )}
+
+      {/* Quartiers Bordeaux desservis (optionnel) — booste local SEO */}
+      {content.quartiersBordeaux && (
+        <section className="section-y">
+          <Container>
+            <div className="max-w-3xl mb-10">
+              <Eyebrow className="mb-3">Quartiers desservis</Eyebrow>
+              <h2 className="mb-4">
+                {service.name} dans les quartiers de Bordeaux et la métropole
+              </h2>
+              {content.quartiersBordeaux.intro && (
+                <p className="text-[1.0625rem] text-[var(--color-gris-600)] leading-relaxed">
+                  {content.quartiersBordeaux.intro}
+                </p>
+              )}
+            </div>
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {content.quartiersBordeaux.items.map((q) => {
+                const inner = (
+                  <>
+                    <div className="shrink-0 w-9 h-9 rounded-full bg-[var(--color-terre-100)] text-[var(--color-terre-700)] grid place-items-center">
+                      <MapPin
+                        className="w-4 h-4"
+                        strokeWidth={2}
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-[1rem] font-bold text-[var(--color-ardoise)] mb-1.5">
+                        {q.nom}
+                      </h3>
+                      <p className="text-[0.9375rem] text-[var(--color-gris-600)] leading-relaxed">
+                        {q.description}
+                      </p>
+                    </div>
+                  </>
+                );
+                return q.href ? (
+                  <li
+                    key={q.nom}
+                    className="rounded-[var(--radius-lg)] border border-[var(--color-border)] p-5 flex gap-4 transition hover:border-[var(--color-terre)] hover:shadow-sm"
+                  >
+                    <Link
+                      href={q.href}
+                      className="flex gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-terre)] rounded-[var(--radius-md)]"
+                    >
+                      {inner}
+                    </Link>
+                  </li>
+                ) : (
+                  <li
+                    key={q.nom}
+                    className="rounded-[var(--radius-lg)] border border-[var(--color-border)] p-5 flex gap-4"
+                  >
+                    {inner}
+                  </li>
+                );
+              })}
+            </ul>
+          </Container>
+        </section>
+      )}
 
       <RealisationsCarousel
         eyebrow="Chantiers réalisés"

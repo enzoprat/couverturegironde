@@ -139,6 +139,113 @@ export default function Page() {
               "Remise d'un bref rapport indiquant l'état général, les points à surveiller dans les 5 prochaines années, et la date conseillée du prochain entretien.",
           },
         ],
+        tarifs: {
+          intro:
+            "Fourchettes de prix observées sur Bordeaux Métropole en 2026 pour un nettoyage de toiture. Le tarif dépend du matériau, de l'accessibilité, du niveau d'encrassement et de l'éventuel combo avec un démoussage ou un traitement hydrofuge.",
+          lines: [
+            {
+              service: 'Nettoyage simple tuile mécanique',
+              range: '12 – 16 €/m²',
+              note: 'Pression 80-100 bars, buse adaptée',
+            },
+            {
+              service: 'Nettoyage tuile canal traditionnelle',
+              range: '14 – 20 €/m²',
+              note: 'Pression réduite, technique manuelle complémentaire',
+            },
+            {
+              service: 'Nettoyage ardoise naturelle',
+              range: '15 – 22 €/m²',
+              note: 'Pression 60-80 bars, buse douce obligatoire',
+            },
+            {
+              service: 'Nettoyage zinc patiné',
+              range: '18 – 28 €/m²',
+              note: 'Pression <50 bars, buse spéciale, eau tiède',
+            },
+            {
+              service: 'Nettoyage + démoussage combiné',
+              range: '18 – 25 €/m²',
+              note: 'Le combo recommandé, le plus rentable',
+            },
+            {
+              service: 'Nettoyage + démoussage + hydrofuge 10 ans',
+              range: '25 – 38 €/m²',
+              note: 'Protection complète, garantie 10 ans',
+            },
+            {
+              service: 'Nettoyage gouttières + descentes EP',
+              range: '8 – 15 €/ml',
+              note: 'Souvent inclus dans le nettoyage toiture',
+            },
+            {
+              service: 'Forfait minimum déplacement',
+              range: '280 – 420 €',
+              note: 'Surface <30 m² ou intervention courte',
+            },
+          ],
+          disclaimer:
+            "Tarifs TTC, posé, sécurité incluse. Échafaudage spécifique, accès difficile ou hauteur >12m sur devis. Le combo nettoyage+démoussage+hydrofuge est le plus rentable sur la durée (économise 30-50% vs prestations séparées).",
+        },
+        quartiersBordeaux: {
+          intro:
+            "Le climat océanique girondin (930 mm de pluie par an, couvert végétal dense) favorise particulièrement les mousses et les dépôts sur les toitures bordelaises. Chaque quartier a son profil d'encrassement, lié au bâti et à l'environnement.",
+          items: [
+            {
+              nom: 'Bordeaux Centre',
+              description:
+                "Dépôts de pollution urbaine + algues sur ardoises. Combo nettoyage + démoussage particulièrement recommandé tous les 4-5 ans.",
+              href: '/couvreur-bordeaux-centre',
+            },
+            {
+              nom: 'Chartrons',
+              description:
+                "Toits zinc et ardoise patrimoniaux : pression strictement maîtrisée obligatoire pour préserver la patine.",
+              href: '/couvreur-bordeaux-chartrons',
+            },
+            {
+              nom: 'Caudéran',
+              description:
+                "Quartier arboré : mousses abondantes sur versants nord, démoussage rémanent + hydrofuge fortement recommandé.",
+              href: '/couvreur-bordeaux-cauderan',
+            },
+            {
+              nom: 'Saint-Augustin',
+              description:
+                "Échoppes tuile canal : nettoyage doux et démoussage régulier maintiennent l'esthétique du bâti bordelais traditionnel.",
+              href: '/couvreur-bordeaux-saint-augustin',
+            },
+            {
+              nom: 'Mérignac',
+              description:
+                "Notre commune : intervention sans surcoût déplacement, tarifs à partir de 12 €/m² pour tuile mécanique standard.",
+              href: '/couvreur-merignac',
+            },
+            {
+              nom: 'Pessac',
+              description:
+                "Quartiers étudiants et résidentiels boisés. Mousses abondantes côté Bourg-Madame et Cap-de-Bos, hydrofuge recommandé.",
+              href: '/nettoyage-toiture-pessac',
+            },
+            {
+              nom: 'Talence',
+              description:
+                "Maisons bourgeoises ardoise et tuile mécanique, intervention douce pour préserver les éléments patrimoniaux.",
+              href: '/couvreur-talence',
+            },
+            {
+              nom: 'Le Bouscat',
+              description:
+                "Quartier résidentiel cossu, toitures bien entretenues : démoussage tous les 5 ans suffit avec hydrofuge.",
+              href: '/couvreur-bouscat',
+            },
+            {
+              nom: 'Gradignan, Villenave, Bègles',
+              description:
+                "Pavillonnaire arboré : versants nord particulièrement exposés, nettoyage + démoussage + hydrofuge combo recommandé.",
+            },
+          ],
+        },
       }}
     />
   );

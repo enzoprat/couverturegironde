@@ -140,6 +140,133 @@ export default function Page() {
               "Visite de fin de chantier avec vous, remise des photos avant/après, attestation décennale. Conseils pour prévenir un futur problème équivalent.",
           },
         ],
+        tarifs: {
+          intro:
+            "Fourchettes de prix indicatives pour les réparations courantes sur Bordeaux Métropole en 2026. Une réparation ciblée coûte généralement entre 10 et 50 fois moins qu'une réfection complète tardive : intervenir vite est l'investissement le plus rentable.",
+          lines: [
+            {
+              service: 'Remplacement 1 à 5 tuiles cassées',
+              range: '180 – 340 €',
+              note: 'Forfait diagnostic + intervention + matériaux',
+            },
+            {
+              service: 'Remplacement 5 à 15 tuiles',
+              range: '320 – 580 €',
+              note: 'Tarif dégressif au-delà de 5 tuiles',
+            },
+            {
+              service: 'Réparation faîtage scellé (par ml)',
+              range: '45 – 70 €/ml',
+              note: 'Mortier de chaux pour bâti ancien',
+            },
+            {
+              service: 'Réparation faîtage à sec ventilé',
+              range: '38 – 60 €/ml',
+              note: 'Système moderne avec closoir ventilé',
+            },
+            {
+              service: "Reprise d'abergement cheminée",
+              range: '380 – 850 €',
+              note: 'Zinguerie + étanchéité au pied de cheminée',
+            },
+            {
+              service: 'Réparation noue zinguerie',
+              range: '180 – 420 €/ml',
+              note: 'Selon longueur et accessibilité',
+            },
+            {
+              service: 'Remplacement section gouttière zinc',
+              range: '85 – 140 €/ml',
+              note: 'Avec soudure étain sur place',
+            },
+            {
+              service: 'Remplacement descente EP zinc',
+              range: '95 – 160 €/ml',
+              note: 'Section dimensionnée pluviométrie 930 mm',
+            },
+            {
+              service: 'Réparation Velux (étanchéité)',
+              range: '320 – 750 €',
+              note: 'Kit Velux d\u2019origine, garantie constructeur',
+            },
+            {
+              service: 'Réparation tuile faîtière scellée cassée',
+              range: '120 – 250 €',
+              note: 'Intervention rapide, intervention seule possible',
+            },
+            {
+              service: "Mise hors d'eau d'urgence (bâchage)",
+              range: '250 – 450 €',
+              note: '24/24 en saison tempête, devis sous 24h',
+            },
+            {
+              service: 'Diagnostic complet + rapport photos',
+              range: '0 – 180 €',
+              note: 'Gratuit si chantier signé, sinon forfait',
+            },
+          ],
+          disclaimer:
+            "Tarifs TTC, posé, garantie décennale incluse. Échafaudage spécifique, hauteur >12m, accès difficile ou intervention nuit/weekend sur devis. En urgence : intervention sous 2-4h en heures ouvrées, 24/24 en saison tempête.",
+        },
+        quartiersBordeaux: {
+          intro:
+            "Nous intervenons rapidement sur tous les quartiers de Bordeaux Métropole. Notre proximité Mérignac permet des délais inégalables (15-30 minutes en heures ouvrées sur Bordeaux Ouest, 30-60 minutes ailleurs).",
+          items: [
+            {
+              nom: 'Bordeaux Centre',
+              description:
+                "Échoppes XIXᵉ et immeubles haussmanniens : réparations soignées respectant les matériaux d'origine (tuile canal, ardoise, zinc patiné).",
+              href: '/couvreur-bordeaux-centre',
+            },
+            {
+              nom: 'Chartrons',
+              description:
+                "Maisons d'armateurs et entrepôts réhabilités : zinguerie patrimoniale, abergements complexes. Savoir-faire spécifique.",
+              href: '/couvreur-bordeaux-chartrons',
+            },
+            {
+              nom: 'Caudéran',
+              description:
+                "Pavillons tuile mécanique : tuiles cassées, faîtages dégradés, gouttières percées sont les réparations les plus fréquentes.",
+              href: '/couvreur-bordeaux-cauderan',
+            },
+            {
+              nom: 'Saint-Augustin',
+              description:
+                "Échoppes tuile canal : remplacements ponctuels et reprise de faîtage scellé au mortier de chaux pour respecter le bâti.",
+              href: '/couvreur-bordeaux-saint-augustin',
+            },
+            {
+              nom: 'Mérignac',
+              description:
+                "Notre commune : intervention urgence sous 15-30 min, tarif sans surcoût déplacement. Atelier sur place rue de Malbos.",
+              href: '/couvreur-merignac',
+            },
+            {
+              nom: 'Pessac',
+              description:
+                "Pavillonnaire et copropriétés : reprise zinguerie, étanchéité points faibles, remplacement tuiles courantes.",
+              href: '/reparation-toiture-pessac',
+            },
+            {
+              nom: 'Talence',
+              description:
+                "Mix bourgeois ardoise + résidences étudiantes tuile mécanique. Réparations adaptées à chaque typologie.",
+              href: '/couvreur-talence',
+            },
+            {
+              nom: 'Le Bouscat',
+              description:
+                "Quartier patrimonial : réparations soignées sur tuile canal et zinc, respect strict des matériaux d\u2019origine.",
+              href: '/couvreur-bouscat',
+            },
+            {
+              nom: 'Bègles, Villenave, Gradignan',
+              description:
+                "Pavillonnaire étendu : tuiles cassées par tempête ou branches, faîtages vieillissants, gouttières à reprendre.",
+            },
+          ],
+        },
       }}
     />
   );

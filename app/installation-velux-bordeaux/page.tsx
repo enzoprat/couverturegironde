@@ -172,6 +172,133 @@ export default function Page() {
               "Habillage des tableaux, raccord plâtre/BA13, peinture si demandée. Vérification finale du fonctionnement (rotation, store, motorisation).",
           },
         ],
+        tarifs: {
+          intro:
+            "Fourchettes de prix indicatives pour la pose et le remplacement de fenêtres de toit à Bordeaux et en Gironde en 2026. Le tarif final dépend du modèle Velux choisi (Standard, Tout Confort, Solaire, Électrique), des dimensions, du matériau de couverture et des finitions intérieures.",
+          lines: [
+            {
+              service: 'Pose Velux Standard (rotation classique)',
+              range: '1 200 – 1 600 €',
+              note: 'Fenêtre + kit étanchéité + pose + finitions',
+            },
+            {
+              service: 'Pose Velux Tout Confort (rotation + ventilation)',
+              range: '1 400 – 1 900 €',
+              note: 'Modèle le plus vendu en chambre',
+            },
+            {
+              service: 'Pose Velux Confort Solaire (motorisation)',
+              range: '1 900 – 2 600 €',
+              note: 'Sans câblage électrique, idéal salle de bain',
+            },
+            {
+              service: 'Pose Velux Confort Électrique',
+              range: '1 800 – 2 400 €',
+              note: 'Câblage électrique nécessaire à proximité',
+            },
+            {
+              service: 'Pose Velux Cabrio (balcon extérieur)',
+              range: '4 200 – 6 800 €',
+              note: 'Spectaculaire, requiert vérification charpente',
+            },
+            {
+              service: 'Remplacement Velux existant',
+              range: '850 – 1 500 €',
+              note: 'Conservation cadre, échange fenêtre seule',
+            },
+            {
+              service: 'Kit étanchéité Velux d\u2019origine',
+              range: '180 – 320 €',
+              note: 'EDW (tuile) / EDN (ardoise) / EDM (plat)',
+            },
+            {
+              service: 'Store extérieur pare-soleil (recommandé sud-ouest)',
+              range: '280 – 520 €',
+              note: 'Indispensable expositions sud à Bordeaux',
+            },
+            {
+              service: 'Volet roulant solaire Velux',
+              range: '650 – 980 €',
+              note: 'Black-out + occultation + isolation acoustique',
+            },
+            {
+              service: 'Habillage intérieur tableau + BA13',
+              range: '180 – 380 €',
+              note: 'Selon état plafond et taille de l\u2019ouverture',
+            },
+            {
+              service: 'Réparation étanchéité Velux (infiltration)',
+              range: '320 – 750 €',
+              note: 'Selon origine du défaut, devis sur diagnostic',
+            },
+            {
+              service: 'Pose Velux en construction neuve (lot couverture)',
+              range: '950 – 1 400 €',
+              note: 'Coordination charpentier, tarif optimisé',
+            },
+          ],
+          disclaimer:
+            "Tarifs TTC, fenêtre Velux d\u2019origine incluse, pose + kit étanchéité + finitions standard. Échafaudage et démarches administratives (DP, ABF) sur devis. Garantie décennale incluse + garantie constructeur 10 ans Velux.",
+        },
+        quartiersBordeaux: {
+          intro:
+            "Nous installons des Velux dans tous les quartiers de Bordeaux Métropole. Chaque secteur a ses contraintes urbanistiques propres (secteur sauvegardé, périmètre ABF, PLU). Nous prenons en charge l'intégralité des démarches administratives.",
+          items: [
+            {
+              nom: 'Bordeaux Centre',
+              description:
+                "Secteur sauvegardé UNESCO : avis ABF systématique, contraintes fortes sur l'aspect extérieur. Modèles à intégration discrète préconisés.",
+              href: '/couvreur-bordeaux-centre',
+            },
+            {
+              nom: 'Chartrons',
+              description:
+                "Maisons d'armateurs et lofts réhabilités, beaucoup de combles aménagés. Velux Cabrio (balcon) parfois autorisés selon configuration.",
+              href: '/couvreur-bordeaux-chartrons',
+            },
+            {
+              nom: 'Caudéran',
+              description:
+                "Pavillonnaire majoritaire, demandes fréquentes Velux Tout Confort et Solaire en chambre d'enfant ou bureau sous combles.",
+              href: '/couvreur-bordeaux-cauderan',
+            },
+            {
+              nom: 'Saint-Augustin',
+              description:
+                "Échoppes bordelaises avec combles habitables, Velux Standard ou Tout Confort dimensionnés selon la pente.",
+              href: '/couvreur-bordeaux-saint-augustin',
+            },
+            {
+              nom: 'Mérignac',
+              description:
+                "Notre commune. Pavillons années 70-90 ouverts aux installations Velux confort et solaire pour aménagement combles.",
+              href: '/couvreur-merignac',
+            },
+            {
+              nom: 'Pessac',
+              description:
+                "Maisons et copropriétés, Velux Solaire prisé en salle de bain (sans câblage électrique requis).",
+              href: '/couvreur-pessac',
+            },
+            {
+              nom: 'Talence',
+              description:
+                "Maisons bourgeoises avec ardoise : Velux à intégration ardoise (kit EDN d\u2019origine) recommandés pour respecter l\u2019harmonie.",
+              href: '/couvreur-talence',
+            },
+            {
+              nom: 'Le Bouscat',
+              description:
+                "Quartier patrimonial cossu : modèles Velux Standard discrets préférés, intégration soignée pour préserver la valeur du bâti.",
+              href: '/couvreur-bouscat',
+            },
+            {
+              nom: 'Bègles, Villenave, Gradignan',
+              description:
+                "Pavillonnaire étendu : modèles confort solaire en chambre, store pare-soleil obligatoire sur expositions sud-ouest.",
+            },
+          ],
+        },
       }}
     />
   );

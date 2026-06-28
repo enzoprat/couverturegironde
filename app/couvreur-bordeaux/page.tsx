@@ -183,6 +183,152 @@ export default function Page() {
               "Visite de fin de chantier avec vous, remise des photos et de l'attestation décennale. Le solde se règle à votre satisfaction confirmée.",
           },
         ],
+        tarifs: {
+          intro:
+            "Fourchettes de prix observées sur Bordeaux Métropole en 2026 pour les prestations courantes de couverture. Ces tarifs sont indicatifs : seul un diagnostic sur site permet de chiffrer précisément, en fonction de l'accessibilité, de l'état réel et des matériaux nécessaires.",
+          lines: [
+            {
+              service: 'Démoussage toiture + brossage',
+              range: '12 – 18 €/m²',
+              note: 'Versants nord et zones ombragées prioritaires',
+            },
+            {
+              service: 'Démoussage + traitement hydrofuge',
+              range: '18 – 27 €/m²',
+              note: 'Combo recommandé climat océanique girondin',
+            },
+            {
+              service: 'Nettoyage haute pression maîtrisé',
+              range: '12 – 20 €/m²',
+              note: 'Pression adaptée tuile / ardoise / zinc',
+            },
+            {
+              service: 'Remplacement tuiles cassées (≤10)',
+              range: '180 – 420 €',
+              note: 'Forfait diagnostic + intervention',
+            },
+            {
+              service: 'Réparation faîtage scellé',
+              range: '45 – 70 €/ml',
+              note: 'Mortier chaux pour bâti ancien bordelais',
+            },
+            {
+              service: 'Pose gouttières zinc dimensionnées',
+              range: '55 – 90 €/ml',
+              note: 'Section adaptée 930 mm/an pluviométrie',
+            },
+            {
+              service: 'Pose Velux (fenêtre + kit étanchéité)',
+              range: '1 200 – 2 400 €',
+              note: 'Selon modèle (Standard, Tout Confort, Solaire)',
+            },
+            {
+              service: "Urgence fuite, mise hors d'eau",
+              range: '250 – 550 €',
+              note: 'Intervention 7j/7, devis sous 24h',
+            },
+            {
+              service: 'Réfection complète tuile canal',
+              range: '85 – 145 €/m²',
+              note: 'Selon état charpente, isolation et écran sous-toiture',
+            },
+            {
+              service: 'Réfection complète ardoise',
+              range: '120 – 220 €/m²',
+              note: 'Ardoise naturelle d\u2019Angers, finitions soignées',
+            },
+            {
+              service: 'Étanchéité toit-terrasse (SEL ou EPDM)',
+              range: '70 – 130 €/m²',
+              note: 'Avec préparation support et relevés',
+            },
+            {
+              service: 'Charpente bois : reprise sablière',
+              range: '450 – 1 200 € /ml',
+              note: 'Selon section et accessibilité',
+            },
+          ],
+          disclaimer:
+            "Tarifs TTC, posé, hors échafaudage spécifique et hors situations particulières (ABF, hauteur >12m, accès complexe). Devis personnalisé gratuit sous 24h.",
+        },
+        quartiersBordeaux: {
+          intro:
+            "Nous intervenons sur l'ensemble des quartiers de Bordeaux et sa métropole. Chaque secteur a son bâti, ses contraintes urbanistiques et ses spécificités de toiture : nous les connaissons pour avoir réalisé des chantiers dans tous ces secteurs depuis 2005.",
+          items: [
+            {
+              nom: 'Bordeaux Centre',
+              description:
+                "Échoppes XIXᵉ en tuile canal, immeubles haussmanniens en ardoise, secteur sauvegardé UNESCO avec avis ABF systématique.",
+              href: '/couvreur-bordeaux-centre',
+            },
+            {
+              nom: 'Chartrons',
+              description:
+                "Maisons d'armateurs et entrepôts réhabilités, toitures complexes mêlant tuile, zinc et ardoise. Contraintes ABF fréquentes.",
+              href: '/couvreur-bordeaux-chartrons',
+            },
+            {
+              nom: 'Caudéran',
+              description:
+                "Quartier pavillonnaire majoritairement tuile canal et mécanique des années 1920-1960. Démoussage et reprise zinguerie courants.",
+              href: '/couvreur-bordeaux-cauderan',
+            },
+            {
+              nom: 'Saint-Augustin',
+              description:
+                "Échoppes bordelaises bien préservées et maisons de ville. Tuile canal traditionnelle, beaucoup de chéneaux zinc à entretenir.",
+              href: '/couvreur-bordeaux-saint-augustin',
+            },
+            {
+              nom: 'Bastide',
+              description:
+                "Rive droite réhabilitée, mix bâti ancien et programmes récents avec toits-terrasses EPDM et zinguerie contemporaine.",
+              href: '/couvreur-bordeaux-bastide',
+            },
+            {
+              nom: 'Mérignac',
+              description:
+                "Notre commune d\u2019atelier depuis 2005. Intervention urgence en 15-30 minutes, tarifs sans surcoût déplacement.",
+              href: '/couvreur-merignac',
+            },
+            {
+              nom: 'Pessac',
+              description:
+                "Pavillonnaire dense années 60-90, copropriétés universitaires, parc Bourg-Madame. Démoussage et étanchéité courants.",
+              href: '/couvreur-pessac',
+            },
+            {
+              nom: 'Talence',
+              description:
+                "Mix maisons bourgeoises et résidences étudiantes. Couverture tuile mécanique majoritaire, ardoise pour le bâti bourgeois.",
+              href: '/couvreur-talence',
+            },
+            {
+              nom: 'Le Bouscat',
+              description:
+                "Quartier résidentiel cossu, échoppes et maisons de maître. Tuile canal et zinc patrimoniaux à préserver à l\u2019identique.",
+              href: '/couvreur-bouscat',
+            },
+            {
+              nom: 'Bègles',
+              description:
+                "Bâti ouvrier traditionnel et nouvelles ZAC. Mix tuile canal, mécanique et toits-terrasses sur programmes récents.",
+              href: '/couvreur-begles',
+            },
+            {
+              nom: "Villenave-d'Ornon",
+              description:
+                "Pavillonnaire étendu, toiture tuile mécanique 70-90 majoritaire. Démoussages réguliers et réparations courantes.",
+              href: '/couvreur-villenave-dornon',
+            },
+            {
+              nom: 'Gradignan',
+              description:
+                "Maisons individuelles avec grands jardins boisés, prolifération mousses sur versants nord. Hydrofuge fortement recommandé.",
+              href: '/couvreur-gradignan',
+            },
+          ],
+        },
       }}
     />
   );
