@@ -38,9 +38,9 @@ const STATIC_PAGES: PageEntry[] = [
     service: 'couverture',
     title: 'Couvreur Bordeaux',
     seoTitle:
-      'Couvreur Bordeaux : entreprise couverture depuis 2005 | 5/5 avis',
+      'Couvreur Bordeaux ★ 5/5 sur 54 avis ★ Devis 24h, urgence 7j/7',
     seoDescription:
-      "Couvreur-zingueur à Bordeaux depuis 2005. Travaux de toiture : démoussage, nettoyage, réparation, zinguerie, urgence 7j/7. Note 5/5 (54 avis). Devis 24h.",
+      "★ Couvreur Bordeaux depuis 2005 ★ Note 5/5 sur 54 avis Google ✓ Démoussage, nettoyage, réparation, zinguerie ✓ Urgence 7j/7 ✓ Devis gratuit sous 24h ✓ Garantie décennale.",
     indexable: true,
     visibleInFooter: true,
     footerSection: 'services',
@@ -70,9 +70,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Démoussage toiture Bordeaux',
     navLabel: 'Démoussage toiture',
     seoTitle:
-      'Démoussage toiture Bordeaux : 12-18 €/m² | Devis 24h, 5/5 avis',
+      'Démoussage toiture Bordeaux 12-18 €/m² · Traitement anti-mousse',
     seoDescription:
-      "Démoussage professionnel de toiture à Bordeaux et en Gironde par couvreur depuis 2005. Tarif 12 à 18 €/m². Note 5/5 (54 avis). Devis gratuit 24h, garantie décennale.",
+      "★ Démoussage toiture Bordeaux 12-18 €/m² ★ Traitement anti-mousse rémanent + brossage manuel + rinçage ✓ Couvreur depuis 2005 ✓ Note 5/5 (54 avis) ✓ Devis 24h.",
     visibleInNav: true,
     navCategory: 'entretien',
     navOrder: 20,
@@ -106,9 +106,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Traitement hydrofuge Bordeaux',
     navLabel: 'Traitement hydrofuge',
     seoTitle:
-      'Traitement hydrofuge toiture Bordeaux : protection 10 ans',
+      'Hydrofuge toiture Bordeaux garantie 10 ans · 6-12 €/m²',
     seoDescription:
-      "Traitement hydrofuge professionnel à Bordeaux et en Gironde. Protection 10 ans contre l'humidité et les mousses. Note 5/5 (54 avis). Devis gratuit 24h, garantie décennale.",
+      "★ Hydrofuge toiture Bordeaux garantie 10 ans ★ Protection humidité, mousses, cycles gel-dégel ✓ Tarif 6-12 €/m² ✓ Couvreur depuis 2005 ✓ Note 5/5 (54 avis) ✓ Devis 24h.",
     visibleInNav: true,
     navCategory: 'entretien',
     navOrder: 22,
@@ -144,7 +144,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Urgence fuite toiture',
     navLabel: 'Urgence fuite 7j/7',
     seoTitle:
-      'Urgence fuite toiture Bordeaux 7j/7 : couvreur en 1h, devis 24h',
+      'Urgence toiture Bordeaux 7j/7 ☎ 07 68 69 78 48 — couvreur en 1h',
     seoDescription:
       "★ Urgence toiture Bordeaux 7j/7 ★ Couvreur sur place en 1h ✓ Mise hors d'eau immédiate ✓ Appel direct 07 68 69 78 48 ✓ Note 5/5 (54 avis). Couverture Gironde.",
     visibleInNav: true,
@@ -558,9 +558,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'institutional',
     title: 'Urgence toiture',
     seoTitle:
-      'Urgence toiture Bordeaux 7j/7 : couvreur en 1h | 07 68 69 78 48',
+      'Couvreur urgence Bordeaux Gironde 7j/7 ☎ 07 68 69 78 48',
     seoDescription:
-      "Urgence toiture à Bordeaux 7j/7 : couvreur sur place en 1h, mise hors d'eau immédiate, fuite, tempête. Appel direct : 07 68 69 78 48. Couvreur depuis 2005, garantie décennale.",
+      "★ Couvreur urgence Bordeaux et Gironde 7j/7 ★ Fuite, tempête, sinistre ✓ Sur place en 1h ✓ Mise hors d'eau immédiate ✓ Devis assurance pris en charge. ☎ 07 68 69 78 48",
     visibleInFooter: true,
     footerSection: 'entreprise',
     indexable: true,
@@ -571,9 +571,9 @@ const STATIC_PAGES: PageEntry[] = [
     path: '/demande-devis',
     type: 'conversion',
     title: 'Demande de devis',
-    seoTitle: 'Devis toiture Bordeaux Gironde gratuit : réponse en 24h',
+    seoTitle: 'Devis toiture Bordeaux gratuit en 24h ☎ 07 68 69 78 48',
     seoDescription:
-      "Demandez votre devis toiture gratuit en Gironde : démoussage, nettoyage, réparation, réfection, zinguerie. Réponse sous 24h ouvrées, sans engagement. Note 5/5 (54 avis).",
+      "★ Devis toiture Bordeaux gratuit sous 24h ★ Démoussage, nettoyage, réparation, réfection, zinguerie ✓ Sans engagement ✓ Couvreur depuis 2005 ✓ Note 5/5 (54 avis) ☎ 07 68 69 78 48.",
     visibleInNav: true,
     navOrder: 60,
     visibleInFooter: true,
