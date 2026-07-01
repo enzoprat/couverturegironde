@@ -431,6 +431,21 @@ const STATIC_PAGES: PageEntry[] = [
     footerSection: 'villes',
     indexable: true,
   },
+  // === Sprint 4 : 1 nouvelle page ville / jour (juillet 2026, post-indexation) ===
+  {
+    slug: 'couvreur-cenon',
+    path: '/couvreur-cenon',
+    type: 'ville',
+    ville: 'cenon',
+    title: 'Couvreur Cenon',
+    seoTitle:
+      'Couvreur Cenon (33150) rive droite ★ 5/5 sur 54 avis ★ Devis 24h',
+    seoDescription:
+      "★ Couvreur Cenon rive droite depuis 2005 ★ Coteaux Haut Cenon, plateau Palmer, Beauval-Loret ✓ Démoussage, réparation, zinguerie ✓ Urgence 7j/7 ✓ 5/5 (54 avis) ✓ Devis gratuit 24h.",
+    visibleInFooter: true,
+    footerSection: 'villes',
+    indexable: true,
+  },
   // === Sprint 3.2 : sub-quartiers Bordeaux (juin 2026, audit Autocomplete) ===
   {
     slug: 'couvreur-bordeaux-centre',

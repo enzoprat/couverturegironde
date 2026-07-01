@@ -226,6 +226,30 @@ export const LOCATIONS: Record<string, LocationDefinition> = {
     distanceFromMerignac: 45,
     tier: 2,
   },
+  cenon: {
+    slug: 'cenon',
+    name: 'Cenon',
+    nameInflected: 'Cenon',
+    postalCode: '33150',
+    inseeCode: '33119',
+    population: 24000,
+    quartiers: [
+      'Palmer',
+      'La Marègue',
+      'Beauval-Loret',
+      'Le Haut Cenon',
+      'Le Bas Cenon',
+      'Pont-Rouge',
+      'Le Loret',
+    ],
+    habitatNotes:
+      "Bâti contrasté : coteaux calcaires du Haut Cenon avec maisons anciennes en pierre et tuile canal, habitat collectif années 60-70 sur le plateau Palmer, pavillonnaire pentu vers Beauval. Le relief accentue le ruissellement : zinguerie et gouttières fortement sollicitées, faîtages exposés aux vents d'ouest venus de la Garonne.",
+    geo: { lat: 44.8583, lng: -0.5319 },
+    neighbors: ['bordeaux', 'floirac', 'lormont'],
+    distanceFromMerignac: 15,
+    tier: 2,
+    visibleInFooter: true,
+  },
 };
 
 /** Liste triée par tier puis population décroissante. */
