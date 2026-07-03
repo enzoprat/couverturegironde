@@ -284,10 +284,54 @@ export const FAQ_APROPOS: FAQItem[] = [
 /** Map service → FAQ associée. */
 import type { ServiceCategory } from './types';
 
+export const FAQ_TRAITEMENT: FAQItem[] = [
+  {
+    question: "Quelle différence entre nettoyage, démoussage et hydrofuge ?",
+    answer:
+      "Les trois s'enchaînent logiquement mais répondent à des besoins distincts. Le nettoyage retire la saleté superficielle (pollution, dépôts, algues). Le démoussage élimine les mousses et lichens, éradique les spores et empêche leur retour à moyen terme. L'hydrofuge est un traitement de protection appliqué après démoussage : il rend la tuile hydrophobe (l'eau perle au lieu d'imprégner) et retarde la ré-installation des mousses pendant 5 à 10 ans. Sur une toiture très encrassée, on enchaîne les trois. Sur une toiture propre, un hydrofuge seul peut suffire en prévention.",
+  },
+  {
+    question: "Quel traitement de toiture choisir selon mon état ?",
+    answer:
+      "État léger (algues, salissures, pas de mousses visibles) : nettoyage haute pression maîtrisé suffit, 12-20 €/m². État modéré (mousses ponctuelles, quelques lichens) : combo démoussage + brossage, 12-18 €/m². État avancé (mousses généralisées, versant nord vert, tuiles gorgées) : démoussage rémanent + brossage + hydrofuge 10 ans, 25-38 €/m². Après une intervention lourde, un simple hydrofuge tous les 8-10 ans suffit ensuite en préventif.",
+  },
+  {
+    question: "À quelle fréquence traiter sa toiture à Bordeaux ?",
+    answer:
+      "Le climat océanique bordelais (930 mm/an, hivers doux, couvert végétal dense) accélère l'encrassement de 30 à 50 % vs moyenne nationale. Nos recommandations : contrôle visuel tous les 2 ans, démoussage tous les 4-5 ans sans hydrofuge, tous les 8-10 ans avec hydrofuge. Les versants nord et les zones ombragées prioritaires. Les toitures en bord de Garonne ou sous couvert végétal dense (Caudéran, Gradignan, coteaux Cenon) peuvent nécessiter un rythme plus soutenu.",
+  },
+  {
+    question: "Le traitement hydrofuge est-il vraiment utile ?",
+    answer:
+      "Oui, sur les toitures poreuses (tuile canal, tuile mécanique non émaillée) et exposées au couvert végétal ou versant nord. L'hydrofuge coloré ou incolore forme un film hydrophobe qui empêche l'eau de pénétrer dans la tuile, ralentit le retour des mousses (spores qui ont besoin d'humidité), et protège du cycle gel-dégel qui fissure les tuiles poreuses. Sur ardoise ou tuile émaillée récente, l'utilité est plus limitée : le matériau est déjà peu poreux.",
+  },
+  {
+    question: "Un traitement chimique est-il dangereux pour le jardin ?",
+    answer:
+      "Nous utilisons des produits professionnels rémanents autorisés en couverture, biodégradables sous 48-72h. Nous bâchons systématiquement les évacuations sensibles, protégeons les descentes d'eau pluviale qui vont au potager ou au récupérateur, et redirigeons les ruissellements. Aucun cas de dégât sur végétation ou nappe phréatique n'est remonté depuis 20 ans d'exercice. Les précautions d'usage sont documentées dans notre devis.",
+  },
+  {
+    question: "Combien coûte un traitement de toiture complet à Bordeaux ?",
+    answer:
+      "Fourchette globale sur Bordeaux Métropole 2026 : nettoyage seul 12-20 €/m², démoussage seul 12-18 €/m², combo démoussage + hydrofuge 18-27 €/m², combo complet nettoyage + démoussage + hydrofuge 25-38 €/m². Sur une maison type 100 m² de toiture, le combo complet représente 2 500-3 800 € TTC, soit un investissement qui préserve la couverture pendant 10-15 ans (vs 80-150 €/m² pour une réfection tardive).",
+  },
+  {
+    question: "Combien de temps dure un chantier de traitement ?",
+    answer:
+      "Sur une toiture d'environ 100 m² : démoussage + brossage = 1 jour, combo démoussage + hydrofuge = 1,5 à 2 jours (avec temps de séchage entre les deux passes), traitement complet nettoyage + démoussage + hydrofuge = 2 à 3 jours. Le planning intègre systématiquement les créneaux météo (pas de pluie prévue dans les 12-24h suivant l'hydrofuge, températures >5°C).",
+  },
+  {
+    question: "Le traitement est-il garanti ?",
+    answer:
+      "Oui. Décennale sur l'ensemble de la prestation (obligation légale). Garantie constructeur 10 ans sur l'hydrofuge professionnel appliqué selon les prescriptions. Garantie 3-5 ans sur l'efficacité anti-mousse selon l'exposition et la porosité du support. Attestations remises à la fin du chantier avec photos avant/après et fiche technique des produits utilisés.",
+  },
+];
+
 export const FAQ_BY_SERVICE: Partial<Record<ServiceCategory, FAQItem[]>> = {
   demoussage: FAQ_DEMOUSSAGE,
   nettoyage: FAQ_NETTOYAGE,
   hydrofuge: FAQ_HYDROFUGE,
+  traitement: FAQ_TRAITEMENT,
   reparation: FAQ_REPARATION,
   urgence: FAQ_URGENCE,
   zinguerie: FAQ_ZINGUERIE,

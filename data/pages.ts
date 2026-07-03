@@ -116,6 +116,19 @@ const STATIC_PAGES: PageEntry[] = [
     footerSection: 'services',
     indexable: true,
   },
+  {
+    slug: 'traitement-toiture-bordeaux',
+    path: '/traitement-toiture-bordeaux',
+    type: 'service',
+    service: 'traitement',
+    title: 'Traitement toiture Bordeaux',
+    seoTitle:
+      'Traitement toiture Bordeaux ★ nettoyage + démoussage + hydrofuge',
+    seoDescription:
+      "★ Traitement toiture Bordeaux depuis 2005 ★ Nettoyage, démoussage, hydrofuge, anti-lichens : la bonne solution selon l\u2019état ✓ Devis 24h ✓ 5/5 (54 avis) ✓ Décennale.",
+    indexable: true,
+    sitemapPriority: 0.8,
+  },
 
   // ============ SERVICES SECONDAIRES ============
   {

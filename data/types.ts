@@ -18,6 +18,7 @@ export type ServiceCategory =
   | 'demoussage'
   | 'nettoyage'
   | 'hydrofuge'
+  | 'traitement'
   | 'reparation'
   | 'urgence'
   | 'zinguerie'

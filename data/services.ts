@@ -84,6 +84,19 @@ export const SERVICES: Record<ServiceCategory, ServiceDefinition> = {
     businessPriority: 1,
     relatedServices: ['demoussage', 'nettoyage', 'reparation'],
   },
+  traitement: {
+    id: 'traitement',
+    name: 'Traitement toiture',
+    shortHeadline: 'Traitement complet préventif et curatif',
+    shortDescription:
+      "Hub des traitements de toiture : nettoyage, démoussage, hydrofuge et anti-lichens. Choix de la solution selon l\u2019état, le matériau et l\u2019exposition.",
+    primaryBenefit: 'La bonne solution pour votre toiture',
+    imageSlug: 'traitement-hydrofuge',
+    iconName: 'Shield',
+    urgency: 'standard',
+    businessPriority: 4,
+    relatedServices: ['demoussage', 'nettoyage', 'hydrofuge'],
+  },
   reparation: {
     id: 'reparation',
     name: 'Réparation toiture',

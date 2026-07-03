@@ -316,6 +316,7 @@ export function buildServiceVilleSlug(
     demoussage: 'demoussage-toiture',
     nettoyage: 'nettoyage-toiture',
     hydrofuge: 'traitement-hydrofuge-toiture',
+    traitement: 'traitement-toiture',
     reparation: 'reparation-toiture',
     urgence: 'urgence-fuite-toiture',
     zinguerie: 'zinguerie',
