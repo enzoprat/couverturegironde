@@ -181,6 +181,142 @@ export default function Page() {
               "Garantie décennale + suivi entretien. Pour les démoussages et hydrofuges, nous proposons un rappel automatique à la fréquence recommandée (3 à 5 ans).",
           },
         ],
+        tarifs: {
+          intro:
+            "Fourchettes de prix couvreur constatées sur l'ensemble du département de la Gironde en 2026, à titre indicatif. Les tarifs varient selon la commune (Bordeaux Métropole vs communes rurales), l'accessibilité, le matériau et l'état réel de la toiture. Seul un diagnostic sur site permet un chiffrage précis.",
+          lines: [
+            {
+              service: 'Démoussage toiture (avec brossage)',
+              range: '12 – 18 €/m²',
+              note: 'Bordeaux Métropole, sans surcoût pour communes limitrophes',
+            },
+            {
+              service: 'Démoussage + traitement hydrofuge 10 ans',
+              range: '18 – 27 €/m²',
+              note: 'Combo recommandé, meilleur rapport durabilité/prix',
+            },
+            {
+              service: 'Nettoyage haute pression maîtrisé',
+              range: '12 – 20 €/m²',
+              note: 'Pression adaptée matériau (tuile canal, ardoise, zinc)',
+            },
+            {
+              service: 'Réfection complète tuile canal Bordeaux',
+              range: '85 – 145 €/m²',
+              note: 'Tarif classique bâti bordelais',
+            },
+            {
+              service: 'Réfection complète ardoise Médoc',
+              range: '120 – 220 €/m²',
+              note: 'Ardoise naturelle Angers ou Espagne',
+            },
+            {
+              service: 'Zinguerie marine Bassin d\u2019Arcachon',
+              range: '75 – 130 €/ml',
+              note: 'Zinc patiné/prépatiné anti-air-salin',
+            },
+            {
+              service: 'Charpente : traitement bois curatif',
+              range: '25 – 45 €/m²',
+              note: 'Traitement insectes + champignons',
+            },
+            {
+              service: 'Urgence fuite Bordeaux Métropole',
+              range: '250 – 550 €',
+              note: 'Intervention 30-60 min heures ouvrées',
+            },
+            {
+              service: 'Urgence fuite Sud-Gironde / Médoc',
+              range: '350 – 750 €',
+              note: 'Selon distance depuis Mérignac',
+            },
+            {
+              service: 'Diagnostic complet + rapport photos',
+              range: '0 – 180 €',
+              note: 'Gratuit si chantier signé, sinon forfait',
+            },
+          ],
+          disclaimer:
+            "Tarifs TTC, posé, sécurité incluse. TVA 10 % applicable aux logements >2 ans. Échafaudage spécifique et intervention hors zone Bordeaux Métropole sur devis. Note 5/5 sur 54 avis Google publics.",
+        },
+        quartiersBordeaux: {
+          intro:
+            "Nous intervenons sur l'ensemble du département de la Gironde depuis notre atelier de Mérignac (65 rue de Malbos). Bordeaux Métropole en quotidien, secteurs plus éloignés (Médoc, Bassin, Libournais, Sud-Gironde) sur devis avec chantiers groupés pour maîtriser les frais de déplacement.",
+          items: [
+            {
+              nom: 'Bordeaux',
+              description:
+                "Centre UNESCO + Chartrons + Caudéran + Saint-Augustin + Bastide + Lac. Bâti haussmannien, échoppes, tuile canal, ardoise patrimoniale.",
+              href: '/couvreur-bordeaux',
+            },
+            {
+              nom: 'Mérignac',
+              description:
+                "Notre commune d\u2019atelier depuis 2005. Intervention 15-30 min, tarifs sans surcoût déplacement.",
+              href: '/couvreur-merignac',
+            },
+            {
+              nom: 'Pessac',
+              description:
+                "Quartiers boisés (Bourg-Madame, Cap-de-Bos), copropriétés universitaires. Démoussage + hydrofuge fortement recommandés.",
+              href: '/couvreur-pessac',
+            },
+            {
+              nom: 'Talence',
+              description:
+                "Maisons bourgeoises + échoppes patrimoniales. Tuile canal traditionnelle, ardoise pour le bâti de maître.",
+              href: '/couvreur-talence',
+            },
+            {
+              nom: 'Bègles',
+              description:
+                "Bâti ouvrier + ZAC récentes. Mix tuile canal, mécanique et toits-terrasses.",
+              href: '/couvreur-begles',
+            },
+            {
+              nom: "Villenave-d'Ornon",
+              description:
+                "Pavillonnaire étendu, tuile mécanique 70-90. Démoussages et réparations courantes.",
+              href: '/couvreur-villenave-dornon',
+            },
+            {
+              nom: 'Le Bouscat',
+              description:
+                "Quartier résidentiel patrimonial. Échoppes bordelaises, tuile canal, zinc à préserver.",
+              href: '/couvreur-bouscat',
+            },
+            {
+              nom: 'Gradignan',
+              description:
+                "Habitat pavillonnaire arboré. Mousses systématiques versants nord, hydrofuge indispensable.",
+              href: '/couvreur-gradignan',
+            },
+            {
+              nom: 'Eysines',
+              description:
+                "Pavillonnaire + habitat maraîcher. Toitures variées, tuile canal sur bâtisses anciennes.",
+              href: '/couvreur-eysines',
+            },
+            {
+              nom: 'Cenon (rive droite)',
+              description:
+                "Coteaux Haut Cenon + plateau Palmer. Bâti contrasté, gouttières section renforcée pour dénivelé.",
+              href: '/couvreur-cenon',
+            },
+            {
+              nom: 'Arcachon & Bassin',
+              description:
+                "Villas Ville d'Hiver, air salin. Zinc marine (patiné, alliage), démoussage adapté.",
+              href: '/couvreur-arcachon',
+            },
+            {
+              nom: 'Libourne & Libournais',
+              description:
+                "Bâti girondin traditionnel, pierre + tuile romane. Interventions groupées pour chantiers dimensionnés.",
+              href: '/couvreur-libourne',
+            },
+          ],
+        },
       }}
     />
   );

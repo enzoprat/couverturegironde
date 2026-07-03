@@ -107,6 +107,12 @@ const nextConfig: NextConfig = {
         destination: '/politique-confidentialite',
         permanent: true,
       },
+      // Legacy Webflow "demande de devis" avec tirets
+      {
+        source: '/demande-de-devis',
+        destination: '/demande-devis',
+        permanent: true,
+      },
       // Requêtes GSC sans page : on capte le trafic vers la bonne destination
       {
         source: '/couvreur-33',

@@ -19,9 +19,9 @@ export default function Page() {
         slug: PAGE.slug,
         h1: (
           <>
-            Démoussage de toiture à{' '}
-            <span className="text-[var(--color-terre)]">Bordeaux</span> et en
-            Gironde
+            Démoussage toiture{' '}
+            <span className="text-[var(--color-terre)]">Bordeaux</span> —
+            traitement anti-mousse rémanent 12-18 €/m²
           </>
         ),
         heroSubtitle:

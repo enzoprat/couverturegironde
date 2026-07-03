@@ -19,9 +19,9 @@ export default function Page() {
         slug: PAGE.slug,
         h1: (
           <>
-            Entreprise de couverture à{' '}
-            <span className="text-[var(--color-terre)]">Bordeaux</span> et en
-            Gironde depuis 2005
+            Couvreur à{' '}
+            <span className="text-[var(--color-terre)]">Bordeaux</span> depuis
+            2005 : artisan couverture Bordeaux Métropole
           </>
         ),
         heroSubtitle:

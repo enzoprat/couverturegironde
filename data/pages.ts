@@ -52,9 +52,9 @@ const STATIC_PAGES: PageEntry[] = [
     service: 'couverture',
     title: 'Couvreur Gironde',
     seoTitle:
-      'Couvreur Gironde (33) : 5/5 sur 54 avis | Devis 24h, urgence 7j/7',
+      'Couvreur Gironde (33) ★ 5/5 · 20 ans ★ Devis 24h',
     seoDescription:
-      "Couvreur-zingueur en Gironde (33) depuis 2005 : Bordeaux Métropole, Médoc, Bassin, Libournais, Sud-Gironde. Démoussage, urgence 7j/7. Note 5/5 (54 avis). Devis 24h.",
+      "★ Couvreur en Gironde depuis 2005 ★ Bordeaux Métropole, Médoc, Bassin, Libournais, Sud-Gironde ✓ Démoussage, réparation, zinguerie ✓ Urgence 7j/7 ✓ 5/5 (54 avis) ✓ Devis 24h.",
     indexable: true,
     visibleInFooter: true,
     footerSection: 'services',
@@ -157,9 +157,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Urgence fuite toiture',
     navLabel: 'Urgence fuite 7j/7',
     seoTitle:
-      'Urgence toiture Bordeaux 7j/7 ☎ 07 68 69 78 48 — couvreur en 1h',
+      'Fuite toiture Bordeaux ☎ 07 68 69 78 48 · couvreur en 1h 7j/7',
     seoDescription:
-      "★ Urgence toiture Bordeaux 7j/7 ★ Couvreur sur place en 1h ✓ Mise hors d'eau immédiate ✓ Appel direct 07 68 69 78 48 ✓ Note 5/5 (54 avis). Couverture Gironde.",
+      "★ Fuite toiture Bordeaux ★ Couvreur urgence 7j/7 sur place en 1h ✓ Mise hors d'eau immédiate ✓ Appel direct ☎ 07 68 69 78 48 ✓ Note 5/5 (54 avis) ✓ Décennale.",
     visibleInNav: true,
     navCategory: 'urgence',
     navOrder: 40,
@@ -175,9 +175,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Zinguerie Bordeaux',
     navLabel: 'Zinguerie & gouttières',
     seoTitle:
-      'Zinguerie & gouttières Bordeaux : zinc, soudure étain | 50-85 €/ml',
+      'Pose gouttière Bordeaux · zinguerie zinc soudée · 50-85 €/ml',
     seoDescription:
-      "★ Zinguerie Bordeaux et Gironde ★ Gouttières zinc + noues + chéneaux + habillages ✓ Soudure étain sur place ✓ Étanchéité garantie 30 ans ✓ Note 5/5 ✓ Devis 24h.",
+      "★ Pose gouttière + zinguerie Bordeaux ★ Gouttières zinc, noues, chéneaux, descentes EP ✓ Soudure étain sur place ✓ Étanchéité 30 ans ✓ 5/5 (54 avis) ✓ Devis 24h.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 31,
@@ -261,9 +261,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Charpente Bordeaux',
     navLabel: 'Charpente',
     seoTitle:
-      'Charpente Bordeaux : rénovation, traitement, renforcement | Devis 24h',
+      'Charpente Bordeaux ★ rénovation + traitement ★ décennale',
     seoDescription:
-      "Travaux de charpente à Bordeaux et en Gironde : diagnostic, traitement bois, renforcement. Couvreur-charpentier depuis 2005. Note 5/5 (54 avis). Devis gratuit 24h.",
+      "★ Charpentier Bordeaux depuis 2005 ★ Diagnostic bois, traitement insectes/champignons, renforcement, remplacement ✓ 5/5 (54 avis) ✓ Décennale ✓ Devis 24h.",
     visibleInNav: true,
     navCategory: 'urgence',
     navOrder: 42,
@@ -331,9 +331,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'ville',
     ville: 'pessac',
     title: 'Couvreur Pessac',
-    seoTitle: 'Couvreur Pessac : démoussage, réparation | 5/5 sur 54 avis',
+    seoTitle: 'Couvreur Pessac ★ réparation fuite + démoussage ★ 5/5',
     seoDescription:
-      "Couvreur à Pessac depuis 2005 : démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Note 5/5 (54 avis). Devis gratuit 24h, garantie décennale.",
+      "★ Couvreur Pessac depuis 2005 ★ Réparation fuite toiture, démoussage, nettoyage, zinguerie ✓ Urgence 7j/7 en 30-60 min ✓ 5/5 (54 avis) ✓ Devis 24h ✓ Décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -344,9 +344,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'ville',
     ville: 'talence',
     title: 'Couvreur Talence',
-    seoTitle: 'Couvreur Talence : démoussage, réparation | 5/5 sur 54 avis',
+    seoTitle: 'Couvreur Talence ★ réparation fuite + démoussage ★ 5/5',
     seoDescription:
-      "Couvreur à Talence depuis 2005 : démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Note 5/5 (54 avis). Devis gratuit 24h, garantie décennale.",
+      "★ Couvreur Talence depuis 2005 ★ Réparation fuite toiture, démoussage, nettoyage, zinguerie ✓ Urgence 7j/7 ✓ Maisons bourgeoises et échoppes ✓ 5/5 (54 avis) ✓ Devis 24h.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -385,9 +385,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'ville',
     ville: 'bouscat',
     title: 'Couvreur Le Bouscat',
-    seoTitle: 'Couvreur Le Bouscat : démoussage, réparation | 5/5 (54 avis)',
+    seoTitle: 'Couvreur Le Bouscat ★ échoppes tuile canal ★ 5/5',
     seoDescription:
-      "Couvreur au Bouscat depuis 2005 : démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Atelier voisin à Mérignac. Note 5/5 (54 avis). Devis 24h.",
+      "★ Couvreur au Bouscat depuis 2005 ★ Échoppes bordelaises, maisons de maître, patrimoine préservé ✓ Démoussage, réparation, zinguerie ✓ 5/5 (54 avis) ✓ Devis 24h.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -424,9 +424,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'ville',
     ville: 'arcachon',
     title: 'Couvreur Arcachon',
-    seoTitle: 'Couvreur Arcachon Bassin : zinguerie marine | 5/5 (54 avis)',
+    seoTitle: 'Couvreur Arcachon Bassin ★ zinguerie marine ★ 5/5',
     seoDescription:
-      "Couvreur à Arcachon et sur le Bassin : démoussage, réparation, zinguerie résistante à l'air salin. Couvreur Gironde depuis 2005. Note 5/5 (54 avis). Devis 24h.",
+      "★ Couvreur Arcachon & Bassin depuis 2005 ★ Villas Ville d'Hiver, air salin, zinc marine ✓ Démoussage, réparation, zinguerie ✓ 5/5 (54 avis) ✓ Devis 24h.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -443,6 +443,76 @@ const STATIC_PAGES: PageEntry[] = [
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
+  },
+  // === Sprint audit GSC 90j (03/07) — silos service×ville à fort impressions ===
+  {
+    slug: 'reparation-toiture-pessac',
+    path: '/reparation-toiture-pessac',
+    type: 'service-ville',
+    service: 'reparation',
+    ville: 'pessac',
+    title: 'Réparation toiture Pessac',
+    seoTitle:
+      'Réparation fuite toiture Pessac ★ intervention 30-60 min 7j/7',
+    seoDescription:
+      "★ Réparation fuite toiture Pessac ★ Intervention 30-60 min heures ouvrées ✓ Tuiles cassées, faîtage, noue zinc, abergements ✓ Devis 24h ✓ 5/5 (54 avis) ✓ Décennale.",
+    indexable: true,
+    sitemapPriority: 0.85,
+  },
+  {
+    slug: 'reparation-toiture-talence',
+    path: '/reparation-toiture-talence',
+    type: 'service-ville',
+    service: 'reparation',
+    ville: 'talence',
+    title: 'Réparation toiture Talence',
+    seoTitle:
+      'Réparation fuite toiture Talence ★ échoppes tuile canal',
+    seoDescription:
+      "★ Réparation fuite toiture Talence ★ Échoppes tuile canal, faîtage scellé chaux, noues zinc ✓ Intervention rapide 7j/7 ✓ Devis 24h ✓ 5/5 (54 avis) ✓ Décennale.",
+    indexable: true,
+    sitemapPriority: 0.85,
+  },
+  {
+    slug: 'reparation-toiture-merignac',
+    path: '/reparation-toiture-merignac',
+    type: 'service-ville',
+    service: 'reparation',
+    ville: 'merignac',
+    title: 'Réparation toiture Mérignac',
+    seoTitle:
+      'Réparation fuite toiture Mérignac ★ intervention 15-30 min',
+    seoDescription:
+      "★ Réparation fuite toiture Mérignac ★ Atelier rue de Malbos, intervention 15-30 min ✓ Tuiles cassées, faîtage, gouttières ✓ Sans surcoût déplacement ✓ 5/5 (54 avis).",
+    indexable: true,
+    sitemapPriority: 0.85,
+  },
+  {
+    slug: 'capotage-toiture-bordeaux',
+    path: '/capotage-toiture-bordeaux',
+    type: 'service',
+    service: 'reparation',
+    title: 'Capotage toiture Bordeaux',
+    seoTitle:
+      'Capotage toiture Bordeaux ★ étanchéité rives + faîtage zinc',
+    seoDescription:
+      "★ Capotage toiture Bordeaux depuis 2005 ★ Rives, faîtages, jonctions maçonnerie en zinc soudé ✓ Étanchéité 30 ans ✓ Soudure étain sur place ✓ 5/5 (54 avis) ✓ Devis 24h.",
+    indexable: true,
+    sitemapPriority: 0.75,
+  },
+  {
+    slug: 'zinguerie-arcachon',
+    path: '/zinguerie-arcachon',
+    type: 'service-ville',
+    service: 'zinguerie',
+    ville: 'arcachon',
+    title: 'Zinguerie Arcachon',
+    seoTitle:
+      'Zinguerie Arcachon Bassin ★ zinc marine anti-air-salin',
+    seoDescription:
+      "★ Zinguerie Arcachon & Bassin depuis 2005 ★ Zinc patiné/prépatiné anti-air-salin, alliage marine ✓ Gouttières, noues, chéneaux ✓ Soudure étain ✓ 5/5 (54 avis) ✓ Devis 24h.",
+    indexable: true,
+    sitemapPriority: 0.8,
   },
   // === Sprint 4 : 1 nouvelle page ville / jour (juillet 2026, post-indexation) ===
   {
@@ -466,9 +536,11 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'ville',
     ville: 'bordeaux',
     title: 'Couvreur Bordeaux Centre',
-    seoTitle: 'Couvreur Bordeaux Centre : échoppes, ABF | 5/5 (54 avis)',
+    seoTitle: 'Couvreur Bordeaux Centre ★ échoppes + ABF ★ 5/5',
     seoDescription:
-      "Couvreur à Bordeaux Centre depuis 2005 : échoppes, hôtels particuliers, ABF, tuile canal. Démoussage, réparation, urgence 7j/7. Note 5/5 (54 avis). Devis 24h.",
+      "★ Couvreur Bordeaux Centre depuis 2005 ★ Échoppes, hôtels particuliers, secteur UNESCO/ABF, tuile canal ✓ Démoussage, réparation, urgence 7j/7 ✓ 5/5 (54 avis) ✓ Devis 24h.",
+    visibleInFooter: true,
+    footerSection: 'villes',
     indexable: true,
   },
   {
@@ -477,9 +549,11 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'ville',
     ville: 'bordeaux',
     title: 'Couvreur Bordeaux Chartrons',
-    seoTitle: 'Couvreur Bordeaux Chartrons : ardoise, ABF | 5/5 (54 avis)',
+    seoTitle: 'Couvreur Bordeaux Chartrons ★ ardoise + ABF ★ 5/5',
     seoDescription:
-      "Couvreur Bordeaux Chartrons depuis 2005 : ardoise, hôtels particuliers, quai des Chartrons, secteur ABF. Démoussage, réparation. Note 5/5 (54 avis). Devis 24h.",
+      "★ Couvreur Bordeaux Chartrons depuis 2005 ★ Ardoise, hôtels particuliers, quai des Chartrons, secteur ABF ✓ Démoussage, réparation, zinguerie ✓ 5/5 (54 avis) ✓ Devis 24h.",
+    visibleInFooter: true,
+    footerSection: 'villes',
     indexable: true,
   },
   {
@@ -488,9 +562,11 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'ville',
     ville: 'bordeaux',
     title: 'Couvreur Bordeaux Rive Droite',
-    seoTitle: 'Couvreur Bordeaux Rive Droite Bastide | 5/5 (54 avis)',
+    seoTitle: 'Couvreur Bordeaux Rive Droite ★ Bastide + Brazza ★ 5/5',
     seoDescription:
-      "Couvreur Bordeaux Rive Droite depuis 2005 : Bastide, Brazza, Niel, Benauge. Démoussage, réparation toiture, zinguerie, urgence 7j/7. Note 5/5 (54 avis). Devis 24h.",
+      "★ Couvreur Bordeaux Rive Droite depuis 2005 ★ Bastide, Brazza, Niel, Benauge ✓ Démoussage, réparation toiture, zinguerie, urgence 7j/7 ✓ 5/5 (54 avis) ✓ Devis 24h.",
+    visibleInFooter: true,
+    footerSection: 'villes',
     indexable: true,
   },
   {
@@ -499,9 +575,11 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'ville',
     ville: 'bordeaux',
     title: 'Couvreur Bordeaux Lac',
-    seoTitle: 'Couvreur Bordeaux Lac : toitures terrasses | 5/5 (54 avis)',
+    seoTitle: 'Couvreur Bordeaux Lac ★ Ginko + toits-terrasses ★ 5/5',
     seoDescription:
-      "Couvreur Bordeaux Lac depuis 2005 : Quartier des Bassins à flot, Ginko, toits-terrasses copropriétés, étanchéité. Note 5/5 (54 avis). Devis 24h.",
+      "★ Couvreur Bordeaux Lac depuis 2005 ★ Bassins à flot, Ginko, toits-terrasses copropriétés, étanchéité EPDM ✓ 5/5 (54 avis) ✓ Devis 24h ✓ Décennale.",
+    visibleInFooter: true,
+    footerSection: 'villes',
     indexable: true,
   },
   {
