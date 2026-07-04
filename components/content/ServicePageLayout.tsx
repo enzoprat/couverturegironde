@@ -147,8 +147,9 @@ export function ServicePageLayout({ content }: { content: ServicePageContent }) 
         <section className="section-y-sm bg-[var(--color-creme)] border-b border-[var(--color-border)]">
           <Container size="narrow">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 p-6 rounded-[var(--radius-lg)] bg-[var(--color-pierre)] border border-[var(--color-border)] shadow-[var(--shadow-sm)]">
-              <div className="shrink-0 w-20 h-20 rounded-full bg-[var(--color-terre-100)] text-[var(--color-terre-700)] grid place-items-center overflow-hidden ring-2 ring-[var(--color-terre)]/20">
-                {content.authorBlock.photoSrc ? (
+              {/* Avatar : UNIQUEMENT si vraie photo fournie. Aucun fallback initiales. */}
+              {content.authorBlock.photoSrc && (
+                <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden ring-2 ring-[var(--color-terre)]/20">
                   <Image
                     src={content.authorBlock.photoSrc}
                     alt={content.authorBlock.photoAlt ?? content.authorBlock.name}
@@ -156,16 +157,8 @@ export function ServicePageLayout({ content }: { content: ServicePageContent }) 
                     height={80}
                     className="w-full h-full object-cover"
                   />
-                ) : (
-                  <span className="text-[1.75rem] font-bold" aria-hidden="true">
-                    {content.authorBlock.name
-                      .split(' ')
-                      .slice(0, 2)
-                      .map((n) => n[0])
-                      .join('')}
-                  </span>
-                )}
-              </div>
+                </div>
+              )}
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 text-[0.75rem] uppercase tracking-wider text-[var(--color-terre-700)] font-bold mb-1">
                   <Check className="w-3.5 h-3.5" strokeWidth={2.5} aria-hidden="true" />
@@ -555,9 +548,9 @@ export function ServicePageLayout({ content }: { content: ServicePageContent }) 
                 </div>
               </div>
 
-              {/* Colonne carte ou photos */}
-              <div className="lg:col-span-3 relative rounded-[var(--radius-lg)] overflow-hidden border border-[var(--color-border)] bg-[var(--color-creme)] min-h-[300px]">
-                {content.atelier.mapEmbedUrl ? (
+              {/* Colonne carte ou photos : UNIQUEMENT si contenu réel. Aucun fallback. */}
+              {content.atelier.mapEmbedUrl ? (
+                <div className="lg:col-span-3 relative rounded-[var(--radius-lg)] overflow-hidden border border-[var(--color-border)] min-h-[300px]">
                   <iframe
                     src={content.atelier.mapEmbedUrl}
                     className="w-full h-full min-h-[300px]"
@@ -566,12 +559,14 @@ export function ServicePageLayout({ content }: { content: ServicePageContent }) 
                     referrerPolicy="no-referrer-when-downgrade"
                     title={`Localisation atelier ${content.atelier.ville}`}
                   />
-                ) : content.atelier.photos && content.atelier.photos.length > 0 ? (
+                </div>
+              ) : content.atelier.photos && content.atelier.photos.length > 0 ? (
+                <div className="lg:col-span-3 relative rounded-[var(--radius-lg)] overflow-hidden border border-[var(--color-border)]">
                   <div className="grid grid-cols-2 gap-2 p-2 h-full">
                     {content.atelier.photos.slice(0, 4).map((p) => (
                       <div
                         key={p.src}
-                        className="relative rounded-[var(--radius-md)] overflow-hidden"
+                        className="relative aspect-square rounded-[var(--radius-md)] overflow-hidden"
                       >
                         <Image
                           src={p.src}
@@ -583,20 +578,8 @@ export function ServicePageLayout({ content }: { content: ServicePageContent }) 
                       </div>
                     ))}
                   </div>
-                ) : (
-                  <div className="grid place-items-center h-full text-[var(--color-gris-500)]">
-                    <div className="text-center px-6">
-                      <MapPin
-                        className="w-8 h-8 mx-auto mb-2 opacity-40"
-                        aria-hidden="true"
-                      />
-                      <p className="text-[0.875rem]">
-                        Carte de l'atelier
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </div>
+                </div>
+              ) : null}
             </div>
           </Container>
         </section>
@@ -712,16 +695,19 @@ export function ServicePageLayout({ content }: { content: ServicePageContent }) 
           })),
         })}
       />
-      <JsonLd
-        data={getReviewSchemas(
-          AVIS.slice(0, 6).map((a) => ({
-            author: a.author,
-            rating: a.rating,
-            date: a.date,
-            text: a.text,
-          })),
-        )}
-      />
+      {/* Review schema : uniquement si AVIS contient des avis réels (jamais fabriqués). */}
+      {AVIS.length > 0 && (
+        <JsonLd
+          data={getReviewSchemas(
+            AVIS.slice(0, 6).map((a) => ({
+              author: a.author,
+              rating: a.rating,
+              date: a.date,
+              text: a.text,
+            })),
+          )}
+        />
+      )}
     </>
   );
 }

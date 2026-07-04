@@ -28,62 +28,27 @@ export type AvisClient = {
   text: string;
 };
 
-export const AVIS: AvisClient[] = [
-  {
-    id: 'avis-001',
-    author: 'Marie L.',
-    city: 'Mérignac',
-    rating: 5,
-    date: '2026-03-12',
-    service: 'Démoussage toiture',
-    text: "Équipe ponctuelle, professionnelle et soigneuse. Démoussage et traitement hydrofuge faits dans les règles, ma toiture est comme neuve. Devis transparent, je recommande.",
-  },
-  {
-    id: 'avis-002',
-    author: 'Thomas D.',
-    city: 'Pessac',
-    rating: 5,
-    date: '2026-02-28',
-    service: 'Urgence fuite toiture',
-    text: "Intervention en urgence un dimanche soir après une grosse averse. Réactivité impeccable, mise hors d'eau immédiate, et réparation propre la semaine suivante. Service rare.",
-  },
-  {
-    id: 'avis-003',
-    author: 'Sophie B.',
-    city: 'Talence',
-    rating: 5,
-    date: '2026-02-10',
-    service: 'Nettoyage toiture',
-    text: "Travail propre, respectueux du voisinage et du jardin. L'artisan a pris le temps d'expliquer chaque étape. Tarifs honnêtes, exactement le devis. Très satisfaite.",
-  },
-  {
-    id: 'avis-004',
-    author: 'Jean-Pierre M.',
-    city: 'Bordeaux',
-    rating: 5,
-    date: '2026-01-22',
-    service: 'Réparation toiture',
-    text: "Diagnostic gratuit en moins de 24h. Remplacement de tuiles et reprise du faîtage, fini en une journée. Aucun stress, aucune surprise. Bravo à toute l'équipe.",
-  },
-  {
-    id: 'avis-005',
-    author: 'Caroline R.',
-    city: 'Le Bouscat',
-    rating: 5,
-    date: '2026-01-08',
-    service: 'Zinguerie',
-    text: "Pose de nouvelles gouttières en zinc, finition irréprochable. Conseils précieux sur l'évacuation des eaux. On sent l'artisan qui connaît son métier.",
-  },
-  {
-    id: 'avis-006',
-    author: 'Olivier P.',
-    city: 'Villenave-d\u2019Ornon',
-    rating: 5,
-    date: '2025-12-15',
-    service: 'Démoussage toiture',
-    text: "Toiture nettoyée et traitée en hydrofuge avant l'hiver. Tarif compétitif, équipe sérieuse. Une vraie tranquillité d'esprit pour les prochaines années.",
-  },
-];
+/**
+ * IMPORTANT — Politique zéro-placeholder :
+ * Ce tableau doit UNIQUEMENT contenir des avis Google Business Profile
+ * réellement postés par des clients de Couverture Gironde, copiés depuis
+ * la fiche GBP par Liroy.
+ *
+ * Tant que Liroy n'a pas fourni les copies vérifiées (auteur exact tel
+ * qu'affiché sur GBP + texte exact + date + ville si mentionnée), ce
+ * tableau reste vide. Aucun avis fabriqué ne doit être ajouté.
+ *
+ * Format à respecter :
+ *   {
+ *     id: 'avis-xxx',
+ *     author: 'Prénom NomInitial' (exactement comme sur GBP),
+ *     city: 'Ville' (si mentionnée dans l'avis, sinon champ vide),
+ *     rating: 5,
+ *     date: 'YYYY-MM-DD' (date de publication GBP),
+ *     text: '...' (extrait fidèle, éventuellement raccourci mais non modifié),
+ *   }
+ */
+export const AVIS: AvisClient[] = [];
 
 /** Format affichable de la date pour l'UI ("Mars 2026"). */
 export function formatAvisDate(iso: string): string {

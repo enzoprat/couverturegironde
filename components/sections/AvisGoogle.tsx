@@ -1,10 +1,10 @@
-import { Star } from 'lucide-react';
+import { Star, ExternalLink } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { AVIS, formatAvisDate, type AvisClient } from '@/data/avis';
-import { TRUST } from '@/lib/constants';
+import { SOCIAL, TRUST } from '@/lib/constants';
 
 type AvisGoogleProps = {
   eyebrow?: string;
@@ -19,9 +19,10 @@ type AvisGoogleProps = {
 /**
  * AvisGoogle — section avis clients.
  *
- * Affiche les avis depuis `data/avis.ts` (en attendant la sync Google Places API).
- * Si filterCity est fourni, on filtre. Si aucun avis ne matche, on retombe sur
- * les 6 derniers avis tous confondus (jamais une section vide).
+ * Politique zéro-placeholder : n'affiche QUE des avis Google Business
+ * Profile réels (source data/avis.ts). Tant que Liroy n'a pas fourni les
+ * vrais avis, la section affiche l'en-tête + un CTA direct vers la fiche
+ * Google, sans jamais fabriquer de cartes.
  */
 export function AvisGoogle({
   eyebrow = 'Avis clients',
@@ -30,14 +31,14 @@ export function AvisGoogle({
   filterCity,
   limit = 6,
 }: AvisGoogleProps) {
-  let displayed = filterCity
+  const displayed = filterCity
     ? AVIS.filter(
         (a) =>
           a.city.localeCompare(filterCity, 'fr', { sensitivity: 'base' }) === 0,
       ).slice(0, limit)
     : AVIS.slice(0, limit);
 
-  if (displayed.length === 0) displayed = AVIS.slice(0, limit);
+  const hasAvis = displayed.length > 0;
 
   return (
     <section className="section-y">
@@ -70,21 +71,49 @@ export function AvisGoogle({
           </div>
         </div>
 
-        <ul
-          role="list"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {displayed.map((avis) => (
-            <li key={avis.id}>
-              <AvisCard avis={avis} />
-            </li>
-          ))}
-        </ul>
+        {hasAvis ? (
+          <ul
+            role="list"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {displayed.map((avis) => (
+              <li key={avis.id}>
+                <AvisCard avis={avis} />
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div className="p-8 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-creme)] text-center">
+            <p className="text-[1rem] text-[var(--color-gris-600)] leading-relaxed max-w-2xl mx-auto mb-6">
+              Nos avis clients sont publics et vérifiables sur notre fiche
+              Google Business Profile. Nous préférons vous y renvoyer plutôt
+              que d'afficher des extraits que vous ne pourriez pas
+              contre-vérifier.
+            </p>
+            <Button
+              href={SOCIAL.google}
+              variant="primary"
+              iconRight={<ExternalLink className="w-4 h-4" />}
+              aria-label="Consulter les avis Google (nouvel onglet)"
+            >
+              Consulter les avis Google
+            </Button>
+          </div>
+        )}
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-10 flex justify-center gap-3 flex-wrap">
           <Button href="/realisations" variant="ghost">
             Découvrir nos réalisations
           </Button>
+          {hasAvis && (
+            <Button
+              href={SOCIAL.google}
+              variant="ghost"
+              iconRight={<ExternalLink className="w-4 h-4" />}
+            >
+              Voir tous les avis Google
+            </Button>
+          )}
         </div>
       </Container>
     </section>
@@ -104,7 +133,8 @@ function AvisCard({ avis }: { avis: AvisClient }) {
       </p>
       <div className="flex items-center justify-between text-[0.8125rem] pt-4 border-t border-[var(--color-border)]">
         <span className="font-semibold text-[var(--color-ardoise)]">
-          {avis.author} · {avis.city}
+          {avis.author}
+          {avis.city ? ` · ${avis.city}` : ''}
         </span>
         <span className="text-[var(--color-gris-600)]">
           {formatAvisDate(avis.date)}
