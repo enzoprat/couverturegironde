@@ -40,7 +40,7 @@ export default function HomePage() {
     <>
       <Hero
         variant="home"
-        eyebrow="Mérignac · Bordeaux · 5/5 sur 54 avis Google"
+        eyebrow="Mérignac · Bordeaux · 5/5 sur 52 avis Google"
         title={
           <>
             Couvreur à{' '}
@@ -65,7 +65,7 @@ export default function HomePage() {
       <ChiffresCles variant="light" />
 
       <AvisGoogle
-        intro="54 avis Google 5/5 vérifiés sur l'ensemble de Bordeaux Métropole. Nos clients témoignent."
+        intro="52 avis Google 5/5 vérifiés sur l'ensemble de Bordeaux Métropole. Nos clients témoignent."
       />
 
       <RealisationsCarousel

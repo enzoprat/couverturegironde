@@ -101,7 +101,7 @@ export default function Page() {
               sur le chantier, qui supervise les travaux et qui assure le
               SAV après réception. Cette continuité de l'interlocuteur,
               combinée à notre ancrage merignacais, est ce qui nous a permis
-              d'atteindre la <strong>note 5/5 sur 54 avis Google</strong>{' '}
+              d'atteindre la <strong>note 5/5 sur 52 avis Google</strong>{' '}
               que vous pouvez vérifier publiquement. Sur Mérignac
               particulièrement, le bouche-à-oreille fonctionne, nous
               intervenons régulièrement sur recommandation de
@@ -138,7 +138,7 @@ export default function Page() {
           {
             title: 'Bouche-à-oreille merignacais depuis 2005',
             description:
-              "20 ans d'interventions sur la commune. 54 avis Google 5/5 publics. Beaucoup de nos chantiers viennent de recommandations voisin-à-voisin.",
+              "20 ans d'interventions sur la commune. 52 avis Google 5/5 publics. Beaucoup de nos chantiers viennent de recommandations voisin-à-voisin.",
           },
         ],
         tarifsLines: [

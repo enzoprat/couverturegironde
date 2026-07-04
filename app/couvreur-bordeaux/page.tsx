@@ -28,7 +28,7 @@ export default function Page() {
           </>
         ),
         heroSubtitle:
-          "Fuite déclarée, démoussage saisonnier, réfection complète ? Un seul interlocuteur du premier appel à la garantie décennale : Liroy, artisan couvreur-zingueur, atelier au 65 rue de Malbos à Mérignac. Appel direct 07 68 69 78 48, devis chiffré ligne par ligne sous 24h, note 5/5 sur 54 avis Google.",
+          "Fuite déclarée, démoussage saisonnier, réfection complète ? Un seul interlocuteur du premier appel à la garantie décennale : Liroy, artisan couvreur-zingueur, atelier au 65 rue de Malbos à Mérignac. Appel direct 07 68 69 78 48, devis chiffré ligne par ligne sous 24h, note 5/5 sur 52 avis Google.",
         shortTitle: 'Couvreur Bordeaux',
 
         // ————————————————————————————————————————————————
@@ -41,7 +41,7 @@ export default function Page() {
           badges: [
             'Depuis 2005',
             'Décennale active',
-            '5/5 sur 54 avis Google',
+            '5/5 sur 52 avis Google',
             'Atelier Mérignac',
           ],
         },
@@ -87,7 +87,7 @@ export default function Page() {
               matériaux, sécurité, accès), <strong>acompte plafonné à
               30 %</strong>, <strong>solde à votre satisfaction confirmée en
               fin de chantier</strong>, aucun poste "divers et imprévus"
-              caché. La note <strong>5/5 sur 54 avis Google publics</strong>{' '}
+              caché. La note <strong>5/5 sur 52 avis Google publics</strong>{' '}
               est la traduction concrète de cette méthode au quotidien depuis
               20 ans.
             </p>

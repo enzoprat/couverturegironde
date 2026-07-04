@@ -70,7 +70,7 @@ export default function Page() {
               <strong>direct sans sous-traitance</strong>. L'artisan qui
               chiffre est celui qui exécute le chantier et qui assure le
               SAV. Cette continuité explique nos{' '}
-              <strong>5/5 sur 54 avis Google</strong>, une note que nous
+              <strong>5/5 sur 52 avis Google</strong>, une note que nous
               défendons activement sur chaque chantier eysinais.
             </p>
           </>

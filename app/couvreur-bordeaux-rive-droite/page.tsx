@@ -86,7 +86,7 @@ export default function Page() {
               <strong>direct sans sous-traitance</strong>. C'est l'artisan
               qui chiffre, qui exécute le chantier sur la Rive Droite,
               qui revient en SAV. Cette continuité explique nos{' '}
-              <strong>5/5 sur 54 avis Google</strong> et notre
+              <strong>5/5 sur 52 avis Google</strong> et notre
               recommandation régulière par syndics et copropriétaires de
               Brazza, Niel et Benauge.
             </p>

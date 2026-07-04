@@ -77,7 +77,7 @@ export default function Page() {
               qui chiffre, qui exécute, qui revient en SAV. Cette
               continuité est ce qui nous a permis d'accumuler des avis
               positifs sur tout le département (
-              <strong>5/5 sur 54 avis Google</strong>) et de nous faire
+              <strong>5/5 sur 52 avis Google</strong>) et de nous faire
               recommander de propriétaire à propriétaire sur le Bassin.
             </p>
           </>

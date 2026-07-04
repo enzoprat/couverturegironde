@@ -262,7 +262,7 @@ export const FAQ_APROPOS: FAQItem[] = [
   {
     question: 'Depuis combien d\'années êtes-vous couvreur en Gironde ?',
     answer:
-      "Couverture Gironde est active à Mérignac depuis 2005, soit 20 ans d'exercice continu sur Bordeaux Métropole et le département de la Gironde. Nous totalisons plusieurs centaines de chantiers de toiture livrés et une note de 5/5 sur 54 avis Google.",
+      "Couverture Gironde est active à Mérignac depuis 2005, soit 20 ans d'exercice continu sur Bordeaux Métropole et le département de la Gironde. Nous totalisons plusieurs centaines de chantiers de toiture livrés et une note de 5/5 sur 52 avis Google.",
   },
   {
     question: 'Où est situé votre atelier ?',

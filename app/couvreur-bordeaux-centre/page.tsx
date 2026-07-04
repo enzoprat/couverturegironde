@@ -87,7 +87,7 @@ export default function Page() {
               <strong>direct sans sous-traitance</strong>. C'est l'artisan
               qui se déplace, qui chiffre, qui exécute et qui assure le
               SAV à long terme. Ce mode opératoire explique nos{' '}
-              <strong>5/5 sur 54 avis Google</strong>, et la
+              <strong>5/5 sur 52 avis Google</strong>, et la
               recommandation de syndics et de copropriétaires du centre
               qui nous renvoient régulièrement des chantiers.
             </p>

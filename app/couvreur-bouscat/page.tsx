@@ -73,7 +73,7 @@ export default function Page() {
               qui se déplace, qui chiffre, qui réalise les travaux et qui
               assure le SAV à long terme. Cette relation directe est ce qui
               nous a permis d'accumuler une{' '}
-              <strong>note de 5/5 sur 54 avis Google</strong>, un signal de
+              <strong>note de 5/5 sur 52 avis Google</strong>, un signal de
               confiance que nous protégeons sur chaque chantier bouscatais.
               Beaucoup de nos clients du Bouscat nous reviennent tous les
               3-4 ans pour l'entretien préventif programmé.

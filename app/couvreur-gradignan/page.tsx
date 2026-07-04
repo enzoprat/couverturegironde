@@ -73,7 +73,7 @@ export default function Page() {
               <strong>direct sans sous-traitance</strong>. C'est l'artisan
               qui chiffre, qui exécute et qui assure le SAV. Cette
               continuité explique nos{' '}
-              <strong>5/5 sur 54 avis Google</strong>, et la fidélité
+              <strong>5/5 sur 52 avis Google</strong>, et la fidélité
               de nos clients gradignanais qui nous reviennent pour
               l'entretien programmé.
             </p>

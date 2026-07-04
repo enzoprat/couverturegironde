@@ -90,7 +90,7 @@ export default function Page() {
               chiffre est celui qui exécute le chantier Chartrons et qui
               revient en SAV. Cette continuité, combinée à notre savoir-faire
               ardoise et zinguerie patrimoniale, explique nos{' '}
-              <strong>5/5 sur 54 avis Google</strong> et notre fidèle
+              <strong>5/5 sur 52 avis Google</strong> et notre fidèle
               clientèle Chartrons.
             </p>
           </>

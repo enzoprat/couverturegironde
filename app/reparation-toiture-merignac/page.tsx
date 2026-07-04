@@ -104,7 +104,7 @@ export default function Page() {
           {
             title: 'Bouche-à-oreille merignacais depuis 2005',
             description:
-              "5/5 sur 54 avis Google publics. Beaucoup de nos chantiers viennent de recommandations voisin-à-voisin sur Mérignac. C'est ce qui nous engage à ne jamais dévier.",
+              "5/5 sur 52 avis Google publics. Beaucoup de nos chantiers viennent de recommandations voisin-à-voisin sur Mérignac. C'est ce qui nous engage à ne jamais dévier.",
           },
         ],
         risques: [

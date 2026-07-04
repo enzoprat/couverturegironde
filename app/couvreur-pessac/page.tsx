@@ -70,7 +70,7 @@ export default function Page() {
               chiffre, qui réalise les travaux et qui assure le SAV. Cette
               relation directe avec le client est ce qui nous a permis
               d'accumuler une note de {''}
-              <strong>5/5 sur 54 avis Google</strong>, un signal de confiance
+              <strong>5/5 sur 52 avis Google</strong>, un signal de confiance
               que nous protégeons sur chaque chantier pessacais.
             </p>
           </>
