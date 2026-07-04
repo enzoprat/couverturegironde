@@ -6,6 +6,7 @@ import type {
   ImageObject,
   LocalBusiness,
   Organization,
+  Person,
   Place,
   Review,
   Service,
@@ -57,6 +58,48 @@ export function getOrganizationSchema(): WithContext<Organization> {
       contactType: 'customer service',
       areaServed: 'FR',
       availableLanguage: ['French'],
+    },
+  };
+}
+
+/**
+ * Schema Person pour Liroy Delsuc — signal E-E-A-T fort.
+ * Émis sur les pages piliers signées par lui, avec `@id` crossref-able.
+ */
+export function getPersonLiroySchema(): WithContext<Person> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${SITE.url}/#liroy-delsuc`,
+    name: 'Liroy Delsuc',
+    givenName: 'Liroy',
+    familyName: 'Delsuc',
+    jobTitle: 'Couvreur-zingueur, fondateur de Couverture Gironde',
+    description:
+      "Artisan couvreur-zingueur à Bordeaux et en Gironde depuis 2005. Fondateur de Couverture Gironde, atelier au 65 rue de Malbos à Mérignac. 20 ans d'expérience sur le bâti bordelais.",
+    worksFor: { '@id': `${SITE.url}/#organization` },
+    knowsAbout: [
+      'Couverture toiture',
+      'Zinguerie',
+      'Démoussage toiture',
+      'Traitement hydrofuge',
+      'Charpente traditionnelle',
+      'Étanchéité toit-terrasse',
+      'Pose Velux',
+      'Tuile canal traditionnelle',
+      'Ardoise naturelle',
+    ],
+    workLocation: {
+      '@type': 'Place',
+      name: 'Atelier Couverture Gironde',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: NAP.streetAddress,
+        postalCode: NAP.postalCode,
+        addressLocality: NAP.addressLocality,
+        addressRegion: NAP.addressRegion,
+        addressCountry: NAP.addressCountry,
+      },
     },
   };
 }

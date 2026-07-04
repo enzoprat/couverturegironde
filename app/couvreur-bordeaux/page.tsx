@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-bordeaux');
 
@@ -13,7 +15,8 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <ServicePageLayout
+    <>
+      <ServicePageLayout
       content={{
         service: 'couverture',
         slug: PAGE.slug,
@@ -21,171 +24,201 @@ export default function Page() {
           <>
             Couvreur à{' '}
             <span className="text-[var(--color-terre)]">Bordeaux</span> depuis
-            2005 : artisan couverture Bordeaux Métropole
+            2005 — artisan direct, sans sous-traitance
           </>
         ),
         heroSubtitle:
-          "Couvreur-zingueur artisan depuis 2005, atelier à Mérignac. Tous travaux de toiture : démoussage, nettoyage, réparation, zinguerie, charpente, neuf et rénovation. Devis gratuit sous 24h, garantie décennale.",
+          "Fuite déclarée, démoussage saisonnier, réfection complète ? Un seul interlocuteur du premier appel à la garantie décennale : Liroy, artisan couvreur-zingueur, atelier au 65 rue de Malbos à Mérignac. Appel direct 07 68 69 78 48, devis chiffré ligne par ligne sous 24h, note 5/5 sur 54 avis Google.",
         shortTitle: 'Couvreur Bordeaux',
+
+        // ————————————————————————————————————————————————
+        // AUTEUR (E-E-A-T massif : Liroy identifié dès le haut de page)
+        // ————————————————————————————————————————————————
+        authorBlock: {
+          name: 'Liroy Delsuc',
+          role: 'Couvreur-zingueur, fondateur de Couverture Gironde',
+          bio: "Artisan couvreur depuis 2005, formé à la tuile canal traditionnelle et à la zinguerie soudée étain. Atelier au 65 rue de Malbos à Mérignac. Chaque devis rédigé et signé par moi. Chaque chantier supervisé par moi. Aucune sous-traitance, jamais.",
+          badges: [
+            'Depuis 2005',
+            'Décennale active',
+            '5/5 sur 54 avis Google',
+            'Atelier Mérignac',
+          ],
+        },
+
         presentation: (
           <>
             <p>
-              Couverture Gironde est une <strong>entreprise artisanale de
-              couverture</strong> implantée à Mérignac depuis 2005,
-              intervenant sur l'ensemble de Bordeaux Métropole et de la
-              Gironde. Notre vocation : proposer un service de couverture
-              complet, sérieux et accessible, sans intermédiaire et sans
-              sous-traitance. C'est notre équipe qui se déplace, qui
-              chiffre, qui réalise les travaux et qui assure le SAV.
+              Vous cherchez un <strong>couvreur à Bordeaux</strong> et vous
+              vous demandez comment distinguer les vrais artisans des
+              structures commerciales qui sous-traitent en cascade. C'est la
+              bonne question. Sur Bordeaux Métropole, une majorité des devis
+              circulent entre plusieurs mains avant d'atteindre l'équipe qui
+              interviendra vraiment sur votre toit — ce qui explique les
+              tarifs gonflés, les délais qui s'étirent et les SAV qui
+              deviennent des parcours du combattant.
             </p>
             <p>
-              Cette continuité de l'interlocuteur est ce qui distingue un
-              artisan d'une simple structure commerciale.{' '}
               <strong>
-                Quand vous appelez Couverture Gironde, vous parlez à
-                l'artisan qui interviendra sur votre toiture.
+                Couverture Gironde fonctionne à l'opposé de ce modèle.
               </strong>{' '}
-              Quand vous recevez un devis, c'est lui qui l'a rédigé. Quand
-              un problème se pose plus tard, vous parlez à la même personne.
-              C'est l'inverse du modèle franchise/sous-traitance dominant le
-              marché.
+              Quand vous nous appelez, vous parlez à Liroy, l'artisan qui
+              interviendra sur votre chantier. Quand vous recevez un devis,
+              c'est lui qui l'a rédigé, ligne par ligne. Quand une reprise
+              s'impose 3 ans plus tard, vous parlez à la même personne. Cette
+              continuité de l'interlocuteur du premier appel jusqu'à la
+              garantie décennale est ce qui distingue un artisan direct d'une
+              plateforme commerciale.
             </p>
             <p>
-              Notre savoir-faire couvre l'ensemble des techniques
-              traditionnelles et contemporaines : tuile canal et tuile
-              mécanique pour l'habitat bordelais classique,{' '}
-              <strong>ardoise naturelle</strong> pour les maisons
-              bourgeoises, <strong>zinguerie sur mesure</strong> avec
-              soudure étain sur place, <strong>étanchéité de toits-terrasses</strong>{' '}
-              pour les copropriétés récentes, et{' '}
-              <strong>charpente bois</strong> pour les rénovations
-              structurelles. Cette polyvalence permet de traiter votre
-              projet de A à Z, sans qu'aucun chantier ne sorte de notre
-              champ de compétences.
+              Notre <strong>atelier physique au 65 rue de Malbos à
+              Mérignac</strong> nous place à moins de 15 minutes de Bordeaux
+              centre, Pessac, Talence, Bègles, Le Bouscat et
+              Villenave-d'Ornon. Cette implantation garantit une réactivité
+              urgence (mise hors d'eau sous 2-4 heures en ouvré), des frais
+              de déplacement maîtrisés, et une connaissance intime du bâti
+              bordelais — échoppes tuile canal du XIXᵉ, immeubles
+              haussmanniens en ardoise, pavillons tuile mécanique des années
+              70-90, et toits-terrasses EPDM sur programmes récents.
             </p>
             <p>
-              Notre prestation phare reste l'<strong>entretien préventif
-              de toiture</strong> : démoussage professionnel, nettoyage
-              maîtrisé et traitement hydrofuge garanti 10 ans. Le climat
-              océanique humide de la Gironde, 930 mm de pluie par an,
-              hivers doux, couvert végétal dense sur Bordeaux Métropole —
-              fait que les toitures locales se dégradent 30 à 50 % plus
-              vite que la moyenne nationale sans entretien régulier.
-              Anticiper, c'est dépenser 10 fois moins qu'une réfection
-              complète tardive.
-            </p>
-            <p>
-              Notre dépôt est situé au{' '}
-              <strong>65 rue de Malbos à Mérignac (33700)</strong>, à
-              moins de 15 minutes de Bordeaux centre, Pessac, Talence,
-              Bègles, Le Bouscat et Villenave-d'Ornon. Cette proximité
-              géographique garantit une <strong>réactivité en urgence</strong>{' '}
-              (mise hors d'eau sous 2-4h en heures ouvrées), des frais de
-              déplacement maîtrisés, et une connaissance fine du bâti
-              local. Nous travaillons 7j/7 de 6h à 22h pour les urgences,
-              et en horaires standards pour les chantiers programmés.
-            </p>
-            <p>
-              Au-delà du métier technique, nous portons une exigence forte
-              sur la transparence commerciale :{' '}
-              <strong>devis chiffré ligne par ligne</strong>, acompte
-              limité à 30 %, solde à la fin du chantier après vérification
-              de votre satisfaction. Pas de "divers et imprévus" cachés,
-              pas de supplément surprise, pas de pression commerciale. La
-              note <strong>5/5 sur 54 avis Google</strong> est la
-              traduction concrète de cette éthique au quotidien.
+              Notre exigence commerciale est simple à vérifier :{' '}
+              <strong>devis chiffré ligne par ligne</strong> (main d'œuvre,
+              matériaux, sécurité, accès), <strong>acompte plafonné à
+              30 %</strong>, <strong>solde à votre satisfaction confirmée en
+              fin de chantier</strong>, aucun poste "divers et imprévus"
+              caché. La note <strong>5/5 sur 54 avis Google publics</strong>{' '}
+              est la traduction concrète de cette méthode au quotidien depuis
+              20 ans.
             </p>
           </>
         ),
+
         pourquoiRaisons: [
           {
-            title: 'Artisan local depuis 2005',
+            title: 'Artisan direct, jamais sous-traitance',
             description:
-              "20 ans d'exercice sur Bordeaux Métropole. Une équipe stable, formée et qualifiée. Connaissance intime du bâti et du climat girondins.",
+              "Le devis, le chantier et le SAV sont assurés par la même équipe. Un seul interlocuteur du premier appel à la garantie décennale.",
           },
           {
-            title: 'Travail direct, sans sous-traitance',
+            title: 'Prix chiffrés visibles avant même le devis',
             description:
-              "L'artisan qui chiffre est celui qui réalise les travaux et qui assure le SAV. Vous n'avez qu'un interlocuteur du devis à la garantie décennale.",
+              "Tarifs 2026 affichés publiquement sur cette page (12-220 €/m² selon prestation). Aucune concurrence bordelaise ne le fait — vous savez à quoi vous attendre avant même de nous contacter.",
           },
           {
-            title: 'Polyvalence complète',
+            title: 'Atelier physique à Mérignac depuis 2005',
             description:
-              "Couverture, zinguerie, démoussage, charpente, étanchéité, Velux : tous les corps de métier de la toiture sous un seul interlocuteur.",
+              "65 rue de Malbos. Vous pouvez passer voir le dépôt, vérifier notre présence. C'est un atelier de couvreur classique, pas un bureau de façade.",
           },
           {
-            title: 'Devis détaillé sous 24h',
+            title: 'Devis rédigé et signé par Liroy',
             description:
-              "Réponse rapide, chiffrage transparent ligne par ligne, aucun supplément caché. Vous décidez à froid, sans pression commerciale.",
+              "Pas de commercial intermédiaire. L'artisan qui rédige le devis est celui qui vous appelle, qui vient sur place, qui exécute et qui vous rappelle 3 ans plus tard si nécessaire.",
           },
           {
-            title: 'Garantie décennale active',
+            title: 'Garantie décennale active + biennale équipements',
             description:
-              "Tous nos chantiers sont couverts par notre assurance décennale. Vous êtes protégé pendant 10 ans après réception des travaux.",
+              "Attestations d'assurance en cours de validité, fournies systématiquement avec le devis. Protection de 10 ans après réception des travaux.",
           },
           {
-            title: 'Urgence 7j/7',
+            title: 'Intervention urgence 7j/7 en 1-4h',
             description:
-              "Fuite, tempête, sinistre : intervention sous quelques heures en heures ouvrées. Mise hors d'eau immédiate, dossier d'assurance constitué.",
+              "Fuite déclarée, tempête, dégât des eaux : mise hors d'eau sous 1-4 heures en ouvré, dossier assurance constitué. En saison tempête, veille des appels renforcée.",
           },
         ],
+
+        // TODO Liroy : fournir 2 avis Google réels (nom prénom + ville + accord de citation)
+        // à injecter ici comme testimonials inline. En attendant, le carousel AvisGoogle
+        // affiche déjà les avis publics — pas de fabrication de faux avis.
+        // inlineTestimonials: [ ... ],
+
         risques: [
           {
-            title: 'Sous-traitance en cascade chez les concurrents',
+            title: "Les 'commerciaux' qui vous rappellent 3 fois",
             description:
-              "Beaucoup d'entreprises bordelaises sous-traitent à des équipes externes peu identifiables. Vous perdez la traçabilité, et le SAV devient un parcours du combattant.",
+              "Certaines structures utilisent des équipes commerciales rémunérées à la signature. Résultat : pression, tarifs gonflés, sous-traitance à l'arrivée. Chez nous, c'est l'artisan qui rappelle — une fois — avec un devis chiffré.",
           },
           {
-            title: 'Devis flous et imprévus en cours de chantier',
+            title: 'Devis flous et suppléments en cours de chantier',
             description:
-              "Les pratiques commerciales agressives multiplient les \"divers\" et les suppléments en cours de chantier. À l'arrivée, la facture peut dépasser de 30-50 % le devis initial.",
+              "Les postes \"divers et imprévus\" ou \"accès complexe\" ajoutés en cours de route font régulièrement dépasser le devis initial de 30-50 %. Notre devis est exhaustif à la signature, aucun supplément après.",
           },
           {
-            title: 'Absence de couverture décennale',
+            title: 'Absence de décennale ou attestation périmée',
             description:
-              "Certains opérateurs ne sont pas correctement assurés. En cas de sinistre ultérieur, vous n'avez aucun recours. Toujours exiger l'attestation décennale avant signature.",
+              "Toujours exiger l'attestation d'assurance décennale ET vérifier sa date de validité. Sans elle, aucun recours en cas de sinistre ultérieur. Nous joignons systématiquement notre attestation au devis.",
           },
           {
-            title: 'Entretien différé qui se paye en réfection',
+            title: 'Démarcheurs porte-à-porte "urgents"',
             description:
-              "Une toiture mal entretenue vieillit 30-50 % plus vite. Là où un démoussage régulier coûte 2-3 €/m² par an lissé, une réfection complète tardive coûte 80-150 €/m².",
+              "Attention aux propositions immédiates avec paiement direct. Tarifs 2-3× le marché, SAV inexistant, souvent aucune assurance. Un artisan sérieux n'a pas besoin de démarcher : il travaille sur rendez-vous et devis.",
           },
         ],
+
         methode: [
           {
-            title: 'Premier contact',
+            title: 'Appel — sous 30 min de rappel',
             description:
-              "Appel ou formulaire en ligne. Nous évaluons votre besoin, vous indiquons les premières fourchettes de prix et planifions une visite si nécessaire.",
+              "Vous appelez au 07 68 69 78 48 ou envoyez le formulaire. Nous vous rappelons sous 30 minutes en ouvré. Description au téléphone (photos bienvenues) pour pré-évaluer l'urgence et le budget approximatif.",
           },
           {
-            title: 'Visite de diagnostic gratuite',
+            title: 'Visite diagnostic gratuite — J+2',
             description:
-              "Un de nos artisans se déplace, inspecte la toiture, prend des photos, identifie les points critiques. Aucun engagement à ce stade.",
+              "Nous programmons une visite sous 48h ouvrées. Inspection complète, photos systématiques, identification des points critiques. Aucun engagement à ce stade.",
           },
           {
-            title: 'Devis détaillé sous 24h',
+            title: 'Devis chiffré — J+3',
             description:
-              "Vous recevez un devis chiffré ligne par ligne avec photos des zones concernées. Comparable, transparent, sans piège.",
+              "Vous recevez sous 24h un devis chiffré ligne par ligne avec photos des zones concernées. Comparable, transparent, aucun supplément caché.",
           },
           {
-            title: 'Préparation du chantier',
+            title: 'Démarches administratives — délai variable',
             description:
-              "Planification, gestion des autorisations (DP, voirie, ABF si secteur sauvegardé), information du voisinage, livraison des matériaux.",
+              "Réfection à l'identique : aucune formalité, on démarre. Changement d'aspect : déclaration préalable en mairie (1-2 mois). Secteur UNESCO ou périmètre ABF : avis 2-4 mois. Nous constituons et déposons les dossiers pour vous.",
           },
           {
-            title: 'Réalisation des travaux',
+            title: 'Chantier — dès autorisation obtenue',
             description:
-              "Notre équipe interne intervient avec le matériel et les équipements de sécurité. Contrôle qualité à chaque étape, photos avant/après systématiques.",
+              "Notre équipe interne intervient avec matériel et sécurité. Contrôle qualité à chaque étape, photos avant/après systématiques, information voisinage. Durée typique : 1-5 jours selon la surface et la complexité.",
           },
           {
             title: 'Réception et garantie',
             description:
-              "Visite de fin de chantier avec vous, remise des photos et de l'attestation décennale. Le solde se règle à votre satisfaction confirmée.",
+              "Visite fin de chantier avec vous, remise du rapport photo + attestation décennale. Solde à votre satisfaction confirmée. Suivi SAV assuré pendant 10 ans.",
           },
         ],
+
+        // ————————————————————————————————————————————————
+        // QUESTIONS À POSER À TOUT COUVREUR (utile + featured snippet)
+        // ————————————————————————————————————————————————
+        questionsCouvreur: {
+          intro:
+            "Avant de signer un devis avec un couvreur bordelais — le nôtre ou un autre — posez ces 3 questions. Elles séparent en 2 minutes les artisans directs des intermédiaires. Nos réponses vous serviront de référence.",
+          items: [
+            {
+              question:
+                "L'artisan qui rédige le devis est-il celui qui exécute le chantier ?",
+              answer:
+                "Cette question filtre 80 % des propositions. Chez un artisan direct comme nous, la réponse est OUI : Liroy rédige le devis et supervise l'exécution. Chez une structure commerciale, la réponse implique une équipe externe qu'on ne vous présente pas avant le jour J.",
+            },
+            {
+              question:
+                "Pouvez-vous me remettre votre attestation d'assurance décennale, avec ses dates de validité ?",
+              answer:
+                "Aucune raison légitime de refuser. Nous joignons systématiquement notre attestation à chaque devis, avec dates. Un couvreur qui rechigne ou qui envoie un scan illisible cache probablement une décennale périmée ou absente.",
+            },
+            {
+              question:
+                "Le devis détaille-t-il tous les postes (accès, sécurité, gestion des déchets) ou reste-t-il des lignes ouvertes ?",
+              answer:
+                "Un devis exhaustif détaille chaque poste : main d'œuvre, matériaux, échafaudage, protection abords, évacuation des déchets, TVA. Nos devis n'ont aucune ligne \"divers et imprévus\" restée ouverte — vous savez exactement ce que vous signez et le total ne bouge pas en cours de chantier.",
+            },
+          ],
+        },
+
         tarifs: {
           intro:
-            "Fourchettes de prix observées sur Bordeaux Métropole en 2026 pour les prestations courantes de couverture. Ces tarifs sont indicatifs : seul un diagnostic sur site permet de chiffrer précisément, en fonction de l'accessibilité, de l'état réel et des matériaux nécessaires.",
+            "Fourchettes de prix 2026 observées sur Bordeaux Métropole pour les prestations courantes de couverture. Ces tarifs sont indicatifs — seul un diagnostic sur site permet de chiffrer précisément selon l'accessibilité, l'état réel et les matériaux. Pour une maison de 120 m² type Caudéran, un démoussage complet représente 1 500-2 200 € TTC.",
           lines: [
             {
               service: 'Démoussage toiture + brossage',
@@ -193,7 +226,7 @@ export default function Page() {
               note: 'Versants nord et zones ombragées prioritaires',
             },
             {
-              service: 'Démoussage + traitement hydrofuge',
+              service: 'Démoussage + traitement hydrofuge 10 ans',
               range: '18 – 27 €/m²',
               note: 'Combo recommandé climat océanique girondin',
             },
@@ -208,7 +241,7 @@ export default function Page() {
               note: 'Forfait diagnostic + intervention',
             },
             {
-              service: 'Réparation faîtage scellé',
+              service: 'Réparation faîtage scellé chaux',
               range: '45 – 70 €/ml',
               note: 'Mortier chaux pour bâti ancien bordelais',
             },
@@ -225,17 +258,17 @@ export default function Page() {
             {
               service: "Urgence fuite, mise hors d'eau",
               range: '250 – 550 €',
-              note: 'Intervention 7j/7, devis sous 24h',
+              note: 'Intervention 7j/7, souvent non facturée si travaux signés',
             },
             {
               service: 'Réfection complète tuile canal',
               range: '85 – 145 €/m²',
-              note: 'Selon état charpente, isolation et écran sous-toiture',
+              note: 'Selon état charpente, isolation, écran sous-toiture',
             },
             {
-              service: 'Réfection complète ardoise',
+              service: 'Réfection complète ardoise naturelle',
               range: '120 – 220 €/m²',
-              note: 'Ardoise naturelle d\u2019Angers, finitions soignées',
+              note: 'Ardoise Angers, finitions soignées',
             },
             {
               service: 'Étanchéité toit-terrasse (SEL ou EPDM)',
@@ -244,13 +277,33 @@ export default function Page() {
             },
             {
               service: 'Charpente bois : reprise sablière',
-              range: '450 – 1 200 € /ml',
+              range: '450 – 1 200 €/ml',
               note: 'Selon section et accessibilité',
             },
           ],
           disclaimer:
-            "Tarifs TTC, posé, hors échafaudage spécifique et hors situations particulières (ABF, hauteur >12m, accès complexe). Devis personnalisé gratuit sous 24h.",
+            "Tarifs TTC, posé, hors échafaudage spécifique et hors situations particulières (ABF, hauteur >12 m, accès complexe). TVA 10 % applicable aux logements achevés depuis plus de 2 ans. Devis personnalisé gratuit sous 24h.",
         },
+
+        // ————————————————————————————————————————————————
+        // ATELIER (signal local physique + preuve d'existence)
+        // ————————————————————————————————————————————————
+        atelier: {
+          adresse: '65 rue de Malbos',
+          codePostal: '33700',
+          ville: 'Mérignac',
+          intro:
+            "Notre siège et notre atelier sont physiquement au 65 rue de Malbos à Mérignac depuis 2005. À moins de 15 minutes de Bordeaux centre, Pessac, Talence, Bègles, Le Bouscat et Villenave-d'Ornon. Vous pouvez passer voir l'atelier : c'est un dépôt de couvreur classique, avec stock de tuiles, matériaux et outillage.",
+          horaires: [
+            { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+            { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+          ],
+          mapEmbedUrl:
+            'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+          itineraireUrl:
+            'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+        },
+
         quartiersBordeaux: {
           intro:
             "Nous intervenons sur l'ensemble des quartiers de Bordeaux et sa métropole. Chaque secteur a son bâti, ses contraintes urbanistiques et ses spécificités de toiture : nous les connaissons pour avoir réalisé des chantiers dans tous ces secteurs depuis 2005.",
@@ -329,7 +382,71 @@ export default function Page() {
             },
           ],
         },
+
+        // ————————————————————————————————————————————————
+        // FAQ CONVERSION-FOCUSED (override la FAQ générique service)
+        // ————————————————————————————————————————————————
+        faqOverride: [
+          {
+            question: 'Quel est le prix d\u2019un couvreur à Bordeaux en 2026 ?',
+            answer:
+              "Les tarifs 2026 observés sur Bordeaux Métropole : démoussage 12-18 €/m², nettoyage 12-20 €/m², démoussage + hydrofuge 18-27 €/m², réfection complète tuile canal 85-145 €/m², réfection ardoise 120-220 €/m². Pour une maison type 120 m², un démoussage complet représente 1 500-2 200 € TTC. Notre page tarifs détaille l'ensemble des prestations.",
+          },
+          {
+            question:
+              'Combien de temps pour obtenir un devis couvreur à Bordeaux ?',
+            answer:
+              "Nous rappelons sous 30 minutes en heures ouvrées après votre appel. Visite de diagnostic gratuite sous 48h. Devis chiffré ligne par ligne sous 24h après la visite. Total : vous avez un devis actionnable en 3 à 5 jours ouvrés maximum, souvent moins.",
+          },
+          {
+            question:
+              'Comment distinguer un artisan couvreur direct d\u2019une plateforme commerciale ?',
+            answer:
+              "Trois signaux fiables : (1) le devis est-il rédigé et signé par l'artisan lui-même, ou par un commercial ? (2) l'atestation décennale est-elle jointe au devis avec ses dates de validité ? (3) le devis détaille-t-il tous les postes ou laisse-t-il des lignes \"divers et imprévus\" ouvertes ? Un artisan direct répond OUI aux 3 premières et NON à la 4ᵉ. C'est notre positionnement.",
+          },
+          {
+            question: 'Quels quartiers de Bordeaux couvrez-vous ?',
+            answer:
+              "Tous : Centre (UNESCO/ABF), Chartrons, Caudéran, Saint-Augustin, Bastide, Bordeaux Lac, ainsi que la métropole (Mérignac, Pessac, Talence, Bègles, Villenave-d'Ornon, Bouscat, Gradignan, Bruges, Eysines, Cenon, Floirac, Lormont). Sur devis pour la Gironde élargie : Médoc, Bassin d'Arcachon, Libournais, Sud-Gironde.",
+          },
+          {
+            question: 'Intervenez-vous en urgence 24h/24 pour une fuite ?',
+            answer:
+              "En ouvré (lundi-vendredi 6h-22h), intervention en 1 à 4 heures pour mise hors d'eau. En saison tempête (novembre-mars), veille des appels renforcée le week-end. Pour les urgences nuit/dimanche, message vocal au 07 68 69 78 48 avec rappel prioritaire dès la première heure du jour ouvré suivant. Coût mise hors d'eau : 250-550 €, souvent non facturé si le devis de réparation est signé dans la foulée.",
+          },
+          {
+            question: 'Êtes-vous certifiés RGE / QualiBat ?',
+            answer:
+              "Nous sommes couverts par la garantie décennale légale + responsabilité civile pro (attestations jointes à chaque devis). Sur les prestations éligibles (rénovation énergétique, isolation par la toiture), nous vous orientons vers nos partenaires certifiés RGE pour préserver votre éligibilité aux aides (MaPrimeRénov', éco-PTZ, CEE).",
+          },
+          {
+            question:
+              'Quels matériaux maîtrisez-vous sur le bâti bordelais ?',
+            answer:
+              "L'intégralité : tuile canal traditionnelle (échoppes centre + Caudéran), tuile mécanique (pavillons 70-90), ardoise naturelle d'Angers (bâti bourgeois), zinc naturel/prépatiné soudé étain (chéneaux, noues, capotages), EPDM et étanchéité bitumineuse (toits-terrasses), et charpente bois pour rénovation structurelle.",
+          },
+          {
+            question:
+              'Quelle garantie et quel SAV après le chantier ?',
+            answer:
+              "Garantie décennale (10 ans) sur l'ensemble de la prestation, obligation légale, notre attestation est active et joignable au devis. Garantie biennale (2 ans) sur les équipements (Velux, gouttières). Fiche technique des matériaux + attestation d'assurance + photos avant/après remises en fin de chantier. En cas de reprise nécessaire pendant les 10 ans : nous revenons, sans discussion.",
+          },
+          {
+            question: 'Acceptez-vous les paiements échelonnés ?',
+            answer:
+              "Pour les chantiers >5 000 € HT, paiement en 2 ou 3 fois sans frais possible (à convenir à la signature). Acompte plafonné à 30 % à la signature, solde à la satisfaction confirmée en fin de chantier. Pour les rénovations éligibles à l'éco-PTZ ou à MaPrimeRénov', nous fournissons tous les justificatifs pour votre dossier bancaire ou ANAH.",
+          },
+          {
+            question:
+              'Pourquoi choisir un artisan mérignacais pour un chantier à Bordeaux Centre ?',
+            answer:
+              "Trois avantages concrets : (1) délai d'intervention urgence 30-60 min contre 60-90 min pour un artisan hors métropole, (2) connaissance intime du bâti bordelais (échoppes tuile canal, ABF, secteur UNESCO), (3) pas de sous-traitance à des équipes externes. Notre atelier au 65 rue de Malbos est à moins de 15 min de Bordeaux Centre — c'est le meilleur compromis proximité / expertise sur le bâti historique bordelais.",
+          },
+        ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }
