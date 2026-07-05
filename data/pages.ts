@@ -318,9 +318,9 @@ const STATIC_PAGES: PageEntry[] = [
     ville: 'merignac',
     title: 'Couvreur Mérignac',
     seoTitle:
-      'Couvreur Mérignac : atelier rue de Malbos | 5/5 sur 52 avis',
+      'Couvreur Mérignac ★ atelier rue de Malbos ★ 5/5',
     seoDescription:
-      "Couvreur à Mérignac depuis 2005, atelier rue de Malbos. Démoussage, nettoyage, réparation, zinguerie, urgence 7j/7. Note 5/5 (52 avis). Devis 24h.",
+      "★ Couvreur Mérignac depuis 2005 · Liroy, artisan direct · atelier 65 rue de Malbos · Urgence 15-30 min · 5/5 sur 52 avis · Devis 24h.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
