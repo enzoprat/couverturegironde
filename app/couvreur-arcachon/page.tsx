@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { VillePageLayout } from '@/components/content/VillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-arcachon');
 
@@ -13,12 +15,49 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <VillePageLayout
-      content={{
-        slug: PAGE.slug,
-        villeSlug: 'arcachon',
-        heroSubtitle:
-          "Couvreur-zingueur à Arcachon et sur le Bassin depuis 2005. Démoussage, réparation, zinguerie résistante à l'air salin sur les villas Belle Époque (Ville d'Hiver), maisons ostréicoles et pavillons contemporains. Devis gratuit sous 24h, garantie décennale, déplacement organisé depuis Mérignac.",
+    <>
+      <VillePageLayout
+        content={{
+          slug: PAGE.slug,
+          villeSlug: 'arcachon',
+          h1: (
+            <>
+              Couvreur à{' '}
+              <span className="text-[var(--color-terre)]">Arcachon</span> &
+              Bassin — villas Belle Époque, zinc marine
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac (60 km)',
+            bio: "Je couvre Arcachon et le Bassin depuis 2005 depuis mon atelier de Mérignac (60 km, 1h de route). Le Bassin est un DÉFI TECHNIQUE : air salin agressif (Le Pyla, Pereire, Moulleau), villas Belle Époque protégées (Ville d'Hiver), maisons ostréicoles patrimoniales. Je n'utilise QUE du zinc marine prépatiné anti-air-salin — un zinc standard s'oxyde en 5-10 ans en bord de mer. J'organise des journées d'intervention groupées Bassin pour maîtriser les frais de déplacement.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Zinc marine anti-air-salin',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac, à 60 km (1h de route) d'Arcachon via A63 + A660. Nous organisons des journées d'intervention groupées Bassin (Arcachon, La Teste, Le Pyla, Le Moulleau, Pereire) pour maîtriser les frais de déplacement et proposer des tarifs compétitifs.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
+
+          heroSubtitle:
+            "Couvreur-zingueur Arcachon & Bassin depuis 2005, atelier à Mérignac (60 km). Spécialiste zinc marine anti-air-salin sur villas Belle Époque (Ville d'Hiver), maisons ostréicoles, pavillons Pyla/Pereire/Moulleau. Journées groupées Bassin pour tarifs compétitifs.",
         contexteLocal: (
           <>
             <p>
@@ -187,8 +226,45 @@ export default function Page() {
             answer:
               "Pour une construction neuve sur le Bassin : ardoise naturelle (qualité Espagne ou Angers) sur les rénovations patrimoniales, tuile mécanique ton terre cuite pour les pavillons contemporains, parfois zinc patiné pour les architectures bord de mer modernes. Dans tous les cas, zinguerie et fixations marines obligatoires. Nous conseillons selon votre projet et votre budget.",
           },
+          {
+            question:
+              "Comment vérifier votre décennale avant signature ?",
+            answer:
+              "Nous joignons systématiquement notre attestation d'assurance décennale à chaque devis, avec ses dates de validité. Un artisan qui rechigne à fournir ce document cache probablement une décennale périmée ou absente.",
+          },
         ],
+
+        // ————————————————————————————————————————————————
+        // QUESTIONS À POSER À TOUT COUVREUR ARCACHONNAIS
+        // ————————————————————————————————————————————————
+        questionsCouvreur: {
+          intro:
+            "3 questions techniques à poser à tout couvreur pour Arcachon, en particulier sur zinguerie où le zinc marine est OBLIGATOIRE.",
+          items: [
+            {
+              question:
+                "Utilisez-vous du zinc marine prépatiné ou du zinc standard sur le Bassin ?",
+              answer:
+                "Sur le Bassin, seul le ZINC MARINE PRÉPATINÉ résiste 30-50 ans à l'air salin. Un couvreur qui propose du zinc standard ou pire de l'acier galvanisé = dégradation 5-10 ans + coût de reprise multiplié par 3. Nous n'utilisons QUE du zinc marine prépatiné anti-air-salin.",
+            },
+            {
+              question:
+                "Prenez-vous en charge le dossier ABF pour la Ville d'Hiver ?",
+              answer:
+                "Les villas Belle Époque de la Ville d'Hiver et des secteurs protégés sont soumises à l'ABF. Un couvreur sérieux constitue le dossier ABF + déclaration préalable. Nous nous en occupons systématiquement.",
+            },
+            {
+              question:
+                "Comment organisez-vous vos déplacements depuis Bordeaux ?",
+            answer:
+              "Un couvreur bordelais qui vient à Arcachon pour UN chantier facture 200-400 € de déplacement. Nous organisons des JOURNÉES GROUPÉES sur le Bassin (2-3 chantiers/jour) — coût déplacement absorbé, tarifs identiques à Bordeaux Métropole. Question à poser pour éviter les surcoûts.",
+            },
+          ],
+        },
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }

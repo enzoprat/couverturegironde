@@ -426,7 +426,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Arcachon',
     seoTitle: 'Couvreur Arcachon Bassin ★ zinguerie marine ★ 5/5',
     seoDescription:
-      "★ Couvreur Arcachon & Bassin depuis 2005 ★ Villas Ville d'Hiver, air salin, zinc marine ✓ Démoussage, réparation, zinguerie ✓ 5/5 (52 avis) ✓ Devis 24h.",
+      "★ Couvreur Arcachon depuis 2005 · Villas Ville d'Hiver, air salin, zinc marine · Liroy artisan direct · 5/5 (52 avis) · Décennale · Devis 24h.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
