@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-gironde');
 
@@ -13,20 +15,33 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <ServicePageLayout
+    <>
+      <ServicePageLayout
       content={{
         service: 'couverture',
         slug: PAGE.slug,
         h1: (
           <>
-            Artisan couvreur-zingueur en{' '}
+            Couvreur en{' '}
             <span className="text-[var(--color-terre)]">Gironde (33)</span>{' '}
-            depuis 2005
+            depuis 2005 — Bordeaux, Médoc, Bassin, Libournais
           </>
         ),
         heroSubtitle:
-          "Artisan couvreur-zingueur en Gironde (33) depuis 2005, spécialiste démoussage et nettoyage de toiture. Interventions sur Bordeaux Métropole, Médoc, Bassin d'Arcachon, Libournais et Sud-Gironde. Urgence fuite 7j/7, devis gratuit sous 24h, garantie décennale.",
+          "Artisan couvreur-zingueur en Gironde depuis 2005, atelier au 65 rue de Malbos à Mérignac. Interventions Bordeaux Métropole quotidiennes, Médoc + Bassin d'Arcachon + Libournais + Sud-Gironde sur devis avec chantiers groupés. Urgence 7j/7, devis 24h, décennale, 5/5 sur 52 avis Google.",
         shortTitle: 'Couvreur Gironde',
+
+        authorBlock: {
+          name: 'Liroy Delsuc',
+          role: 'Couvreur-zingueur, fondateur — atelier Mérignac',
+          bio: "Je couvre la Gironde depuis 2005 depuis mon atelier de Mérignac. Bordeaux Métropole en quotidien (15-30 min Mérignac, 30-60 min Bordeaux Centre, 45-90 min communes limitrophes). Sur les zones plus éloignées (Médoc 1h, Bassin d'Arcachon 1h, Libournais 45 min, Sud-Gironde 1h15), j'organise des journées d'intervention GROUPÉES pour maîtriser les frais de déplacement — c'est ce qui rend nos tarifs compétitifs même hors métropole.",
+          badges: [
+            'Depuis 2005',
+            'Décennale active',
+            '5/5 sur 52 avis Google',
+            'Départemental (33)',
+          ],
+        },
         presentation: (
           <>
             <p>
@@ -317,7 +332,76 @@ export default function Page() {
             },
           ],
         },
+
+        // ————————————————————————————————————————————————
+        // FAQ GIRONDE-FOCUSED (10 questions ICP départemental)
+        // ————————————————————————————————————————————————
+        faqOverride: [
+          {
+            question:
+              "Intervenez-vous partout en Gironde ou seulement à Bordeaux ?",
+            answer:
+              "PARTOUT en Gironde. Notre atelier est à Mérignac, ce qui nous place au centre géographique du département. Bordeaux Métropole en intervention quotidienne (15-90 min selon la commune). Zones plus éloignées sur devis : Médoc (1h, journées groupées), Bassin d'Arcachon (1h, zinc marine adapté), Libournais + Saint-Émilion (45 min), Sud-Gironde + Langon (1h15), Entre-deux-Mers (45-90 min selon commune). Pour ces zones, nous groupons les chantiers pour maîtriser les frais de déplacement.",
+          },
+          {
+            question:
+              "Combien coûte un couvreur en Gironde en 2026 ?",
+            answer:
+              "Fourchettes 2026 sur le département : démoussage 12-18 €/m², combo démoussage + hydrofuge 18-27 €/m², nettoyage haute pression 12-20 €/m², remplacement 5-10 tuiles 180-420 €, réfection tuile canal 85-145 €/m², réfection ardoise Médoc 120-220 €/m², zinguerie marine Bassin d'Arcachon 75-130 €/ml. Bordeaux Métropole sans surcoût. Zones éloignées : + 8-15 % pour déplacement selon distance, atténué par les chantiers groupés.",
+          },
+          {
+            question:
+              "Quel délai pour un devis en Gironde ?",
+            answer:
+              "Bordeaux Métropole : rappel sous 30 min ouvrées, diagnostic sur site sous 48h, devis chiffré sous 24h après visite. Zones plus éloignées : rappel sous 30 min ouvrées, diagnostic sous 5-7 jours (planification pour grouper avec d'autres chantiers de la zone), devis sous 24h après visite. Total actionnable en 3-8 jours ouvrés selon zone.",
+          },
+          {
+            question:
+              "Que faire pour une urgence fuite en Gironde éloignée ?",
+            answer:
+              "Appelez le 07 68 69 78 48. En heures ouvrées : mise hors d'eau 1-2h Bordeaux Métropole, 1h30-3h Libournais/Bassin, 2-4h Médoc/Sud-Gironde. Pour les urgences très éloignées (>1h30 de route), nous vous orientons vers un couvreur local partenaire pour la mise hors d'eau IMMÉDIATE, puis nous prenons le relais pour le devis + réparation définitive. Nous ne laissons jamais un client en Gironde sans solution urgence.",
+          },
+          {
+            question:
+              "Pourquoi choisir un couvreur mérignacais pour un chantier en Médoc ?",
+            answer:
+              "Trois avantages concrets : (1) atelier fixe et vérifiable (65 rue de Malbos, Mérignac) — pas un couvreur nomade qui disparaît après le chantier, (2) chantiers groupés qui rendent nos tarifs Médoc compétitifs face aux couvreurs locaux, (3) décennale et attestations vérifiables avec dates. La contrepartie : nos délais Médoc sont plus longs qu'un couvreur local pour les diagnostics non urgents (5-7 jours vs 1-2 jours en local).",
+          },
+          {
+            question:
+              "Faites-vous du bâti girondin traditionnel (tuile romane, pierre) ?",
+            answer:
+              "Oui, c'est notre spécialité sur le département. Bordeaux Métropole : échoppes tuile canal, haussmannien ardoise, pavillonnaire tuile mécanique. Médoc : chartreuses ardoise, châteaux viticoles tuile romane. Libournais + Saint-Émilion : maisons pierre + tuile romane, mortier chaux pour rejointoiement. Bassin d'Arcachon : villas Belle Époque Ville d'Hiver + maisons ostréicoles. Bâti rural Entre-deux-Mers : pierre + tuile canal traditionnelle. Nous adaptons matériaux et techniques à chaque typologie.",
+          },
+          {
+            question:
+              "L'air salin du Bassin d'Arcachon détériore-t-il la zinguerie ?",
+            answer:
+              "OUI, rapidement. Un zinc standard ou pire un acier galvanisé se dégrade en 5-10 ans en air salin direct (Le Pyla, Pereire, Moulleau). Nous utilisons EXCLUSIVEMENT du zinc marine prépatiné anti-air-salin sur Arcachon et le Bassin. Coût +20 % vs zinc standard mais résistance 30-50 ans conservée. Voir notre page dédiée /zinguerie-arcachon pour les détails techniques et tarifs marine.",
+          },
+          {
+            question:
+              "Quels matériaux privilégier selon la zone en Gironde ?",
+            answer:
+              "Bordeaux Métropole : tuile canal traditionnelle (échoppes) + tuile mécanique (pavillons) + ardoise (bâti bourgeois). Médoc : ardoise chartreuses + tuile romane secteur rural. Libournais + Saint-Émilion : tuile romane + pierre + zinc chéneau. Bassin d'Arcachon : ardoise villas Belle Époque + zinc marine. Sud-Gironde + Langon : tuile romane + tuile canal. Nous adaptons les matériaux au bâti local — jamais de tuile mécanique standard sur bâti girondin traditionnel.",
+          },
+          {
+            question:
+              "Comment vérifier votre décennale avant signature ?",
+            answer:
+              "Nous joignons systématiquement notre attestation d'assurance décennale à chaque devis, avec ses dates de validité. Un artisan qui rechigne à fournir ce document cache probablement une décennale périmée ou absente — refusez de signer. Sans décennale valide, aucun recours en cas de sinistre post-chantier. Vérifiable également sur notre fiche Google Business Profile ou en passant à l'atelier au 65 rue de Malbos à Mérignac.",
+          },
+          {
+            question:
+              "Combien de fois par an intervenez-vous hors métropole ?",
+            answer:
+              "Fréquence 2025 : Médoc 3-4 journées/mois (chantiers groupés), Bassin d'Arcachon 2-3 journées/mois, Libournais 3-4 journées/mois, Sud-Gironde 1-2 journées/mois. Cette rotation régulière assure une bonne réactivité et permet de proposer des tarifs cohérents avec la métropole. Pour les urgences immédiates hors métropole, nous nous appuyons sur un réseau de partenaires locaux pour la mise hors d'eau initiale.",
+          },
+        ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }

@@ -54,7 +54,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Couvreur Gironde (33) ★ 5/5 · 20 ans ★ Devis 24h',
     seoDescription:
-      "★ Couvreur en Gironde depuis 2005 ★ Bordeaux Métropole, Médoc, Bassin, Libournais, Sud-Gironde ✓ Démoussage, réparation, zinguerie ✓ Urgence 7j/7 ✓ 5/5 (52 avis) ✓ Devis 24h.",
+      "★ Couvreur Gironde depuis 2005 · Bordeaux Métropole, Médoc, Bassin, Libournais · Liroy artisan direct · 5/5 (52 avis) · Devis 24h · Décennale.",
     indexable: true,
     visibleInFooter: true,
     footerSection: 'services',
