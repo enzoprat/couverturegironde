@@ -193,9 +193,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Installation Velux Bordeaux',
     navLabel: 'Pose Velux',
     seoTitle:
-      'Pose Velux Bordeaux : installation et remplacement | 850-1600 €',
+      'Pose Velux Bordeaux · 1200-2400 € · Devis 24h',
     seoDescription:
-      "★ Pose Velux Bordeaux et Gironde 850-1600 € ★ Installation + remplacement par couvreur certifié ✓ Étanchéité garantie ✓ Conseil modèle ✓ Note 5/5 (52 avis) ✓ Devis 24h.",
+      "★ Pose Velux Bordeaux · Installation + remplacement · Kit Velux d'origine · Liroy artisan direct · 5/5 (52 avis) · Devis 24h.",
     visibleInNav: true,
     navCategory: 'urgence',
     navOrder: 41,

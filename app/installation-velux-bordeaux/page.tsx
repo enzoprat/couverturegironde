@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('installation-velux-bordeaux');
 
@@ -13,20 +15,34 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <ServicePageLayout
+    <>
+      <ServicePageLayout
       content={{
         service: 'velux',
         slug: PAGE.slug,
         h1: (
           <>
-            Installation Velux à{' '}
+            Pose Velux{' '}
             <span className="text-[var(--color-terre)]">Bordeaux</span> —
-            pose, remplacement, étanchéité
+            installation, remplacement, étanchéité kit d'origine
           </>
         ),
         heroSubtitle:
           "Pose et remplacement de fenêtres de toit Velux par artisan couvreur depuis 2005. Étanchéité garantie, conseil sur le modèle adapté, dimensionnement et orientation optimisés. Devis gratuit sous 24h.",
         shortTitle: 'Installation Velux',
+
+        authorBlock: {
+          name: 'Liroy Delsuc',
+          role: 'Couvreur-zingueur, fondateur — atelier Mérignac',
+          bio: "Je pose des Velux depuis 2005. L'installation d'une fenêtre de toit combine menuiserie, couverture et étanchéité — c'est un métier de couvreur, pas de menuisier généraliste. Un raccord d'étanchéité mal exécuté = infiltrations 2-3 ans plus tard. J'utilise systématiquement les kits Velux d'origine adaptés au matériau de votre toiture (EDW tuile, EDN ardoise, EDM plat) pour préserver la garantie constructeur.",
+          badges: [
+            'Depuis 2005',
+            'Décennale active',
+            '5/5 sur 52 avis Google',
+            'Kits Velux d\u2019origine',
+          ],
+        },
+
         presentation: (
           <>
             <p>
@@ -299,7 +315,76 @@ export default function Page() {
             },
           ],
         },
+
+        // ————————————————————————————————————————————————
+        // FAQ VELUX-FOCUSED (10 questions ICP)
+        // ————————————————————————————————————————————————
+        faqOverride: [
+          {
+            question:
+              "Combien coûte la pose d'un Velux à Bordeaux en 2026 ?",
+            answer:
+              "Fourchettes 2026, fenêtre + pose + kit étanchéité + finitions : Velux Standard (rotation classique) 1 200-1 600 €, Tout Confort (rotation + ventilation) 1 400-1 900 €, Confort Solaire (motorisation sans câblage) 1 900-2 600 €, Confort Électrique 1 800-2 400 €, Cabrio (balcon extérieur) 4 200-6 800 €. Remplacement Velux existant (fenêtre seule, conservation cadre) : 850-1 500 €. Kit étanchéité Velux d'origine (EDW/EDN/EDM) : 180-320 €.",
+          },
+          {
+            question:
+              "Quel modèle Velux choisir pour ma pièce ?",
+            answer:
+              "Standard : rotation classique, chambre principale. Tout Confort : ventilation intégrée, idéal chambre d'enfant. Confort Solaire : motorisation sans câblage électrique, PARFAIT en salle de bain (aucune installation électrique proche eau). Confort Électrique : câblage nécessaire à proximité, ouverture pluie. Cabrio : balcon extérieur spectaculaire, requiert vérification charpente. Sur Bordeaux exposition sud-ouest, store extérieur pare-soleil OBLIGATOIRE pour éviter surchauffe estivale (+280-520 €).",
+          },
+          {
+            question:
+              "Faut-il une déclaration préalable pour installer un Velux ?",
+            answer:
+              "OUI dans la majorité des cas — la création d'une fenêtre de toit modifie l'aspect extérieur de la construction, ce qui nécessite une déclaration préalable de travaux (DP) auprès du service urbanisme de votre commune. Délai instruction : 1-2 mois. En secteur UNESCO Bordeaux Centre ou périmètre ABF (Chartrons, abords monuments), l'avis de l'Architecte des Bâtiments de France est requis en plus — délai 2-4 mois supplémentaires. Nous constituons TOUS les dossiers pour vous.",
+          },
+          {
+            question:
+              "Puis-je poser un Velux moi-même ?",
+            answer:
+              "Techniquement non recommandé, légalement risqué. Une pose Velux combine 3 métiers (couverture, menuiserie, étanchéité) + accès en hauteur + risque de chute. Une pose non professionnelle : (1) invalide la garantie constructeur Velux 10 ans, (2) invalide votre assurance habitation en cas de sinistre lié, (3) provoque quasi-systématiquement des infiltrations 2-3 ans plus tard (kit étanchéité mal appliqué). Coût de reprise ensuite : 3-5× le prix d'une pose initiale professionnelle.",
+          },
+          {
+            question:
+              "Combien de temps dure la pose d'un Velux ?",
+            answer:
+              "Pose Velux Standard sur toiture accessible : 1 journée. Pose Velux Solaire ou Électrique : 1-1,5 jour (motorisation + câblage). Pose Velux Cabrio : 2-3 jours (vérification charpente + intervention complexe). Remplacement Velux existant (conservation cadre) : 1 journée. Ces délais n'incluent PAS les démarches administratives préalables (DP 1-2 mois, ABF 2-4 mois si applicable).",
+          },
+          {
+            question:
+              "Le Velux est-il éligible aux aides rénovation énergétique 2026 ?",
+            answer:
+              "Le simple remplacement d'un Velux existant par un modèle plus performant peut être éligible à MaPrimeRénov' Sérénité ou aux CEE (Certificats d'Économie d'Énergie) SI vous passez d'un vitrage simple à un double vitrage à isolation renforcée. La création d'un Velux neuf n'est généralement PAS éligible (agrandissement de surface vitrée). Sur les prestations éligibles, nous vous orientons vers nos partenaires certifiés RGE pour préserver votre éligibilité.",
+          },
+          {
+            question:
+              "Quelle est la durée de vie d'un Velux ?",
+            answer:
+              "Fenêtre elle-même : 25-40 ans selon exposition et entretien. Vitrage isolant : 15-20 ans (perd son efficacité thermique, condensation possible). Kit d'étanchéité extérieur : 10-15 ans (le point faible principal). Motorisation Solaire/Électrique : 10-15 ans. Nous recommandons un remplacement complet vers 25-30 ans plutôt que des reprises ponctuelles coûteuses.",
+          },
+          {
+            question:
+              "Est-ce que Velux fait de la garantie ?",
+            answer:
+              "Oui, Velux garantit ses fenêtres 10 ans sur les vices constructeur (cadre, vitrage, verrouillage) SI la pose respecte les prescriptions du fabricant, notamment l'utilisation du KIT D'ÉTANCHÉITÉ VELUX D'ORIGINE adapté au matériau (EDW pour tuile, EDN pour ardoise, EDM pour toiture plate). Une pose sans kit d'origine ou avec kit non adapté INVALIDE la garantie constructeur. Nous utilisons systématiquement les kits d'origine.",
+          },
+          {
+            question:
+              "Quelle exposition privilégier pour un Velux à Bordeaux ?",
+            answer:
+              "Nord/nord-est : lumière douce toute l'année, aucun risque de surchauffe estivale, idéal chambre. Sud/sud-ouest : lumière abondante mais surchauffe estivale importante (35-45°C intérieur possible sans protection), STORE EXTÉRIEUR PARE-SOLEIL OBLIGATOIRE (+280-520 €). Est : lumière matinale plaisante, chauffe modérée l'après-midi. Ouest : chauffe importante en fin de journée, store recommandé. À Bordeaux climat océanique doux, préférer nord/est pour confort naturel.",
+          },
+          {
+            question:
+              "Que faire en cas de fuite autour de mon Velux ?",
+            answer:
+              "Les fuites Velux les plus fréquentes viennent du kit d'étanchéité périphérique qui vieillit après 15-20 ans. Nous intervenons en urgence (30 min à 2h sur Bordeaux) pour mise hors d'eau puis diagnostic. Reprise étanchéité avec kit Velux d'origine adapté : 320-750 €. Si le Velux a plus de 25 ans et présente d'autres signes de vieillissement (condensation entre vitrages, mécanisme d'ouverture qui bloque, joint dégradé), un remplacement complet peut être plus rentable.",
+          },
+        ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }
