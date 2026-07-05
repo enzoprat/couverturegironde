@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { VillePageLayout } from '@/components/content/VillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-cenon');
 
@@ -13,12 +15,49 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <VillePageLayout
-      content={{
-        slug: PAGE.slug,
-        villeSlug: 'cenon',
-        heroSubtitle:
-          "Couvreur-zingueur artisan intervenant à Cenon depuis 2005. Coteaux du Haut Cenon, plateau Palmer, Beauval-Loret, Pont-Rouge, Le Loret : nous couvrons toute la commune. Démoussage, nettoyage, réparation, zinguerie, urgences 7j/7. Notre atelier est à Mérignac (15 km, 20 min du Pont d'Aquitaine). Devis gratuit sous 24h, garantie décennale.",
+    <>
+      <VillePageLayout
+        content={{
+          slug: PAGE.slug,
+          villeSlug: 'cenon',
+          h1: (
+            <>
+              Couvreur à{' '}
+              <span className="text-[var(--color-terre)]">Cenon</span> rive
+              droite depuis 2005 — coteaux + Palmer + Beauval
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac (15 km)',
+            bio: "Je couvre Cenon depuis 2005 depuis mon atelier de Mérignac (15 km, 20 min via Pont d'Aquitaine). Cenon est un défi topographique : coteaux du Haut Cenon en tuile canal ancienne, plateau Palmer avec toits-terrasses collectifs, pavillonnaire pentu Beauval. Les vents d'ouest venus de la Garonne accélèrent la dégradation des faîtages (30-40 % plus vite qu'en plaine). Dimensionnement gouttières section renforcée obligatoire sur les versants pentus.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Urgence 30-45 min',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac, à 15 km (20 min) de Cenon via A630 + Pont d'Aquitaine. Intervention urgence 30-45 min en heures ouvrées.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
+
+          heroSubtitle:
+            "Couvreur-zingueur artisan à Cenon depuis 2005, atelier à Mérignac (15 km). Spécialiste topographie contrastée : coteaux Haut Cenon tuile canal, plateau Palmer toits-terrasses, pavillonnaire Beauval. Vents d'ouest = gouttières section renforcée obligatoire. Devis 24h.",
         contexteLocal: (
           <>
             <p>
@@ -270,8 +309,45 @@ export default function Page() {
             answer:
               "Oui, systématiquement en cas de sinistre. Après intervention d'urgence (mise hors d'eau, bâchage), nous remettons un rapport photo complet, un devis de reprise et l'attestation décennale. Ces éléments constituent le dossier que vous transmettez à votre assureur. Nous restons disponibles pour tout échange direct avec l'expert d'assurance si nécessaire.",
           },
+          {
+            question:
+              "Comment vérifier votre décennale avant signature ?",
+            answer:
+              "Nous joignons systématiquement notre attestation d'assurance décennale à chaque devis, avec ses dates de validité. Un artisan qui rechigne à fournir ce document cache probablement une décennale périmée ou absente.",
+          },
         ],
+
+        // ————————————————————————————————————————————————
+        // QUESTIONS À POSER À TOUT COUVREUR CENONNAIS
+        // ————————————————————————————————————————————————
+        questionsCouvreur: {
+          intro:
+            "3 questions à poser à tout couvreur pour Cenon rive droite, particulièrement sur les coteaux pentus qui demandent une expertise topographique.",
+          items: [
+            {
+              question:
+                "Dimensionnez-vous les gouttières en section renforcée sur les coteaux ?",
+              answer:
+                "Sur les versants pentus du Haut Cenon, l'eau ruisselle 2-3× plus vite qu'en plaine. Une gouttière standard (section 25) sature à 30-40 mm/h et déborde à chaque gros orage. Nous dimensionnons SYSTÉMATIQUEMENT en section renforcée (33 minimum) sur les coteaux. Un couvreur qui propose du standard sans questionner la pente ne connaît pas la topographie cenonnaise.",
+            },
+            {
+              question:
+                "Mortier chaux ou ciment sur les échoppes anciennes du Haut Cenon ?",
+              answer:
+                "Sur bâti ancien (échoppes XIXe Haut Cenon), mortier de CHAUX obligatoire pour respect matériau + esthétique traditionnelle. Un couvreur qui propose du ciment moderne sur bâti ancien = danger : ciment dur qui fissure la tuile ancienne.",
+            },
+            {
+              question:
+                "Intervenez-vous sur les copropriétés Palmer (toits-terrasses) ?",
+              answer:
+                "Le plateau Palmer concentre des copropriétés années 60-70 avec toits-terrasses EPDM ou étanchéité bitumineuse. Un couvreur classique ne maîtrise pas forcément ces techniques. Nous exécutons directement l'étanchéité EPDM/SEL sans sous-traitance + format syndic (attestations, planning AG, acompte adapté).",
+            },
+          ],
+        },
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }
