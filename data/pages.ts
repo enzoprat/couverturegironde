@@ -123,9 +123,9 @@ const STATIC_PAGES: PageEntry[] = [
     service: 'traitement',
     title: 'Traitement toiture Bordeaux',
     seoTitle:
-      'Traitement toiture Bordeaux ★ nettoyage + démoussage + hydrofuge',
+      'Traitement toiture Bordeaux · démoussage + hydrofuge',
     seoDescription:
-      "★ Traitement toiture Bordeaux depuis 2005 ★ Nettoyage, démoussage, hydrofuge, anti-lichens : la bonne solution selon l\u2019état ✓ Devis 24h ✓ 5/5 (52 avis) ✓ Décennale.",
+      "★ Traitement toiture Bordeaux · Nettoyage, démoussage, hydrofuge, anti-lichens · Liroy artisan direct · 5/5 (52 avis) · Devis 24h · Décennale.",
     indexable: true,
     sitemapPriority: 0.8,
   },

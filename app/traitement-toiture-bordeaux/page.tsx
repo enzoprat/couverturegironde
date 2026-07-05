@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('traitement-toiture-bordeaux');
 
@@ -13,20 +15,33 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <ServicePageLayout
+    <>
+      <ServicePageLayout
       content={{
         service: 'traitement',
         slug: PAGE.slug,
         h1: (
           <>
-            Entreprise de traitement de toiture à{' '}
+            Traitement toiture{' '}
             <span className="text-[var(--color-terre)]">Bordeaux</span> —
-            nettoyage, démoussage, hydrofuge
+            nettoyage + démoussage + hydrofuge : lequel choisir ?
           </>
         ),
         heroSubtitle:
-          "Traitement complet de toiture par artisan couvreur depuis 2005. Nettoyage haute pression maîtrisé, démoussage rémanent, traitement hydrofuge garanti 10 ans et anti-lichens. Nous vous orientons vers la solution adaptée à l'état, au matériau et à l'exposition de votre toiture. Devis gratuit sous 24h.",
+          "Nettoyage, démoussage, hydrofuge, anti-lichens : 4 traitements distincts, chacun pour un besoin précis. Nous vous orientons honnêtement vers la SEULE solution adaptée à l'état, au matériau et à l'exposition — jamais l'upsell. Devis gratuit sous 24h.",
         shortTitle: 'Traitement toiture',
+
+        authorBlock: {
+          name: 'Liroy Delsuc',
+          role: 'Couvreur-zingueur, fondateur — atelier Mérignac',
+          bio: "Depuis 2005, je fais du traitement de toiture sur Bordeaux Métropole. Ma priorité : vous dire HONNÊTEMENT si vous avez besoin d'un nettoyage seul (12-20 €/m²), d'un démoussage (12-18 €/m²), d'un combo démoussage + hydrofuge (18-27 €/m²), ou d'un traitement complet (25-38 €/m²). Nous refusons régulièrement des chantiers quand le traitement demandé serait prématuré — la crédibilité se construit sur ce qu'on NE vend pas.",
+          badges: [
+            'Depuis 2005',
+            'Décennale active',
+            '5/5 sur 52 avis Google',
+            'Diagnostic honnête',
+          ],
+        },
         presentation: (
           <>
             <p>
@@ -288,7 +303,76 @@ export default function Page() {
             },
           ],
         },
+
+        // ————————————————————————————————————————————————
+        // FAQ TRAITEMENT-FOCUSED (arbre de décision)
+        // ————————————————————————————————————————————————
+        faqOverride: [
+          {
+            question:
+              "Quel traitement me faut-il vraiment : nettoyage, démoussage ou hydrofuge ?",
+            answer:
+              "Arbre de décision simple : (1) Toiture juste SALE (pollution, algues, pas de mousses visibles) → NETTOYAGE haute pression seul 12-20 €/m². (2) Toiture avec MOUSSES ponctuelles ou étendues → DÉMOUSSAGE chimique + brossage 12-18 €/m². (3) Toiture démoussée + versant nord/couvert arboré → COMBO démoussage + HYDROFUGE 18-27 €/m² pour tenir 8-10 ans. (4) Toiture NÉGLIGÉE depuis 5+ ans avec tout cumulé → COMBO COMPLET nettoyage + démoussage + hydrofuge 25-38 €/m². Diagnostic gratuit chez nous pour le choix précis.",
+          },
+          {
+            question:
+              "Combien coûte un traitement de toiture complet à Bordeaux en 2026 ?",
+            answer:
+              "Fourchettes 2026 : nettoyage seul 12-20 €/m², démoussage seul 12-18 €/m², combo démoussage + hydrofuge 18-27 €/m² (le plus recommandé), combo complet 25-38 €/m². Pour une maison type 120 m² de toiture : combo démoussage + hydrofuge 2 160-3 240 € TTC, combo complet 3 000-4 560 €. TVA 10 % pour logements >2 ans. Le combo hydrofuge évite 85-220 €/m² de réfection tardive — ROI imbattable.",
+          },
+          {
+            question:
+              "Refusez-vous vraiment des chantiers de traitement ?",
+            answer:
+              "Oui, régulièrement. Nous refusons : (1) hydrofuge sur ardoise récente <15 ans (peu poreuse, pas d'utilité), (2) démoussage sur toiture <10 ans en excellent état (prématuré, revenir dans 5 ans), (3) traitement sur toiture qui présente des défauts structurels préalables (tuiles cassées à remplacer d'abord, faîtage disloqué à reprendre). Un traitement inutile est de l'argent gaspillé. Cette honnêteté est notre signature depuis 2005.",
+          },
+          {
+            question:
+              "Quelle fréquence d'entretien recommander à Bordeaux ?",
+            answer:
+              "Climat girondin (930 mm/an) : contrôle visuel tous les 2 ans, démoussage tous les 4-5 ans SANS hydrofuge, tous les 8-10 ans AVEC hydrofuge. Zones à couvert dense (Caudéran, Gradignan boisé, Bourg-Madame Pessac, coteaux Cenon) : rythme plus soutenu 3-4 ans sans hydrofuge, 6-8 ans avec. Versants nord et zones ombragées prioritaires. Nous programmons un rappel automatique si vous le souhaitez.",
+          },
+          {
+            question:
+              "Karcher grand public vs nettoyage professionnel : la différence ?",
+            answer:
+              "Un karcher grand public à pleine puissance avec buse standard : (1) provoque des micro-fissures dans la céramique, (2) sable l'engobe protecteur, (3) sur ardoise peut désolidariser les ardoises, (4) accélère le vieillissement de 3-5 ans. Nettoyage professionnel : pression et buse ADAPTÉES au matériau (80-100 bars tuile canal, 60-80 bars ardoise, <50 bars zinc). C'est le SEUL choix compatible avec la longévité de la couverture.",
+          },
+          {
+            question:
+              "Le produit anti-mousse est-il dangereux pour mon jardin ?",
+            answer:
+              "Nous utilisons des produits professionnels rémanents autorisés en couverture, biodégradables sous 48-72h. Nous bâchons systématiquement les évacuations sensibles, protégeons les descentes d'eau pluviale qui vont au récupérateur ou au potager. Aucun cas de dégât sur végétation ou nappe phréatique remonté depuis 20 ans d'exercice.",
+          },
+          {
+            question:
+              "L'hydrofuge est-il utile sur ma toiture ?",
+            answer:
+              "OUI sur toitures POREUSES : tuile canal traditionnelle, tuile mécanique non émaillée, sur versant nord ou sous couvert végétal dense. L'hydrofuge y allonge la durée de vie de 30-50 % et retarde le retour des mousses de 5-10 ans. UTILITÉ LIMITÉE sur ardoise récente (peu poreuse), tuile émaillée moderne (déjà hydrophobe), zinc (imperméable de nature). Nous refusons régulièrement l'hydrofuge sur ces supports.",
+          },
+          {
+            question:
+              "Quel est le meilleur moment pour un traitement à Bordeaux ?",
+            answer:
+              "Idéalement au printemps (mars-mai) ou fin d'été (septembre-octobre), hors période de gel ou de fortes pluies. La mousse est moins active, températures idéales pour l'application des produits + le séchage. Éviter juillet-août (chaleur évaporation) et décembre-février (gel).",
+          },
+          {
+            question:
+              "Combien de temps dure un chantier de traitement complet ?",
+            answer:
+              "Toiture maison 100-150 m² : nettoyage seul 1 jour, démoussage + brossage 1 jour, combo démoussage + hydrofuge 1,5-2 jours (temps séchage entre passes), combo complet nettoyage + démoussage + hydrofuge 2-3 jours. Le planning intègre systématiquement les créneaux météo (pas de pluie prévue 12-24h suivant l'hydrofuge, températures >5°C).",
+          },
+          {
+            question:
+              "Quelles garanties fournissez-vous ?",
+            answer:
+              "Décennale (10 ans) sur l'ensemble de la prestation, obligation légale — attestation active jointe à chaque devis. Garantie constructeur 10 ans sur l'hydrofuge professionnel appliqué. Garantie 3-5 ans sur l'efficacité anti-mousse selon exposition. Attestations remises fin de chantier + fiche technique produits + photos avant/après.",
+          },
+        ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }
