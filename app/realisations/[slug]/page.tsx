@@ -24,6 +24,7 @@ import {
   getArticleSchema,
   getBreadcrumbSchema,
   getImageObjectSchema,
+  getPersonLiroySchema,
 } from '@/lib/seo/schemas';
 import { REALISATIONS } from '@/data/realisations';
 import { SERVICES } from '@/data/services';
@@ -60,11 +61,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     });
   }
   const service = SERVICES[realisation.service as keyof typeof SERVICES];
-  // Description trimée pour ne pas dépasser ~180 chars (limite SERP Google).
-  // La description chantier brute peut faire 200-280 chars : on tronque puis
-  // on ajoute un suffixe ville/service court.
-  const suffix = `. ${service?.name ?? 'Toiture'} à ${realisation.villeName} par Couverture Gironde.`;
-  const maxBase = 180 - suffix.length;
+  // Description trimée à ≤155 chars (limite Google effective).
+  // Format : baseDesc + suffixe court "· {Service} {ville} · Liroy artisan direct".
+  const suffix = ` · ${service?.name ?? 'Toiture'} ${realisation.villeName} · Liroy artisan direct`;
+  const MAX_META = 150;
+  const maxBase = MAX_META - suffix.length;
   const baseDesc = realisation.description.length > maxBase
     ? realisation.description.slice(0, maxBase - 1).replace(/[\s,.;:]+$/, '') + '…'
     : realisation.description;
@@ -73,7 +74,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // contexte SERP + brandée par couvreur).
   return buildMetadata({
     title: `${realisation.title} à ${realisation.villeName}`,
-    description: `${baseDesc}${suffix}`,
+    description: `${baseDesc}${suffix}.`,
     path: `/realisations/${realisation.slug}`,
     type: 'article',
   });
@@ -351,6 +352,31 @@ export default async function Page({ params }: PageProps) {
         </Container>
       </section>
 
+      {/* Bloc auteur - signature Liroy sur chaque réalisation (E-E-A-T) */}
+      <section className="section-y-sm bg-[var(--color-creme)] border-y border-[var(--color-border)]">
+        <Container size="narrow">
+          <div className="p-6 rounded-[var(--radius-lg)] bg-[var(--color-pierre)] border border-[var(--color-border)]">
+            <div className="text-[0.75rem] uppercase tracking-wider text-[var(--color-terre-700)] font-bold mb-2">
+              Chantier supervisé par
+            </div>
+            <p className="text-[1rem] text-[var(--color-ardoise)] leading-relaxed">
+              <Link
+                href="/a-propos"
+                className="font-bold text-[var(--color-ardoise)] underline decoration-[var(--color-terre)]/40 underline-offset-4 hover:decoration-[var(--color-terre)] transition"
+              >
+                Liroy Delsuc
+              </Link>
+              , couvreur-zingueur, fondateur de Couverture Gironde. Atelier au{' '}
+              <strong>65 rue de Malbos à Mérignac depuis 2005</strong>. Chaque
+              chantier de {service?.name.toLowerCase() ?? 'toiture'} à{' '}
+              {realisation.villeName} est diagnostiqué, chiffré et supervisé
+              personnellement — aucune sous-traitance, décennale active, 5/5 sur
+              52 avis Google.
+            </p>
+          </div>
+        </Container>
+      </section>
+
       <AvisGoogle filterCity={realisation.villeName} />
       <Reassurance />
 
@@ -384,6 +410,8 @@ export default async function Page({ params }: PageProps) {
           height: 900,
         })}
       />
+      {/* Person Liroy — signal E-E-A-T sur chaque réalisation */}
+      <JsonLd data={getPersonLiroySchema()} />
     </>
   );
 }
