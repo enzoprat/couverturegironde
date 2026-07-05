@@ -703,9 +703,9 @@ const STATIC_PAGES: PageEntry[] = [
     path: '/mentions-legales',
     type: 'legal',
     title: 'Mentions légales',
-    seoTitle: 'Mentions légales : Couverture Gironde',
+    seoTitle: 'Mentions légales · Couverture Gironde',
     seoDescription:
-      'Mentions légales du site couverturegironde.fr : informations éditeur, hébergeur et responsabilité.',
+      "Mentions légales de couverturegironde.fr : éditeur (Liroy Delsuc), siège au 65 rue de Malbos à Mérignac, hébergeur, propriété intellectuelle.",
     visibleInFooter: true,
     footerSection: 'legal',
     indexable: true,
@@ -717,9 +717,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'legal',
     title: 'Politique de confidentialité',
     seoTitle:
-      'Politique de confidentialité : Couverture Gironde',
+      'Politique de confidentialité · Couverture Gironde',
     seoDescription:
-      'Politique de confidentialité du site couverturegironde.fr : traitement des données personnelles, droits RGPD.',
+      "Politique de confidentialité de couverturegironde.fr : traitement des données personnelles, base légale, droits RGPD (accès, rectification, suppression).",
     visibleInFooter: true,
     footerSection: 'legal',
     indexable: true,
@@ -730,9 +730,9 @@ const STATIC_PAGES: PageEntry[] = [
     path: '/cookies',
     type: 'legal',
     title: 'Cookies',
-    seoTitle: 'Politique cookies : Couverture Gironde',
+    seoTitle: 'Politique cookies · Couverture Gironde',
     seoDescription:
-      "Politique de gestion des cookies sur couverturegironde.fr : finalités, durée de conservation, gestion de votre consentement et contact pour vos droits RGPD.",
+      "Politique cookies de couverturegironde.fr : finalités, durée conservation, gestion consentement, contact pour vos droits RGPD.",
     visibleInFooter: true,
     footerSection: 'legal',
     indexable: true,
