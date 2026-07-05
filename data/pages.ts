@@ -398,9 +398,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'ville',
     ville: 'gradignan',
     title: 'Couvreur Gradignan',
-    seoTitle: 'Couvreur Gradignan : démoussage, réparation | 5/5 (52 avis)',
+    seoTitle: 'Couvreur Gradignan ★ pavillons boisés · hydrofuge ★ 5/5',
     seoDescription:
-      "Couvreur à Gradignan depuis 2005 : démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Spécialiste pavillons sous couvert arboré. Note 5/5 (52 avis). Devis 24h.",
+      "★ Couvreur Gradignan depuis 2005 · Pavillons boisés · Démoussage + hydrofuge indispensable · Liroy artisan direct · 5/5 (52 avis) · Devis 24h.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,

@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { VillePageLayout } from '@/components/content/VillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-gradignan');
 
@@ -13,12 +15,49 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <VillePageLayout
-      content={{
-        slug: PAGE.slug,
-        villeSlug: 'gradignan',
-        heroSubtitle:
-          "Couvreur-zingueur à Gradignan depuis 2005, intervention chaque jour sur les pavillons de Madère, Laurenzane et du Pont-de-la-Maye. Démoussage, nettoyage, réparation et zinguerie. Atelier à 12 km à Mérignac, garantie décennale, devis gratuit sous 24h.",
+    <>
+      <VillePageLayout
+        content={{
+          slug: PAGE.slug,
+          villeSlug: 'gradignan',
+          h1: (
+            <>
+              Couvreur à{' '}
+              <span className="text-[var(--color-terre)]">Gradignan</span> depuis
+              2005 — pavillons boisés, hydrofuge indispensable
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac (12 km)',
+            bio: "Je couvre Gradignan depuis 2005 depuis mon atelier de Mérignac (12 km, 25 min). Gradignan est LE cas typique où l'hydrofuge après démoussage est INDISPENSABLE : couvert arboré très dense (parc bordelais, jardins des pavillons), versants nord ombragés, humidité retenue. Sans hydrofuge, les mousses reviennent en 2-3 ans après un démoussage. Avec hydrofuge, on tient 8-10 ans — ROI imbattable sur Gradignan.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Urgence 45-75 min',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac, à 12 km (25 min) de Gradignan via A630 + rocade Sud. Intervention urgence 45-75 min en heures ouvrées.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
+
+          heroSubtitle:
+            "Couvreur-zingueur à Gradignan depuis 2005, atelier à Mérignac (12 km). Spécialiste pavillons sous couvert arboré : démoussage + hydrofuge OBLIGATOIRE pour tenir 8-10 ans. Intervention 45-75 min, décennale, 5/5 sur 52 avis Google.",
         contexteLocal: (
           <>
             <p>
@@ -190,8 +229,48 @@ export default function Page() {
             answer:
               "Oui. Sur les chantiers supérieurs à 5 000 € HT, paiement en 2 ou 3 fois sans frais. Pour les éco-prêts à taux zéro liés à la rénovation énergétique de la toiture, nous fournissons toutes les pièces justificatives à votre banque.",
           },
+          {
+            question:
+              "Pourquoi hydrofuge OBLIGATOIRE à Gradignan et pas ailleurs ?",
+            answer:
+              "Gradignan cumule 3 facteurs qui font revenir les mousses très vite après démoussage : (1) couvert arboré exceptionnel (parc bordelais, jardins boisés des pavillons), (2) versants nord ombragés majoritaires sur pavillonnaire XXe, (3) humidité retenue par le couvert. Résultat : sans hydrofuge, retour des mousses en 2-3 ans. Avec hydrofuge, 8-10 ans de tranquillité. Sur Gradignan, le combo démoussage + hydrofuge (18-27 €/m²) est le SEUL choix rentable — pas un upsell.",
+          },
+          {
+            question:
+              "Comment vérifier votre décennale avant signature ?",
+            answer:
+              "Nous joignons systématiquement notre attestation d'assurance décennale à chaque devis, avec ses dates de validité. Un artisan qui rechigne à fournir ce document cache probablement une décennale périmée ou absente.",
+          },
         ],
+
+        questionsCouvreur: {
+          intro:
+            "3 questions à poser à tout couvreur pour Gradignan, en particulier sur pavillonnaire arboré où l'hydrofuge est indispensable.",
+          items: [
+            {
+              question:
+                "Recommandez-vous systématiquement l'hydrofuge sur Gradignan ?",
+              answer:
+                "Un artisan qui propose seulement un démoussage sur Gradignan sans mentionner l'hydrofuge ne connaît pas les spécificités locales (couvert arboré = retour mousses en 2-3 ans). Nous recommandons SYSTÉMATIQUEMENT le combo démoussage + hydrofuge sur Gradignan — c'est le SEUL choix rentable.",
+            },
+            {
+              question:
+                "Fréquence recommandée d'entretien sur mon pavillon ?",
+              answer:
+                "Sur Gradignan pavillonnaire arboré : contrôle tous les 2 ans, démoussage + hydrofuge tous les 8-10 ans. Un couvreur qui propose un entretien tous les 3-4 ans ne prend pas en compte la protection hydrofuge. Un artisan qui propose tous les 15-20 ans sous-estime le couvert végétal local.",
+            },
+            {
+              question:
+                "Votre devis inclut-il tous les postes ou reste-t-il des lignes ouvertes ?",
+              answer:
+                "Nos devis détaillent chaque poste (main d'œuvre, produits, accès, TVA). Aucune ligne « divers » — vous savez exactement ce que vous signez et le total ne bouge pas.",
+            },
+          ],
+        },
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }
