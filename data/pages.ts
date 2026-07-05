@@ -157,9 +157,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Urgence fuite toiture',
     navLabel: 'Urgence fuite 7j/7',
     seoTitle:
-      'Fuite toiture Bordeaux ☎ 07 68 69 78 48 · couvreur en 1h 7j/7',
+      'Fuite toiture Bordeaux ☎ 07 68 69 78 48 · urgence 7j/7',
     seoDescription:
-      "★ Fuite toiture Bordeaux ★ Couvreur urgence 7j/7 sur place en 1h ✓ Mise hors d'eau immédiate ✓ Appel direct ☎ 07 68 69 78 48 ✓ Note 5/5 (52 avis) ✓ Décennale.",
+      "★ Urgence fuite toiture Bordeaux · Couvreur sur place 30 min à 2h · Mise hors d'eau 250-550 € · Dossier assurance constitué · ☎ 07 68 69 78 48.",
     visibleInNav: true,
     navCategory: 'urgence',
     navOrder: 40,
