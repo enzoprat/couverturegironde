@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { VillePageLayout } from '@/components/content/VillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-bouscat');
 
@@ -13,12 +15,49 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <VillePageLayout
-      content={{
-        slug: PAGE.slug,
-        villeSlug: 'bouscat',
-        heroSubtitle:
-          "Couvreur-zingueur au Bouscat depuis 2005, intervention chaque jour sur les toitures du Champ-de-Courses, Lyautey et Sainte-Germaine. Démoussage, nettoyage, réparation et zinguerie. Atelier à 5 km à Mérignac, garantie décennale, devis gratuit sous 24h.",
+    <>
+      <VillePageLayout
+        content={{
+          slug: PAGE.slug,
+          villeSlug: 'bouscat',
+          h1: (
+            <>
+              Couvreur au{' '}
+              <span className="text-[var(--color-terre)]">Bouscat</span> depuis
+              2005 — échoppes patrimoniales tuile canal + zinc
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac (5 km du Bouscat)',
+            bio: "Je couvre Le Bouscat depuis 2005 depuis mon atelier de Mérignac (5 km, 10 min). Le Bouscat concentre un patrimoine architectural cossu : échoppes bordelaises XIXe en tuile canal traditionnelle, maisons de maître Champ-de-Courses/Lyautey en ardoise. La demande d'entretien y est forte car les propriétaires valorisent leur bâti. Techniques traditionnelles (mortier chaux, clous cuivre, zinc soudé étain) obligatoires pour respecter le caractère.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Urgence 15-30 min',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac, à 5 km (10 min) du Bouscat. Cette proximité permet une intervention urgence en 15-30 minutes en heures ouvrées, sans surcoût de déplacement — comparable à Mérignac.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
+
+          heroSubtitle:
+            "Couvreur-zingueur au Bouscat depuis 2005, atelier à Mérignac (5 km, 15-30 min). Spécialiste patrimoine cossu : échoppes tuile canal XIXe, maisons de maître Champ-de-Courses/Lyautey ardoise, zinc soudé étain. Décennale, 5/5 sur 52 avis Google.",
         contexteLocal: (
           <>
             <p>
@@ -191,8 +230,48 @@ export default function Page() {
             answer:
               "Oui. Sur les chantiers supérieurs à 5 000 € HT, paiement en 2 ou 3 fois sans frais. Pour les éco-PTZ liés à la rénovation énergétique de la toiture, nous fournissons toutes les pièces justificatives à votre banque.",
           },
+          {
+            question:
+              "Zinc naturel ou prépatiné sur les échoppes du Bouscat ?",
+            answer:
+              "Sur bâti patrimonial cossu, nous recommandons ZINC PRÉPATINÉ (anthra-zinc anthracite ou quartz-zinc gris clair) qui offre l'aspect vieilli DÈS la pose — harmonie immédiate avec l'esthétique traditionnelle des échoppes bordelaises. Coût +15-25 % vs zinc naturel, mais le zinc naturel mettra 2-5 ans à patiner et gênerait visuellement pendant ce délai. Sur maisons de maître Champ-de-Courses/Lyautey, prépatiné indispensable.",
+          },
+          {
+            question:
+              "Comment vérifier votre décennale avant signature ?",
+            answer:
+              "Nous joignons systématiquement notre attestation d'assurance décennale à chaque devis, avec ses dates de validité. Un artisan qui rechigne à fournir ce document cache probablement une décennale périmée ou absente.",
+          },
         ],
+
+        questionsCouvreur: {
+          intro:
+            "3 questions à poser à tout couvreur pour Le Bouscat, quartier patrimonial cossu où le respect du bâti d'origine est essentiel.",
+          items: [
+            {
+              question:
+                "Utilisez-vous du mortier de chaux ou du mortier ciment sur mes tuiles anciennes ?",
+              answer:
+                "Sur bâti bouscatais patrimonial, mortier chaux OBLIGATOIRE (respire, compatible tuile ancienne). Un couvreur qui propose du ciment moderne sur échoppe XIXe = danger : ciment dur qui fissure la tuile ancienne. Nous utilisons EXCLUSIVEMENT du mortier de chaux.",
+            },
+            {
+              question:
+                "Zinc naturel ou prépatiné pour préserver l'aspect de mon échoppe ?",
+              answer:
+                "Le Bouscat est un quartier où les propriétaires investissent dans la conservation esthétique. Prépatiné recommandé dès la pose (aspect vieilli immédiat). Un couvreur qui propose systématiquement du zinc naturel sur bâti patrimonial ne prend pas en compte l'esthétique locale.",
+            },
+            {
+              question:
+                "Prenez-vous en charge la déclaration préalable et l'ABF si applicable ?",
+              answer:
+                "Certains secteurs du Bouscat sont soumis à l'ABF (proximité monuments historiques, périmètres protégés). Un couvreur sérieux constitue le dossier ABF. Nous nous en occupons systématiquement — vous signez, c'est tout.",
+            },
+          ],
+        },
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }

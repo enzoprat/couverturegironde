@@ -387,7 +387,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Le Bouscat',
     seoTitle: 'Couvreur Le Bouscat ★ échoppes tuile canal ★ 5/5',
     seoDescription:
-      "★ Couvreur au Bouscat depuis 2005 ★ Échoppes bordelaises, maisons de maître, patrimoine préservé ✓ Démoussage, réparation, zinguerie ✓ 5/5 (52 avis) ✓ Devis 24h.",
+      "★ Couvreur Le Bouscat depuis 2005 · Échoppes tuile canal + maisons de maître · Liroy artisan direct · 5/5 (52 avis) · Devis 24h · Décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
