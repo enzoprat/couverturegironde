@@ -261,9 +261,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Charpente Bordeaux',
     navLabel: 'Charpente',
     seoTitle:
-      'Charpente Bordeaux ★ rénovation + traitement ★ décennale',
+      'Charpente Bordeaux · rénovation + traitement · Devis 24h',
     seoDescription:
-      "★ Charpentier Bordeaux depuis 2005 ★ Diagnostic bois, traitement insectes/champignons, renforcement, remplacement ✓ 5/5 (52 avis) ✓ Décennale ✓ Devis 24h.",
+      "★ Charpentier Bordeaux · Diagnostic bois, traitement insectes/champignons, renforcement · Liroy artisan direct depuis 2005 · 5/5 (52 avis) · Décennale.",
     visibleInNav: true,
     navCategory: 'urgence',
     navOrder: 42,

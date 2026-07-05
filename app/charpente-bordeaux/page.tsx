@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('charpente-bordeaux');
 
@@ -13,20 +15,33 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <ServicePageLayout
+    <>
+      <ServicePageLayout
       content={{
         service: 'charpente',
         slug: PAGE.slug,
         h1: (
           <>
-            Charpente à{' '}
+            Charpente{' '}
             <span className="text-[var(--color-terre)]">Bordeaux</span> —
-            rénovation, traitement, renforcement structurel
+            rénovation, traitement bois, renforcement structurel
           </>
         ),
         heroSubtitle:
-          "Diagnostic et rénovation de charpente bois par artisan couvreur-charpentier depuis 2005. Traitement insectes xylophages et champignons, remplacement de pièces, renforcement structurel. Garantie 10 ans.",
+          "Diagnostic et rénovation de charpente bois par artisan couvreur-charpentier depuis 2005. Traitement curatif insectes xylophages (capricorne, vrillette, termite) et champignons (mérule), remplacement de pièces, renforcement structurel. Décennale active.",
         shortTitle: 'Charpente',
+
+        authorBlock: {
+          name: 'Liroy Delsuc',
+          role: 'Couvreur-charpentier, fondateur — atelier Mérignac',
+          bio: "La charpente est le squelette de votre toiture — un défaut structurel invisible depuis le sol peut fragiliser toute la couverture. Depuis 2005, je réalise diagnostic bois, traitement curatif et renforcement structurel sur Bordeaux Métropole. Sur le bâti ancien girondin (échoppes, maisons XIXe), je respecte les techniques traditionnelles (assemblages à tenon-mortaise, essences locales) plutôt que les fermettes modernes non compatibles.",
+          badges: [
+            'Depuis 2005',
+            'Décennale active',
+            '5/5 sur 52 avis Google',
+            'Diagnostic gratuit',
+          ],
+        },
         presentation: (
           <>
             <p>
@@ -185,7 +200,76 @@ export default function Page() {
               "Si pièces structurelles dégradées : moisage ou remplacement avec bois calibré et traité. Contrôle structurel final, attestation et garantie remises.",
           },
         ],
+
+        // ————————————————————————————————————————————————
+        // FAQ CHARPENTE-FOCUSED (10 questions ICP)
+        // ————————————————————————————————————————————————
+        faqOverride: [
+          {
+            question:
+              "Comment savoir si ma charpente est attaquée par des insectes ?",
+            answer:
+              "5 signaux visibles : (1) TROUS RONDS de 2-3 mm sur les bois (vrillette), (2) TROUS OVALES de 5-10 mm (capricorne), (3) SCIURE fine (vermoulure) au sol sous poutres, (4) BOIS QUI SONNE CREUX au marteau, (5) GALERIES visibles quand on sonde. La TERMITE fait des galeries internes sans trous externes visibles. Le CAPRICORNE peut détruire 60-80 % du bois interne en 5-8 ans SANS SIGNAL EXTÉRIEUR NET. Un diagnostic professionnel est indispensable au moindre doute.",
+          },
+          {
+            question:
+              "Combien coûte un traitement de charpente à Bordeaux ?",
+            answer:
+              "Fourchettes 2026 : traitement curatif insectes xylophages 25-45 €/m² de surface habitable sous rampants (bûchage + injection + pulvérisation), traitement fongique curatif (mérule, coniophore) 35-55 €/m² (plus complexe, souvent lié à un problème d'humidité à traiter en amont), traitement préventif toutes essences 15-25 €/m². Pour maison type 100 m² sous rampants : traitement curatif complet 2 500-4 500 € TTC. Diagnostic sur site 0-180 € gratuit si chantier signé.",
+          },
+          {
+            question:
+              "Quelle différence entre traitement préventif et curatif ?",
+            answer:
+              "PRÉVENTIF : bois sain non attaqué, application d'un produit fongicide + insecticide pour protéger 10-15 ans. Coût réduit (15-25 €/m²), rapide (1-2 jours). CURATIF : bois DÉJÀ attaqué, protocole DTU 41.2 avec bûchage (retrait bois dégradés), brossage, injection sous pression dans les bois épais (pannes, chevrons), pulvérisation surface, 2-3 passes. Coût 25-45 €/m² et durée 3-7 jours. Si structure fragilisée : renforcement ou remplacement de pièces en supplément.",
+          },
+          {
+            question:
+              "Ma charpente ancienne (100 ans+) doit-elle être renforcée ?",
+            answer:
+              "Pas nécessairement. Une charpente ancienne bien conçue (assemblages tenon-mortaise, essences locales chêne/châtaignier, sections généreuses) peut tenir 200-300 ans SI l'humidité est maîtrisée et si aucun insecte ne l'attaque. Diagnostic sur site indispensable : évaluation des sections, contrôle des assemblages, sondage à la vrille, mesure taux humidité. Nous refusons les projets de renforcement inutile — sur bâti ancien girondin, la préservation de l'existant est presque toujours préférable au remplacement.",
+          },
+          {
+            question:
+              "Fermette moderne ou charpente traditionnelle — laquelle ?",
+            answer:
+              "FERMETTE (industrielle, années 70+) : rapide à installer, moins chère (30-50 €/m² neuf), mais combles NON aménageables et incompatible avec bâti ancien. TRADITIONNELLE (chevrons + pannes + entrait + poinçon) : plus chère (80-150 €/m² neuf), combles aménageables, ESTHÉTIQUE compatible avec bâti girondin ancien. Pour REMPLACEMENT dans une échoppe bordelaise ou maison girondine avant 1950 : traditionnelle obligatoire pour respect patrimoine et compatibilité PLU/ABF.",
+          },
+          {
+            question:
+              "Termites à Bordeaux : ma commune est-elle concernée ?",
+            answer:
+              "OUI, toute la Gironde est classée département À RISQUE TERMITE par arrêté préfectoral. Toute vente immobilière requiert un état parasitaire termites (DPE termites, moins de 6 mois). Sur Bordeaux Métropole, particulièrement les rives de Garonne, les caves et sous-sols humides sont des voies d'entrée principales. Traitement termite curatif = protocole spécifique (barrière chimique périmètre + injection sol) + entreprise agréée. Nous vous orientons vers nos partenaires spécialisés termites si diagnostic positif.",
+          },
+          {
+            question:
+              "Ma charpente présente une flèche (déformation) — grave ?",
+            answer:
+              "PAS FORCÉMENT — une flèche modérée (2-4 cm sur 4-5 m de portée) est souvent normale sur bois anciens et stabilisée depuis des décennies. Alarmant : (1) flèche progressive (mesures dans le temps), (2) craquements audibles, (3) fissures dans les plâtres au niveau des appuis, (4) portes/fenêtres qui coincent à l'étage. Diagnostic structurel indispensable : identification cause (charge, humidité, insectes, tassement), calcul de reprise. Ne pas confondre flèche esthétique et déformation pathologique.",
+          },
+          {
+            question:
+              "Combien de temps dure un traitement de charpente ?",
+            answer:
+              "Diagnostic sur site + rapport photo : 2-3h. Traitement préventif toutes essences maison 100 m² : 1-2 jours. Traitement curatif complet (bûchage + injection + pulvérisation en 2-3 passes) : 3-7 jours selon surface et gravité. Renforcement ou remplacement de pièces structurelles : +1-5 jours selon complexité. Nous respectons le DTU 41.2 (temps de séchage entre passes, produits homologués).",
+          },
+          {
+            question:
+              "Quelle garantie fournissez-vous sur le traitement ?",
+            answer:
+              "Décennale (10 ans) sur l'ensemble de la prestation, obligation légale. Garantie efficacité produits traitants : 10 ans anti-insectes, 5-10 ans anti-fongique selon produit. Si réinfestation observée pendant la garantie, nous reprenons à nos frais après vérification qu'aucun facteur externe nouveau (fuite, infiltration, ventilation modifiée) n'est en cause.",
+          },
+          {
+            question:
+              "Faut-il faire un diagnostic charpente régulier ?",
+            answer:
+              "Recommandations : diagnostic complet tous les 10 ans sur maison ancienne (>50 ans), tous les 15 ans sur maison récente. Contrôle visuel annuel des combles (sciure, humidité, taches suspectes). Après tout événement climatique majeur (tempête, dégât des eaux, incendie voisin), diagnostic ponctuel. Un traitement préventif 15-25 €/m² tous les 15-20 ans est bien plus économique qu'un traitement curatif tardif 25-45 €/m² + remplacement structural.",
+          },
+        ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }
