@@ -227,9 +227,9 @@ const STATIC_PAGES: PageEntry[] = [
     service: 'faitage',
     title: 'Faîtage toiture Bordeaux',
     navLabel: 'Faîtage toiture',
-    seoTitle: 'Faîtage toiture Bordeaux : rénovation et étanchéité garantie',
+    seoTitle: 'Faîtage toiture Bordeaux · scellé chaux ou closoir ventilé',
     seoDescription:
-      "Rénovation de faîtage à Bordeaux : faîtage scellé ou à sec, étanchéité garantie. Couvreur depuis 2005. Note 5/5 (52 avis). Devis gratuit 24h, garantie décennale.",
+      "★ Faîtage toiture Bordeaux · Scellé mortier chaux ou closoir ventilé · 45-70 €/ml · Liroy artisan direct · 5/5 (52 avis) · Décennale.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 33,
