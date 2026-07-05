@@ -1,9 +1,15 @@
 import type { ReactNode } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   CheckCircle2,
   AlertTriangle,
   ArrowRight,
+  Check,
+  Clock,
+  HelpCircle,
   MapPin,
+  Phone,
 } from 'lucide-react';
 import { Hero } from '@/components/sections/Hero';
 import { Reassurance } from '@/components/sections/Reassurance';
@@ -26,7 +32,7 @@ import { getLocationBySlug } from '@/data/locations';
 import { getFAQForService } from '@/data/faq';
 import type { FAQItem } from '@/data/faq';
 import type { ServiceCategory } from '@/data/types';
-import { SITE } from '@/lib/constants';
+import { NAP, SITE } from '@/lib/constants';
 import { requirePage } from '@/lib/pages';
 
 /**
@@ -52,6 +58,31 @@ export type ServiceVillePageContent = {
   methode: Array<{ title: string; description: string }>;
   /** FAQ optionnelle locale ; sinon retombe sur la FAQ du service. */
   faqLocale?: FAQItem[];
+  /** Bloc auteur E-E-A-T optionnel. */
+  authorBlock?: {
+    name: string;
+    role: string;
+    bio: string;
+    photoSrc?: string;
+    photoAlt?: string;
+    href?: string;
+    badges?: string[];
+  };
+  /** Bloc atelier optionnel. */
+  atelier?: {
+    adresse: string;
+    ville: string;
+    codePostal: string;
+    horaires: Array<{ jours: string; heures: string }>;
+    mapEmbedUrl?: string;
+    itineraireUrl?: string;
+    intro?: string;
+  };
+  /** Bloc "3 questions à poser" optionnel. */
+  questionsCouvreur?: {
+    intro?: string;
+    items: Array<{ question: string; answer: string }>;
+  };
 };
 
 export function ServiceVillePageLayout({
@@ -80,6 +111,58 @@ export function ServiceVillePageLayout({
         breadcrumbSlug={content.slug}
         secondaryCtaLabel={`Devis ${service.name.toLowerCase()} ${ville.name}`}
       />
+
+      {/* Bloc auteur (E-E-A-T) */}
+      {content.authorBlock && (
+        <section className="section-y-sm bg-[var(--color-creme)] border-b border-[var(--color-border)]">
+          <Container size="narrow">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 p-6 rounded-[var(--radius-lg)] bg-[var(--color-pierre)] border border-[var(--color-border)] shadow-[var(--shadow-sm)]">
+              {content.authorBlock.photoSrc && (
+                <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden ring-2 ring-[var(--color-terre)]/20">
+                  <Image
+                    src={content.authorBlock.photoSrc}
+                    alt={content.authorBlock.photoAlt ?? content.authorBlock.name}
+                    width={80}
+                    height={80}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 text-[0.75rem] uppercase tracking-wider text-[var(--color-terre-700)] font-bold mb-1">
+                  <Check className="w-3.5 h-3.5" strokeWidth={2.5} aria-hidden="true" />
+                  Page rédigée et vérifiée par l'artisan
+                </div>
+                <h2 className="text-[1.125rem] font-bold text-[var(--color-ardoise)] mb-1">
+                  {content.authorBlock.href ? (
+                    <Link href={content.authorBlock.href} className="hover:text-[var(--color-terre)] transition">
+                      {content.authorBlock.name}
+                    </Link>
+                  ) : (
+                    content.authorBlock.name
+                  )}
+                </h2>
+                <p className="text-[0.875rem] text-[var(--color-gris-600)] mb-2">
+                  {content.authorBlock.role}
+                </p>
+                <p className="text-[0.9375rem] text-[var(--color-gris-600)] leading-relaxed">
+                  {content.authorBlock.bio}
+                </p>
+                {content.authorBlock.badges && content.authorBlock.badges.length > 0 && (
+                  <ul className="flex flex-wrap gap-2 mt-3">
+                    {content.authorBlock.badges.map((b) => (
+                      <li key={b} className="inline-flex items-center gap-1 px-2.5 py-1 text-[0.75rem] font-semibold rounded-full bg-[var(--color-garantie-100)] text-[var(--color-garantie)]">
+                        <Check className="w-3 h-3" strokeWidth={3} aria-hidden="true" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* Présentation locale */}
       <section className="section-y">
@@ -246,6 +329,116 @@ export function ServiceVillePageLayout({
       />
 
       <AvisGoogle filterCity={ville.name} />
+
+      {/* Bloc atelier */}
+      {content.atelier && (
+        <section className="section-y">
+          <Container>
+            <div className="max-w-3xl mb-10">
+              <Eyebrow className="mb-3">Atelier & siège</Eyebrow>
+              <h2 className="mb-4">Notre atelier à {content.atelier.ville}</h2>
+              {content.atelier.intro && (
+                <p className="text-[1.0625rem] text-[var(--color-gris-600)] leading-relaxed">
+                  {content.atelier.intro}
+                </p>
+              )}
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-stretch">
+              <div className="lg:col-span-2 space-y-5">
+                <div className="p-6 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-pierre)]">
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="shrink-0 w-10 h-10 rounded-full bg-[var(--color-terre-100)] text-[var(--color-terre-700)] grid place-items-center">
+                      <MapPin className="w-5 h-5" strokeWidth={2} aria-hidden="true" />
+                    </div>
+                    <div>
+                      <p className="text-[0.75rem] uppercase tracking-wider font-bold text-[var(--color-gris-500)] mb-1">Adresse</p>
+                      <address className="not-italic text-[1rem] font-semibold text-[var(--color-ardoise)] leading-snug">
+                        {content.atelier.adresse}<br />
+                        {content.atelier.codePostal} {content.atelier.ville}
+                      </address>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="shrink-0 w-10 h-10 rounded-full bg-[var(--color-terre-100)] text-[var(--color-terre-700)] grid place-items-center">
+                      <Clock className="w-5 h-5" strokeWidth={2} aria-hidden="true" />
+                    </div>
+                    <div>
+                      <p className="text-[0.75rem] uppercase tracking-wider font-bold text-[var(--color-gris-500)] mb-1">Horaires</p>
+                      <ul className="text-[0.9375rem] text-[var(--color-ardoise)] leading-relaxed space-y-0.5">
+                        {content.atelier.horaires.map((h) => (
+                          <li key={h.jours} className="flex justify-between gap-3">
+                            <span className="font-semibold">{h.jours}</span>
+                            <span className="text-[var(--color-gris-600)]">{h.heures}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button href={NAP.phoneHref} variant="primary" iconLeft={<Phone className="w-4 h-4" />}>
+                    {NAP.phoneDisplay}
+                  </Button>
+                  {content.atelier.itineraireUrl && (
+                    <Button href={content.atelier.itineraireUrl} variant="ghost" iconRight={<ArrowRight className="w-4 h-4" />}>
+                      Itinéraire Google Maps
+                    </Button>
+                  )}
+                </div>
+              </div>
+              {content.atelier.mapEmbedUrl && (
+                <div className="lg:col-span-3 relative rounded-[var(--radius-lg)] overflow-hidden border border-[var(--color-border)] min-h-[300px]">
+                  <iframe
+                    src={content.atelier.mapEmbedUrl}
+                    className="w-full h-full min-h-[300px]"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={`Localisation atelier ${content.atelier.ville}`}
+                  />
+                </div>
+              )}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Bloc "3 questions à poser" */}
+      {content.questionsCouvreur && (
+        <section className="section-y">
+          <Container size="narrow">
+            <div className="mb-10">
+              <Eyebrow className="mb-3">Guide de sélection</Eyebrow>
+              <h2 className="mb-4">
+                Les questions à poser à tout couvreur à {ville.name} avant de signer
+              </h2>
+              {content.questionsCouvreur.intro && (
+                <p className="text-[1.0625rem] text-[var(--color-gris-600)] leading-relaxed">
+                  {content.questionsCouvreur.intro}
+                </p>
+              )}
+            </div>
+            <ul className="space-y-6">
+              {content.questionsCouvreur.items.map((q, i) => (
+                <li key={q.question} className="flex gap-5 p-6 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-pierre)]">
+                  <div className="shrink-0 w-10 h-10 rounded-full bg-[var(--color-terre-100)] text-[var(--color-terre-700)] grid place-items-center font-bold text-[0.9375rem]" aria-hidden="true">
+                    {i + 1}
+                  </div>
+                  <div>
+                    <h3 className="text-[1.0625rem] font-bold text-[var(--color-ardoise)] mb-2 inline-flex items-start gap-2">
+                      <HelpCircle className="w-4 h-4 mt-1 text-[var(--color-terre)] shrink-0" aria-hidden="true" />
+                      {q.question}
+                    </h3>
+                    <p className="text-[0.9375rem] text-[var(--color-gris-600)] leading-relaxed">
+                      {q.answer}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </Container>
+        </section>
+      )}
 
       <Reassurance />
 

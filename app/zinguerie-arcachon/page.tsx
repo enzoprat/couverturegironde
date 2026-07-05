@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ServiceVillePageLayout } from '@/components/content/ServiceVillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('zinguerie-arcachon');
 
@@ -13,18 +15,39 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <ServiceVillePageLayout
-      content={{
-        slug: PAGE.slug,
-        service: 'zinguerie',
-        villeSlug: 'arcachon',
-        h1: (
-          <>
-            Zinguerie à{' '}
-            <span className="text-[var(--color-terre)]">Arcachon</span> et sur
-            le Bassin — zinc marine anti-air-salin
-          </>
-        ),
+    <>
+      <ServiceVillePageLayout
+        content={{
+          slug: PAGE.slug,
+          service: 'zinguerie',
+          villeSlug: 'arcachon',
+          h1: (
+            <>
+              Zinguerie à{' '}
+              <span className="text-[var(--color-terre)]">Arcachon</span> et sur
+              le Bassin — zinc marine anti-air-salin
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac (60 km)',
+            bio: "Je réalise la zinguerie sur Arcachon et le Bassin depuis 2005. Sur le Bassin, air salin agressif = zinc marine prépatiné OBLIGATOIRE. Un zinc standard s'oxyde en 5-10 ans en bord de mer. Journées d'intervention groupées Arcachon + La Teste + Le Pyla pour maîtriser les frais de déplacement. Soudure étain sur place pour étanchéité 30-50 ans.",
+            badges: ['Depuis 2005', 'Décennale active', '5/5 sur 52 avis Google', 'Zinc marine anti-air-salin'],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro: "Atelier à 60 km (1h) d'Arcachon via A63 + A660. Journées d'intervention groupées Bassin pour maîtriser les frais de déplacement.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl: 'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl: 'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
         heroSubtitle:
           "Zinguerie à Arcachon et sur le Bassin par artisan couvreur-zingueur depuis 2005. Zinc naturel patiné et prépatiné adapté à l'air salin, gouttières marine, noues et chéneaux dimensionnés. Soudure étain sur place, garantie 30 ans. Devis gratuit sous 24h.",
         presentation: (
@@ -208,5 +231,8 @@ export default function Page() {
         ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }

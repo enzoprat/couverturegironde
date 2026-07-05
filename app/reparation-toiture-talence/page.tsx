@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ServiceVillePageLayout } from '@/components/content/ServiceVillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('reparation-toiture-talence');
 
@@ -13,18 +15,39 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <ServiceVillePageLayout
-      content={{
-        slug: PAGE.slug,
-        service: 'reparation',
-        villeSlug: 'talence',
-        h1: (
-          <>
-            Réparation fuite toiture à{' '}
-            <span className="text-[var(--color-terre)]">Talence</span> —
-            échoppes tuile canal et bâti bourgeois
-          </>
-        ),
+    <>
+      <ServiceVillePageLayout
+        content={{
+          slug: PAGE.slug,
+          service: 'reparation',
+          villeSlug: 'talence',
+          h1: (
+            <>
+              Réparation fuite toiture à{' '}
+              <span className="text-[var(--color-terre)]">Talence</span> —
+              échoppes tuile canal et bâti bourgeois
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac (9 km de Talence)',
+            bio: "Je répare les toitures talençaises depuis 2005. Sur bâti patrimonial (échoppes tuile canal Thouars/Peixotto, maisons bourgeoises ardoise), mortier chaux OBLIGATOIRE. Intervention urgence 30-60 min heures ouvrées depuis Mérignac (9 km). Prise en charge démarches ABF si secteur classé.",
+            badges: ['Depuis 2005', 'Décennale active', '5/5 sur 52 avis Google', 'Mortier chaux bâti ancien'],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro: "Atelier à 9 km (20 min) de Talence via A630. Intervention 30-60 min en heures ouvrées.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl: 'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl: 'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
         heroSubtitle:
           "Réparation fuite toiture à Talence par artisan couvreur depuis 2005. Spécialiste échoppes bordelaises tuile canal, maisons bourgeoises ardoise, faîtages scellés chaux. Intervention 30-60 min depuis Mérignac (9 km). Devis 24h, garantie décennale.",
         presentation: (
@@ -207,5 +230,8 @@ export default function Page() {
         ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }

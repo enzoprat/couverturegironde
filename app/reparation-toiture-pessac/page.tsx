@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ServiceVillePageLayout } from '@/components/content/ServiceVillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('reparation-toiture-pessac');
 
@@ -13,18 +15,39 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <ServiceVillePageLayout
-      content={{
-        slug: PAGE.slug,
-        service: 'reparation',
-        villeSlug: 'pessac',
-        h1: (
-          <>
-            Réparation fuite toiture à{' '}
-            <span className="text-[var(--color-terre)]">Pessac</span> —
-            intervention 30-60 min 7j/7
-          </>
-        ),
+    <>
+      <ServiceVillePageLayout
+        content={{
+          slug: PAGE.slug,
+          service: 'reparation',
+          villeSlug: 'pessac',
+          h1: (
+            <>
+              Réparation fuite toiture à{' '}
+              <span className="text-[var(--color-terre)]">Pessac</span> —
+              intervention 30-60 min 7j/7
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac (7 km de Pessac)',
+            bio: "Je répare les toitures pessacaises depuis 2005. Intervention 30-60 min en heures ouvrées depuis mon atelier Mérignac (7 km). Sur Pessac : tuiles cassées par branches sous couvert Bourgailh, faîtages fissurés bâti ancien centre, noues zinc percées échoppes. Dossier assurance constitué systématiquement.",
+            badges: ['Depuis 2005', 'Décennale active', '5/5 sur 52 avis Google', 'Urgence 30-60 min'],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro: "Atelier à 7 km (15 min) de Pessac via A630. Intervention 30-60 min en heures ouvrées.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl: 'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl: 'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
         heroSubtitle:
           "Réparation fuite toiture à Pessac par artisan couvreur depuis 2005. Intervention 30-60 min heures ouvrées depuis notre atelier de Mérignac (7 km). Tuiles cassées, faîtage disloqué, noue zinc percée, abergement cheminée. Devis gratuit sous 24h, garantie décennale.",
         presentation: (
@@ -203,5 +226,8 @@ export default function Page() {
         ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }

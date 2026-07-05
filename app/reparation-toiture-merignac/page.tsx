@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ServiceVillePageLayout } from '@/components/content/ServiceVillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('reparation-toiture-merignac');
 
@@ -13,20 +15,49 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <ServiceVillePageLayout
-      content={{
-        slug: PAGE.slug,
-        service: 'reparation',
-        villeSlug: 'merignac',
-        h1: (
-          <>
-            Réparation fuite toiture à{' '}
-            <span className="text-[var(--color-terre)]">Mérignac</span> —
-            intervention 15-30 min depuis rue de Malbos
-          </>
-        ),
-        heroSubtitle:
-          "Réparation fuite toiture à Mérignac par artisan couvreur historique de la commune depuis 2005. Notre atelier est au 65 rue de Malbos : intervention 15-30 min en heures ouvrées. Tuiles cassées, faîtage, gouttières, abergements. Devis gratuit sous 24h.",
+    <>
+      <ServiceVillePageLayout
+        content={{
+          slug: PAGE.slug,
+          service: 'reparation',
+          villeSlug: 'merignac',
+          h1: (
+            <>
+              Réparation fuite toiture à{' '}
+              <span className="text-[var(--color-terre)]">Mérignac</span> —
+              intervention 15-30 min depuis rue de Malbos
+            </>
+          ),
+          heroSubtitle:
+            "Réparation fuite toiture à Mérignac par artisan couvreur historique de la commune depuis 2005. Notre atelier est au 65 rue de Malbos : intervention 15-30 min en heures ouvrées. Tuiles cassées, faîtage, gouttières, abergements. Devis gratuit sous 24h.",
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac (commune atelier)',
+            bio: "Mérignac est ma commune d'atelier depuis 2005. Sur toute réparation urgente : intervention 15-30 min en heures ouvrées (Capeyron 10 min, Arlac 15 min, Bourranville 20 min). Aucune structure extérieure ne peut égaler ce délai. Pas de surcoût déplacement, tarifs identiques quel que soit le quartier merignacais.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Urgence 15-30 min',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac même. Vous pouvez passer voir le dépôt — c'est un atelier de couvreur classique avec stock matériaux. Ouvert lundi-vendredi 6h-22h.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
         presentation: (
           <>
             <p>
@@ -207,5 +238,8 @@ export default function Page() {
         ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }

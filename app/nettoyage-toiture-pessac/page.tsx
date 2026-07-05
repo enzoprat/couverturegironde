@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ServiceVillePageLayout } from '@/components/content/ServiceVillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('nettoyage-toiture-pessac');
 
@@ -13,20 +15,70 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <ServiceVillePageLayout
-      content={{
-        slug: PAGE.slug,
-        service: 'nettoyage',
-        villeSlug: 'pessac',
-        h1: (
-          <>
-            Nettoyage de toiture à{' '}
-            <span className="text-[var(--color-terre)]">Pessac</span> —
-            démoussage et rinçage haute pression
-          </>
-        ),
-        heroSubtitle:
-          "Nettoyage professionnel de toiture à Pessac par artisan couvreur depuis 2005. Haute pression maîtrisée, démoussage complémentaire, rinçage des descentes. Devis gratuit en 24h, garantie décennale.",
+    <>
+      <ServiceVillePageLayout
+        content={{
+          slug: PAGE.slug,
+          service: 'nettoyage',
+          villeSlug: 'pessac',
+          h1: (
+            <>
+              Nettoyage toiture{' '}
+              <span className="text-[var(--color-terre)]">Pessac</span> — haute
+              pression maîtrisée 12-20 €/m²
+            </>
+          ),
+          heroSubtitle:
+            "Nettoyage professionnel à Pessac par artisan couvreur depuis 2005, atelier Mérignac (7 km). Pression et buse adaptées au matériau (tuile canal 80-100 bars, ardoise 60-80 bars). Devis gratuit 24h, Liroy artisan direct, décennale.",
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac (7 km de Pessac)',
+            bio: "Je nettoie les toitures pessacaises depuis 2005. Pessac = couvert végétal exceptionnel (Bourgailh, secteur universitaire, jardins Saige) → mousses systématiques. Nettoyage seul insuffisant sur Pessac — combo nettoyage + démoussage + hydrofuge RECOMMANDÉ pour tenir 8-10 ans. Karcher grand public interdit sur nos chantiers : pression adaptée matériau uniquement.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Pression adaptée matériau',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac, à 7 km (15 min) de Pessac via A630. Intervention 30-60 min en heures ouvrées.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
+
+          questionsCouvreur: {
+            intro: "3 questions à poser à tout couvreur pour un nettoyage à Pessac.",
+            items: [
+              {
+                question: "Utilisez-vous un karcher grand public ou un matériel professionnel adapté au matériau ?",
+                answer:
+                  "Un karcher grand public à pleine puissance sur tuile canal ancienne = micro-fissures + sablage engobe. Sur nos chantiers Pessac : pression ADAPTÉE (80-100 bars tuile canal, 60-80 ardoise, <50 zinc). Question qui distingue un pro d'un amateur.",
+              },
+              {
+                question: "Recommandez-vous systématiquement l'hydrofuge après nettoyage sur Pessac ?",
+                answer:
+                  "Sur Pessac (couvert arboré), oui — sans hydrofuge, les mousses reviennent en 2-3 ans. Avec hydrofuge, 8-10 ans de tranquillité. Un artisan qui propose seulement un nettoyage sur Pessac ne connaît pas les spécificités locales.",
+              },
+              {
+                question: "Protégez-vous mes descentes d'eau pluviale vers le récupérateur/potager ?",
+                answer:
+                  "Nous bâchons SYSTÉMATIQUEMENT les évacuations sensibles. Un couvreur qui ne pose pas cette question au préalable ne se soucie pas de vos infrastructures jardin.",
+              },
+            ],
+          },
         presentation: (
           <>
             <p>
@@ -220,5 +272,8 @@ export default function Page() {
         ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }
