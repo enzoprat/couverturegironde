@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { QuartierBordeauxPageLayout } from '@/components/content/QuartierBordeauxPageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-bordeaux-centre');
 
@@ -13,27 +15,88 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <QuartierBordeauxPageLayout
-      content={{
-        slug: PAGE.slug,
-        quartier: 'Centre',
-        quartierInflected: 'du centre de Bordeaux',
-        microZones: [
-          'Triangle d\u2019Or',
-          'Saint-Pierre',
-          'Sainte-Catherine',
-          'Saint-Michel',
-          'Saint-Paul',
-          'Place Pey-Berland',
-          'Cours Victor-Hugo',
-          'Place de la Bourse',
-          'Quai du Maréchal-Lyautey',
-          'Allées de Tourny',
-          'Cours de l\u2019Intendance',
-          'Mériadeck',
-        ],
-        heroSubtitle:
-          "Couvreur-zingueur à Bordeaux Centre depuis 2005, intervention chaque jour sur les toitures du Triangle d'Or, Saint-Pierre, Sainte-Catherine et Saint-Michel. Spécialiste des échoppes bordelaises, hôtels particuliers et bâti UNESCO classé. Démarches ABF gérées, intervention sous 1h en urgence, devis gratuit sous 24h.",
+    <>
+      <QuartierBordeauxPageLayout
+        content={{
+          slug: PAGE.slug,
+          quartier: 'Centre',
+          quartierInflected: 'du centre de Bordeaux',
+          h1: (
+            <>
+              Couvreur à{' '}
+              <span className="text-[var(--color-terre)]">Bordeaux Centre</span>{' '}
+              — échoppes tuile canal + secteur UNESCO/ABF
+            </>
+          ),
+          microZones: [
+            'Triangle d\u2019Or',
+            'Saint-Pierre',
+            'Sainte-Catherine',
+            'Saint-Michel',
+            'Saint-Paul',
+            'Place Pey-Berland',
+            'Cours Victor-Hugo',
+            'Place de la Bourse',
+            'Quai du Maréchal-Lyautey',
+            'Allées de Tourny',
+            'Cours de l\u2019Intendance',
+            'Mériadeck',
+          ],
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac',
+            bio: "Bordeaux Centre est le quartier le plus EXIGEANT en couverture : secteur UNESCO/ABF sur tout le périmètre, échoppes XIXe en tuile canal traditionnelle, hôtels particuliers ardoise. Depuis 2005, je respecte techniques traditionnelles (mortier chaux, tuile récupération) et je constitue systématiquement les dossiers ABF. Le ciment moderne = interdit sur ce bâti.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Dossiers ABF pris en charge',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac, à 8 km (15-30 min) du centre de Bordeaux selon la circulation. Intervention urgence sous 45-60 min en heures ouvrées.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
+
+          questionsCouvreur: {
+            intro:
+              "3 questions techniques à poser à tout couvreur pour Bordeaux Centre, particulièrement sur bâti UNESCO/ABF.",
+            items: [
+              {
+                question: "Prenez-vous en charge le dossier ABF ?",
+                answer:
+                  "Tout Bordeaux Centre est en secteur UNESCO. Tout changement d'aspect nécessite l'avis de l'Architecte des Bâtiments de France (2-4 mois d'instruction). Un couvreur sérieux constitue le dossier ABF pour vous. Nous nous en occupons systématiquement.",
+              },
+              {
+                question:
+                  "Mortier chaux ou ciment sur mes tuiles anciennes ?",
+                answer:
+                  "Sur bâti Bordeaux Centre XIXe (échoppes, hôtels particuliers), mortier de CHAUX OBLIGATOIRE (respire, compatible tuile ancienne). Ciment moderne = INTERDIT (fissure la tuile, non respiratoire, refusé par ABF).",
+              },
+              {
+                question:
+                  "Comment gérez-vous l'accès dans les rues étroites ?",
+                answer:
+                  "Bordeaux Centre = ruelles étroites, zones piétonnes, contraintes camion. Nous demandons systématiquement l'autorisation d'occupation de voirie (30-45 jours avant chantier), planifions les livraisons matériaux tôt le matin, et bâchons rigoureusement pour ne pas polluer voirie.",
+              },
+            ],
+          },
+
+          heroSubtitle:
+            "Couvreur-zingueur à Bordeaux Centre depuis 2005. Spécialiste des échoppes bordelaises + hôtels particuliers + bâti UNESCO/ABF classé. Mortier chaux obligatoire. Démarches ABF prises en charge. Atelier à Mérignac (8 km, 15-30 min). Devis gratuit sous 24h, Liroy artisan direct.",
         contexteUrbain: (
           <>
             <p>
@@ -222,5 +285,8 @@ export default function Page() {
         ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }

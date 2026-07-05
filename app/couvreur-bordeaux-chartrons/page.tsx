@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { QuartierBordeauxPageLayout } from '@/components/content/QuartierBordeauxPageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-bordeaux-chartrons');
 
@@ -13,11 +15,71 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <QuartierBordeauxPageLayout
-      content={{
-        slug: PAGE.slug,
-        quartier: 'Chartrons',
-        quartierInflected: 'des Chartrons',
+    <>
+      <QuartierBordeauxPageLayout
+        content={{
+          slug: PAGE.slug,
+          quartier: 'Chartrons',
+          quartierInflected: 'des Chartrons',
+          h1: (
+            <>
+              Couvreur aux{' '}
+              <span className="text-[var(--color-terre)]">Chartrons</span>{' '}
+              (Bordeaux) — maisons d'armateurs, ardoise + zinc patrimonial
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac',
+            bio: "Les Chartrons concentrent un patrimoine d'exception : maisons d'armateurs XVIIIe, hôtels particuliers en ardoise, zinguerie patrimoniale soudée étain. Depuis 2005, je respecte les techniques traditionnelles et je constitue systématiquement les dossiers ABF (tout le quartier est classé). Sur zinc patrimonial, aucun mastic — soudure étain sur place uniquement.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Dossiers ABF pris en charge',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac, à 8 km (20-40 min) des Chartrons via A630 + rocade nord. Zinguerie sur mesure préparée à l'atelier.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
+
+          questionsCouvreur: {
+            intro:
+              "3 questions à poser à tout couvreur pour les Chartrons, particulièrement sur zinguerie patrimoniale.",
+            items: [
+              {
+                question: "Prenez-vous en charge le dossier ABF ?",
+                answer:
+                  "Tous les Chartrons sont en secteur ABF. Un couvreur sérieux constitue le dossier pour vous (2-4 mois d'instruction). Nous nous en occupons systématiquement.",
+              },
+              {
+                question:
+                  "Utilisez-vous zinc prépatiné ou naturel sur les Chartrons ?",
+                answer:
+                  "Sur bâti patrimonial des Chartrons, ZINC PRÉPATINÉ (anthra-zinc, quartz-zinc) recommandé pour aspect vieilli DÈS la pose — harmonie immédiate. Coût +15-25 % vs naturel mais le naturel mettrait 2-5 ans à patiner et créerait une dissonance visuelle prolongée.",
+              },
+              {
+                question: "Soudure étain ou mastic sur mon zinc ?",
+                answer:
+                  "SOUDURE ÉTAIN OBLIGATOIRE. Sur bâti patrimonial en climat humide bordelais, le mastic tient 5-8 ans max. La soudure étain tient 30-50 ans SANS reprise. Nous soudons TOUJOURS les jonctions.",
+              },
+            ],
+          },
+
         microZones: [
           'Quai des Chartrons',
           'Cours Portal',
@@ -226,5 +288,8 @@ export default function Page() {
         ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }

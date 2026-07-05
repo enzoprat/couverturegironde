@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { QuartierBordeauxPageLayout } from '@/components/content/QuartierBordeauxPageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-bordeaux-rive-droite');
 
@@ -13,11 +15,73 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <QuartierBordeauxPageLayout
-      content={{
-        slug: PAGE.slug,
-        quartier: 'Rive Droite',
-        quartierInflected: 'de la Rive Droite',
+    <>
+      <QuartierBordeauxPageLayout
+        content={{
+          slug: PAGE.slug,
+          quartier: 'Rive Droite',
+          quartierInflected: 'de la Rive Droite',
+          h1: (
+            <>
+              Couvreur à Bordeaux{' '}
+              <span className="text-[var(--color-terre)]">Rive Droite</span> —
+              Bastide, Brazza, Niel, Queyries
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac',
+            bio: "La Rive Droite bordelaise concentre 2 typologies distinctes : (1) bâti ancien Bastide/Benauge/Queyries en tuile canal + zinguerie traditionnelle, (2) ZAC récentes Brazza/Bastide Niel avec toits-terrasses EPDM et architectures contemporaines. Depuis 2005, je maîtrise les 2 techniques. Traversée du Pont d'Aquitaine depuis Mérignac : 30-45 min en heures ouvrées.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Urgence 30-45 min',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac, à 12 km (30-45 min) de la Rive Droite via Pont d'Aquitaine. Intervention urgence 30-45 min en heures ouvrées.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
+
+          questionsCouvreur: {
+            intro:
+              "3 questions à poser à tout couvreur pour la Rive Droite bordelaise.",
+            items: [
+              {
+                question:
+                  "Traitez-vous à la fois bâti ancien Bastide ET toits-terrasses Brazza ?",
+                answer:
+                  "La Rive Droite = 2 métiers distincts. Un couvreur qui ne maîtrise qu'un seul (couvreur classique OU étancheur) va sous-traiter l'autre. Chez nous, les 2 sont exécutés en direct.",
+              },
+              {
+                question:
+                  "Mortier chaux sur mon échoppe Bastide ?",
+                answer:
+                  "Sur échoppes Bastide/Benauge/Queyries XIXe, mortier de CHAUX obligatoire (respire, compatible tuile ancienne). Un couvreur qui propose du ciment moderne sur bâti ancien = danger.",
+              },
+              {
+                question:
+                  "Format syndic pour copropriétés Brazza/Bastide Niel ?",
+                answer:
+                  "Oui, régulièrement. Devis adapté, attestations, planning compatible AG, acompte adapté. Nous fournissons tous les éléments nécessaires au syndic.",
+              },
+            ],
+          },
+
         microZones: [
           'La Bastide',
           'Brazza',
@@ -220,5 +284,8 @@ export default function Page() {
         ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }

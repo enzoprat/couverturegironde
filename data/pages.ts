@@ -538,7 +538,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Bordeaux Centre',
     seoTitle: 'Couvreur Bordeaux Centre ★ échoppes + ABF ★ 5/5',
     seoDescription:
-      "★ Couvreur Bordeaux Centre depuis 2005 ★ Échoppes, hôtels particuliers, secteur UNESCO/ABF, tuile canal ✓ Démoussage, réparation, urgence 7j/7 ✓ 5/5 (52 avis) ✓ Devis 24h.",
+      "★ Couvreur Bordeaux Centre depuis 2005 · Échoppes + UNESCO/ABF · Tuile canal + mortier chaux · Liroy artisan direct · 5/5 (52 avis) · Décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,

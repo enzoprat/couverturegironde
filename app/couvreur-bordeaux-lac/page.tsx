@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { QuartierBordeauxPageLayout } from '@/components/content/QuartierBordeauxPageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-bordeaux-lac');
 
@@ -13,11 +15,72 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <QuartierBordeauxPageLayout
-      content={{
-        slug: PAGE.slug,
-        quartier: 'Lac',
-        quartierInflected: 'de Bordeaux Lac',
+    <>
+      <QuartierBordeauxPageLayout
+        content={{
+          slug: PAGE.slug,
+          quartier: 'Lac',
+          quartierInflected: 'de Bordeaux Lac',
+          h1: (
+            <>
+              Couvreur à{' '}
+              <span className="text-[var(--color-terre)]">Bordeaux Lac</span> —
+              Ginko, Bassins à flot, toits-terrasses EPDM
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac',
+            bio: "Bordeaux Lac (Ginko, Bassins à flot, Parc Floral) = quartier récent avec architecture contemporaine dominante : toits-terrasses EPDM/SEL sur copropriétés, zinguerie à joint debout sur programmes neufs, ossature bois + bac acier sur logements sociaux. Techniques différentes du bâti ancien. Depuis 2005, j'ai suivi la croissance de ce quartier et j'y interviens régulièrement.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Étanchéité EPDM/SEL',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac, à 10 km (25-40 min) de Bordeaux Lac via A630 + rocade nord. Intervention urgence sous 45-60 min.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
+
+          questionsCouvreur: {
+            intro:
+              "3 questions à poser à tout couvreur pour Bordeaux Lac, particulièrement sur toits-terrasses copropriétés.",
+            items: [
+              {
+                question:
+                  "EPDM ou SEL : quelle étanchéité pour mon toit-terrasse Ginko ?",
+                answer:
+                  "EPDM (caoutchouc synthétique) : durée 30-50 ans, résistant UV, pose collée. Idéal terrasses accessibles neuves. SEL (Système Étanchéité Liquide, polyuréthane) : durée 15-25 ans, sans joints, idéal reprises ponctuelles. Sur Ginko/Bassins à flot majoritairement EPDM. Nous procédons par diagnostic pour évaluer reprise localisée vs étanchéité complète.",
+              },
+              {
+                question:
+                  "Intervenez-vous en format copropriété avec syndic ?",
+                answer:
+                  "Oui, régulièrement. Format syndic maîtrisé : devis adapté, attestations d'assurance, planning compatible AG, acompte adapté. Nous fournissons tous les éléments nécessaires au syndic.",
+              },
+              {
+                question: "Comment vérifier votre décennale ?",
+                answer:
+                  "Nous joignons systématiquement notre attestation d'assurance décennale à chaque devis, avec ses dates de validité. Sur toits-terrasses en particulier, décennale valide indispensable — les infiltrations post-chantier sont un risque majeur.",
+              },
+            ],
+          },
+
         microZones: [
           'Ginko',
           'Bassins à flot',
@@ -227,5 +290,8 @@ export default function Page() {
         ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }
