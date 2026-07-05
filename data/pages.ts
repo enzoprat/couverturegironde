@@ -279,9 +279,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'guide',
     title: 'Prix démoussage toiture Bordeaux',
     seoTitle:
-      'Prix démoussage toiture Bordeaux 2026 : Tarifs et facteurs de prix',
+      'Prix démoussage toiture Bordeaux 2026 · Tarifs au m²',
     seoDescription:
-      "Combien coûte un démoussage de toiture à Bordeaux en 2026 ? Tarifs au m², facteurs de prix, exemples chiffrés, conseils pour comparer les devis.",
+      "Combien coûte un démoussage de toiture à Bordeaux en 2026 ? Tarifs au m², facteurs de prix, exemples chiffrés, comparaison devis · Guide Liroy Delsuc.",
     indexable: true,
     sitemapPriority: 0.7,
   },
@@ -291,9 +291,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'guide',
     title: 'Aides rénovation toiture 2026',
     seoTitle:
-      'Aides pour refaire sa toiture 2026 : MaPrimeRénov, éco-PTZ, CEE',
+      'Aides toiture 2026 · MaPrimeRénov + éco-PTZ + CEE',
     seoDescription:
-      "★ Aides pour refaire sa toiture en 2026 ★ MaPrimeRénov' + éco-PTZ + TVA 5,5 % + CEE. Conditions, montants, démarches détaillés par un couvreur Gironde depuis 2005.",
+      "★ Aides toiture 2026 · MaPrimeRénov' + éco-PTZ + TVA 5,5 % + CEE · Conditions, montants, démarches · Guide couvreur Gironde depuis 2005.",
     indexable: true,
     sitemapPriority: 0.7,
   },
@@ -303,9 +303,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'guide',
     title: 'Quand démousser sa toiture en Gironde',
     seoTitle:
-      'Nettoyer toiture verte de mousse en Gironde : quand, comment, prix',
+      'Quand démousser sa toiture en Gironde · Fréquence + signes',
     seoDescription:
-      "★ Comment nettoyer une toiture verte de mousse en Gironde ? Quand démousser, quelle fréquence, quels signes d'alerte ? Conseils couvreur Gironde depuis 2005.",
+      "★ Quand démousser sa toiture en Gironde ? Fréquence recommandée, signes d'alerte, meilleur moment · Guide par Liroy Delsuc, couvreur depuis 2005.",
     indexable: true,
     sitemapPriority: 0.7,
   },

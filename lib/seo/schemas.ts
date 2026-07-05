@@ -384,7 +384,8 @@ export function getArticleSchema(params: {
     description: params.description,
     url: params.url,
     image: params.imageUrl,
-    author: { '@id': `${SITE.url}/#organization` },
+    // Auteur = Person Liroy (E-E-A-T signal), publisher = Organization
+    author: { '@id': `${SITE.url}/#liroy-delsuc` },
     publisher: { '@id': `${SITE.url}/#organization` },
     datePublished: params.datePublished,
     dateModified: params.dateModified ?? params.datePublished,

@@ -9,7 +9,11 @@ import { RelatedPages } from '@/components/sections/RelatedPages';
 import { Reassurance } from '@/components/sections/Reassurance';
 import { AvisGoogle } from '@/components/sections/AvisGoogle';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { getArticleSchema, getFAQSchema } from '@/lib/seo/schemas';
+import {
+  getArticleSchema,
+  getFAQSchema,
+  getPersonLiroySchema,
+} from '@/lib/seo/schemas';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
 import type { FAQItem } from '@/data/faq';
@@ -91,7 +95,14 @@ export function GuidePageLayout({ content }: { content: GuidePageContent }) {
               {content.readingTimeMin} min de lecture
             </span>
             <span className="inline-flex items-center gap-1.5">
-              Par <strong>Couverture Gironde</strong> · Couvreur depuis 2005
+              Par{' '}
+              <a
+                href="/a-propos"
+                className="font-bold text-[var(--color-ardoise)] underline decoration-[var(--color-terre)]/40 underline-offset-4 hover:decoration-[var(--color-terre)] transition"
+              >
+                Liroy Delsuc
+              </a>{' '}
+              · Couvreur-zingueur, Couverture Gironde, depuis 2005
             </span>
           </div>
         </Container>
@@ -252,6 +263,8 @@ export function GuidePageLayout({ content }: { content: GuidePageContent }) {
         })}
       />
       {content.faq.length > 0 && <JsonLd data={getFAQSchema(content.faq)} />}
+      {/* Person schema Liroy — signal E-E-A-T auteur sur les guides */}
+      <JsonLd data={getPersonLiroySchema()} />
     </>
   );
 }
