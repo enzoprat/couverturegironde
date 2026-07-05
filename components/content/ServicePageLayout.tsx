@@ -12,6 +12,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import {
   getFAQSchema,
   getHowToSchema,
+  getPriceCatalogSchema,
   getReviewSchemas,
   getServiceSchema,
 } from '@/lib/seo/schemas';
@@ -695,6 +696,25 @@ export function ServicePageLayout({ content }: { content: ServicePageContent }) 
           })),
         })}
       />
+      {/* OfferCatalog schema — si tarifs fournis (rich results prix Google + AI Overviews) */}
+      {content.tarifs && content.tarifs.lines.length > 0 && (
+        <JsonLd
+          data={getPriceCatalogSchema(
+            [
+              {
+                title: `${service.name} — tarifs Bordeaux Métropole`,
+                services: content.tarifs.lines.map((l) => ({
+                  name: l.service,
+                  range: l.range,
+                  details: l.note ?? '',
+                })),
+              },
+            ],
+            `${SITE.url}${page.path}`,
+          )}
+        />
+      )}
+
       {/* Review schema : uniquement si AVIS contient des avis réels (jamais fabriqués). */}
       {AVIS.length > 0 && (
         <JsonLd

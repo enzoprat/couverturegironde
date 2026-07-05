@@ -40,7 +40,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Couvreur Bordeaux ★ 5/5 sur 52 avis ★ Devis 24h, urgence 7j/7',
     seoDescription:
-      "★ Couvreur Bordeaux depuis 2005 ★ Note 5/5 sur 52 avis Google ✓ Démoussage, nettoyage, réparation, zinguerie ✓ Urgence 7j/7 ✓ Devis gratuit sous 24h ✓ Garantie décennale.",
+      "★ Couvreur Bordeaux depuis 2005 · Liroy, artisan direct · 5/5 sur 52 avis Google · Démoussage, réparation, urgence 7j/7 · Devis 24h · Décennale.",
     indexable: true,
     visibleInFooter: true,
     footerSection: 'services',
