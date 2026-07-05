@@ -245,9 +245,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Ornements de toiture Bordeaux',
     navLabel: 'Ornements traditionnels',
     seoTitle:
-      'Ornements toiture Bordeaux : épis, lambrequins, girouettes',
+      'Ornements toiture Bordeaux · épis, lambrequins, girouettes',
     seoDescription:
-      "Ornements de toiture à Bordeaux : épis, lambrequins, girouettes, rives décoratives. Travail traditionnel et soigné, respect du bâti girondin. Note 5/5 (52 avis). Devis gratuit 24h.",
+      "★ Ornements toiture Bordeaux · Épis, lambrequins, girouettes, rives décoratives · Liroy artisan direct · 5/5 (52 avis) · Décennale · Devis 24h.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 34,

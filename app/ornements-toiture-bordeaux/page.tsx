@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('ornements-toiture-bordeaux');
 
@@ -13,20 +15,33 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <ServicePageLayout
+    <>
+      <ServicePageLayout
       content={{
         service: 'ornements',
         slug: PAGE.slug,
         h1: (
           <>
-            Ornements de toiture à{' '}
+            Ornements toiture{' '}
             <span className="text-[var(--color-terre)]">Bordeaux</span> —
-            épis, lambrequins, girouettes
+            épis, lambrequins zinc, girouettes patrimoniales
           </>
         ),
         heroSubtitle:
-          "Pose et restauration d'ornements de toiture traditionnels par artisan couvreur depuis 2005. Épis de faîtage, lambrequins zinc, girouettes, rives décoratives. Respect du bâti girondin classé.",
+          "Pose et restauration d'ornements patrimoniaux : épis de faîtage terre cuite ou zinc, lambrequins zinc soudés étain, girouettes cuivre, rives décoratives. Techniques traditionnelles compatibles bâti girondin classé (échoppes, Chartrons, Bouscat). Devis 24h.",
         shortTitle: 'Ornements toiture',
+
+        authorBlock: {
+          name: 'Liroy Delsuc',
+          role: 'Couvreur-zingueur, fondateur — atelier Mérignac',
+          bio: "Les ornements sont l'âme d'une toiture patrimoniale. Depuis 2005, je restaure épis de faîtage, lambrequins zinc, girouettes cuivre sur le bâti girondin classé. Découpe et pliage à l'atelier de Mérignac pour respect strict des modèles d'origine. Sur bâti UNESCO Bordeaux Centre ou ABF (Chartrons, Bouscat), techniques et matériaux d'origine OBLIGATOIRES.",
+          badges: [
+            'Depuis 2005',
+            'Décennale active',
+            '5/5 sur 52 avis Google',
+            'Techniques traditionnelles',
+          ],
+        },
         presentation: (
           <>
             <p>
@@ -179,7 +194,76 @@ export default function Page() {
               "Contrôle d'alignement, de fixation, d'étanchéité. Photos avant/après remises avec attestation. Conseils d'entretien pour les décennies suivantes.",
           },
         ],
+
+        // ————————————————————————————————————————————————
+        // FAQ ORNEMENTS-FOCUSED (10 questions patrimoniales)
+        // ————————————————————————————————————————————————
+        faqOverride: [
+          {
+            question:
+              "Quels ornements peuvent être posés sur mon échoppe bordelaise ?",
+            answer:
+              "Les échoppes bordelaises XIXe traditionnelles portent typiquement : ÉPI DE FAÎTAGE en terre cuite ou zinc à l'axe central du faîtage (150-450 € pièce), LAMBREQUIN zinc soudé étain en bordure d'avant-toit (75-180 €/ml), rive décorative en tuile canal spécifique, corniche zinc en pignon. Nous restaurons chaque type à l'identique de l'original si les photos ou éléments d'époque sont disponibles.",
+          },
+          {
+            question:
+              "Combien coûte un épi de faîtage à Bordeaux en 2026 ?",
+            answer:
+              "Fourchettes 2026 : épi terre cuite standard 150-350 €, épi zinc soudé étain 250-550 €, épi restauration à l'identique (moulage sur modèle d'origine) 450-1 200 €, girouette cuivre standard 380-850 €, girouette sur mesure 850-2 500 €. Prix pose incluse (fixation + étanchéité). Sur mesure atelier Mérignac + pose site.",
+          },
+          {
+            question:
+              "Zinc, terre cuite ou cuivre : quel matériau choisir ?",
+            answer:
+              "Dépend du bâti d'origine. TERRE CUITE : compatible échoppes tuile canal, aspect chaud, coût modéré (150-450 €). ZINC : compatible bâti mixte, patine noble avec le temps, durabilité 40-60 ans (250-550 €). CUIVRE : bâti bourgeois, maisons de maître, aspect noble et patine verte iconique, durabilité 80-120 ans, coût élevé (450-2 500 €). Nous respectons TOUJOURS le matériau d'origine — sauf si la restauration l'exige.",
+          },
+          {
+            question:
+              "Faut-il un dossier ABF pour poser un épi ou une girouette ?",
+            answer:
+              "En secteur UNESCO Bordeaux Centre ou périmètre ABF (Chartrons, Bouscat centre, abords monuments historiques) : OUI si création d'un ornement nouveau ou changement de modèle. NON pour restauration à l'identique (même modèle, même matériau, même dimensions). Nous constituons systématiquement le dossier ABF si nécessaire. Délai instruction 2-4 mois.",
+          },
+          {
+            question:
+              "Combien de temps dure un ornement bien posé ?",
+            answer:
+              "Épi terre cuite : 40-60 ans si étanchéité respectée. Épi zinc soudé étain : 40-60 ans. Girouette cuivre : 80-120 ans (le cuivre s'améliore avec le temps). Lambrequin zinc soudé étain : 30-50 ans. Ces durées supposent une pose correcte (fixation + étanchéité + soudure sur place pour les éléments zinc). Nos ornements sont posés dans les règles de l'art pour tenir intergénérationnellement.",
+          },
+          {
+            question:
+              "Mon ornement d'origine est cassé — restauration ou remplacement ?",
+            answer:
+              "Dépend de l'état. RESTAURATION possible si : matériau récupérable, éléments manquants moulables à partir de l'existant, dommages localisés. Coût 60-70 % d'un neuf. REMPLACEMENT : matériau irrécupérable (terre cuite éclatée, zinc fortement corrodé), pièces multiples manquantes, réutilisation impossible. Nous privilégions TOUJOURS la restauration quand elle est techniquement viable — respect du bâti.",
+          },
+          {
+            question:
+              "Peut-on ajouter une girouette moderne sur une toiture ancienne ?",
+            answer:
+              "Techniquement oui, mais respectez l'ESTHÉTIQUE du bâti. Sur bâti girondin ancien, girouette de forme traditionnelle (coq, animal, motif floral) en cuivre ou zinc uniquement. Éviter les girouettes design contemporain ou en acier inoxydable sur échoppe XIXe — dissonance esthétique + refus ABF probable en secteur classé. Conseil personnalisé selon votre bâti.",
+          },
+          {
+            question:
+              "Comment se pose un lambrequin zinc ?",
+            answer:
+              "Découpe et pliage à l'atelier de Mérignac aux dimensions exactes relevées sur site. Motifs découpés à la scie sauteuse ou au laser selon complexité. Pose sur site avec fixation par clous cuivre (pas galvanisé — incompatible durée de vie zinc). Soudure étain de chaque jonction pour continuité étanche. Contrôle qualité soudure par soudure.",
+          },
+          {
+            question:
+              "Faut-il entretenir les ornements de toiture ?",
+            answer:
+              "Zinc et cuivre : AUCUN entretien, patine protectrice naturelle. NE PAS PEINDRE. Terre cuite : contrôle visuel tous les 5-10 ans, remplacement si fissuration (rare). Girouettes mécaniques : graissage discret du pivot tous les 15-20 ans si grincement. En général, un ornement bien posé se laisse tranquille pendant plusieurs décennies.",
+          },
+          {
+            question:
+              "Quelle garantie sur la pose d'ornements ?",
+            answer:
+              "Décennale (10 ans) sur l'ensemble de la prestation, obligation légale. Durabilité intrinsèque des matériaux : zinc 40-60 ans, cuivre 80-120 ans, terre cuite 40-60 ans. Fiche technique matériaux + attestation d'assurance + photos avant/après remises fin de chantier. Si défaut de fixation ou d'étanchéité dans les 10 ans, nous reprenons.",
+          },
+        ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }
