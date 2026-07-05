@@ -18,7 +18,12 @@ import { AvisGoogle } from '@/components/sections/AvisGoogle';
 import { RealisationsCarousel } from '@/components/sections/RealisationsCarousel';
 import { CTAFinal } from '@/components/sections/CTAFinal';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { getFAQSchema, getPlaceSchema, getReviewSchemas } from '@/lib/seo/schemas';
+import {
+  getFAQSchema,
+  getPersonLiroySchema,
+  getPlaceSchema,
+  getReviewSchemas,
+} from '@/lib/seo/schemas';
 import { FAQ } from '@/components/sections/FAQ';
 import { FAQ_APROPOS } from '@/data/faq';
 import { AVIS } from '@/data/avis';
@@ -365,89 +370,6 @@ export default function Page() {
         </Container>
       </section>
 
-      {/* SECTION, Notre équipe */}
-      <section className="section-y">
-        <Container>
-          <div className="max-w-3xl mb-12">
-            <Eyebrow className="mb-3">Notre équipe</Eyebrow>
-            <h2 className="mb-4">
-              Les artisans qui interviendront chez vous
-            </h2>
-            <p className="text-lead">
-              Nous travaillons en direct sans sous-traitance. L'artisan qui
-              vous reçoit pour le diagnostic est celui qui réalise les
-              travaux. Cette continuité est notre signature depuis 2005.
-            </p>
-          </div>
-
-          {/*
-            Cartes équipe, placeholder structuré. Remplacer les contenus
-            par les vrais prénoms / rôles / années d'expérience, et drop les
-            photos dans /public/images/team/{prenom}.webp. SmartImage gérera
-            le fallback en placeholder SVG si la photo n'existe pas encore.
-          */}
-          <ul
-            role="list"
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {[
-              {
-                name: 'Le couvreur principal',
-                role: 'Couvreur-zingueur · Fondateur',
-                years: 'Depuis 2005',
-                bio: "Forme l'équipe et supervise chaque chantier. Spécialité : démoussage, tuile canal, zinguerie traditionnelle.",
-              },
-              {
-                name: 'L\u2019équipe technique',
-                role: 'Couvreurs qualifiés',
-                years: 'Interventions quotidiennes',
-                bio: 'Équipe stable, formée sur place. Maîtrise tous matériaux : tuile canal et mécanique, ardoise, zinc, bac acier.',
-              },
-              {
-                name: 'Le pôle administratif',
-                role: 'Devis, factures, suivi',
-                years: 'Réponse sous 24h',
-                bio: "Réception des appels, élaboration des devis, suivi administratif. C'est nous que vous joignez par téléphone.",
-              },
-            ].map((member) => (
-              <li
-                key={member.name}
-                className="rounded-[var(--radius-lg)] bg-[var(--color-creme)] border border-[var(--color-border)] p-6"
-              >
-                {/* Avatar placeholder, couleur Ardoise avec initiale.
-                    Remplacer par <SmartImage variant="hero" slug={...} /> quand photo dispo. */}
-                <div
-                  aria-hidden="true"
-                  className="w-20 h-20 rounded-full bg-[var(--color-ardoise)] text-[var(--color-pierre)] grid place-items-center text-[1.75rem] font-bold mb-4"
-                >
-                  {member.name.charAt(0)}
-                </div>
-                <h3 className="text-[1.0625rem] font-bold text-[var(--color-ardoise)] mb-1">
-                  {member.name}
-                </h3>
-                <div className="text-[0.8125rem] font-semibold text-[var(--color-terre-600)] uppercase tracking-wider mb-1">
-                  {member.role}
-                </div>
-                <div className="text-[0.8125rem] text-[var(--color-gris-600)] mb-3">
-                  {member.years}
-                </div>
-                <p className="text-[0.9375rem] text-[var(--color-gris-600)] leading-relaxed">
-                  {member.bio}
-                </p>
-              </li>
-            ))}
-          </ul>
-
-          <div className="mt-8 p-5 rounded-[var(--radius-md)] bg-[var(--color-creme)] border border-dashed border-[var(--color-gris-300)] text-[0.875rem] text-[var(--color-gris-600)]">
-            💡 <strong className="text-[var(--color-ardoise)]">Note interne</strong> :
-            cette section attend tes vraies infos. Donne-moi les prénoms,
-            rôles, années d'expérience et photos de l'équipe (smartphone OK)
-            et je remplace le contenu en 5 min. Les photos vont dans{' '}
-            <code>/public/images/team/</code>.
-          </div>
-        </Container>
-      </section>
-
       {/* SECTION, Assurances et garanties (Attestations) */}
       <section className="section-y bg-[var(--color-creme)] border-y border-[var(--color-border)]">
         <Container>
@@ -547,13 +469,6 @@ export default function Page() {
             </a>
           </div>
 
-          <div className="mt-6 p-5 rounded-[var(--radius-md)] bg-[var(--color-pierre)] border border-dashed border-[var(--color-gris-300)] text-[0.875rem] text-[var(--color-gris-600)]">
-            💡 <strong className="text-[var(--color-ardoise)]">Note interne</strong> :
-            envoie-moi le scan de ton attestation décennale et de toute
-            certification dont tu disposes (RGE, Qualibat, Capeb, FFB) et
-            j'ajoute les logos officiels à cette section. C'est un signal
-            de confiance énorme.
-          </div>
         </Container>
       </section>
 
@@ -584,19 +499,22 @@ export default function Page() {
         subtitle="Décrivez-nous votre besoin en 2 minutes. Nous revenons vers vous sous 24h ouvrées avec un devis détaillé ou un conseil immédiat."
       />
 
+      {/* Schema Person Liroy — page auteur définitive du site (E-E-A-T massif) */}
+      <JsonLd data={getPersonLiroySchema()} />
       <JsonLd data={getPlaceSchema()} />
       <JsonLd data={getFAQSchema(FAQ_APROPOS)} />
-      {/* Review schemas — signaux Experience pour E-E-A-T (cf. seo-audit/eeat-*.md) */}
-      {getReviewSchemas(
-        AVIS.map((a) => ({
-          author: a.author,
-          rating: a.rating,
-          date: a.date,
-          text: a.text,
-        })),
-      ).map((schema, i) => (
-        <JsonLd key={`review-${i}`} data={schema} />
-      ))}
+      {/* Review schemas — uniquement si AVIS contient des avis réels (jamais fabriqués). */}
+      {AVIS.length > 0 &&
+        getReviewSchemas(
+          AVIS.map((a) => ({
+            author: a.author,
+            rating: a.rating,
+            date: a.date,
+            text: a.text,
+          })),
+        ).map((schema, i) => (
+          <JsonLd key={`review-${i}`} data={schema} />
+        ))}
     </>
   );
 }

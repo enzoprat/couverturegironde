@@ -633,9 +633,9 @@ const STATIC_PAGES: PageEntry[] = [
     path: '/a-propos',
     type: 'institutional',
     title: 'À propos',
-    seoTitle: 'À propos : Liroy Delsuc, couvreur Bordeaux depuis 2005',
+    seoTitle: 'À propos · Liroy Delsuc, couvreur Bordeaux depuis 2005',
     seoDescription:
-      "Couverture Gironde, fondée par Liroy Delsuc en 2005 à Mérignac. 20 ans d'expérience en Gironde, atelier rue de Malbos. Note 5/5 (52 avis). Garantie décennale.",
+      "Couverture Gironde, fondée par Liroy Delsuc en 2005 à Mérignac. 20 ans d'expérience, atelier rue de Malbos. 5/5 (52 avis) · Décennale active.",
     visibleInNav: true,
     navOrder: 70,
     visibleInFooter: true,
