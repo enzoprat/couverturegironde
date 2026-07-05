@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('reparation-toiture-bordeaux');
 
@@ -13,20 +15,33 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <ServicePageLayout
+    <>
+      <ServicePageLayout
       content={{
         service: 'reparation',
         slug: PAGE.slug,
         h1: (
           <>
-            Réparation de toiture à{' '}
-            <span className="text-[var(--color-terre)]">Bordeaux</span> et en
-            Gironde
+            Réparation toiture à{' '}
+            <span className="text-[var(--color-terre)]">Bordeaux</span> —
+            tuiles, faîtage, noue zinc, abergement
           </>
         ),
         heroSubtitle:
-          "Tuiles cassées, faîtage défaillant, infiltration, fissure, dégât de tempête. Diagnostic gratuit, intervention rapide, devis transparent. Couvreur depuis 2005 sur Bordeaux Métropole.",
+          "Tuiles cassées par le vent, faîtage disloqué, noue zinc percée, abergement de cheminée fuyard ? Diagnostic gratuit sur site sous 48h, devis chiffré ligne par ligne sous 24h, exécution en 1-3 semaines selon planning. Liroy, artisan couvreur direct depuis 2005, atelier au 65 rue de Malbos à Mérignac.",
         shortTitle: 'Réparation toiture',
+
+        authorBlock: {
+          name: 'Liroy Delsuc',
+          role: 'Couvreur-zingueur, fondateur — atelier Mérignac',
+          bio: "Je fais des réparations de toiture depuis 2005 sur Bordeaux Métropole. Chaque diagnostic par mes soins, chaque devis rédigé personnellement, chaque chantier supervisé. Ma méthode : remonter à la cause profonde plutôt que boucher le symptôme visible. Une fuite déclarée à un endroit a souvent son origine à 2 mètres de là — c'est ce qui évite les reprises et les surcoûts.",
+          badges: [
+            'Depuis 2005',
+            'Décennale active',
+            '5/5 sur 52 avis Google',
+            'Diagnostic gratuit',
+          ],
+        },
         presentation: (
           <>
             <p>
@@ -267,7 +282,76 @@ export default function Page() {
             },
           ],
         },
+
+        // ————————————————————————————————————————————————
+        // FAQ RÉPARATION-FOCUSED (10 questions ICP)
+        // ————————————————————————————————————————————————
+        faqOverride: [
+          {
+            question:
+              "Combien coûte une réparation de toiture à Bordeaux en 2026 ?",
+            answer:
+              "Fourchettes 2026 : remplacement 5-10 tuiles cassées 180-420 €, reprise faîtage scellé chaux 45-70 €/ml, reprise faîtage à sec ventilé 38-60 €/ml, reprise abergement cheminée 380-850 €, réparation noue zinc soudée étain 180-420 €/ml, remplacement gouttière zinc 85-140 €/ml, réparation Velux (kit étanchéité) 320-750 €, mise hors d'eau urgence 250-450 €. Diagnostic gratuit si chantier signé. Devis chiffré ligne par ligne sous 24h.",
+          },
+          {
+            question:
+              "Quel est votre délai d'intervention pour une réparation ?",
+            answer:
+              "Pour les urgences déclarées (fuite active), intervention 30 min à 2h en heures ouvrées sur Bordeaux Métropole depuis notre atelier de Mérignac. Pour les réparations non urgentes (tuiles à remplacer, faîtage à refaire), diagnostic sur site sous 48h, devis sous 24h après visite, chantier planifié 1-3 semaines selon disponibilité et matériaux à commander.",
+          },
+          {
+            question:
+              "Réparer ou refaire toute la toiture — comment décider ?",
+            answer:
+              "Trois critères objectifs : (1) l'âge de la couverture (>50 ans + peu d'entretien = envisager réfection), (2) le nombre de points faibles cumulés (>5 zones à reprendre = étudier réfection), (3) l'état de la charpente et de l'isolation sous-jacentes. Une réparation ciblée coûte 6-10× moins qu'une réfection tardive, mais si les points faibles s'accumulent, la réfection devient plus rentable sur la durée. Nous vous donnons l'analyse honnête après diagnostic complet.",
+          },
+          {
+            question:
+              "Comment identifiez-vous la vraie cause d'une fuite ?",
+            answer:
+              "Une fuite déclarée à un endroit a souvent son origine ailleurs (faîtage distant, noue, abergement, tuile fissurée en amont). Nous inspectons systématiquement TOUTE la toiture avant de chiffrer une réparation ponctuelle : photos des points critiques, sondages si nécessaire, test d'aspersion contrôlée pour valider. Cette méthode évite les reprises et les surcoûts — 90 % des fuites récidivantes viennent d'une mauvaise identification initiale de la cause.",
+          },
+          {
+            question:
+              "Mon assurance couvre-t-elle la réparation ?",
+            answer:
+              "Dans la plupart des cas si le sinistre est lié à un événement climatique (tempête vents >100 km/h, grêle, chute d'arbre) : votre assurance habitation multirisque prend en charge. Nous fournissons systématiquement le dossier complet nécessaire à votre déclaration : photos avant/après, devis chiffré ligne par ligne, attestation décennale. Nous restons disponibles pour tout échange direct avec l'expert d'assurance mandaté.",
+          },
+          {
+            question:
+              "Quels matériaux utilisez-vous pour les réparations ?",
+            answer:
+              "Tuile canal traditionnelle du Sud-Ouest (récupération si nécessaire pour bâti ancien), tuile mécanique standard pour pavillons 70-90, ardoise naturelle d'Angers pour bâti bourgeois. Zinc naturel patiné pour zinguerie soudée étain sur place. Mortier de chaux pour reprises de faîtage sur bâti ancien (compatible), mortier bâtard pour bâti récent. Kits Velux d'origine pour étanchéité Velux. Aucun matériau de récupération non identifié.",
+          },
+          {
+            question:
+              "Combien de temps dure une réparation ?",
+            answer:
+              "Remplacement 5-10 tuiles : 2-4h. Reprise faîtage 8-15 ml : 1 journée. Reprise abergement complet : 1 journée. Reprise noue zinc 5-10 ml : 1-2 jours. Réparation Velux : 1 journée. Mise hors d'eau urgence : 1-3h. Pour les réparations complexes (multiples points faibles), 2-5 jours. Le planning intègre systématiquement les créneaux météo.",
+          },
+          {
+            question:
+              "Faut-il une autorisation pour réparer sa toiture à Bordeaux ?",
+            answer:
+              "Pour une réparation à l'identique (même matériau, même teinte, même pente), aucune formalité. Pour un changement d'aspect (nouveau matériau, couleur différente, création Velux), déclaration préalable de travaux obligatoire. Certains secteurs de Bordeaux (centre UNESCO, périmètres ABF) peuvent être soumis à l'avis de l'Architecte des Bâtiments de France. Nous vérifions systématiquement et constituons les dossiers pour vous.",
+          },
+          {
+            question:
+              "Quelles garanties sur la réparation ?",
+            answer:
+              "Décennale (10 ans) sur l'ensemble de la prestation, obligation légale — notre attestation d'assurance est active et jointe à chaque devis avec dates de validité. Garantie biennale (2 ans) sur équipements (Velux, gouttières). Photos avant/après + attestation d'assurance + fiche technique matériaux remises en fin de chantier. Si la même fuite reprend au même endroit dans les 10 ans, nous revenons.",
+          },
+          {
+            question:
+              "Comment vérifier que vous êtes vraiment couvert par une décennale ?",
+            answer:
+              "Nous joignons systématiquement notre attestation décennale à chaque devis, avec dates de validité. Un couvreur qui rechigne à fournir ce document ou envoie un scan illisible cache probablement une décennale périmée ou absente — refusez de signer. Sans décennale valide, vous n'auriez aucun recours en cas de sinistre post-chantier.",
+          },
+        ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }

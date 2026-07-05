@@ -139,9 +139,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Réparation toiture Bordeaux',
     navLabel: 'Réparation toiture',
     seoTitle:
-      'Réparation toiture Bordeaux : intervention 24h, diagnostic gratuit',
+      'Réparation toiture Bordeaux · diagnostic gratuit · 24h',
     seoDescription:
-      "★ Réparation toiture Bordeaux ★ Tuiles cassées, fuite, faîtage, étanchéité ✓ Intervention sous 24h ✓ Diagnostic gratuit ✓ Note 5/5 (52 avis) ✓ Garantie décennale.",
+      "★ Réparation toiture Bordeaux · Tuiles cassées, faîtage, noue, abergement · Diagnostic gratuit · Liroy artisan direct · 5/5 (52 avis) · Devis 24h.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 30,
