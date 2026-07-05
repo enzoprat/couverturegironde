@@ -106,9 +106,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Traitement hydrofuge Bordeaux',
     navLabel: 'Traitement hydrofuge',
     seoTitle:
-      'Hydrofuge toiture Bordeaux garantie 10 ans · 6-12 €/m²',
+      'Hydrofuge toiture Bordeaux · garantie 10 ans · 6-12 €/m²',
     seoDescription:
-      "★ Hydrofuge toiture Bordeaux garantie 10 ans ★ Protection humidité, mousses, cycles gel-dégel ✓ Tarif 6-12 €/m² ✓ Couvreur depuis 2005 ✓ Note 5/5 (52 avis) ✓ Devis 24h.",
+      "★ Hydrofuge toiture Bordeaux 6-12 €/m² · Garantie 10 ans · Protection mousses + gel-dégel · Liroy artisan direct · 5/5 (52 avis) · Devis 24h.",
     visibleInNav: true,
     navCategory: 'entretien',
     navOrder: 22,
