@@ -437,9 +437,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'ville',
     ville: 'libourne',
     title: 'Couvreur Libourne',
-    seoTitle: 'Couvreur Libourne Libournais : tuile romane | 5/5 (52 avis)',
+    seoTitle: 'Couvreur Libourne ★ tuile romane + Libournais ★ 5/5',
     seoDescription:
-      "Couvreur à Libourne et dans le Libournais depuis 2005 : démoussage, réparation, zinguerie, tuile romane et canal. Note 5/5 (52 avis). Devis gratuit 24h.",
+      "★ Couvreur Libourne depuis 2005 · Bâti girondin pierre + tuile romane · Châteaux viticoles · Liroy artisan direct · 5/5 (52 avis) · Décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,

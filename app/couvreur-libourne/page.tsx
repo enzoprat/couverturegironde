@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { VillePageLayout } from '@/components/content/VillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-libourne');
 
@@ -13,12 +15,49 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <VillePageLayout
-      content={{
-        slug: PAGE.slug,
-        villeSlug: 'libourne',
-        heroSubtitle:
-          "Couvreur-zingueur à Libourne et dans le Libournais depuis 2005. Démoussage, réparation, zinguerie sur tuile romane et tuile canal traditionnelles. Intervention sur Libourne, Saint-Émilion, Pomerol et environs vignobles. Devis gratuit 24h, garantie décennale.",
+    <>
+      <VillePageLayout
+        content={{
+          slug: PAGE.slug,
+          villeSlug: 'libourne',
+          h1: (
+            <>
+              Couvreur à{' '}
+              <span className="text-[var(--color-terre)]">Libourne</span> depuis
+              2005 — tuile romane, bâti girondin + châteaux
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac (45 km)',
+            bio: "Je couvre Libourne et le Libournais depuis 2005 depuis mon atelier de Mérignac (45 km, 45 min). Le Libournais concentre du bâti girondin traditionnel : maisons en PIERRE + tuile romane ou canal, échoppes libournaises XIXe, châteaux viticoles Saint-Émilion/Pomerol. Techniques traditionnelles (mortier chaux + tuile récupération) essentielles. J'organise des journées d'intervention groupées Libournais pour maîtriser les frais de déplacement.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Tuile romane spécialiste',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac, à 45 km (45 min) de Libourne via A89. Nous organisons des journées d'intervention groupées Libournais (Libourne + Saint-Émilion + Pomerol + Fronsac) pour maîtriser les frais de déplacement.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
+
+          heroSubtitle:
+            "Couvreur-zingueur à Libourne depuis 2005, atelier à Mérignac (45 km). Spécialiste bâti girondin traditionnel : maisons pierre + tuile romane, échoppes libournaises, châteaux viticoles Saint-Émilion/Pomerol. Journées groupées Libournais. Devis 24h.",
         contexteLocal: (
           <>
             <p>
@@ -184,8 +223,45 @@ export default function Page() {
             answer:
               "Libourne, Saint-Émilion, Pomerol, Lussac, Montagne, Castillon-la-Bataille, Coutras, Galgon, Branne, et tout le secteur viticole. Pour les communes plus éloignées (Sainte-Foy-la-Grande, Pellegrue), un surcoût de déplacement s'applique. Devis personnalisé après visite.",
           },
+          {
+            question:
+              "Comment vérifier votre décennale avant signature ?",
+            answer:
+              "Nous joignons systématiquement notre attestation d'assurance décennale à chaque devis, avec ses dates de validité. Un artisan qui rechigne à fournir ce document cache probablement une décennale périmée ou absente.",
+          },
         ],
+
+        // ————————————————————————————————————————————————
+        // QUESTIONS À POSER À TOUT COUVREUR LIBOURNAIS
+        // ————————————————————————————————————————————————
+        questionsCouvreur: {
+          intro:
+            "3 questions à poser à tout couvreur pour Libourne, particulièrement sur bâti girondin traditionnel (pierre + tuile romane).",
+          items: [
+            {
+              question:
+                "Utilisez-vous du mortier de chaux sur mes tuiles anciennes ?",
+              answer:
+                "Sur bâti libournais ancien, mortier de CHAUX obligatoire (respire, compatible tuile ancienne). Un couvreur qui propose du ciment moderne sur maison girondine XIXe = danger : ciment dur qui fissure la tuile ancienne.",
+            },
+            {
+              question:
+                "Fournissez-vous de la tuile romane de récupération ?",
+              answer:
+                "Pour respect esthétique bâti libournais patrimonial, tuile romane de récupération souvent préférable (aspect vieilli identique). Un couvreur sérieux dispose ou peut sourcer ces matériaux. Nous en avons régulièrement en stock à l'atelier.",
+            },
+            {
+              question:
+                "Comment organisez-vous vos déplacements depuis Bordeaux ?",
+              answer:
+                "Un couvreur bordelais qui vient à Libourne pour UN chantier facture 150-300 € de déplacement. Nous organisons des JOURNÉES GROUPÉES sur le Libournais (2-3 chantiers/jour) — coût déplacement absorbé, tarifs identiques à Bordeaux Métropole.",
+            },
+          ],
+        },
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }
