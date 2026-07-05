@@ -210,9 +210,9 @@ const STATIC_PAGES: PageEntry[] = [
     service: 'neuve',
     title: 'Toiture neuve Bordeaux',
     navLabel: 'Toiture neuve',
-    seoTitle: 'Toiture neuve Bordeaux et Gironde : construction clé en main',
+    seoTitle: 'Toiture neuve Bordeaux · 85-220 €/m² · clé en main',
     seoDescription:
-      "★ Toiture neuve à Bordeaux et en Gironde ★ Construction clé en main : charpente + couverture + zinguerie + isolation ✓ Maîtrise d'œuvre globale ✓ Note 5/5 (52 avis) ✓ Devis 24h.",
+      "★ Toiture neuve Bordeaux · Charpente + couverture + zinguerie + isolation · Liroy artisan direct · 5/5 (52 avis) · Devis 24h · Décennale.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 32,
