@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('capotage-toiture-bordeaux');
 
@@ -13,20 +15,33 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <ServicePageLayout
+    <>
+      <ServicePageLayout
       content={{
         service: 'reparation',
         slug: PAGE.slug,
         h1: (
           <>
-            Capotage toiture à{' '}
-            <span className="text-[var(--color-terre)]">Bordeaux</span> —
-            étanchéité rives, faîtages et jonctions zinc
+            Capotage toiture{' '}
+            <span className="text-[var(--color-terre)]">Bordeaux</span> — rives,
+            faîtages, jonctions zinc soudé étain
           </>
         ),
         heroSubtitle:
-          "Capotage toiture à Bordeaux par artisan couvreur-zingueur depuis 2005. Réalisation de capotages sur mesure en zinc soudé étain pour rives, faîtages, jonctions maçonnerie et éléments saillants. Étanchéité 30 ans, décennale, devis gratuit sous 24h.",
+          "Capotage sur mesure en zinc naturel ou prépatiné, soudure étain sur place (durabilité 30-50 ans). Rives latérales, faîtages, abergements cheminées, jonctions maçonnerie. Découpe et pliage à l'atelier Mérignac. Devis chiffré ligne par ligne sous 24h.",
         shortTitle: 'Capotage toiture',
+
+        authorBlock: {
+          name: 'Liroy Delsuc',
+          role: 'Couvreur-zingueur, fondateur — atelier Mérignac',
+          bio: "Le capotage est un savoir-faire de zingueur pur. Depuis 2005, je réalise capotages rives + faîtages + abergements sur le bâti bordelais : découpe et pliage à l'atelier de Mérignac, pose et soudure ÉTAIN sur place. Pas de mastic, pas de joints silicone — ces techniques amateur tiennent 5-8 ans max en climat girondin. Un capotage zinc soudé étain tient 30-50 ans sans reprise.",
+          badges: [
+            'Depuis 2005',
+            'Décennale active',
+            '5/5 sur 52 avis Google',
+            'Soudure étain sur place',
+          ],
+        },
         presentation: (
           <>
             <p>
@@ -278,7 +293,76 @@ export default function Page() {
             },
           ],
         },
+
+        // ————————————————————————————————————————————————
+        // FAQ CAPOTAGE-FOCUSED (10 questions techniques)
+        // ————————————————————————————————————————————————
+        faqOverride: [
+          {
+            question:
+              "Qu'est-ce qu'un capotage de toiture concrètement ?",
+            answer:
+              "Un capotage désigne l'ensemble des habillages zinc qui PROTÈGENT LES POINTS D'ARRÊT de la couverture — là où la toiture se termine ou se raccorde à un élément vertical (mur, cheminée, souche). Types : capotage rive (bord latéral), capotage faîtage (ligne haute), abergement cheminée (autour souche), capotage jonction mur mitoyen. Un capotage bien exécuté = étanchéité durable des jonctions, points faibles typiques de toute couverture.",
+          },
+          {
+            question:
+              "Combien coûte un capotage à Bordeaux en 2026 ?",
+            answer:
+              "Fourchettes 2026 : capotage rive latérale zinc soudé 55-90 €/ml, capotage faîtage zinc couronnement 65-105 €/ml, capotage rive complexe (angle, saillie) 80-130 €/ml, abergement cheminée complet 380-850 €, capotage jonction mur mitoyen 55-95 €/ml, capotage lucarne/chatière 180-480 €. Zinc prépatiné (anthra-zinc, quartz-zinc) : +15-25 %. Devis personnalisé après visite.",
+          },
+          {
+            question:
+              "Soudure étain ou mastic pour mon capotage ?",
+            answer:
+              "SOUDURE ÉTAIN OBLIGATOIRE. La soudure = fusion mécanique du zinc, étanchéité PERMANENTE 30-50 ans sans reprise. Le mastic ou silicone se dégrade en 5-8 ans en climat girondin humide + UV. En bord de mer (Arcachon), le mastic tient 3-5 ans max. Un capotage collé au mastic est un capotage cosmétique, pas durable. Nous soudons TOUJOURS.",
+          },
+          {
+            question:
+              "Zinc naturel ou prépatiné pour mon capotage ?",
+            answer:
+              "Dépend du bâti et de la visibilité. ZINC NATUREL : brillant à la pose, patine grise-mate en 2-5 ans (carbonate de zinc). Choix classique pavillonnaire. ZINC PRÉPATINÉ (anthra-zinc anthracite, quartz-zinc gris clair) : aspect vieilli DÈS la pose, harmonie immédiate avec bâti patrimonial. Coût +15-25 %. Sur Chartrons, Bouscat, quartiers patrimoniaux Bordeaux : prépatiné préconisé.",
+          },
+          {
+            question:
+              "Puis-je remplacer mon capotage acier galvanisé par du zinc ?",
+            answer:
+              "OUI, et c'est même fortement recommandé. Un capotage acier galvanisé standard se dégrade rapidement en climat girondin : traces de rouille en 5 ans, perforation en 10. Le zinc-titane résiste 30-50 ans dans les mêmes conditions. Sur la durée totale, le zinc revient MOINS CHER au m² par an. Nous remplaçons régulièrement des capotages acier galvanisé par zinc soudé étain.",
+          },
+          {
+            question:
+              "Faut-il une autorisation pour poser un capotage ?",
+            answer:
+              "Pour un remplacement à l'identique (même matériau, même aspect), aucune formalité. Pour un changement de matériau (galvanisé → zinc) ou de couleur (naturel → prépatiné), déclaration préalable de travaux généralement requise. En secteur UNESCO Bordeaux Centre ou périmètre ABF (Chartrons, abords monuments), l'avis ABF est demandé. Nous vérifions et constituons les dossiers pour vous.",
+          },
+          {
+            question:
+              "Comment se déroule un chantier de capotage ?",
+            answer:
+              "Étapes : (1) diagnostic + prise de mesures précises sur site, (2) devis chiffré sous 24h, (3) découpe et pliage à l'atelier de Mérignac aux dimensions exactes, (4) sécurisation + pose sur site avec ajustement précis, (5) soudure étain de chaque raccord avec chalumeau, (6) test d'étanchéité par aspersion. Durée typique : chantier standard 1-2 jours atelier + 1 jour pose.",
+          },
+          {
+            question:
+              "Un capotage nécessite-t-il de l'entretien ?",
+            answer:
+              "NON, aucun entretien. Le zinc-titane forme une patine protectrice naturelle qui le rend inaltérable. NE PAS PEINDRE (empêche la formation de la patine et provoque une oxydation accélérée). Un capotage zinc soudé étain bien posé tient 30-50 ans sans aucune intervention.",
+          },
+          {
+            question:
+              "Bord de mer (Arcachon) : zinc marine obligatoire ?",
+            answer:
+              "OUI. En air salin direct (Le Pyla, Pereire, Moulleau), zinc marine PRÉPATINÉ anti-air-salin obligatoire. Coût +20 % vs zinc standard, mais durabilité 30-50 ans conservée. Un zinc standard en bord de mer subit une oxydation accélérée sans la patine protectrice classique — dégradation 5-10 ans au lieu de 30-50. Voir notre page /zinguerie-arcachon.",
+          },
+          {
+            question:
+              "Quelle garantie sur le capotage ?",
+            answer:
+              "Décennale (10 ans) sur l'ensemble de la prestation, obligation légale. Durabilité intrinsèque du zinc soudé étain estimée à 30-50 ans SANS reprise. Fiche technique matériaux VMZINC (ou équivalent qualité France/Belgique) + attestation d'assurance + photos avant/après remises en fin de chantier.",
+          },
+        ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }

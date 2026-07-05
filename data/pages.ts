@@ -494,9 +494,9 @@ const STATIC_PAGES: PageEntry[] = [
     service: 'reparation',
     title: 'Capotage toiture Bordeaux',
     seoTitle:
-      'Capotage toiture Bordeaux ★ étanchéité rives + faîtage zinc',
+      'Capotage toiture Bordeaux · rives + faîtage zinc soudé',
     seoDescription:
-      "★ Capotage toiture Bordeaux depuis 2005 ★ Rives, faîtages, jonctions maçonnerie en zinc soudé ✓ Étanchéité 30 ans ✓ Soudure étain sur place ✓ 5/5 (52 avis) ✓ Devis 24h.",
+      "★ Capotage toiture Bordeaux · Rives, faîtages, jonctions maçonnerie en zinc soudé étain · Liroy artisan direct · 5/5 (52 avis) · Décennale.",
     indexable: true,
     sitemapPriority: 0.75,
   },
