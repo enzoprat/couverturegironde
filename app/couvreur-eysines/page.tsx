@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { VillePageLayout } from '@/components/content/VillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-eysines');
 
@@ -13,12 +15,49 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <VillePageLayout
-      content={{
-        slug: PAGE.slug,
-        villeSlug: 'eysines',
-        heroSubtitle:
-          "Couvreur-zingueur à Eysines depuis 2005, présent chaque jour sur les toitures du centre, du Vigean, de Carès-Cantinolle et de Migron. Démoussage, nettoyage, réparation et zinguerie. Atelier voisin à 4 km à Mérignac, garantie décennale, devis gratuit sous 24h.",
+    <>
+      <VillePageLayout
+        content={{
+          slug: PAGE.slug,
+          villeSlug: 'eysines',
+          h1: (
+            <>
+              Couvreur à{' '}
+              <span className="text-[var(--color-terre)]">Eysines</span> depuis
+              2005 — atelier voisin (4 km), urgence 15-30 min
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac (4 km d\u2019Eysines)',
+            bio: "Je couvre Eysines depuis 2005 depuis mon atelier de Mérignac (4 km, 8 min). C'est ma commune voisine — les délais et tarifs sont identiques à ceux de Mérignac. Eysines présente un mix pavillonnaire + habitat maraîcher traditionnel (Le Vigean, Migron) avec tuile canal sur bâtisses anciennes. Sur ce bâti maraîcher patrimonial, techniques traditionnelles (mortier chaux, tuile récupération) essentielles.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Urgence 15-30 min',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac, à 4 km (8 min) d'Eysines — commune voisine directe. Cette proximité permet une intervention urgence 15-30 min en heures ouvrées, avec les mêmes tarifs qu'à Mérignac (aucun surcoût déplacement).",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
+
+          heroSubtitle:
+            "Couvreur-zingueur à Eysines depuis 2005, atelier à Mérignac (4 km, 8 min). Commune voisine directe : intervention 15-30 min, tarifs identiques à Mérignac. Spécialiste pavillonnaire + habitat maraîcher traditionnel Le Vigean/Migron. 5/5 sur 52 avis Google, décennale.",
         contexteLocal: (
           <>
             <p>
@@ -185,8 +224,48 @@ export default function Page() {
             answer:
               "Oui, sur les chantiers supérieurs à 5 000 € HT, paiement en 2 ou 3 fois sans frais. Pour les éco-PTZ rénovation énergétique de toiture, justificatifs fournis à votre banque.",
           },
+          {
+            question:
+              "Facturez-vous un surcoût déplacement pour Eysines ?",
+            answer:
+              "NON. Eysines est notre commune voisine directe (4 km, 8 min via A630). Nos petites interventions (remplacement 5 tuiles, contrôle ponctuel, reprise zinguerie) sont facturées SANS surcoût kilométrique, tarifs identiques à Mérignac. Un couvreur qui vous facture un forfait déplacement 80-120 € pour Eysines n'est probablement pas voisin.",
+          },
+          {
+            question:
+              "Comment vérifier votre décennale avant signature ?",
+            answer:
+              "Nous joignons systématiquement notre attestation d'assurance décennale à chaque devis, avec ses dates de validité. Un artisan qui rechigne à fournir ce document cache probablement une décennale périmée ou absente.",
+          },
         ],
+
+        questionsCouvreur: {
+          intro:
+            "3 questions à poser à tout couvreur qui vous propose un devis pour Eysines.",
+          items: [
+            {
+              question:
+                "Quel est votre délai réel d'intervention à Eysines en urgence ?",
+              answer:
+                "Un couvreur voisin (Mérignac, Bordeaux Nord) répond 15-30 min en heures ouvrées. Notre atelier est à 4 km (8 min via A630). Si un couvreur annonce « 2-4 heures » ou « dans la journée », il envoie probablement une équipe depuis Bordeaux ou hors métropole = perte de temps critique en urgence tempête.",
+            },
+            {
+              question:
+                "Facturez-vous un forfait déplacement kilométrique ?",
+              answer:
+                "Un artisan voisin ne facture PAS de kilométrique sur Eysines. Nos petits chantiers (5 tuiles, contrôle, reprise ponctuelle) sont sans surcoût déplacement. Un couvreur qui ajoute 80-120 € forfait déplacement pour Eysines n'est pas voisin.",
+            },
+            {
+              question:
+                "Votre devis inclut-il tous les postes ou reste-t-il des lignes ouvertes ?",
+              answer:
+                "Nos devis détaillent chaque poste (main d'œuvre, matériaux, sécurité, accès, TVA). Aucune ligne « divers » — vous savez exactement ce que vous signez et le total ne bouge pas.",
+            },
+          ],
+        },
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }

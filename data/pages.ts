@@ -411,9 +411,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'ville',
     ville: 'eysines',
     title: 'Couvreur Eysines',
-    seoTitle: 'Couvreur Eysines : démoussage, réparation | 5/5 (52 avis)',
+    seoTitle: 'Couvreur Eysines ★ atelier 4 km · urgence 15-30 min ★ 5/5',
     seoDescription:
-      "Couvreur à Eysines depuis 2005 : démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Atelier voisin à 4 km à Mérignac. Note 5/5 (52 avis). Devis 24h.",
+      "★ Couvreur Eysines depuis 2005 · Atelier voisin à 4 km · Urgence 15-30 min · Liroy artisan direct · 5/5 (52 avis) · Devis 24h · Décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
