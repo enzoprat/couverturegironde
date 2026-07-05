@@ -333,7 +333,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Pessac',
     seoTitle: 'Couvreur Pessac ★ réparation fuite + démoussage ★ 5/5',
     seoDescription:
-      "★ Couvreur Pessac depuis 2005 ★ Réparation fuite toiture, démoussage, nettoyage, zinguerie ✓ Urgence 7j/7 en 30-60 min ✓ 5/5 (52 avis) ✓ Devis 24h ✓ Décennale.",
+      "★ Couvreur Pessac depuis 2005 · Réparation fuite, démoussage, zinguerie · Urgence 30-60 min · Liroy artisan direct · 5/5 (52 avis) · Devis 24h.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,

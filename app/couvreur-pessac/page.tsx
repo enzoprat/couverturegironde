@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { VillePageLayout } from '@/components/content/VillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-pessac');
 
@@ -13,12 +15,49 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <VillePageLayout
-      content={{
-        slug: PAGE.slug,
-        villeSlug: 'pessac',
-        heroSubtitle:
-          "Couvreur-zingueur à Pessac, intervention chaque jour sur les toitures du centre, de Saige, Cap-de-Bos et Toctoucau. Démoussage, nettoyage, réparation et zinguerie. 20 ans d'expérience, garantie décennale, devis gratuit sous 24h.",
+    <>
+      <VillePageLayout
+        content={{
+          slug: PAGE.slug,
+          villeSlug: 'pessac',
+          h1: (
+            <>
+              Couvreur à{' '}
+              <span className="text-[var(--color-terre)]">Pessac</span> depuis
+              2005 — intervention 30-60 min depuis Mérignac
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac (7 km de Pessac)',
+            bio: "Je couvre Pessac quotidiennement depuis 2005 depuis mon atelier de Mérignac (7 km, 15 min via A630). Je connais bien les 3 typologies pessacaises : les copropriétés universitaires (Saige, Alouette) qui demandent format syndic + attestations, les pavillons Cap-de-Bos/Toctoucau sous couvert végétal dense (hydrofuge INDISPENSABLE), et le bâti bourgeois du centre (tuile canal traditionnelle + ardoise). Chaque devis rédigé et signé par moi, aucune sous-traitance.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Urgence 30-60 min (ouvré)',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac, à 7 km (15 min via A630) du centre de Pessac. Cette proximité permet une intervention urgence en 30-60 minutes en heures ouvrées sur toute la commune pessacaise, sans surcoût de déplacement.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
+
+          heroSubtitle:
+            "Couvreur-zingueur à Pessac depuis 2005, atelier à Mérignac (7 km). Intervention 30-60 min en heures ouvrées sur toutes les toitures pessacaises : centre bourgeois, Saige, Cap-de-Bos, Toctoucau, Alouette. Démoussage, hydrofuge, réparation, zinguerie. Devis 24h, décennale, 5/5 sur 52 avis Google.",
         contexteLocal: (
           <>
             <p>
@@ -251,8 +290,51 @@ export default function Page() {
             answer:
               "Nous acceptons les paiements échelonnés en 2 à 3 fois sans frais sur les chantiers supérieurs à 5 000 € HT. Pour les éco-prêts à taux zéro liés à la rénovation énergétique, nous fournissons toutes les pièces justificatives nécessaires à votre dossier bancaire.",
           },
+          {
+            question:
+              "Pourquoi les toitures pessacaises ont-elles autant de mousses ?",
+            answer:
+              "Trois facteurs conjoints : (1) le couvert végétal exceptionnellement dense (Bourgailh 1 000 hectares, domaine universitaire arboré, parc Bordelais, alignements dans les lotissements Saige), (2) le climat océanique humide (930 mm/an, hivers doux), (3) beaucoup de bâti pavillonnaire tuile mécanique 70-90 poreuse. Résultat : mousses systématiques versants nord, cycle de démoussage recommandé tous les 3-4 ans (vs 4-5 ans en moyenne bordelaise). Hydrofuge après démoussage FORTEMENT recommandé pour tenir 8-10 ans.",
+          },
+          {
+            question:
+              "Comment vérifier votre décennale avant signature ?",
+            answer:
+              "Nous joignons systématiquement notre attestation d'assurance décennale à chaque devis, avec ses dates de validité. Un artisan qui rechigne à fournir ce document cache probablement une décennale périmée ou absente — refusez de signer. Sans décennale valide, aucun recours en cas de sinistre post-chantier.",
+          },
         ],
+
+        // ————————————————————————————————————————————————
+        // QUESTIONS À POSER À TOUT COUVREUR PESSACAIS
+        // ————————————————————————————————————————————————
+        questionsCouvreur: {
+          intro:
+            "3 questions à poser à tout couvreur qui vous propose un devis pour Pessac. Elles séparent en 2 minutes les artisans réels des intermédiaires opportunistes.",
+          items: [
+            {
+              question:
+                "Où est votre atelier ? Puis-je passer le voir ?",
+              answer:
+                "Un artisan qui intervient VRAIMENT à Pessac a un atelier vérifiable — soit à Pessac même (Clivaz, AT Rénovation), soit à proximité immédiate. Notre atelier est au 65 rue de Malbos à Mérignac (7 km, 15 min), ouvert lundi-vendredi 6h-22h. Un couvreur qui refuse ou envoie une adresse de boîte postale est probablement un intermédiaire commercial.",
+            },
+            {
+              question:
+                "Quel est votre délai réel d'intervention à Pessac en urgence ?",
+              answer:
+                "Un couvreur sérieux basé sur Pessac ou immédiatement voisin répond 30-60 minutes en heures ouvrées. Si la réponse est « 2-4 heures » ou « dans la journée », vous parlez probablement à une structure qui envoie une équipe depuis Bordeaux ou hors métropole. En saison tempête, la différence de délai peut coûter cher en dégâts intérieurs.",
+            },
+            {
+              question:
+                "Votre devis inclut-il tous les postes ou reste-t-il des lignes ouvertes ?",
+              answer:
+                "Un devis exhaustif détaille chaque poste : main d'œuvre, matériaux, échafaudage, protection abords, évacuation des déchets, TVA. Nos devis n'ont aucune ligne « divers et imprévus » restée ouverte — vous savez exactement ce que vous signez et le total ne bouge pas en cours de chantier.",
+            },
+          ],
+        },
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }
