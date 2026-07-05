@@ -20,9 +20,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'home',
     title: 'Accueil',
     seoTitle:
-      'Couvreur Bordeaux ★ 5/5 sur 52 avis ★ Devis 24h, urgence 7j/7',
+      'Couverture Gironde · Couvreur Mérignac depuis 2005 · 5/5',
     seoDescription:
-      "Couvreur-zingueur à Bordeaux depuis 2005 ✓ Démoussage, nettoyage, réparation toiture ✓ Urgence fuite 7j/7 sous 1h ✓ Note 5/5 sur 52 avis Google ✓ Devis gratuit 24h, garantie décennale.",
+      "Couverture Gironde · Artisan couvreur-zingueur à Mérignac depuis 2005 · Bordeaux Métropole et Gironde · Liroy · 5/5 (52 avis) · Décennale.",
     visibleInNav: true,
     navOrder: 10,
     indexable: true,

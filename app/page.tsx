@@ -10,7 +10,12 @@ import { ZonesDesservies } from '@/components/sections/ZonesDesservies';
 import { Urgence } from '@/components/sections/Urgence';
 import { CTAFinal } from '@/components/sections/CTAFinal';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { getFAQSchema, getHowToSchema, getReviewSchemas } from '@/lib/seo/schemas';
+import {
+  getFAQSchema,
+  getHowToSchema,
+  getPersonLiroySchema,
+  getReviewSchemas,
+} from '@/lib/seo/schemas';
 import { FAQ_GENERAL } from '@/data/faq';
 import { AVIS } from '@/data/avis';
 import { requirePage } from '@/lib/pages';
@@ -43,12 +48,11 @@ export default function HomePage() {
         eyebrow="Mérignac · Bordeaux · 5/5 sur 52 avis Google"
         title={
           <>
-            Couvreur à{' '}
-            <span className="text-[var(--color-terre)]">Bordeaux</span> :
-            démoussage, nettoyage et entretien de toiture en Gironde
+            <span className="text-[var(--color-terre)]">Couverture Gironde</span>{' '}
+            — artisan couvreur à Mérignac depuis 2005
           </>
         }
-        subtitle="Artisan couvreur-zingueur à Bordeaux depuis 2005, atelier à Mérignac. Intervention rapide 7j/7, devis gratuit sous 24h et garantie décennale. Présent sur tout Bordeaux Métropole et le département (33)."
+        subtitle="Liroy Delsuc, couvreur-zingueur, atelier au 65 rue de Malbos à Mérignac. Démoussage, nettoyage, réparation, urgence 7j/7 sur Bordeaux Métropole et toute la Gironde. Devis gratuit sous 24h, garantie décennale, 5/5 sur 52 avis Google."
         imageSlug="home"
         secondaryCtaLabel="Demander un devis gratuit"
       />
@@ -85,19 +89,23 @@ export default function HomePage() {
 
       <CTAFinal />
 
-      {/* SEO E-E-A-T : Review + HowTo + FAQ enrichissent les signaux
-          Experience + Expertise sur la homepage (cf. seo-audit/eeat-*.md) */}
+      {/* SEO E-E-A-T : Person + FAQ + HowTo enrichissent les signaux
+          Experience + Expertise sur la homepage. Person signal la marque
+          personnelle Liroy sur la page auteur ancre du site. */}
+      <JsonLd data={getPersonLiroySchema()} />
       <JsonLd data={getFAQSchema(FAQ_GENERAL)} />
-      {getReviewSchemas(
-        AVIS.map((a) => ({
-          author: a.author,
-          rating: a.rating,
-          date: a.date,
-          text: a.text,
-        })),
-      ).map((schema, i) => (
-        <JsonLd key={`review-${i}`} data={schema} />
-      ))}
+      {/* Review schemas : uniquement si AVIS contient des avis réels. */}
+      {AVIS.length > 0 &&
+        getReviewSchemas(
+          AVIS.map((a) => ({
+            author: a.author,
+            rating: a.rating,
+            date: a.date,
+            text: a.text,
+          })),
+        ).map((schema, i) => (
+          <JsonLd key={`review-${i}`} data={schema} />
+        ))}
       <JsonLd
         data={getHowToSchema({
           name: "Comment se déroule un démoussage de toiture en Gironde",
