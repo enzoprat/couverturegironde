@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { VillePageLayout } from '@/components/content/VillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-begles');
 
@@ -13,12 +15,49 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <VillePageLayout
-      content={{
-        slug: PAGE.slug,
-        villeSlug: 'begles',
-        heroSubtitle:
-          "Couvreur-zingueur à Bègles depuis 2005. Démoussage, nettoyage, réparation toiture et zinguerie en bord de Garonne. Intervention sur tout le territoire béglais, garantie décennale, devis sous 24h.",
+    <>
+      <VillePageLayout
+        content={{
+          slug: PAGE.slug,
+          villeSlug: 'begles',
+          h1: (
+            <>
+              Couvreur à{' '}
+              <span className="text-[var(--color-terre)]">Bègles</span> depuis
+              2005 — échoppes ouvrières + toits-terrasses ZAC
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac (11 km de Bègles)',
+            bio: "Je couvre Bègles depuis 2005 depuis mon atelier de Mérignac (11 km, 20 min). Bègles présente 2 typologies très distinctes : (1) les maisons ouvrières traditionnelles (Terres-Neuves, Birambits, Carle-Vernet) en tuile canal ou mécanique + zinguerie basique à moderniser, (2) les ZAC récentes (Mairie, Bègles Plage) avec toits-terrasses EPDM/SEL et zinguerie contemporaine. J'adapte techniques et matériaux à chaque cas.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Urgence 30-90 min',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac, à 11 km (20 min) de Bègles via A630 + rocade. Cette proximité permet une intervention urgence en 30-90 minutes en heures ouvrées sur toute la commune béglaise.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
+
+          heroSubtitle:
+            "Couvreur-zingueur à Bègles depuis 2005, atelier à Mérignac (11 km). Spécialiste 2 typologies : échoppes ouvrières traditionnelles (Terres-Neuves, Birambits) et toits-terrasses ZAC récentes (EPDM, SEL). Intervention 30-90 min, décennale, 5/5 sur 52 avis Google.",
         contexteLocal: (
           <>
             <p>
@@ -192,8 +231,51 @@ export default function Page() {
             answer:
               "Réfection à l'identique : pas de formalité dans la majorité des cas. Changement de matériau ou de teinte : déclaration préalable obligatoire. Certains secteurs proches du Carle-Vernet peuvent demander un avis ABF. Nous vous guidons précisément dès le diagnostic.",
           },
+          {
+            question:
+              "EPDM ou SEL : quelle étanchéité pour mon toit-terrasse en ZAC ?",
+            answer:
+              "EPDM (caoutchouc synthétique) : durée de vie 30-50 ans, résistant UV, pose collée ou fixée, coût 60-100 €/m². Idéal terrasses accessibles neuves. SEL (Système d'Étanchéité Liquide, polyuréthane) : durée 15-25 ans, application liquide sans joints, idéal pour reprises ponctuelles et formes complexes, coût 50-90 €/m². Sur ZAC Bègles récentes, EPDM est majoritaire — nous procédons par diagnostic pour évaluer si une reprise SEL localisée suffit ou si l'étanchéité complète doit être refaite.",
+          },
+          {
+            question:
+              "Comment vérifier votre décennale avant signature ?",
+            answer:
+              "Nous joignons systématiquement notre attestation d'assurance décennale à chaque devis, avec ses dates de validité. Un artisan qui rechigne à fournir ce document cache probablement une décennale périmée ou absente — refusez de signer.",
+          },
         ],
+
+        // ————————————————————————————————————————————————
+        // QUESTIONS À POSER À TOUT COUVREUR BÉGLAIS
+        // ————————————————————————————————————————————————
+        questionsCouvreur: {
+          intro:
+            "3 questions à poser à tout couvreur qui vous propose un devis pour Bègles. Elles séparent en 2 minutes les artisans compétents des intermédiaires.",
+          items: [
+            {
+              question:
+                "Traitez-vous à la fois échoppes tuile canal ET toits-terrasses EPDM ?",
+              answer:
+                "Bègles présente 2 typologies très distinctes qui demandent 2 métiers : couvreur classique pour les échoppes, étancheur pour les toits-terrasses. Un couvreur qui ne maîtrise qu'une seule technique va sous-traiter l'autre. Chez nous, les 2 sont exécutés en direct par notre équipe.",
+            },
+            {
+              question:
+                "Prenez-vous en charge la déclaration préalable en mairie ?",
+              answer:
+                "Un changement de matériau ou de teinte à Bègles demande une déclaration préalable de travaux (1-2 mois d'instruction). Un couvreur sérieux constitue et dépose le dossier pour vous. Nous nous en occupons systématiquement.",
+            },
+            {
+              question:
+                "Votre devis inclut-il tous les postes ou reste-t-il des lignes ouvertes ?",
+              answer:
+                "En ZAC dense (Bègles Mairie, Bègles Plage), l'occupation de voirie et l'accès copropriétés doivent être chiffrés. Nos devis détaillent chaque poste — main d'œuvre, matériaux, sécurité, accès. Aucune ligne « divers » ouverte, aucun supplément en cours de chantier.",
+            },
+          ],
+        },
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }

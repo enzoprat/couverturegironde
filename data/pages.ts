@@ -357,9 +357,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'ville',
     ville: 'begles',
     title: 'Couvreur Bègles',
-    seoTitle: 'Couvreur Bègles : démoussage, réparation | 5/5 sur 52 avis',
+    seoTitle: 'Couvreur Bègles ★ échoppes + ZAC récentes ★ 5/5',
     seoDescription:
-      "Couvreur à Bègles depuis 2005 : démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Note 5/5 (52 avis). Devis gratuit 24h, garantie décennale.",
+      "★ Couvreur Bègles depuis 2005 · Échoppes ouvrières + toits-terrasses ZAC · Liroy artisan direct · 5/5 (52 avis) · Devis 24h · Décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
