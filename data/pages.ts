@@ -175,9 +175,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Zinguerie Bordeaux',
     navLabel: 'Zinguerie & gouttières',
     seoTitle:
-      'Pose gouttière Bordeaux · zinguerie zinc soudée · 50-85 €/ml',
+      'Pose gouttière + zinguerie Bordeaux · zinc soudé étain',
     seoDescription:
-      "★ Pose gouttière + zinguerie Bordeaux ★ Gouttières zinc, noues, chéneaux, descentes EP ✓ Soudure étain sur place ✓ Étanchéité 30 ans ✓ 5/5 (52 avis) ✓ Devis 24h.",
+      "★ Zinguerie Bordeaux · Gouttières zinc, noues, chéneaux, capotage · Soudure étain sur place · Liroy artisan direct · 5/5 (52 avis) · Devis 24h.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 31,
