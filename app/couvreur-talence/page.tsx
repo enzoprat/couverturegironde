@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { VillePageLayout } from '@/components/content/VillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-talence');
 
@@ -13,12 +15,49 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <VillePageLayout
-      content={{
-        slug: PAGE.slug,
-        villeSlug: 'talence',
-        heroSubtitle:
-          "Couvreur-zingueur à Talence depuis 2005. Démoussage, nettoyage, réparation et zinguerie sur l'ensemble de la commune et des quartiers proches. Intervention rapide, garantie décennale, devis gratuit sous 24h.",
+    <>
+      <VillePageLayout
+        content={{
+          slug: PAGE.slug,
+          villeSlug: 'talence',
+          h1: (
+            <>
+              Couvreur à{' '}
+              <span className="text-[var(--color-terre)]">Talence</span> depuis
+              2005 — échoppes tuile canal + bâti bourgeois
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac (9 km de Talence)',
+            bio: "Je couvre Talence depuis 2005 depuis mon atelier de Mérignac (9 km, 20 min). Talence est un défi patrimonial : échoppes tuile canal XIXe centre, maisons bourgeoises Thouars/Peixotto en ardoise, faîtages scellés au mortier ciment ancien qui fissurent. Sur ce bâti, mortier chaux OBLIGATOIRE (jamais ciment) pour respecter le bâti. Contexte urbain dense = gestion voirie + riverains à informer, démarches PLU et parfois ABF. Je m'en occupe.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Bâti patrimonial',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac, à 9 km (20 min) du centre de Talence via A630. Cette proximité permet une intervention urgence en 30-60 minutes en heures ouvrées, avec zinguerie sur mesure préparée à l'atelier pour les chantiers programmés.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
+
+          heroSubtitle:
+            "Couvreur-zingueur à Talence depuis 2005, atelier à Mérignac (9 km). Spécialiste bâti patrimonial : échoppes tuile canal XIXe, maisons bourgeoises Thouars/Peixotto ardoise, mortier chaux compatible bâti ancien. Intervention 30-60 min, décennale, 5/5 sur 52 avis Google.",
         contexteLocal: (
           <>
             <p>
@@ -254,8 +293,51 @@ export default function Page() {
             answer:
               "Pour les urgences nuit/week-end, laissez un message vocal au 07 68 69 78 48. Nous rappelons en priorité absolue dès la première heure de la journée suivante avec un créneau d'intervention prioritaire. La mise hors d'eau intervient dans la matinée.",
           },
+          {
+            question:
+              "Pourquoi mortier de chaux plutôt que mortier ciment sur mon échoppe talençaise ?",
+            answer:
+              "Le mortier ciment (moderne, dur) est INCOMPATIBLE avec le bâti ancien talençais : (1) il ne respire pas → humidité piégée dans les tuiles anciennes → dégradation accélérée, (2) il est plus dur que la tuile ancienne → fissuration à la moindre dilatation thermique, (3) il n'est pas ratrappable en cas de reprise. Le mortier de CHAUX (traditionnel) respire, est plus tendre que la tuile, et peut être repris ligne par ligne sans dégât. Sur un faîtage d'échoppe XIXe, chaux OBLIGATOIRE.",
+          },
+          {
+            question:
+              "Comment vérifier votre décennale avant signature ?",
+            answer:
+              "Nous joignons systématiquement notre attestation d'assurance décennale à chaque devis, avec ses dates de validité. Un artisan qui rechigne à fournir ce document cache probablement une décennale périmée ou absente — refusez de signer.",
+          },
         ],
+
+        // ————————————————————————————————————————————————
+        // QUESTIONS À POSER À TOUT COUVREUR TALENÇAIS
+        // ————————————————————————————————————————————————
+        questionsCouvreur: {
+          intro:
+            "3 questions à poser à tout couvreur qui vous propose un devis pour Talence, particulièrement sur bâti ancien (échoppes, maisons bourgeoises).",
+          items: [
+            {
+              question:
+                "Utilisez-vous du mortier de chaux ou du mortier ciment sur mes tuiles anciennes ?",
+              answer:
+                "Un couvreur qui ne connait pas la différence chaux/ciment ou qui propose du ciment sur bâti ancien = danger. Nous utilisons EXCLUSIVEMENT du mortier de chaux sur les échoppes et maisons bourgeoises talençaises. Le ciment est réservé au bâti récent (après 1950) où il est adapté.",
+            },
+            {
+              question:
+                "Prenez-vous en charge la déclaration préalable et l'ABF si mon secteur est concerné ?",
+              answer:
+                "Certains secteurs de Talence (proximité parc Peixotto, abords monuments historiques) sont soumis à l'avis de l'Architecte des Bâtiments de France. Un couvreur sérieux prend en charge la déclaration préalable + dossier ABF. Nous constituons tous les dossiers, vous n'avez qu'à signer.",
+            },
+            {
+              question:
+                "Votre devis inclut-il tous les postes (voirie, déchets) ou reste-t-il des lignes ouvertes ?",
+              answer:
+                "En centre Talence dense, l'occupation temporaire de voirie et l'évacuation des déchets doivent être chiffrées. Un devis avec ligne « divers » ouverte gonfle en cours de chantier. Nos devis détaillent chaque poste — le total ne bouge pas.",
+            },
+          ],
+        },
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }

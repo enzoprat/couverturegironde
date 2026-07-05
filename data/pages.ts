@@ -346,7 +346,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Talence',
     seoTitle: 'Couvreur Talence ★ réparation fuite + démoussage ★ 5/5',
     seoDescription:
-      "★ Couvreur Talence depuis 2005 ★ Réparation fuite toiture, démoussage, nettoyage, zinguerie ✓ Urgence 7j/7 ✓ Maisons bourgeoises et échoppes ✓ 5/5 (52 avis) ✓ Devis 24h.",
+      "★ Couvreur Talence depuis 2005 · Échoppes tuile canal + maisons bourgeoises ardoise · Liroy artisan direct · 5/5 (52 avis) · Devis 24h.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
