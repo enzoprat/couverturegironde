@@ -88,9 +88,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Nettoyage toiture Bordeaux',
     navLabel: 'Nettoyage toiture',
     seoTitle:
-      'Nettoyage toiture Bordeaux : 15-22 €/m² | Démoussage + hydrofuge',
+      'Nettoyage toiture Bordeaux 12-20 €/m² · Devis 24h',
     seoDescription:
-      "★ Nettoyage toiture Bordeaux 15-22 €/m² ★ Démoussage + rinçage haute pression + hydrofuge longue durée ✓ Couvreur depuis 2005 ✓ Note 5/5 (52 avis) ✓ Devis gratuit 24h.",
+      "★ Nettoyage toiture Bordeaux 12-20 €/m² · Haute pression maîtrisée + rinçage · Liroy artisan direct depuis 2005 · 5/5 (52 avis) · Devis 24h.",
     visibleInNav: true,
     navCategory: 'entretien',
     navOrder: 21,

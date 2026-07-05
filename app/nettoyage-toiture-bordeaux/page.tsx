@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('nettoyage-toiture-bordeaux');
 
@@ -13,20 +15,33 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <ServicePageLayout
+    <>
+      <ServicePageLayout
       content={{
         service: 'nettoyage',
         slug: PAGE.slug,
         h1: (
           <>
-            Nettoyage de toiture à{' '}
-            <span className="text-[var(--color-terre)]">Bordeaux</span> et en
-            Gironde
+            Nettoyage toiture à{' '}
+            <span className="text-[var(--color-terre)]">Bordeaux</span> — haute
+            pression maîtrisée 12-20 €/m²
           </>
         ),
         heroSubtitle:
-          "Nettoyage haute pression maîtrisé, démoussage et rinçage par artisan couvreur. Respect de la tuile, de l'ardoise et de la zinguerie. Devis gratuit sous 24h, intervention sur tout Bordeaux Métropole et la Gironde.",
+          "Nettoyage haute pression MAÎTRISÉE (pas de karcher grand public agressif), pression et buse adaptées au matériau (tuile canal 80-100 bars, ardoise 60-80 bars, zinc <50 bars), rinçage complet des descentes. Diagnostic gratuit, tarif transparent 12-20 €/m², atelier Mérignac.",
         shortTitle: 'Nettoyage toiture',
+
+        authorBlock: {
+          name: 'Liroy Delsuc',
+          role: 'Couvreur-zingueur, fondateur — atelier Mérignac',
+          bio: "Je fais du nettoyage professionnel depuis 2005 sur Bordeaux Métropole. Aucun karcher grand public utilisé sur nos chantiers : la pression et la buse sont adaptées au matériau, c'est ce qui distingue un nettoyage durable d'un traitement qui dégrade la tuile en quelques minutes. Chaque nettoyage inclut une inspection complète de la toiture avec repérage des points faibles.",
+          badges: [
+            'Depuis 2005',
+            'Décennale active',
+            '5/5 sur 52 avis Google',
+            'Pression adaptée matériau',
+          ],
+        },
         presentation: (
           <>
             <p>
@@ -246,7 +261,76 @@ export default function Page() {
             },
           ],
         },
+
+        // ————————————————————————————————————————————————
+        // FAQ NETTOYAGE-FOCUSED (10 questions ICP)
+        // ————————————————————————————————————————————————
+        faqOverride: [
+          {
+            question:
+              "Nettoyage ≠ démoussage : quelle est la différence ?",
+            answer:
+              "Deux prestations distinctes mais complémentaires. Le NETTOYAGE haute pression retire les dépôts superficiels (pollution, particules fines, algues, coulures noires) — 12-20 €/m². Le DÉMOUSSAGE traite chimiquement les mousses et lichens INSTALLÉS avec brossage manuel et éradication des spores — 12-18 €/m². Sur une toiture avec MOUSSES visibles, il faut faire les deux. Sur une toiture juste sale (pas de mousses), un nettoyage suffit.",
+          },
+          {
+            question:
+              "Combien coûte un nettoyage de toiture à Bordeaux ?",
+            answer:
+              "Fourchettes 2026 : nettoyage simple tuile mécanique 12-16 €/m², tuile canal 14-20 €/m², ardoise 15-22 €/m², zinc 18-28 €/m². Combo nettoyage + démoussage 18-25 €/m² (le plus recommandé). Pour une maison type 120 m², nettoyage seul 1 440-2 400 €, combo 2 160-3 000 € TTC. TVA 10 % pour logements >2 ans. Diagnostic gratuit si chantier signé.",
+          },
+          {
+            question:
+              "Le karcher grand public abîme-t-il vraiment ma toiture ?",
+            answer:
+              "OUI, c'est la cause n°1 de dégradations post-nettoyage sur les toitures bordelaises. Un karcher grand public à pleine puissance avec buse standard : (1) provoque des micro-fissures dans la céramique, (2) sable l'engobe protecteur (couche superficielle), (3) accélère le vieillissement de 3-5 ans, (4) sur ardoise, peut désolidariser les ardoises. Un nettoyage professionnel utilise pression ADAPTÉE : 80-100 bars tuile canal, 60-80 bars ardoise, <50 bars zinc.",
+          },
+          {
+            question:
+              "Quel est le meilleur moment pour nettoyer sa toiture ?",
+            answer:
+              "Idéalement au printemps (mars-mai) ou fin d'été (septembre-octobre), hors période de gel ou de fortes pluies. À ces saisons : température idéale pour le séchage, pas de gel qui compromet la pression, pas de canicule qui évapore les produits complémentaires. Éviter juillet-août (chaleur) et décembre-février (risque gel).",
+          },
+          {
+            question:
+              "À quelle fréquence nettoyer sa toiture à Bordeaux ?",
+            answer:
+              "Recommandations pour le climat girondin : contrôle visuel tous les 2 ans, nettoyage tous les 4-5 ans sans mousses visibles, nettoyage + démoussage tous les 4-5 ans avec mousses. Versants nord et zones ombragées prioritaires. Toitures sous couvert dense (Caudéran, Bourg-Madame, coteaux Cenon, Gradignan boisé) : rythme plus soutenu, tous les 3-4 ans.",
+          },
+          {
+            question:
+              "Comment protégez-vous mon jardin et mes voisins ?",
+            answer:
+              "Bâchage systématique des massifs, protection des descentes d'eau pluviale qui vont au récupérateur ou au potager, redirection des ruissellements pour ne pas polluer la voirie. Voisins informés en amont. Nettoyage des évacuations sensibles en fin d'intervention pour éviter que les résidus obstruent le réseau pluvial.",
+          },
+          {
+            question:
+              "Peut-on nettoyer sans produit chimique ?",
+            answer:
+              "Oui pour un nettoyage simple (dépôts superficiels, pollution, algues fines) : eau seule à pression adaptée suffit. Mais si des mousses ou lichens sont installés, il FAUT un traitement chimique rémanent — sans lui, les spores restantes recolonisent la toiture en 2-3 ans. Nous utilisons des produits professionnels biodégradables sous 48-72h autorisés en couverture, jamais de javel diluée ou de produits grand public agressifs.",
+          },
+          {
+            question:
+              "Combien de temps dure un chantier de nettoyage ?",
+            answer:
+              "Pour une toiture de maison individuelle (100-150 m²) : nettoyage seul 1 journée, combo nettoyage + démoussage 1,5-2 jours (avec temps de séchage entre les deux passes), combo complet nettoyage + démoussage + hydrofuge 2-3 jours. Planning intègre les créneaux météo (pas de pluie 12-24h suivant l'hydrofuge, températures >5°C).",
+          },
+          {
+            question:
+              "Repérez-vous les tuiles cassées pendant le nettoyage ?",
+            answer:
+              "Oui, systématiquement. Chaque nettoyage inclut une inspection complète de la toiture : repérage des tuiles fissurées, joints de faîtage à reprendre, points faibles zinguerie, éléments à surveiller dans les 2-5 ans. Rapport écrit remis en fin de chantier avec photos. Si des réparations sont détectées, nous vous chiffrons séparément — vous décidez si vous les faites en même temps ou plus tard.",
+          },
+          {
+            question:
+              "Quelle garantie sur le nettoyage ?",
+            answer:
+              "Décennale (10 ans) sur l'ensemble de la prestation, obligation légale — attestation active jointe à chaque devis. Photos avant/après remises en fin de chantier. Si dégradation constatée liée à notre intervention (rare mais couvert), nous prenons en charge la reprise à nos frais pendant 10 ans.",
+          },
+        ],
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }
