@@ -9,6 +9,8 @@ import { DevisForm } from '@/components/forms/DevisForm';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
 import { NAP, TRUST } from '@/lib/constants';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('demande-devis');
 
@@ -118,6 +120,8 @@ export default function Page() {
 
       <Reassurance />
       <AvisGoogle title="Pourquoi nos clients nous recommandent" />
+      {/* Person Liroy — signal E-E-A-T sur la page devis */}
+      <JsonLd data={getPersonLiroySchema()} />
     </>
   );
 }

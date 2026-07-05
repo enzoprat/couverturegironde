@@ -8,7 +8,12 @@ import { Reassurance } from '@/components/sections/Reassurance';
 import { FAQ } from '@/components/sections/FAQ';
 import { CTAFinal } from '@/components/sections/CTAFinal';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { getFAQSchema, getPriceCatalogSchema, getReviewSchemas } from '@/lib/seo/schemas';
+import {
+  getFAQSchema,
+  getPersonLiroySchema,
+  getPriceCatalogSchema,
+  getReviewSchemas,
+} from '@/lib/seo/schemas';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
 import { SITE } from '@/lib/constants';
@@ -334,17 +339,20 @@ export default function Page() {
       <JsonLd
         data={getPriceCatalogSchema(TARIF_SECTIONS, `${SITE.url}${PAGE.path}`)}
       />
-      {/* Review schemas — preuve sociale couplée aux tarifs (E-E-A-T) */}
-      {getReviewSchemas(
-        AVIS.map((a) => ({
-          author: a.author,
-          rating: a.rating,
-          date: a.date,
-          text: a.text,
-        })),
-      ).map((schema, i) => (
-        <JsonLd key={`review-${i}`} data={schema} />
-      ))}
+      {/* Person Liroy — signal E-E-A-T sur la page tarifs */}
+      <JsonLd data={getPersonLiroySchema()} />
+      {/* Review schemas — uniquement si AVIS contient des avis réels. */}
+      {AVIS.length > 0 &&
+        getReviewSchemas(
+          AVIS.map((a) => ({
+            author: a.author,
+            rating: a.rating,
+            date: a.date,
+            text: a.text,
+          })),
+        ).map((schema, i) => (
+          <JsonLd key={`review-${i}`} data={schema} />
+        ))}
     </>
   );
 }

@@ -15,6 +15,8 @@ import { requirePage } from '@/lib/pages';
 import { REALISATIONS } from '@/data/realisations';
 import { SERVICES } from '@/data/services';
 import { resolveRealisationImage } from '@/lib/images';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('realisations');
 
@@ -114,6 +116,8 @@ export default function Page() {
       <AvisGoogle title="La parole à nos clients" />
       <ZonesDesservies />
       <CTAFinal />
+      {/* Person Liroy — signal E-E-A-T sur la page réalisations */}
+      <JsonLd data={getPersonLiroySchema()} />
     </>
   );
 }

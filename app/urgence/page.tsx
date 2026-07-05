@@ -20,6 +20,7 @@ import { CTAFinal } from '@/components/sections/CTAFinal';
 import { JsonLd } from '@/components/seo/JsonLd';
 import {
   getFAQSchema,
+  getPersonLiroySchema,
   getServiceSchema,
 } from '@/lib/seo/schemas';
 import { FAQ_URGENCE } from '@/data/faq';
@@ -340,6 +341,8 @@ export default function Page() {
         })}
       />
       <JsonLd data={getFAQSchema(FAQ_URGENCE)} />
+      {/* Person Liroy — signal E-E-A-T sur la page urgence */}
+      <JsonLd data={getPersonLiroySchema()} />
     </>
   );
 }

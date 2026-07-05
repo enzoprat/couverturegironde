@@ -14,7 +14,7 @@ import { Reassurance } from '@/components/sections/Reassurance';
 import { AvisGoogle } from '@/components/sections/AvisGoogle';
 import { CTAFinal } from '@/components/sections/CTAFinal';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { getPlaceSchema } from '@/lib/seo/schemas';
+import { getPersonLiroySchema, getPlaceSchema } from '@/lib/seo/schemas';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
 import { NAP, OPENING_HOURS, SITE } from '@/lib/constants';
@@ -249,8 +249,9 @@ export default function Page() {
       <Reassurance />
       <CTAFinal />
 
-      {/* Schemas : Place pour le siège géolocalisé */}
+      {/* Schemas : Place pour le siège géolocalisé + Person Liroy E-E-A-T */}
       <JsonLd data={getPlaceSchema()} />
+      <JsonLd data={getPersonLiroySchema()} />
       <JsonLd
         data={{
           '@context': 'https://schema.org',

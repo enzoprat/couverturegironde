@@ -603,9 +603,9 @@ const STATIC_PAGES: PageEntry[] = [
     path: '/realisations',
     type: 'institutional',
     title: 'Réalisations',
-    seoTitle: 'Nos réalisations de toiture à Bordeaux et en Gironde',
+    seoTitle: 'Réalisations toiture Bordeaux Gironde · Avant/après',
     seoDescription:
-      "Découvrez nos chantiers récents : démoussage, nettoyage, réparation et zinguerie à Bordeaux et en Gironde. Photos avant/après et détails par projet.",
+      "★ Nos chantiers Bordeaux Gironde · Démoussage, réparation, zinguerie · Photos avant/après · Détails par projet · Liroy Delsuc, couvreur depuis 2005.",
     visibleInNav: true,
     navOrder: 60,
     visibleInFooter: true,
@@ -618,9 +618,9 @@ const STATIC_PAGES: PageEntry[] = [
     path: '/contact',
     type: 'conversion',
     title: 'Contact',
-    seoTitle: 'Contact Couverture Gironde : 07 68 69 78 48 | Bordeaux',
+    seoTitle: 'Contact Couverture Gironde · ☎ 07 68 69 78 48',
     seoDescription:
-      "Contactez Couverture Gironde au 07 68 69 78 48. Couvreur Bordeaux Métropole depuis 2005, atelier à Mérignac. Note 5/5 (52 avis). Réponse sous 24h, devis gratuit.",
+      "Contact Couverture Gironde · ☎ 07 68 69 78 48 · Atelier 65 rue de Malbos Mérignac · Liroy artisan direct · 5/5 (52 avis) · Réponse 24h.",
     visibleInNav: true,
     navOrder: 80,
     visibleInFooter: true,
@@ -648,9 +648,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'institutional',
     title: 'Tarifs',
     seoTitle:
-      'Tarifs couvreur Bordeaux 2026 : démoussage dès 12 €/m² | Devis gratuit',
+      'Tarifs couvreur Bordeaux 2026 · démoussage dès 12 €/m²',
     seoDescription:
-      "Tarifs 2026 d'un couvreur à Bordeaux : démoussage 12-18 €/m², nettoyage 15-22 €/m², hydrofuge dès 6 €/m². Prix transparents ligne par ligne. Note 5/5 (52 avis). Devis gratuit 24h.",
+      "★ Tarifs couvreur Bordeaux 2026 · Démoussage 12-18 €/m² · Nettoyage 12-20 €/m² · Hydrofuge 6-12 €/m² · Liroy artisan direct · Devis 24h.",
     visibleInNav: true,
     navOrder: 50,
     visibleInFooter: true,
@@ -666,7 +666,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Couvreur urgence Bordeaux Gironde 7j/7 ☎ 07 68 69 78 48',
     seoDescription:
-      "★ Couvreur urgence Bordeaux et Gironde 7j/7 ★ Fuite, tempête, sinistre ✓ Sur place en 1h ✓ Mise hors d'eau immédiate ✓ Devis assurance pris en charge. ☎ 07 68 69 78 48",
+      "★ Couvreur urgence Bordeaux Gironde 7j/7 · Fuite, tempête, sinistre · Sur place 30 min-2h · Dossier assurance constitué · ☎ 07 68 69 78 48.",
     visibleInFooter: true,
     footerSection: 'entreprise',
     indexable: true,
@@ -677,9 +677,9 @@ const STATIC_PAGES: PageEntry[] = [
     path: '/demande-devis',
     type: 'conversion',
     title: 'Demande de devis',
-    seoTitle: 'Devis toiture Bordeaux gratuit en 24h ☎ 07 68 69 78 48',
+    seoTitle: 'Devis toiture Bordeaux gratuit 24h · ☎ 07 68 69 78 48',
     seoDescription:
-      "★ Devis toiture Bordeaux gratuit sous 24h ★ Démoussage, nettoyage, réparation, réfection, zinguerie ✓ Sans engagement ✓ Couvreur depuis 2005 ✓ Note 5/5 (52 avis) ☎ 07 68 69 78 48.",
+      "★ Devis toiture Bordeaux gratuit 24h · Démoussage, réparation, zinguerie · Sans engagement · Liroy artisan direct · 5/5 (52 avis) · Décennale.",
     visibleInNav: true,
     navOrder: 60,
     visibleInFooter: true,
