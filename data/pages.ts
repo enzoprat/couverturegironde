@@ -70,9 +70,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Démoussage toiture Bordeaux',
     navLabel: 'Démoussage toiture',
     seoTitle:
-      'Démoussage toiture Bordeaux 12-18 €/m² · Traitement anti-mousse',
+      'Démoussage toiture Bordeaux 12-18 €/m² · Devis 24h',
     seoDescription:
-      "★ Démoussage toiture Bordeaux 12-18 €/m² ★ Traitement anti-mousse rémanent + brossage manuel + rinçage ✓ Couvreur depuis 2005 ✓ Note 5/5 (52 avis) ✓ Devis 24h.",
+      "★ Démoussage toiture Bordeaux 12-18 €/m² · Anti-mousse rémanent + brossage · Liroy artisan direct depuis 2005 · 5/5 sur 52 avis · Devis 24h.",
     visibleInNav: true,
     navCategory: 'entretien',
     navOrder: 20,
