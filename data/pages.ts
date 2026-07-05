@@ -371,9 +371,9 @@ const STATIC_PAGES: PageEntry[] = [
     ville: 'villenave-dornon',
     title: "Couvreur Villenave-d'Ornon",
     seoTitle:
-      "Couvreur Villenave-d'Ornon : démoussage, réparation | 5/5 avis",
+      "Couvreur Villenave-d'Ornon ★ tuile mécanique 70-90 ★ 5/5",
     seoDescription:
-      "Couvreur à Villenave-d'Ornon depuis 2005 : démoussage, nettoyage, réparation toiture, zinguerie, urgence 7j/7. Note 5/5 (52 avis). Devis gratuit 24h, garantie décennale.",
+      "★ Couvreur Villenave-d'Ornon depuis 2005 · Pavillonnaire tuile mécanique 70-90 · Liroy artisan direct · 5/5 (52 avis) · Devis 24h · Décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,

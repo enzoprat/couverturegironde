@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { VillePageLayout } from '@/components/content/VillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
 const PAGE = requirePage('couvreur-villenave-dornon');
 
@@ -13,12 +15,49 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <VillePageLayout
-      content={{
-        slug: PAGE.slug,
-        villeSlug: 'villenave-dornon',
-        heroSubtitle:
-          "Couvreur-zingueur à Villenave-d'Ornon depuis 2005. Démoussage, nettoyage, réparation toiture et zinguerie sur l'ensemble de la commune. Intervention rapide, garantie décennale, devis gratuit sous 24h.",
+    <>
+      <VillePageLayout
+        content={{
+          slug: PAGE.slug,
+          villeSlug: 'villenave-dornon',
+          h1: (
+            <>
+              Couvreur à{' '}
+              <span className="text-[var(--color-terre)]">Villenave-d'Ornon</span>{' '}
+              depuis 2005 — pavillonnaire tuile mécanique 70-90
+            </>
+          ),
+
+          authorBlock: {
+            name: 'Liroy Delsuc',
+            role: 'Couvreur-zingueur, fondateur — atelier Mérignac (13 km)',
+            bio: "Je couvre Villenave-d'Ornon depuis 2005 depuis mon atelier de Mérignac (13 km, 25 min). Villenave présente un pavillonnaire étendu tuile mécanique années 70-90 qui atteint sa fin de vie moyenne. Les tuiles mécaniques poreuses de cette époque + le couvert végétal dense (jardins, alignements) = mousses SYSTÉMATIQUES versants nord. Hydrofuge après démoussage vivement recommandé pour tenir 8-10 ans.",
+            badges: [
+              'Depuis 2005',
+              'Décennale active',
+              '5/5 sur 52 avis Google',
+              'Urgence 45-75 min',
+            ],
+          },
+
+          atelier: {
+            adresse: '65 rue de Malbos',
+            codePostal: '33700',
+            ville: 'Mérignac',
+            intro:
+              "Notre atelier est à Mérignac, à 13 km (25 min) de Villenave-d'Ornon via A630 + rocade Sud. Intervention urgence 45-75 min en heures ouvrées.",
+            horaires: [
+              { jours: 'Lundi – Vendredi', heures: '6h00 – 22h00' },
+              { jours: 'Samedi – Dimanche', heures: 'Urgences 7j/7' },
+            ],
+            mapEmbedUrl:
+              'https://www.google.com/maps?q=65+rue+de+Malbos+33700+M%C3%A9rignac&output=embed',
+            itineraireUrl:
+              'https://www.google.com/maps/dir//65+rue+de+Malbos,+33700+M%C3%A9rignac',
+          },
+
+          heroSubtitle:
+            "Couvreur-zingueur à Villenave-d'Ornon depuis 2005, atelier à Mérignac (13 km). Spécialiste pavillonnaire tuile mécanique 70-90 : démoussage + hydrofuge fortement recommandé (mousses versants nord). Intervention 45-75 min, décennale, 5/5 sur 52 avis Google.",
         contexteLocal: (
           <>
             <p>
@@ -210,8 +249,48 @@ export default function Page() {
             answer:
               "Oui, pour les chantiers supérieurs à 5 000 € HT, paiement en 2 ou 3 fois sans frais à convenir à la signature. Pour les rénovations énergétiques éligibles à MaPrimeRénov' ou à l'éco-PTZ, nous fournissons tous les justificatifs nécessaires à votre dossier.",
           },
+          {
+            question:
+              "Ma tuile mécanique 70-90 approche fin de vie — réparer ou refaire ?",
+            answer:
+              "Critères objectifs : (1) si <20 % des tuiles présentent des défauts, réparation ciblée + démoussage + hydrofuge = 15-20 ans de durée de vie supplémentaire (18-27 €/m² combo), (2) si >30 % des tuiles présentent des défauts ou faîtages disloqués ou noues percées, réfection complète devient plus rentable (85-145 €/m² tuile mécanique). Diagnostic sur site indispensable pour analyse honnête.",
+          },
+          {
+            question:
+              "Comment vérifier votre décennale avant signature ?",
+            answer:
+              "Nous joignons systématiquement notre attestation d'assurance décennale à chaque devis, avec ses dates de validité. Un artisan qui rechigne à fournir ce document cache probablement une décennale périmée ou absente.",
+          },
         ],
+
+        questionsCouvreur: {
+          intro:
+            "3 questions à poser à tout couvreur pour Villenave-d'Ornon, particulièrement sur pavillonnaire tuile mécanique années 70-90 en fin de vie.",
+          items: [
+            {
+              question:
+                "Diagnostic honnête : réparer ou refaire ma tuile mécanique 70-90 ?",
+              answer:
+                "Un artisan sérieux vous donne l'analyse chiffrée objective (nombre de tuiles défectueuses, état faîtage, noues) avec 2 options chiffrées (réparation vs réfection). Un commercial pousse la réfection pour maximiser le devis. Nous privilégions toujours la réparation quand elle est techniquement suffisante.",
+            },
+            {
+              question:
+                "Combien d'hydrofuges avez-vous appliqués sur Villenave ?",
+              answer:
+                "Un couvreur qui travaille vraiment Villenave depuis plusieurs années a des dizaines de références de démoussages + hydrofuges sur les pavillons Villenavais. Nous en réalisons 15-25 par an sur la commune depuis 2005.",
+            },
+            {
+              question:
+                "Votre devis inclut-il tous les postes ou reste-t-il des lignes ouvertes ?",
+              answer:
+                "Nos devis détaillent chaque poste : main d'œuvre, matériaux, sécurité, accès. Aucune ligne « divers et imprévus » — vous savez exactement ce que vous signez et le total ne bouge pas.",
+            },
+          ],
+        },
       }}
     />
+    {/* Schema Person Liroy — E-E-A-T signal auteur */}
+    <JsonLd data={getPersonLiroySchema()} />
+    </>
   );
 }
