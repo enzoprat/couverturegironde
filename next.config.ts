@@ -145,6 +145,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/nettoyage-toiture',
+        destination: '/nettoyage-toiture-bordeaux',
+        permanent: true,
+      },
+      {
         source: '/reparation-toiture-gironde',
         destination: '/reparation-toiture-bordeaux',
         permanent: true,
