@@ -47,6 +47,21 @@ export function getIndexablePages(): PageEntry[] {
   return PAGES.filter((p) => p.indexable !== false && !p.draft);
 }
 
+/**
+ * Retourne la page HUB (pilier) d'un service — le hub Bordeaux non lié à une
+ * ville. Sert de cible de maillage remontant pour les réalisations : chaque
+ * chantier pointe vers le pilier de son service (faîtage, zinguerie, couverture…),
+ * jamais un fallback générique. `undefined` si aucun hub n'existe pour ce service.
+ */
+export function getServiceHubPage(
+  service: ServiceCategory,
+): PageEntry | undefined {
+  return PAGES.find(
+    (p) =>
+      p.type === 'service' && p.service === service && !p.ville && !p.draft,
+  );
+}
+
 /** Pages destinées au menu principal (header). Triées par `navOrder`. */
 export function getNavPages(): PageEntry[] {
   return PAGES.filter((p) => p.visibleInNav && !p.draft).sort(

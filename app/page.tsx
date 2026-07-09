@@ -9,6 +9,7 @@ import { FAQ } from '@/components/sections/FAQ';
 import { ZonesDesservies } from '@/components/sections/ZonesDesservies';
 import { Urgence } from '@/components/sections/Urgence';
 import { CTAFinal } from '@/components/sections/CTAFinal';
+import { Simulateur } from '@/components/simulateur/Simulateur';
 import { JsonLd } from '@/components/seo/JsonLd';
 import {
   getFAQSchema,
@@ -65,6 +66,8 @@ export default function HomePage() {
       />
 
       <Reassurance />
+
+      <Simulateur />
 
       <ChiffresCles variant="light" />
 

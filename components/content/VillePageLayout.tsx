@@ -24,6 +24,7 @@ import { RealisationsCarousel } from '@/components/sections/RealisationsCarousel
 import { FAQ } from '@/components/sections/FAQ';
 import { CTAFinal } from '@/components/sections/CTAFinal';
 import { RelatedPages } from '@/components/sections/RelatedPages';
+import { Simulateur } from '@/components/simulateur/Simulateur';
 import { Container } from '@/components/ui/Container';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Button } from '@/components/ui/Button';
@@ -43,6 +44,7 @@ import type { FAQItem } from '@/data/faq';
 import { AVIS } from '@/data/avis';
 import { NAP, SITE } from '@/lib/constants';
 import { getPageBySlug, requirePage } from '@/lib/pages';
+import { toLocatif, deVille } from '@/lib/utils';
 
 /**
  * VillePageLayout — template définitif pour les pages hub ville (couvreur-{ville}).
@@ -147,21 +149,15 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
         variant="ville"
         eyebrow={`Couvreur · ${ville.nameInflected} · ${ville.postalCode}`}
         title={
-          content.h1 ??
-          (() => {
-            // Contraction française : "à + Le X" devient "au X".
-            // Ex: "à Le Bouscat" → "au Bouscat".
-            const startsWithLe = ville.name.startsWith('Le ');
-            const prep = startsWithLe ? 'au ' : 'à ';
-            const cityForTitle = startsWithLe ? ville.name.slice(3) : ville.name;
-            return (
-              <>
-                Couvreur {prep}
-                <span className="text-[var(--color-terre)]">{cityForTitle}</span> :
-                démoussage, nettoyage et réparation toiture
-              </>
-            );
-          })()
+          content.h1 ?? (
+            <>
+              Couvreur{' '}
+              <span className="text-[var(--color-terre)]">
+                {toLocatif(ville.name)}
+              </span>{' '}
+              : démoussage, nettoyage et réparation toiture
+            </>
+          )
         }
         subtitle={content.heroSubtitle}
         breadcrumbSlug={content.slug}
@@ -229,9 +225,9 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
       {/* SECTION 1 — Contexte local (300 mots) */}
       <section className="section-y">
         <Container size="narrow">
-          <Eyebrow className="mb-3">Notre intervention à {ville.name}</Eyebrow>
+          <Eyebrow className="mb-3">Notre intervention {toLocatif(ville.name)}</Eyebrow>
           <h2 className="mb-6">
-            Pourquoi choisir Couverture Gironde à {ville.name}
+            Pourquoi choisir Couverture Gironde {toLocatif(ville.name)}
           </h2>
           <div className="prose prose-lg max-w-none text-[1.0625rem] text-[var(--color-gris-600)] leading-relaxed space-y-4 [&_strong]:text-[var(--color-ardoise)]">
             {content.contexteLocal}
@@ -245,14 +241,14 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
           <Container size="narrow">
             <Eyebrow className="mb-3">Urgence fuite · {ville.name}</Eyebrow>
             <h2 className="mb-5">
-              Réparation fuite toiture à {ville.name} :
+              Réparation fuite toiture {toLocatif(ville.name)} :
               intervention rapide 7j/7
             </h2>
             <div className="prose prose-lg max-w-none text-[1.0625rem] text-[var(--color-gris-600)] leading-relaxed space-y-4 [&_strong]:text-[var(--color-ardoise)] mb-8">
               {content.reparationFuite.intro}
             </div>
             <h3 className="text-[1.125rem] font-bold text-[var(--color-ardoise)] mb-4">
-              Cas typiques de fuite toiture à {ville.name}
+              Cas typiques de fuite toiture {toLocatif(ville.name)}
             </h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {content.reparationFuite.casTypiques.map((cas) => (
@@ -405,12 +401,12 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
       <section className="section-y bg-[var(--color-creme)] border-y border-[var(--color-border)]">
         <Container>
           <div className="max-w-3xl mb-12">
-            <Eyebrow className="mb-3">Nos services à {ville.name}</Eyebrow>
+            <Eyebrow className="mb-3">Nos services {toLocatif(ville.name)}</Eyebrow>
             <h2 className="mb-4">
-              Tous les travaux de toiture à {ville.name}
+              Tous les travaux de toiture {toLocatif(ville.name)}
             </h2>
             <p className="text-lead">
-              Couverture Gironde propose à {ville.nameInflected} l'ensemble des
+              Couverture Gironde propose {toLocatif(ville.name)} l'ensemble des
               prestations de couverture, zinguerie et entretien de toiture.
               Diagnostic gratuit, devis sous 24h, garantie décennale sur chaque
               chantier.
@@ -452,6 +448,9 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
           </ul>
         </Container>
       </section>
+
+      {/* Simulateur de projet — section interactive, contexte ville injecté */}
+      <Simulateur ville={{ slug: ville.slug, name: ville.name }} />
 
       {/* Testimonials inline (preuve conversion en milieu de lecture) */}
       {content.inlineTestimonials && content.inlineTestimonials.length > 0 && (
@@ -502,7 +501,7 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
             <div className="mb-10">
               <Eyebrow className="mb-3">Guide de sélection</Eyebrow>
               <h2 className="mb-4">
-                Les questions à poser à tout couvreur à {ville.name} avant de signer
+                Les questions à poser à tout couvreur {toLocatif(ville.name)} avant de signer
               </h2>
               {content.questionsCouvreur.intro && (
                 <p className="text-[1.0625rem] text-[var(--color-gris-600)] leading-relaxed">
@@ -548,7 +547,7 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
             Tarifs indicatifs · {ville.name}
           </Eyebrow>
           <h2 className="mb-5 text-[var(--color-pierre)]">
-            Combien coûte un couvreur à {ville.name} ?
+            Combien coûte un couvreur {toLocatif(ville.name)} ?
           </h2>
           <p className="text-lead mb-10 text-[var(--color-gris-300)]">
             Les fourchettes ci-dessous sont des tarifs indicatifs constatés sur{' '}
@@ -602,11 +601,11 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
           <div className="max-w-3xl mb-10">
             <Eyebrow className="mb-3">Quartiers desservis</Eyebrow>
             <h2 className="mb-4">
-              Tous les quartiers de {ville.name} couverts
+              Tous les quartiers {deVille(ville.name)} couverts
             </h2>
             <p className="text-lead">
-              Nous intervenons sur l'ensemble du territoire communal de{' '}
-              {ville.nameInflected}, du centre-ville aux quartiers
+              Nous intervenons sur l'ensemble du territoire communal{' '}
+              {deVille(ville.name)}, du centre-ville aux quartiers
               périphériques, avec une réactivité optimale en cas d'urgence.
             </p>
           </div>
@@ -632,7 +631,7 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
               aria-hidden="true"
             />
             <p className="text-[0.9375rem] text-[var(--color-ardoise)]">
-              <strong>Couvreur de proximité à {ville.name} :</strong>{' '}
+              <strong>Couvreur de proximité {toLocatif(ville.name)} :</strong>{' '}
               intervention urgence sous 2 à 4h en moyenne en heures ouvrées,
               déplacement inclus dans le devis.
             </p>
@@ -642,9 +641,9 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
 
       {/* SECTION 6 — Réalisations locales */}
       <RealisationsCarousel
-        eyebrow={`Chantiers à ${ville.name}`}
-        title={`Nos réalisations à ${ville.name} et alentours`}
-        intro={`Sélection de nos interventions récentes à ${ville.nameInflected} et dans les communes voisines.`}
+        eyebrow={`Chantiers ${toLocatif(ville.name)}`}
+        title={`Nos réalisations ${toLocatif(ville.name)} et alentours`}
+        intro={`Sélection de nos interventions récentes ${toLocatif(ville.name)} et dans les communes voisines.`}
         filterVille={ville.slug}
         variant="grid"
       />
@@ -652,10 +651,10 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
       {/* SECTION 7 — Avis locaux */}
       <AvisGoogle
         eyebrow={`Avis clients · ${ville.name}`}
-        title={`Ce que disent nos clients à ${ville.name}`}
+        title={`Ce que disent nos clients ${toLocatif(ville.name)}`}
         intro={
           villeAvis.length > 0
-            ? `Témoignages vérifiés de clients de ${ville.nameInflected} et alentours.`
+            ? `Témoignages vérifiés de clients ${deVille(ville.name)} et alentours.`
             : 'Nos clients de Bordeaux Métropole témoignent.'
         }
         filterCity={ville.name}
@@ -665,7 +664,7 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
       <FAQ
         items={content.faqLocale}
         title={`Questions fréquentes : couvreur ${ville.name}`}
-        intro={`Tout ce que vous devez savoir avant de nous confier un projet de toiture à ${ville.nameInflected}.`}
+        intro={`Tout ce que vous devez savoir avant de nous confier un projet de toiture ${toLocatif(ville.name)}.`}
         background="creme"
       />
 
@@ -680,8 +679,8 @@ export function VillePageLayout({ content }: { content: VillePageContent }) {
       />
 
       <CTAFinal
-        title={`Un projet de toiture à ${ville.name} ?`}
-        subtitle={`Décrivez-nous votre besoin en 2 minutes. Nous revenons vers vous sous 24h ouvrées avec un devis détaillé pour votre chantier à ${ville.nameInflected}.`}
+        title={`Un projet de toiture ${toLocatif(ville.name)} ?`}
+        subtitle={`Décrivez-nous votre besoin en 2 minutes. Nous revenons vers vous sous 24h ouvrées avec un devis détaillé pour votre chantier ${toLocatif(ville.name)}.`}
       />
 
       {/* Schemas SEO locaux */}

@@ -6,6 +6,7 @@ import { FAQ } from '@/components/sections/FAQ';
 import { ZonesDesservies } from '@/components/sections/ZonesDesservies';
 import { CTAFinal } from '@/components/sections/CTAFinal';
 import { RelatedPages } from '@/components/sections/RelatedPages';
+import { Simulateur } from '@/components/simulateur/Simulateur';
 import { Container } from '@/components/ui/Container';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { JsonLd } from '@/components/seo/JsonLd';
@@ -241,6 +242,10 @@ export function ServicePageLayout({ content }: { content: ServicePageContent }) 
           </ul>
         </Container>
       </section>
+
+      {/* Simulateur — ouvre directement la branche liée au service de la page.
+          Services sans branche dédiée (démoussage, nettoyage…) : grille des 4 choix. */}
+      <Simulateur service={content.service} />
 
       {/* Testimonial inline (preuve conversion en milieu de lecture) */}
       {content.inlineTestimonials && content.inlineTestimonials.length > 0 && (

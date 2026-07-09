@@ -55,8 +55,11 @@ export const OPENING_HOURS = {
 } as const;
 
 export const SOCIAL = {
-  google:
-    'https://www.google.com/search?q=Couverture+Gironde+M%C3%A9rignac',
+  // Fiche Google Business Profile (lien court g.page officiel).
+  google: 'https://g.page/r/CYcnAtj5cBPVEAE',
+  // Deep-link "écrire un avis" — ouvre directement la fenêtre de rédaction
+  // d'avis Google. À utiliser en CTA de sollicitation d'avis.
+  googleReview: 'https://g.page/r/CYcnAtj5cBPVEAE/review',
   // Ajouter d'autres profils à mesure
 } as const;
 

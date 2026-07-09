@@ -14,7 +14,7 @@ import type {
   WebSite,
   WithContext,
 } from 'schema-dts';
-import { NAP, OPENING_HOURS, SITE, TRUST } from '@/lib/constants';
+import { NAP, OPENING_HOURS, SITE } from '@/lib/constants';
 import { getLocationBySlug, LOCATIONS } from '@/data/locations';
 import type { BreadcrumbItem } from '@/lib/pages';
 
@@ -541,12 +541,10 @@ export function getLocalBusinessAtCitySchema(params: {
         longitude: params.cityLng,
       },
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: TRUST.googleRating,
-      reviewCount: TRUST.googleReviewCount,
-      bestRating: 5,
-      worstRating: 1,
-    },
+    // NB : PAS d'aggregateRating ici. Le même total global (52 avis) répliqué
+    // à l'identique sur 11 entités ville quasi-dupliquées est un motif classique
+    // de suppression des étoiles ("avis non spécifiques à l'entité"). La note
+    // par ville est portée par les Review individuels filtrés sur la ville
+    // (getReviewSchemas dans VillePageLayout), que Google agrège lui-même.
   };
 }

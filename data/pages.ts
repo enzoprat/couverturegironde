@@ -38,7 +38,7 @@ const STATIC_PAGES: PageEntry[] = [
     service: 'couverture',
     title: 'Couvreur Bordeaux',
     seoTitle:
-      'Couvreur Bordeaux ★ 5/5 sur 52 avis ★ Devis 24h, urgence 7j/7',
+      'Couvreur Bordeaux ★ 5/5, 52 avis ★ Devis 24h urgence 7j/7',
     seoDescription:
       "★ Couvreur Bordeaux depuis 2005 · Liroy, artisan direct · 5/5 sur 52 avis Google · Démoussage, réparation, urgence 7j/7 · Devis 24h · Décennale.",
     indexable: true,
@@ -67,6 +67,7 @@ const STATIC_PAGES: PageEntry[] = [
     path: '/demoussage-toiture-bordeaux',
     type: 'service',
     service: 'demoussage',
+    parentSlug: 'traitement-toiture-bordeaux',
     title: 'Démoussage toiture Bordeaux',
     navLabel: 'Démoussage toiture',
     seoTitle:
@@ -85,6 +86,7 @@ const STATIC_PAGES: PageEntry[] = [
     path: '/nettoyage-toiture-bordeaux',
     type: 'service',
     service: 'nettoyage',
+    parentSlug: 'traitement-toiture-bordeaux',
     title: 'Nettoyage toiture Bordeaux',
     navLabel: 'Nettoyage toiture',
     seoTitle:
@@ -103,6 +105,7 @@ const STATIC_PAGES: PageEntry[] = [
     path: '/traitement-hydrofuge-toiture-bordeaux',
     type: 'service',
     service: 'hydrofuge',
+    parentSlug: 'traitement-toiture-bordeaux',
     title: 'Traitement hydrofuge Bordeaux',
     navLabel: 'Traitement hydrofuge',
     seoTitle:
@@ -127,6 +130,8 @@ const STATIC_PAGES: PageEntry[] = [
     seoDescription:
       "★ Traitement toiture Bordeaux · Nettoyage, démoussage, hydrofuge, anti-lichens · Liroy artisan direct · 5/5 (52 avis) · Devis 24h · Décennale.",
     indexable: true,
+    visibleInFooter: true,
+    footerSection: 'services',
     sitemapPriority: 0.8,
   },
 
@@ -453,9 +458,9 @@ const STATIC_PAGES: PageEntry[] = [
     ville: 'pessac',
     title: 'Réparation toiture Pessac',
     seoTitle:
-      'Réparation fuite toiture Pessac ★ intervention 30-60 min 7j/7',
+      'Réparation fuite toiture Pessac ★ 30-60 min 7j/7 · 5/5',
     seoDescription:
-      "★ Réparation fuite toiture Pessac ★ Intervention 30-60 min heures ouvrées ✓ Tuiles cassées, faîtage, noue zinc, abergements ✓ Devis 24h ✓ 5/5 (52 avis) ✓ Décennale.",
+      "★ Réparation fuite toiture Pessac ★ Intervention 30-60 min heures ouvrées ✓ Tuiles cassées, faîtage, noue zinc, abergements ✓ Devis 24h ✓ 5/5 (52 avis).",
     indexable: true,
     sitemapPriority: 0.85,
   },
@@ -469,7 +474,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Réparation fuite toiture Talence ★ échoppes tuile canal',
     seoDescription:
-      "★ Réparation fuite toiture Talence ★ Échoppes tuile canal, faîtage scellé chaux, noues zinc ✓ Intervention rapide 7j/7 ✓ Devis 24h ✓ 5/5 (52 avis) ✓ Décennale.",
+      "★ Réparation fuite toiture Talence ★ Échoppes tuile canal, faîtage scellé chaux, noues zinc ✓ Intervention rapide 7j/7 ✓ Devis 24h ✓ 5/5 (52 avis).",
     indexable: true,
     sitemapPriority: 0.85,
   },
@@ -483,7 +488,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Réparation fuite toiture Mérignac ★ intervention 15-30 min',
     seoDescription:
-      "★ Réparation fuite toiture Mérignac ★ Atelier rue de Malbos, intervention 15-30 min ✓ Tuiles cassées, faîtage, gouttières ✓ Sans surcoût déplacement ✓ 5/5 (52 avis).",
+      "★ Réparation fuite toiture Mérignac ★ Atelier rue de Malbos, intervention 15-30 min ✓ Tuiles cassées, faîtage, gouttières ✓ 5/5 (52 avis) ✓ Devis 24h.",
     indexable: true,
     sitemapPriority: 0.85,
   },
@@ -510,7 +515,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Zinguerie Arcachon Bassin ★ zinc marine anti-air-salin',
     seoDescription:
-      "★ Zinguerie Arcachon & Bassin depuis 2005 ★ Zinc patiné/prépatiné anti-air-salin, alliage marine ✓ Gouttières, noues, chéneaux ✓ Soudure étain ✓ 5/5 (52 avis) ✓ Devis 24h.",
+      "★ Zinguerie Arcachon & Bassin depuis 2005 ★ Zinc anti-air-salin, alliage marine ✓ Gouttières, noues, chéneaux ✓ Soudure étain ✓ 5/5 (52 avis) ✓ Devis 24h.",
     indexable: true,
     sitemapPriority: 0.8,
   },
@@ -522,9 +527,9 @@ const STATIC_PAGES: PageEntry[] = [
     ville: 'cenon',
     title: 'Couvreur Cenon',
     seoTitle:
-      'Couvreur Cenon (33150) rive droite ★ 5/5 sur 52 avis ★ Devis 24h',
+      'Couvreur Cenon 33150 ★ rive droite ★ 5/5 · Devis 24h',
     seoDescription:
-      "★ Couvreur Cenon rive droite depuis 2005 ★ Coteaux Haut Cenon, plateau Palmer, Beauval-Loret ✓ Démoussage, réparation, zinguerie ✓ Urgence 7j/7 ✓ 5/5 (52 avis) ✓ Devis gratuit 24h.",
+      "★ Couvreur Cenon rive droite depuis 2005 ★ Coteaux Haut Cenon, plateau Palmer, Beauval-Loret ✓ Démoussage, réparation, zinguerie ✓ 5/5 (52 avis).",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -551,7 +556,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Bordeaux Chartrons',
     seoTitle: 'Couvreur Bordeaux Chartrons ★ ardoise + ABF ★ 5/5',
     seoDescription:
-      "★ Couvreur Bordeaux Chartrons depuis 2005 ★ Ardoise, hôtels particuliers, quai des Chartrons, secteur ABF ✓ Démoussage, réparation, zinguerie ✓ 5/5 (52 avis) ✓ Devis 24h.",
+      "★ Couvreur Bordeaux Chartrons depuis 2005 ★ Ardoise, hôtels particuliers, quai des Chartrons, secteur ABF ✓ Démoussage, réparation ✓ 5/5 (52 avis).",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -564,7 +569,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Bordeaux Rive Droite',
     seoTitle: 'Couvreur Bordeaux Rive Droite ★ Bastide + Brazza ★ 5/5',
     seoDescription:
-      "★ Couvreur Bordeaux Rive Droite depuis 2005 ★ Bastide, Brazza, Niel, Benauge ✓ Démoussage, réparation toiture, zinguerie, urgence 7j/7 ✓ 5/5 (52 avis) ✓ Devis 24h.",
+      "★ Couvreur Bordeaux Rive Droite depuis 2005 ★ Bastide, Brazza, Niel, Benauge ✓ Démoussage, réparation, zinguerie, urgence 7j/7 ✓ 5/5 (52 avis).",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,

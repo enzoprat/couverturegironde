@@ -15,6 +15,7 @@ import { requirePage } from '@/lib/pages';
 import { REALISATIONS } from '@/data/realisations';
 import { SERVICES } from '@/data/services';
 import { resolveRealisationImage } from '@/lib/images';
+import { toLocatif } from '@/lib/utils';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { getPersonLiroySchema } from '@/lib/seo/schemas';
 
@@ -40,7 +41,7 @@ export default function Page() {
   // On enrichit chaque realisation pour que le client component n'ait pas à le faire.
   const enriched: RealisationWithImage[] = sorted.map((r) => {
     const slugForImage = r.hasAvantApres ? `${r.slug}-apres` : r.slug;
-    const alt = `${r.title} à ${r.villeName}`;
+    const alt = `${r.title} ${toLocatif(r.villeName)}`;
     const resolved = resolveRealisationImage(slugForImage, alt, '3/2');
     return {
       ...r,

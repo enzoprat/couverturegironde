@@ -28,10 +28,11 @@ import {
 } from '@/lib/seo/schemas';
 import { REALISATIONS } from '@/data/realisations';
 import { SERVICES } from '@/data/services';
-import { getLocationBySlug } from '@/data/locations';
+import type { ServiceCategory } from '@/data/types';
 import { buildMetadata } from '@/lib/seo/metadata';
-import { getPageBySlug } from '@/lib/pages';
+import { getPageBySlug, getServiceHubPage } from '@/lib/pages';
 import { SITE, NAP } from '@/lib/constants';
+import { toLocatif } from '@/lib/utils';
 
 /**
  * /realisations/[slug], page individuelle d'un chantier.
@@ -73,7 +74,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // peut déjà faire 65+ chars. Pas de suffixe brand ici (déjà implicite via le
   // contexte SERP + brandée par couvreur).
   return buildMetadata({
-    title: `${realisation.title} à ${realisation.villeName}`,
+    title: `${realisation.title} ${toLocatif(realisation.villeName)}`,
     description: `${baseDesc}${suffix}.`,
     path: `/realisations/${realisation.slug}`,
     type: 'article',
@@ -86,9 +87,12 @@ export default async function Page({ params }: PageProps) {
   if (!realisation) notFound();
 
   const service = SERVICES[realisation.service as keyof typeof SERVICES];
-  const villeData = getLocationBySlug(realisation.villeSlug);
   const villeHubPage = getPageBySlug(`couvreur-${realisation.villeSlug}`);
-  const servicePage = getPageBySlug(`${realisation.service === 'demoussage' ? 'demoussage-toiture-bordeaux' : realisation.service === 'nettoyage' ? 'nettoyage-toiture-bordeaux' : realisation.service === 'hydrofuge' ? 'traitement-hydrofuge-toiture-bordeaux' : realisation.service === 'reparation' ? 'reparation-toiture-bordeaux' : realisation.service === 'urgence' ? 'urgence-fuite-toiture-bordeaux' : realisation.service === 'zinguerie' ? 'zinguerie-bordeaux' : 'couvreur-bordeaux'}`);
+  // Maillage remontant : le chantier pointe vers le pilier de SON service
+  // (résolu depuis le registre), avec repli sur le hub couverture Bordeaux.
+  const servicePage =
+    getServiceHubPage(realisation.service as ServiceCategory) ??
+    getPageBySlug('couvreur-bordeaux');
 
   const dateFr = new Date(realisation.date).toLocaleDateString('fr-FR', {
     month: 'long',
@@ -132,9 +136,9 @@ export default async function Page({ params }: PageProps) {
                 </span>
               </div>
               <h1 className="mb-5">
-                {realisation.title} à{' '}
+                {realisation.title}{' '}
                 <span className="text-[var(--color-terre)]">
-                  {realisation.villeName}
+                  {toLocatif(realisation.villeName)}
                 </span>
               </h1>
               <p className="text-lead mb-8">{realisation.description}</p>
@@ -165,7 +169,7 @@ export default async function Page({ params }: PageProps) {
                     ? `${realisation.slug}-apres`
                     : realisation.slug
                 }
-                alt={`${realisation.title} à ${realisation.villeName}`}
+                alt={`${realisation.title} ${toLocatif(realisation.villeName)}`}
                 aspect="4/3"
                 priority
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -192,7 +196,7 @@ export default async function Page({ params }: PageProps) {
                 <SmartImage
                   variant="realisation"
                   slug={`${realisation.slug}-avant`}
-                  alt={`Toiture avant intervention, ${realisation.title} à ${realisation.villeName}`}
+                  alt={`Toiture avant intervention, ${realisation.title} ${toLocatif(realisation.villeName)}`}
                   aspect="4/3"
                 />
                 <figcaption className="mt-3 text-[0.875rem] text-[var(--color-gris-600)] font-semibold">
@@ -203,7 +207,7 @@ export default async function Page({ params }: PageProps) {
                 <SmartImage
                   variant="realisation"
                   slug={`${realisation.slug}-apres`}
-                  alt={`Toiture après intervention, ${realisation.title} à ${realisation.villeName}`}
+                  alt={`Toiture après intervention, ${realisation.title} ${toLocatif(realisation.villeName)}`}
                   aspect="4/3"
                 />
                 <figcaption className="mt-3 text-[0.875rem] text-[var(--color-gris-600)] font-semibold">
@@ -215,38 +219,55 @@ export default async function Page({ params }: PageProps) {
         </section>
       )}
 
+      {/* GALERIE ÉTAPES si disponible */}
+      {realisation.content.gallery && realisation.content.gallery.length > 0 && (
+        <section className="section-y bg-[var(--color-creme)] border-y border-[var(--color-border)]">
+          <Container>
+            <div className="max-w-3xl mb-10">
+              <Eyebrow className="mb-3">Le chantier en images</Eyebrow>
+              <h2 className="mb-4">
+                {realisation.content.galleryTitle ?? "Les étapes de l'intervention"}
+              </h2>
+              <p className="text-lead">
+                {realisation.content.galleryIntro ??
+                  "Retour en images sur les principales étapes de ce chantier, de la dépose de l'ancienne couverture à la repose des tuiles."}
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-6">
+              {realisation.content.gallery.map((item) => (
+                <figure key={item.suffix}>
+                  <SmartImage
+                    variant="realisation"
+                    slug={`${realisation.slug}-${item.suffix}`}
+                    alt={item.alt}
+                    aspect="4/3"
+                  />
+                  <figcaption className="mt-3 text-[0.875rem] text-[var(--color-gris-600)] font-semibold">
+                    {item.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
       {/* DÉTAILS CHANTIER */}
       <section className="section-y">
         <Container>
           <div className="grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
               <Eyebrow className="mb-3">Détails du chantier</Eyebrow>
-              <h2 className="mb-6">Notre intervention en détail</h2>
-              <div className="prose prose-lg max-w-none text-[1.0625rem] text-[var(--color-gris-600)] leading-relaxed space-y-4 [&_strong]:text-[var(--color-ardoise)]">
-                <p>
-                  Ce chantier de <strong>{service?.name.toLowerCase() ?? realisation.service}</strong>{' '}
-                  à <strong>{realisation.villeName}</strong> illustre notre
-                  approche : diagnostic précis, choix techniques justifiés,
-                  exécution soignée et finition irréprochable.{' '}
-                  {realisation.description}
-                </p>
-                <p>
-                  Réalisé en <strong>{dateFr}</strong> sur la commune de{' '}
-                  {realisation.villeName}{villeData ? ` (${villeData.postalCode})` : ''},
-                  ce projet a mobilisé notre équipe pendant la durée nécessaire
-                  pour livrer un résultat à la hauteur de nos standards : aucune
-                  sous-traitance, contrôle qualité à chaque étape, et nettoyage
-                  complet du chantier en fin d'intervention.
-                </p>
-                <p>
-                  Comme sur l'ensemble de nos chantiers, cette réalisation est{' '}
-                  <strong>couverte par notre assurance décennale</strong>. Le
-                  client bénéficie d'une garantie de 10 ans après réception
-                  des travaux. Sur demande, nous fournissons l'attestation
-                  d'assurance et les photos détaillées de chaque étape de
-                  l'intervention.
-                </p>
-              </div>
+              {realisation.content.sections.map((section, i) => (
+                <div key={section.heading} className={i === 0 ? '' : 'mt-10'}>
+                  <h2 className="mb-4">{section.heading}</h2>
+                  <div className="prose prose-lg max-w-none text-[1.0625rem] text-[var(--color-gris-600)] leading-relaxed space-y-4">
+                    {section.body.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+                </div>
+              ))}
 
               <div className="mt-10 grid sm:grid-cols-3 gap-4">
                 <DetailBox
@@ -272,14 +293,7 @@ export default async function Page({ params }: PageProps) {
                   Points clés de cette intervention
                 </h3>
                 <ul className="space-y-3">
-                  {[
-                    `Diagnostic gratuit avant chiffrage`,
-                    `Intervention par notre équipe interne, sans sous-traitance`,
-                    `Matériaux et produits professionnels adaptés à ${realisation.villeName}`,
-                    `Couverture décennale active sur l'ensemble du chantier`,
-                    `Photos avant/après remises au client`,
-                    `Conseils d'entretien personnalisés en fin de chantier`,
-                  ].map((point) => (
+                  {realisation.content.keyPoints.map((point) => (
                     <li key={point} className="flex items-start gap-3">
                       <CheckCircle2
                         className="w-5 h-5 text-[var(--color-garantie)] shrink-0 mt-0.5"
@@ -327,7 +341,7 @@ export default async function Page({ params }: PageProps) {
                       href={servicePage.path}
                       className="block text-[0.9375rem] text-[var(--color-gris-300)] hover:text-[var(--color-terre)] transition-colors"
                     >
-                      → Tout sur le {service?.name.toLowerCase()} à Bordeaux
+                      → En savoir plus : {servicePage.title}
                     </Link>
                   )}
                   {villeHubPage && (
@@ -335,7 +349,7 @@ export default async function Page({ params }: PageProps) {
                       href={villeHubPage.path}
                       className="block text-[0.9375rem] text-[var(--color-gris-300)] hover:text-[var(--color-terre)] transition-colors"
                     >
-                      → Couvreur à {realisation.villeName}
+                      → Couvreur {toLocatif(realisation.villeName)}
                     </Link>
                   )}
                   <Link
@@ -368,8 +382,8 @@ export default async function Page({ params }: PageProps) {
               </Link>
               , couvreur-zingueur, fondateur de Couverture Gironde. Atelier au{' '}
               <strong>65 rue de Malbos à Mérignac depuis 2005</strong>. Chaque
-              chantier de {service?.name.toLowerCase() ?? 'toiture'} à{' '}
-              {realisation.villeName} est diagnostiqué, chiffré et supervisé
+              chantier de {service?.name.toLowerCase() ?? 'toiture'}{' '}
+              {toLocatif(realisation.villeName)} est diagnostiqué, chiffré et supervisé
               personnellement — aucune sous-traitance, décennale active, 5/5 sur
               52 avis Google.
             </p>
@@ -387,7 +401,7 @@ export default async function Page({ params }: PageProps) {
       />
 
       <CTAFinal
-        title={`Un projet ${service?.name.toLowerCase() ?? 'de toiture'} à ${realisation.villeName} ?`}
+        title={`Un projet ${service?.name.toLowerCase() ?? 'de toiture'} ${toLocatif(realisation.villeName)} ?`}
         subtitle="Décrivez votre besoin en 2 minutes. Devis détaillé sous 24h, garantie décennale, intervention propre et soignée."
       />
 
@@ -395,17 +409,17 @@ export default async function Page({ params }: PageProps) {
       <JsonLd data={getBreadcrumbSchema(breadcrumbItems)} />
       <JsonLd
         data={getArticleSchema({
-          headline: `${realisation.title} à ${realisation.villeName}`,
+          headline: `${realisation.title} ${toLocatif(realisation.villeName)}`,
           description: realisation.description,
           url: `${SITE.url}/realisations/${realisation.slug}`,
           imageUrl,
-          datePublished: realisation.date,
+          datePublished: realisation.publishedAt ?? realisation.date,
         })}
       />
       <JsonLd
         data={getImageObjectSchema({
           url: imageUrl,
-          caption: `${realisation.title}, chantier réalisé par Couverture Gironde à ${realisation.villeName}`,
+          caption: `${realisation.title}, chantier réalisé par Couverture Gironde ${toLocatif(realisation.villeName)}`,
           width: 1200,
           height: 900,
         })}

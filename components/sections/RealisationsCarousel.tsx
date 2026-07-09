@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/Button';
 import { SmartImage } from '@/components/ui/SmartImage';
 import { getLatestRealisations, filterRealisations } from '@/data/realisations';
 import type { Realisation } from '@/data/realisations';
+import { toLocatif } from '@/lib/utils';
 
 type RealisationsCarouselProps = {
   eyebrow?: string;
@@ -103,7 +104,7 @@ function RealisationCard({ realisation }: { realisation: Realisation }) {
             ? `${realisation.slug}-apres`
             : realisation.slug
         }
-        alt={`${realisation.title} à ${realisation.villeName}`}
+        alt={`${realisation.title} ${toLocatif(realisation.villeName)}`}
         aspect="3/2"
         className="rounded-none"
         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

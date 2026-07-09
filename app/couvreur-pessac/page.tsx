@@ -262,12 +262,6 @@ export default function Page() {
           },
           {
             question:
-              'Pourquoi les toitures pessacaises ont-elles autant de mousses ?',
-            answer:
-              "Le couvert végétal très dense de Pessac (forêt du Bourgailh, parc Bordelais, alignements d'arbres dans les lotissements) crée un microclimat humide et peu ensoleillé sur de nombreuses toitures. L'humidité retenue, combinée à des températures douces toute l'année, est l'environnement idéal pour les mousses, lichens et algues. Un démoussage tous les 3 à 5 ans est ici la norme.",
-          },
-          {
-            question:
               "Quel est le meilleur moment pour démousser sa toiture à Pessac ?",
             answer:
               "Idéalement au printemps (mars-mai) ou à la fin de l'été (septembre-octobre), hors période de gel ou de fortes pluies. C'est le moment où la mousse est la moins active, et où l'on peut appliquer un traitement hydrofuge dans les meilleures conditions de séchage.",

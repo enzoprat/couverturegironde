@@ -1,4 +1,4 @@
-import { Star, ExternalLink } from 'lucide-react';
+import { Star, ExternalLink, PenLine } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Button } from '@/components/ui/Button';
@@ -90,14 +90,26 @@ export function AvisGoogle({
               que d'afficher des extraits que vous ne pourriez pas
               contre-vérifier.
             </p>
-            <Button
-              href={SOCIAL.google}
-              variant="primary"
-              iconRight={<ExternalLink className="w-4 h-4" />}
-              aria-label="Consulter les avis Google (nouvel onglet)"
-            >
-              Consulter les avis Google
-            </Button>
+            <div className="flex flex-col sm:flex-row justify-center gap-3">
+              <Button
+                href={SOCIAL.google}
+                external
+                variant="primary"
+                iconRight={<ExternalLink className="w-4 h-4" />}
+                aria-label="Consulter les avis Google (nouvel onglet)"
+              >
+                Consulter les avis Google
+              </Button>
+              <Button
+                href={SOCIAL.googleReview}
+                external
+                variant="secondary"
+                iconRight={<PenLine className="w-4 h-4" />}
+                aria-label="Laisser un avis sur Google (nouvel onglet)"
+              >
+                Laisser un avis
+              </Button>
+            </div>
           </div>
         )}
 

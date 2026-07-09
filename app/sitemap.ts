@@ -40,10 +40,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  // Réalisations individuelles
+  // Réalisations individuelles.
+  // lastmod = date de PUBLICATION (publishedAt), pas la date du chantier :
+  // envoyer la date du chantier (parfois 2 ans en arrière) saboterait le
+  // signal de fraîcheur au moment où l'on veut faire (re)crawler la page.
+  // Repli sur la date de build si publishedAt absent.
   const realisations = REALISATIONS.map((r) => ({
     url: `${SITE.url}/realisations/${r.slug}`,
-    lastModified: new Date(r.date),
+    lastModified: r.publishedAt ? new Date(r.publishedAt) : now,
     priority: 0.6,
     changeFrequency: 'yearly' as const,
   }));
