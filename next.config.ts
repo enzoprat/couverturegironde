@@ -9,7 +9,9 @@ const ContentSecurityPolicy = [
   "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
   "img-src 'self' data: blob:",
   "font-src 'self' data:",
-  "connect-src 'self'",
+  // api.web3forms.com : backend des formulaires (DevisForm + Simulateur).
+  // Sans cette entrée, le fetch cross-origin est bloqué → "Load failed".
+  "connect-src 'self' https://api.web3forms.com",
   "frame-ancestors 'self'",
   "form-action 'self'",
   "base-uri 'self'",
