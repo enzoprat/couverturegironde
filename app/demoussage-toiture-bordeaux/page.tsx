@@ -71,8 +71,14 @@ export default function Page() {
               </p>
               <p>
                 <strong>Démoussage ≠ nettoyage ≠ hydrofuge.</strong> Ces trois
-                prestations sont souvent confondues : le nettoyage haute
-                pression retire les dépôts superficiels (pollution, algues) ;
+                prestations sont souvent confondues : le{' '}
+                <Link
+                  href="/nettoyage-toiture-bordeaux"
+                  className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+                >
+                  nettoyage haute pression
+                </Link>{' '}
+                retire les dépôts superficiels (pollution, algues) ;
                 le démoussage traite chimiquement les végétaux installés
                 (mousses, lichens) et éradique les spores ; le{' '}
                 <Link

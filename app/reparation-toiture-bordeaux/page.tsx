@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -70,7 +71,15 @@ export default function Page() {
               symptôme. Une fuite déclarée à un endroit a souvent son origine
               ailleurs. C'est pourquoi nous prenons systématiquement le temps
               d'inspecter la toiture entière avant de chiffrer une réparation
-              ponctuelle. Vous évitez ainsi de payer deux fois.
+              ponctuelle. Vous évitez ainsi de payer deux fois. En cas de fuite
+              active qui coule déjà, c'est une{' '}
+              <Link
+                href="/urgence-fuite-toiture-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                urgence fuite toiture
+              </Link>{' '}
+              : nous intervenons sous 30 min à 2h pour la mise hors d'eau.
             </p>
           </>
         ),

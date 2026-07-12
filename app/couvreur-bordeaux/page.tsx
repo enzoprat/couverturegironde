@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -75,7 +76,14 @@ export default function Page() {
               Mérignac</strong> nous place à moins de 15 minutes de Bordeaux
               centre, Pessac, Talence, Bègles, Le Bouscat et
               Villenave-d'Ornon. Cette implantation garantit une réactivité
-              urgence (mise hors d'eau sous 2-4 heures en ouvré), des frais
+              maximale en cas d'{' '}
+              <Link
+                href="/urgence-fuite-toiture-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                urgence fuite toiture
+              </Link>{' '}
+              (mise hors d'eau sous 2-4 heures en ouvré), des frais
               de déplacement maîtrisés, et une connaissance intime du bâti
               bordelais — échoppes tuile canal du XIXᵉ, immeubles
               haussmanniens en ardoise, pavillons tuile mécanique des années
