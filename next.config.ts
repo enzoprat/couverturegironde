@@ -193,6 +193,39 @@ const nextConfig: NextConfig = {
         destination: '/couvreur-bouscat',
         permanent: true,
       },
+      // Legacy Webflow "explorée non indexée" (GSC 12/07) — consolidation vers
+      // les pages pertinentes existantes pour éviter les 404 résiduels.
+      {
+        source: '/devis-couverture-toiture-bordeaux',
+        destination: '/demande-devis',
+        permanent: true,
+      },
+      {
+        source: '/privacy-policy',
+        destination: '/politique-confidentialite',
+        permanent: true,
+      },
+      {
+        source: '/nos-services-en-gironde',
+        destination: '/couvreur-gironde',
+        permanent: true,
+      },
+      // Peinture/façade : service abandonné, aucune page équivalente → home.
+      {
+        source: '/peinture-batiment',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/peinture-facade-gironde',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/peinture-facade-renovation-bordeaux',
+        destination: '/',
+        permanent: true,
+      },
     ];
   },
 };

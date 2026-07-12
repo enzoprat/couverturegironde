@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -73,8 +74,14 @@ export default function Page() {
                 prestations sont souvent confondues : le nettoyage haute
                 pression retire les dépôts superficiels (pollution, algues) ;
                 le démoussage traite chimiquement les végétaux installés
-                (mousses, lichens) et éradique les spores ; l'hydrofuge est
-                un traitement de protection appliqué APRÈS démoussage qui
+                (mousses, lichens) et éradique les spores ; le{' '}
+                <Link
+                  href="/traitement-hydrofuge-toiture-bordeaux"
+                  className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+                >
+                  traitement hydrofuge
+                </Link>{' '}
+                est une protection appliquée APRÈS démoussage qui
                 retarde la ré-installation pendant 5-10 ans. Un démoussage
                 seul suffit sur une toiture avec mousses ponctuelles.
                 Combo démoussage + hydrofuge pour une toiture très colonisée

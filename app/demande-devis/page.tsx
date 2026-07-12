@@ -43,8 +43,8 @@ export default function Page() {
           <div className="max-w-3xl mb-10">
             <Eyebrow className="mb-3">Devis gratuit · sans engagement</Eyebrow>
             <h1 className="text-display mb-5">
-              Décrivez votre projet, nous{' '}
-              <span className="text-[var(--color-terre)]">revenons vers vous sous 24h</span>
+              Devis toiture à Bordeaux —{' '}
+              <span className="text-[var(--color-terre)]">réponse gratuite sous 24h</span>
             </h1>
             <p className="text-lead">
               Démoussage, nettoyage, réparation, zinguerie ou projet plus

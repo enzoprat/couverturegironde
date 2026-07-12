@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -69,7 +70,14 @@ export default function Page() {
                 les coulures et les algues sur la tuile.
               </strong>{' '}
               Les deux opérations sont complémentaires et indissociables pour
-              un résultat durable.
+              un résultat durable. Sur une toiture poreuse, nous ajoutons un{' '}
+              <Link
+                href="/traitement-hydrofuge-toiture-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                traitement hydrofuge
+              </Link>{' '}
+              en finition pour retarder le retour des mousses de 5 à 10 ans.
             </p>
           </>
         ),
