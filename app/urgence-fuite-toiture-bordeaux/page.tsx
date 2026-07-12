@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -75,6 +76,15 @@ export default function Page() {
                 complet. <strong>Vous n'êtes jamais forcé à décider en urgence
                 pour des travaux importants.</strong> C'est ce qui nous
                 distingue des démarcheurs qui exploitent la détresse client.
+                Si votre sinistre fait suite à un coup de vent, notre page{' '}
+                <Link
+                  href="/fuite-toiture-tempete-bordeaux"
+                  className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+                >
+                  fuite de toiture après tempête
+                </Link>{' '}
+                détaille les démarches d'assurance tempête et catastrophe
+                naturelle spécifiques.
               </p>
               <p>
                 Le coût d'une <strong>mise hors d'eau chiffré 250-550 €</strong>{' '}

@@ -172,6 +172,27 @@ const STATIC_PAGES: PageEntry[] = [
     footerSection: 'services',
     indexable: true,
   },
+  // Satellite longue-traîne alimentant la page urgence (money page pos ~8).
+  // service:'urgence' MAIS placée après urgence-fuite → celle-ci reste la
+  // page canonique du service dans le maillage automatique des autres pages.
+  {
+    slug: 'fuite-toiture-tempete-bordeaux',
+    path: '/fuite-toiture-tempete-bordeaux',
+    type: 'service',
+    service: 'urgence',
+    title: 'Fuite toiture après tempête',
+    seoTitle:
+      'Fuite toiture après tempête Bordeaux · bâchage + assurance 7j/7',
+    seoDescription:
+      "★ Fuite de toiture après tempête à Bordeaux · Bâchage d'urgence sous 2h + dossier assurance tempête / cat-nat constitué · Couvreur Mérignac ☎ 07 68 69 78 48.",
+    relatedSlugs: [
+      'urgence-fuite-toiture-bordeaux',
+      'reparation-toiture-bordeaux',
+      'couvreur-bordeaux',
+    ],
+    indexable: true,
+    sitemapPriority: 0.7,
+  },
   {
     slug: 'zinguerie-bordeaux',
     path: '/zinguerie-bordeaux',
