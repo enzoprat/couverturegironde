@@ -53,15 +53,15 @@ export default function HomePage() {
             — artisan couvreur à Mérignac depuis 2005
           </>
         }
-        subtitle="Liroy Delsuc, couvreur-zingueur, atelier au 65 rue de Malbos à Mérignac. Démoussage, nettoyage, réparation, urgence 7j/7 sur Bordeaux Métropole et toute la Gironde. Devis gratuit sous 24h, garantie décennale, 5/5 sur 52 avis Google."
+        subtitle="Liroy Delsuc, couvreur-zingueur, atelier au 65 rue de Malbos à Mérignac. Réparation, rénovation et réfection de toiture, recherche de fuite, zinguerie et urgence 7j/7 sur Bordeaux Métropole et toute la Gironde. Devis gratuit sous 24h, garantie décennale, 5/5 sur 52 avis Google."
         imageSlug="home"
         secondaryCtaLabel="Demander un devis gratuit"
       />
 
       <ServicesGrid
         eyebrow="Nos services en Gironde"
-        title="Démoussage, nettoyage et entretien de toiture à Bordeaux et en Gironde"
-        intro="Notre spécialité : préserver et prolonger la vie de votre toiture. Démoussage professionnel, nettoyage maîtrisé et traitement hydrofuge longue durée, complétés par toutes les prestations de couverture et zinguerie sur l'ensemble de la Gironde."
+        title="Couvreur à Bordeaux et en Gironde : réparation, rénovation et réfection de toiture"
+        intro="Artisan couvreur-zingueur : réparation de toiture, réfection complète, recherche de fuite, pose et remplacement de tuiles, ardoises et zinc sur l'ensemble de la Gironde. Nous assurons aussi l'entretien (démoussage, nettoyage, hydrofuge) pour prolonger la durée de vie de votre couverture."
         scope="all"
       />
 
@@ -111,34 +111,34 @@ export default function HomePage() {
         ))}
       <JsonLd
         data={getHowToSchema({
-          name: "Comment se déroule un démoussage de toiture en Gironde",
+          name: "Comment se déroule une réparation ou réfection de toiture en Gironde",
           description:
-            "Méthode professionnelle Couverture Gironde pour un démoussage durable, du diagnostic au traitement hydrofuge final.",
+            "Méthode professionnelle Couverture Gironde pour une intervention de couverture durable, du diagnostic à la réception du chantier.",
           totalTime: "P1D",
           steps: [
             {
               name: "Diagnostic gratuit sur site",
-              text: "Visite technique sans engagement : état général de la couverture, points faibles, accessibilité, photos et mesures précises. Compte rendu remis avec recommandation.",
+              text: "Visite technique sans engagement : état général de la couverture, recherche de fuite, points faibles, accessibilité, photos et mesures précises. Compte rendu remis avec recommandation.",
             },
             {
               name: "Devis détaillé sous 24h",
-              text: "Devis chiffré ligne par ligne, sans ambiguïté : type de prestation, surface, matériel utilisé, garantie. Devis personnalisé adapté à votre toiture.",
+              text: "Devis chiffré ligne par ligne, sans ambiguïté : nature des travaux, surface, matériaux (tuile, ardoise, zinc), garantie décennale. Devis personnalisé adapté à votre toiture.",
             },
             {
-              name: "Brossage manuel des zones critiques",
-              text: "Élimination mécanique des mousses installées sur les versants nord, autour des cheminées et des zones ombragées. Pas de pression destructrice : on respecte la tuile.",
+              name: "Préparation et sécurisation du chantier",
+              text: "Installation des protections et de l'échafaudage, dépose des éléments endommagés (tuiles, ardoises, faîtage, zinguerie), contrôle de la charpente et de l'écran sous-toiture.",
             },
             {
-              name: "Application du produit anti-mousse",
-              text: "Traitement chimique professionnel longue durée (3-5 ans d'efficacité), adapté au matériau (tuile canal, mécanique, ardoise). Application par pulvérisation basse pression.",
+              name: "Réparation ou réfection de la couverture",
+              text: "Remplacement des tuiles ou ardoises, reprise du faîtage, des noues et des raccords, réfection de la zinguerie (gouttières, chéneaux). Matériaux adaptés au bâti girondin.",
             },
             {
-              name: "Rinçage et inspection finale",
-              text: "Rinçage des descentes et des chéneaux, inspection des points sensibles (faîtage, noues, raccords zinc). Photos avant/après remises en fin de chantier.",
+              name: "Contrôle d'étanchéité et finitions",
+              text: "Vérification de la mise hors d'eau, test des points sensibles (faîtage, noues, solins, raccords zinc), nettoyage du chantier et des descentes.",
             },
             {
-              name: "Option : traitement hydrofuge garanti 10 ans",
-              text: "Application d'un hydrofuge incolore ou coloré pour imperméabiliser la couverture, ralentir la recolonisation des mousses et raviver la teinte. Garantie 10 ans.",
+              name: "Réception et garantie décennale",
+              text: "Visite de fin de chantier avec le client, photos avant/après remises, rappel de l'attestation d'assurance décennale couvrant les travaux 10 ans.",
             },
           ],
         })}
