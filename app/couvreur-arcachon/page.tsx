@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { VillePageLayout } from '@/components/content/VillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -63,9 +64,17 @@ export default function Page() {
             <p>
               Arcachon et le Bassin sont un territoire à part en Gironde,
               avec des contraintes climatiques et patrimoniales très
-              spécifiques. Couvreur-zingueur depuis 2005 sur le département,
-              nous intervenons régulièrement sur la commune et le pourtour
-              du Bassin. Pour limiter les coûts de déplacement (60 km
+              spécifiques. Couvreur-zingueur depuis 2005, nous intervenons
+              sur la commune et le pourtour du Bassin comme sur l'ensemble
+              de la{' '}
+              <Link
+                href="/couvreur-gironde"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                Gironde hors métropole
+              </Link>{' '}
+              (Médoc, Libournais, Sud-Gironde). Pour limiter les coûts de
+              déplacement (60 km
               depuis notre atelier de Mérignac), nous organisons{' '}
               <strong>des journées d'intervention groupées sur le Bassin</strong>{' '}
               pour mutualiser les frais avec d'autres clients arcachonnais.

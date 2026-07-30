@@ -99,6 +99,25 @@ export default function Page() {
               est la traduction concrète de cette méthode au quotidien depuis
               20 ans.
             </p>
+            <p>
+              Au-delà de Bordeaux Métropole, nous intervenons sur chantier dans
+              toute la{' '}
+              <Link
+                href="/couvreur-gironde"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                Gironde hors métropole
+              </Link>{' '}
+              — Médoc, Libournais, Sud-Gironde — et sur le{' '}
+              <Link
+                href="/couvreur-arcachon"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                Bassin d'Arcachon
+              </Link>
+              , où le climat maritime impose une zinguerie renforcée et un
+              traitement hydrofuge adaptés.
+            </p>
           </>
         ),
 
