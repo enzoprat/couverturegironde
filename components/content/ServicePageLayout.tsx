@@ -125,6 +125,14 @@ export type ServicePageContent = {
   }>;
   /** Override de la FAQ service générique (utile pour pages piliers). */
   faqOverride?: FAQItem[];
+  /** Bandeau d'urgence rouge affiché juste après le bloc auteur (contexte sinistre). */
+  urgenceBanner?: ReactNode;
+  /** Section urgence sinistre rouge à 2 CTA (appel immédiat + demande 24h), après la présentation. */
+  urgenceSinistre?: {
+    eyebrow?: string;
+    title: string;
+    text: string;
+  };
 };
 
 export function ServicePageLayout({ content }: { content: ServicePageContent }) {
@@ -203,6 +211,33 @@ export function ServicePageLayout({ content }: { content: ServicePageContent }) 
         </section>
       )}
 
+      {/* Bandeau urgence rouge (contexte sinistre) — juste après le bloc auteur.
+          Rouge inline volontaire : réservé aux pages sinistre, hors design system. */}
+      {content.urgenceBanner && (
+        <section className="bg-[#c0271f] text-white">
+          <Container>
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-4">
+              <p className="flex items-center gap-2.5 text-[0.9375rem] font-semibold text-center sm:text-left">
+                <AlertTriangle
+                  className="w-5 h-5 shrink-0"
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
+                {content.urgenceBanner}
+              </p>
+              <Button
+                href={NAP.phoneHref}
+                size="md"
+                iconLeft={<Phone className="w-5 h-5" />}
+                className="!bg-white !text-[#c0271f] hover:!bg-[#f6e7e5] shrink-0"
+              >
+                Appeler — {NAP.phoneDisplay}
+              </Button>
+            </div>
+          </Container>
+        </section>
+      )}
+
       {/* Présentation */}
       <section className="section-y">
         <Container size="narrow">
@@ -213,6 +248,47 @@ export function ServicePageLayout({ content }: { content: ServicePageContent }) 
           </div>
         </Container>
       </section>
+
+      {/* Section urgence sinistre rouge à 2 CTA — après la présentation.
+          Rouge inline volontaire : réservé aux pages sinistre, hors design system. */}
+      {content.urgenceSinistre && (
+        <section className="section-y bg-[#c0271f] text-white">
+          <Container>
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 mb-6">
+                <AlertTriangle className="w-4 h-4" aria-hidden="true" />
+                <span className="text-[0.8125rem] font-bold uppercase tracking-wider">
+                  {content.urgenceSinistre.eyebrow ?? 'Urgence sinistre'}
+                </span>
+              </div>
+              <h2 className="text-display mb-6 text-white">
+                {content.urgenceSinistre.title}
+              </h2>
+              <p className="text-lead mb-8 !text-white max-w-2xl">
+                {content.urgenceSinistre.text}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button
+                  href={NAP.phoneHref}
+                  size="lg"
+                  iconLeft={<Phone className="w-5 h-5" />}
+                  className="!bg-white !text-[#c0271f] hover:!bg-[#f6e7e5] !shadow-none"
+                >
+                  Appeler — réponse immédiate
+                </Button>
+                <Button
+                  href="/demande-devis"
+                  variant="inverse"
+                  size="lg"
+                  iconRight={<ArrowRight className="w-5 h-5" />}
+                >
+                  Envoyer une demande — réponse sous 24h
+                </Button>
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* Pourquoi faire appel à un professionnel */}
       <section className="section-y bg-[var(--color-creme)] border-y border-[var(--color-border)]">

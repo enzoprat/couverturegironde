@@ -32,6 +32,19 @@ export default function Page() {
             "Toiture exposée aux flammes, aux braises ou aux fumées lors des feux de l'été 2026 ? Diagnostic couvreur gratuit sur toute la Gironde, mise en sécurité immédiate et dossier assurance incendie constitué. Liroy, artisan direct, atelier à Mérignac — commune elle-même touchée par les évacuations. ☎ 07 68 69 78 48.",
           shortTitle: 'Toiture après incendie',
 
+          urgenceBanner: (
+            <>
+              Toiture ouverte, fuite active ou doute sur un foyer résiduel ?
+              N&apos;attendez pas la première pluie — chaque heure compte.
+            </>
+          ),
+
+          urgenceSinistre: {
+            eyebrow: 'Urgence sinistre Gironde',
+            title: 'Toiture sinistrée ? Nous intervenons en priorité',
+            text: "Après un incendie, une toiture ouverte ou fragilisée s'aggrave à la première pluie, et un foyer résiduel peut couver plusieurs jours. Appelez pour une réponse immédiate, ou envoyez votre demande : nous vous recontactons sous 24h ouvrées pour organiser la mise en sécurité et le diagnostic gratuit.",
+          },
+
           authorBlock: {
             name: 'Liroy Delsuc',
             role: 'Couvreur-zingueur, fondateur — atelier Mérignac',
