@@ -84,7 +84,16 @@ export default function Page() {
                   fuite de toiture après tempête
                 </Link>{' '}
                 détaille les démarches d'assurance tempête et catastrophe
-                naturelle spécifiques.
+                naturelle spécifiques. Si votre toiture a été exposée aux
+                flammes, aux braises ou aux fumées lors des feux de forêt,
+                consultez notre page dédiée{' '}
+                <Link
+                  href="/reparation-toiture-apres-incendie-gironde"
+                  className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+                >
+                  réparation de toiture après incendie en Gironde
+                </Link>
+                .
               </p>
               <p>
                 Le coût d'une <strong>mise hors d'eau chiffré 250-550 €</strong>{' '}

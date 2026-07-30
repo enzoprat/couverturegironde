@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -65,7 +66,16 @@ export default function Page() {
               pannes, fermes),{' '}
               <strong>renforcement structurel</strong> par moisage ou
               consolidation, et <strong>création de charpente neuve</strong>{' '}
-              dans le cadre de constructions ou d'extensions.
+              dans le cadre de constructions ou d'extensions. Après un
+              sinistre, nous évaluons la perte de section d'une charpente
+              roussie ou carbonisée en surface : voir notre page{' '}
+              <Link
+                href="/reparation-toiture-apres-incendie-gironde"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                réparation de toiture après incendie en Gironde
+              </Link>
+              .
             </p>
             <p>
               À Bordeaux Métropole, les charpentes traditionnelles

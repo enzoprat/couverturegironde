@@ -79,7 +79,15 @@ export default function Page() {
               >
                 urgence fuite toiture
               </Link>{' '}
-              : nous intervenons sous 30 min à 2h pour la mise hors d'eau.
+              : nous intervenons sous 30 min à 2h pour la mise hors d'eau. Si
+              les dégâts font suite à un incendie, notre page{' '}
+              <Link
+                href="/reparation-toiture-apres-incendie-gironde"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                réparation de toiture après incendie en Gironde
+              </Link>{' '}
+              détaille le diagnostic et le dossier assurance spécifiques.
             </p>
           </>
         ),

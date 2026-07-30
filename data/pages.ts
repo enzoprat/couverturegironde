@@ -193,6 +193,36 @@ const STATIC_PAGES: PageEntry[] = [
     indexable: true,
     sitemapPriority: 0.7,
   },
+  // Page mère "sinistre incendie" — réponse aux feux Gironde été 2026.
+  // Une SEULE page transactionnelle forte (pas de pages incendie×ville :
+  // risque doorway + cannibalisation des pages couvreur/réparation × ville).
+  // service:'couverture' = tous travaux de toiture après sinistre.
+  {
+    slug: 'reparation-toiture-apres-incendie-gironde',
+    path: '/reparation-toiture-apres-incendie-gironde',
+    type: 'service',
+    service: 'couverture',
+    title: 'Réparation toiture après incendie Gironde',
+    navLabel: 'Toiture après incendie',
+    seoTitle:
+      'Réparation toiture après incendie en Gironde \u00b7 diagnostic gratuit',
+    seoDescription:
+      "★ Toiture touchée par les feux de Gironde 2026 ? Diagnostic couvreur gratuit, mise en sécurité, dossier assurance incendie · Liroy, atelier Mérignac ☎ 07 68 69 78 48.",
+    relatedSlugs: [
+      'urgence-fuite-toiture-bordeaux',
+      'reparation-toiture-bordeaux',
+      'charpente-bordeaux',
+      'zinguerie-bordeaux',
+      'couvreur-gironde',
+    ],
+    visibleInNav: true,
+    navCategory: 'urgence',
+    navOrder: 43,
+    visibleInFooter: true,
+    footerSection: 'services',
+    indexable: true,
+    sitemapPriority: 0.9,
+  },
   {
     slug: 'zinguerie-bordeaux',
     path: '/zinguerie-bordeaux',

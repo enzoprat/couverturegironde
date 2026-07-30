@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -65,7 +66,17 @@ export default function Page() {
               les pièces métalliques (zinguerie, faîtage scellé,
               quincaillerie). Dans le Médoc et le Libournais, l'exposition
               aux orages d'été et aux tempêtes hivernales multiplie les
-              sinistres tuiles et faîtages.
+              sinistres tuiles et faîtages. Le massif forestier des Landes de
+              Gascogne expose par ailleurs une partie du département au risque
+              d'incendie : après un feu, nous assurons le diagnostic et la
+              remise en état des toitures touchées (voir notre page{' '}
+              <Link
+                href="/reparation-toiture-apres-incendie-gironde"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                réparation de toiture après incendie en Gironde
+              </Link>
+              ).
             </p>
             <p>
               Côté patrimoine, la Gironde concentre une diversité

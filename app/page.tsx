@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { Hero } from '@/components/sections/Hero';
+import { Container } from '@/components/ui/Container';
 import { ServicesGrid } from '@/components/sections/ServicesGrid';
 import { Reassurance } from '@/components/sections/Reassurance';
 import { ChiffresCles } from '@/components/sections/ChiffresCles';
@@ -82,6 +84,25 @@ export default function HomePage() {
       />
 
       <Urgence variant="compact" />
+
+      {/* Lien contextuel événementiel (feux Gironde 2026) — scopé à l'accueil,
+          à retirer quand l'épisode incendie sera passé. */}
+      <section className="py-4 bg-[var(--color-urgence-100)] border-b border-[var(--color-urgence)]/20">
+        <Container>
+          <p className="text-[0.9375rem] text-[var(--color-gris-600)]">
+            Toiture touchée par les feux de forêt de l&apos;été 2026 en Gironde ?
+            Nous assurons la mise en sécurité, le diagnostic gratuit et le
+            dossier assurance —{' '}
+            <Link
+              href="/reparation-toiture-apres-incendie-gironde"
+              className="font-semibold text-[var(--color-urgence)] underline underline-offset-2 hover:no-underline"
+            >
+              réparation de toiture après incendie en Gironde
+            </Link>
+            .
+          </p>
+        </Container>
+      </section>
 
       <FAQ
         items={FAQ_GENERAL}

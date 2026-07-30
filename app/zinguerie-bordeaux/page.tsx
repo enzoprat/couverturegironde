@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -66,7 +67,18 @@ export default function Page() {
               encaissés, descentes carrées ou rondes, noues, raccords muraux,
               habillages de souches de cheminée, abergements de Velux. Nous
               soudons à l'étain sur place pour les jonctions exposées —
-              garantie d'étanchéité supérieure à n'importe quel collage.
+              garantie d'étanchéité supérieure à n'importe quel collage. Après
+              un sinistre, la zinguerie est souvent le premier élément atteint :
+              zinc oxydé par les fumées acides, soudures fragilisées, gouttières
+              PVC déformées par la chaleur. Si votre couverture a été exposée aux
+              feux de 2026, notre page{' '}
+              <Link
+                href="/reparation-toiture-apres-incendie-gironde"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                réparation de toiture après incendie en Gironde
+              </Link>{' '}
+              détaille le diagnostic et le dossier assurance.
             </p>
           </>
         ),
