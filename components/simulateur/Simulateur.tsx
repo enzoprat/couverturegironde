@@ -88,10 +88,12 @@ export function Simulateur({
   function selectBranch(b: Branch) {
     setBranch(b);
     setAnswers({});
-    if (b.kind === 'urgence') {
+    // Branche sans étapes (urgence, ou « Autre projet ») → écran de sortie direct.
+    if (b.kind === 'urgence' || b.steps.length === 0) {
       setPhase('outcome');
-      onStep?.({ branch: b.id, step: 'urgence-shortcut', index: 0 });
-      pushDataLayer({ event: 'simulateur_branch', branch: b.id, kind: 'urgence' });
+      const kind = b.kind === 'urgence' ? 'urgence' : 'direct';
+      onStep?.({ branch: b.id, step: `${kind}-shortcut`, index: 0 });
+      pushDataLayer({ event: 'simulateur_branch', branch: b.id, kind });
     } else {
       setStepIndex(0);
       setPhase('steps');

@@ -205,5 +205,27 @@ export const SIMULATEUR_CONFIG: SimulateurConfig = {
           'Éligibilité indicative, à confirmer selon vos revenus et les barèmes en vigueur. Nous ne sommes pas un organisme d\u2019État : nous vous orientons et constituons le dossier technique.',
       },
     },
+
+    /* ============================================================
+       E. AUTRE PROJET
+       Filet anti-perte-de-lead : aucun besoin ne doit rester sans issue.
+       Pas d'étapes (steps: []) → écran de sortie direct « on vous rappelle ».
+       ============================================================ */
+    {
+      id: 'autre',
+      label: 'Autre projet',
+      icon: '💬',
+      hint: 'Un autre besoin ? Décrivez-le, on vous rappelle',
+      kind: 'standard',
+      steps: [],
+      outcome: {
+        mode: 'delay-only',
+        title: 'Parlez-nous de votre projet',
+        body: [
+          'Votre besoin ne rentre pas dans une case ? Aucun souci. Laissez-nous votre numéro et une brève description : nous vous rappelons {ville} sous 24h ouvrées pour en discuter et vous orienter, sans engagement.',
+        ],
+        delai: 'Rappel gratuit sous 24h ouvrées.',
+      },
+    },
   ],
 };
