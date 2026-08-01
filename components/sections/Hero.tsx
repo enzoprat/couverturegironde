@@ -1,5 +1,6 @@
-import { ArrowRight, Phone, ShieldCheck, Star, Award, Clock } from 'lucide-react';
+import { ArrowRight, Phone, ShieldCheck, Award, Clock } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
+import { GoogleRatingBadge } from '@/components/ui/GoogleBadge';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Eyebrow } from '@/components/ui/Eyebrow';
@@ -141,10 +142,7 @@ export function Hero({
                 </Badge>
               </li>
               <li>
-                <Badge variant="or" icon={<Star />}>
-                  {TRUST.googleRating}/5 sur {TRUST.googleReviewCount} avis
-                  Google
-                </Badge>
+                <GoogleRatingBadge />
               </li>
               <li>
                 <Badge variant="or" icon={<Award />}>
