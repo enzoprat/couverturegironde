@@ -1,9 +1,9 @@
-import { Star, ExternalLink, PenLine } from 'lucide-react';
+import Image from 'next/image';
+import { ExternalLink, PenLine } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
-import { AVIS, formatAvisDate, type AvisClient } from '@/data/avis';
+import { AvisCarousel } from '@/components/sections/AvisCarousel';
+import { AVIS } from '@/data/avis';
 import { SOCIAL, TRUST } from '@/lib/constants';
 
 type AvisGoogleProps = {
@@ -12,104 +12,120 @@ type AvisGoogleProps = {
   intro?: string;
   /** Filtrer par ville (pour pages villes). */
   filterCity?: string;
-  /** Nombre d'avis à afficher (par défaut 6). */
+  /** Nombre d'avis à afficher (par défaut 10). */
   limit?: number;
 };
 
+/** Étoile Google (jaune #FBBC05), rendue en SVG inline pour éviter un import. */
+function GoogleStar({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="#FBBC05" aria-hidden="true">
+      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+    </svg>
+  );
+}
+
 /**
- * AvisGoogle — section avis clients.
+ * AvisGoogle — section avis clients, présentée comme un carrousel de cartes
+ * façon widget Google (note globale + logo Google + cartes scrollables).
  *
- * Politique zéro-placeholder : n'affiche QUE des avis Google Business
- * Profile réels (source data/avis.ts). Tant que Liroy n'a pas fourni les
- * vrais avis, la section affiche l'en-tête + un CTA direct vers la fiche
- * Google, sans jamais fabriquer de cartes.
+ * Politique zéro-placeholder : n'affiche QUE des avis Google Business Profile
+ * réels (source data/avis.ts, recopiés depuis la fiche GBP).
+ *
+ * Le texte des avis n'est JAMAIS modifié ni enrichi de liens : le maillage
+ * interne passe par le tag « prestation » affiché sous chaque avis.
  */
 export function AvisGoogle({
-  eyebrow = 'Avis clients',
-  title = 'Ce que disent nos clients en Gironde',
+  eyebrow,
+  title = 'Avis vérifiés de nos clients',
   intro,
   filterCity,
-  limit = 6,
+  limit = 10,
 }: AvisGoogleProps) {
-  const displayed = filterCity
+  const filtered = filterCity
     ? AVIS.filter(
         (a) =>
           a.city.localeCompare(filterCity, 'fr', { sensitivity: 'base' }) === 0,
-      ).slice(0, limit)
-    : AVIS.slice(0, limit);
+      )
+    : AVIS;
 
+  // Sur une page ville sans avis local, on retombe sur l'ensemble des avis
+  // plutôt que d'afficher une section vide.
+  const displayed = (filtered.length > 0 ? filtered : AVIS).slice(0, limit);
   const hasAvis = displayed.length > 0;
 
   return (
-    <section className="section-y">
+    <section className="section-y bg-[var(--color-creme)]">
       <Container>
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
-          <div className="max-w-2xl">
-            <Eyebrow className="mb-3">{eyebrow}</Eyebrow>
-            <h2 className="mb-4">{title}</h2>
-            {intro && <p className="text-lead">{intro}</p>}
+        <div className="text-center mb-12 max-w-3xl mx-auto">
+          {eyebrow && (
+            <p className="text-[0.8125rem] font-bold uppercase tracking-[0.18em] text-[var(--color-terre)] mb-3">
+              {eyebrow}
+            </p>
+          )}
+          <h2 className="mb-5">{title}</h2>
+
+          <div
+            className="flex items-center justify-center gap-1 mb-3"
+            role="img"
+            aria-label={`Note ${TRUST.googleRating} sur 5`}
+          >
+            {[1, 2, 3, 4, 5].map((i) => (
+              <GoogleStar key={i} className="w-7 h-7 md:w-8 md:h-8" />
+            ))}
           </div>
 
-          <div className="flex items-center gap-3 shrink-0">
-            <div className="flex items-center gap-1 text-[var(--color-or)]">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <Star
-                  key={i}
-                  className="w-5 h-5 fill-current"
-                  aria-hidden="true"
-                />
-              ))}
-            </div>
-            <div className="text-[0.9375rem]">
-              <strong className="text-[var(--color-ardoise)]">
-                {TRUST.googleRating}/5
-              </strong>{' '}
-              <span className="text-[var(--color-gris-600)]">
-                · {TRUST.googleReviewCount} avis Google
-              </span>
-            </div>
-          </div>
+          <p className="text-[var(--color-gris-600)] mb-5">
+            Note {TRUST.googleRating}/5 basée sur{' '}
+            <strong className="text-[var(--color-ardoise)]">
+              {TRUST.googleReviewCount} avis
+            </strong>
+          </p>
+
+          <a
+            href={SOCIAL.google}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Voir tous les avis sur notre fiche Google (nouvel onglet)"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white border border-[var(--color-border)] shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-md)] transition-shadow focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-terre)]"
+          >
+            <Image
+              src="/google-g.svg"
+              alt="Google"
+              width={18}
+              height={18}
+              unoptimized
+            />
+            <span className="text-[0.875rem] font-semibold text-[var(--color-ardoise)]">
+              Avis vérifiés sur Google
+            </span>
+            <ExternalLink
+              className="w-3.5 h-3.5 text-[var(--color-gris-600)]"
+              aria-hidden="true"
+            />
+          </a>
+
+          {intro && (
+            <p className="text-lead mt-6">{intro}</p>
+          )}
         </div>
 
         {hasAvis ? (
-          <ul
-            role="list"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {displayed.map((avis) => (
-              <li key={avis.id}>
-                <AvisCard avis={avis} />
-              </li>
-            ))}
-          </ul>
+          <AvisCarousel avis={displayed} />
         ) : (
-          <div className="p-8 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-creme)] text-center">
+          <div className="p-8 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-white text-center">
             <p className="text-[1rem] text-[var(--color-gris-600)] leading-relaxed max-w-2xl mx-auto mb-6">
               Nos avis clients sont publics et vérifiables sur notre fiche
-              Google Business Profile. Nous préférons vous y renvoyer plutôt
-              que d'afficher des extraits que vous ne pourriez pas
-              contre-vérifier.
+              Google Business Profile.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-3">
-              <Button
-                href={SOCIAL.google}
-                external
-                variant="primary"
-                iconRight={<ExternalLink className="w-4 h-4" />}
-                aria-label="Consulter les avis Google (nouvel onglet)"
-              >
-                Consulter les avis Google
-              </Button>
-              <Button
-                href={SOCIAL.googleReview}
-                external
-                variant="secondary"
-                iconRight={<PenLine className="w-4 h-4" />}
-                aria-label="Laisser un avis sur Google (nouvel onglet)"
-              >
-                Laisser un avis
-              </Button>
-            </div>
+            <Button
+              href={SOCIAL.google}
+              external
+              variant="primary"
+              iconRight={<ExternalLink className="w-4 h-4" />}
+            >
+              Consulter les avis Google
+            </Button>
           </div>
         )}
 
@@ -117,41 +133,16 @@ export function AvisGoogle({
           <Button href="/realisations" variant="ghost">
             Découvrir nos réalisations
           </Button>
-          {hasAvis && (
-            <Button
-              href={SOCIAL.google}
-              variant="ghost"
-              iconRight={<ExternalLink className="w-4 h-4" />}
-            >
-              Voir tous les avis Google
-            </Button>
-          )}
+          <Button
+            href={SOCIAL.googleReview}
+            external
+            variant="ghost"
+            iconRight={<PenLine className="w-4 h-4" />}
+          >
+            Laisser un avis
+          </Button>
         </div>
       </Container>
     </section>
-  );
-}
-
-function AvisCard({ avis }: { avis: AvisClient }) {
-  return (
-    <Card interactive={false} className="h-full flex flex-col">
-      <div className="flex items-center gap-1 text-[var(--color-or)] mb-3">
-        {Array.from({ length: avis.rating }).map((_, i) => (
-          <Star key={i} className="w-4 h-4 fill-current" aria-hidden="true" />
-        ))}
-      </div>
-      <p className="text-[1rem] text-[var(--color-ardoise)] leading-relaxed mb-5 flex-1">
-        «&nbsp;{avis.text}&nbsp;»
-      </p>
-      <div className="flex items-center justify-between text-[0.8125rem] pt-4 border-t border-[var(--color-border)]">
-        <span className="font-semibold text-[var(--color-ardoise)]">
-          {avis.author}
-          {avis.city ? ` · ${avis.city}` : ''}
-        </span>
-        <span className="text-[var(--color-gris-600)]">
-          {formatAvisDate(avis.date)}
-        </span>
-      </div>
-    </Card>
   );
 }

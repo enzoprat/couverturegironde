@@ -29,7 +29,7 @@ export default function Page() {
           </>
         ),
         heroSubtitle:
-          "Artisan couvreur-zingueur en Gironde depuis 2005, atelier au 65 rue de Malbos à Mérignac. Interventions Bordeaux Métropole quotidiennes, Médoc + Bassin d'Arcachon + Libournais + Sud-Gironde sur devis avec chantiers groupés. Urgence 7j/7, devis 24h, décennale, 5/5 sur 52 avis Google.",
+          "Artisan couvreur-zingueur en Gironde depuis 2005, atelier au 65 rue de Malbos à Mérignac. Interventions Bordeaux Métropole quotidiennes, Médoc + Bassin d'Arcachon + Libournais + Sud-Gironde sur devis avec chantiers groupés. Urgence 7j/7, devis 24h, décennale, 5/5 sur 55 avis Google.",
         shortTitle: 'Couvreur Gironde',
 
         authorBlock: {
@@ -39,7 +39,7 @@ export default function Page() {
           badges: [
             'Depuis 2005',
             'Décennale active',
-            '5/5 sur 52 avis Google',
+            '5/5 sur 55 avis Google',
             'Départemental (33)',
           ],
         },
@@ -52,7 +52,7 @@ export default function Page() {
               couvre Bordeaux Métropole en intervention quotidienne, et nous
               nous déplaçons sur tout le département pour les chantiers
               dimensionnés : Médoc, Bassin d'Arcachon, Libournais, Saint-Émilion,
-              Entre-deux-Mers, Sud-Gironde, La Brède, Langon. Note 5/5 sur 52
+              Entre-deux-Mers, Sud-Gironde, La Brède, Langon. Note 5/5 sur 55
               avis Google.
             </p>
             <p>
@@ -135,7 +135,7 @@ export default function Page() {
           {
             title: '20 ans d\'expérience en Gironde',
             description:
-              "Note 5/5 sur 52 avis Google. Connaissance fine du bâti girondin : échoppes bordelaises, chartreuses Médoc, villas Arcachon, bâti rural Entre-deux-Mers.",
+              "Note 5/5 sur 55 avis Google. Connaissance fine du bâti girondin : échoppes bordelaises, chartreuses Médoc, villas Arcachon, bâti rural Entre-deux-Mers.",
           },
           {
             title: 'Expertise climat océanique',
@@ -263,7 +263,7 @@ export default function Page() {
             },
           ],
           disclaimer:
-            "Tarifs TTC, posé, sécurité incluse. TVA 10 % applicable aux logements >2 ans. Échafaudage spécifique et intervention hors zone Bordeaux Métropole sur devis. Note 5/5 sur 52 avis Google publics.",
+            "Tarifs TTC, posé, sécurité incluse. TVA 10 % applicable aux logements >2 ans. Échafaudage spécifique et intervention hors zone Bordeaux Métropole sur devis. Note 5/5 sur 55 avis Google publics.",
         },
         quartiersBordeaux: {
           intro:

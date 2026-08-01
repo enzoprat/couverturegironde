@@ -12,6 +12,10 @@ const ContentSecurityPolicy = [
   // api.web3forms.com : backend des formulaires (DevisForm + Simulateur).
   // Sans cette entrée, le fetch cross-origin est bloqué → "Load failed".
   "connect-src 'self' https://api.web3forms.com",
+  // www.google.com/maps/embed : carte de la fiche Google Business Profile
+  // intégrée dans le footer sitewide. Sans frame-src, default-src 'self'
+  // bloque l'iframe.
+  "frame-src https://www.google.com",
   "frame-ancestors 'self'",
   "form-action 'self'",
   "base-uri 'self'",

@@ -57,3 +57,6 @@ _gsc-data/
 # Service account keys et secrets (ne JAMAIS committer)
 /_secrets/
 *service-account*.json
+
+# Documents administratifs perso (SIREN/SIRET, courriers INSEE… — hors code site)
+/tableau-activite-insee.html

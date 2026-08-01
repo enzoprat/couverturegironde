@@ -33,7 +33,7 @@ export default function Page() {
             name: 'Liroy Delsuc',
             role: 'Couvreur-zingueur, fondateur — atelier Mérignac (60 km)',
             bio: "Je réalise la zinguerie sur Arcachon et le Bassin depuis 2005. Sur le Bassin, air salin agressif = zinc marine prépatiné OBLIGATOIRE. Un zinc standard s'oxyde en 5-10 ans en bord de mer. Journées d'intervention groupées Arcachon + La Teste + Le Pyla pour maîtriser les frais de déplacement. Soudure étain sur place pour étanchéité 30-50 ans.",
-            badges: ['Depuis 2005', 'Décennale active', '5/5 sur 52 avis Google', 'Zinc marine anti-air-salin'],
+            badges: ['Depuis 2005', 'Décennale active', '5/5 sur 55 avis Google', 'Zinc marine anti-air-salin'],
           },
 
           atelier: {

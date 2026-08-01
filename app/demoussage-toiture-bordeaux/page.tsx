@@ -42,7 +42,7 @@ export default function Page() {
             badges: [
               'Depuis 2005',
               'Décennale active',
-              '5/5 sur 52 avis Google',
+              '5/5 sur 55 avis Google',
               'Atelier Mérignac',
             ],
           },

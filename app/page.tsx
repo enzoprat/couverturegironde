@@ -48,14 +48,14 @@ export default function HomePage() {
     <>
       <Hero
         variant="home"
-        eyebrow="Mérignac · Bordeaux · 5/5 sur 52 avis Google"
+        eyebrow="Mérignac · Bordeaux · 5/5 sur 55 avis Google"
         title={
           <>
             <span className="text-[var(--color-terre)]">Couverture Gironde</span>{' '}
             — artisan couvreur à Mérignac depuis 2005
           </>
         }
-        subtitle="Liroy Delsuc, couvreur-zingueur, atelier au 65 rue de Malbos à Mérignac. Réparation, rénovation et réfection de toiture, recherche de fuite, zinguerie et urgence 7j/7 sur Bordeaux Métropole et toute la Gironde. Devis gratuit sous 24h, garantie décennale, 5/5 sur 52 avis Google."
+        subtitle="Liroy Delsuc, couvreur-zingueur, atelier au 65 rue de Malbos à Mérignac. Réparation, rénovation et réfection de toiture, recherche de fuite, zinguerie et urgence 7j/7 sur Bordeaux Métropole et toute la Gironde. Devis gratuit sous 24h, garantie décennale, 5/5 sur 55 avis Google."
         imageSlug="home"
         secondaryCtaLabel="Demander un devis gratuit"
       />
@@ -74,7 +74,7 @@ export default function HomePage() {
       <ChiffresCles variant="light" />
 
       <AvisGoogle
-        intro="52 avis Google 5/5 vérifiés sur l'ensemble de Bordeaux Métropole. Nos clients témoignent."
+        intro="55 avis Google 5/5 vérifiés sur l'ensemble de Bordeaux Métropole. Nos clients témoignent."
       />
 
       <RealisationsCarousel

@@ -35,7 +35,7 @@ export default function Page() {
             badges: [
               'Depuis 2005',
               'Décennale active',
-              '5/5 sur 52 avis Google',
+              '5/5 sur 55 avis Google',
               'Urgence 15-30 min',
             ],
           },
@@ -57,7 +57,7 @@ export default function Page() {
           },
 
           heroSubtitle:
-            "Couvreur-zingueur à Eysines depuis 2005, atelier à Mérignac (4 km, 8 min). Commune voisine directe : intervention 15-30 min, tarifs identiques à Mérignac. Spécialiste pavillonnaire + habitat maraîcher traditionnel Le Vigean/Migron. 5/5 sur 52 avis Google, décennale.",
+            "Couvreur-zingueur à Eysines depuis 2005, atelier à Mérignac (4 km, 8 min). Commune voisine directe : intervention 15-30 min, tarifs identiques à Mérignac. Spécialiste pavillonnaire + habitat maraîcher traditionnel Le Vigean/Migron. 5/5 sur 55 avis Google, décennale.",
         contexteLocal: (
           <>
             <p>
@@ -109,7 +109,7 @@ export default function Page() {
               <strong>direct sans sous-traitance</strong>. L'artisan qui
               chiffre est celui qui exécute le chantier et qui assure le
               SAV. Cette continuité explique nos{' '}
-              <strong>5/5 sur 52 avis Google</strong>, une note que nous
+              <strong>5/5 sur 55 avis Google</strong>, une note que nous
               défendons activement sur chaque chantier eysinais.
             </p>
           </>

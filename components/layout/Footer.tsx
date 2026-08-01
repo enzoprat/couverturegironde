@@ -2,8 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { MapPin, MessageCircle, Phone, Star } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
+import { GoogleBadge } from '@/components/ui/GoogleBadge';
 import { getFooterSections } from '@/lib/pages';
-import { NAP, SITE, TRUST } from '@/lib/constants';
+import { NAP, SITE, SOCIAL, TRUST } from '@/lib/constants';
 
 /**
  * Footer — data-driven via le registre des pages.
@@ -92,14 +93,43 @@ export function Footer() {
               </li>
             </ul>
 
-            <div className="mt-6 inline-flex items-center gap-2 px-3 py-2 rounded-full bg-[var(--color-or)]/15 text-[var(--color-or-300)]">
-              <Star
-                className="w-4 h-4 fill-current"
-                aria-hidden="true"
+            <div className="mt-6 flex items-center gap-2.5">
+              <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-[var(--color-or)]/15 text-[var(--color-or-300)]">
+                <Star className="w-4 h-4 fill-current" aria-hidden="true" />
+                <span className="text-[0.8125rem] font-semibold">
+                  {TRUST.googleRating}/5 sur {TRUST.googleReviewCount} avis
+                  Google
+                </span>
+              </div>
+              <GoogleBadge tone="dark" />
+            </div>
+
+            {/* Carte de la fiche Google Business Profile.
+                L'iframe est neutralisée (pointer-events-none) et surmontée
+                d'un lien : le clic renvoie vers la FICHE GBP, pas vers une
+                simple adresse Maps. */}
+            <div className="relative mt-8 rounded-[var(--radius-lg)] overflow-hidden border border-[var(--color-ardoise-700)]">
+              <iframe
+                src={SOCIAL.googleMapsEmbed}
+                title="Localisation de Couverture Gironde, 65 rue de Malbos à Mérignac"
+                width="600"
+                height="450"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                className="w-full h-[180px] block pointer-events-none grayscale-[0.25]"
               />
-              <span className="text-[0.8125rem] font-semibold">
-                {TRUST.googleRating}/5 sur {TRUST.googleReviewCount} avis Google
-              </span>
+              <a
+                href={SOCIAL.google}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Voir la fiche Google de Couverture Gironde (nouvel onglet)"
+                className="absolute inset-0 flex items-end justify-start p-3 bg-[var(--color-ardoise)]/10 hover:bg-transparent transition-colors focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[var(--color-terre)]"
+              >
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white text-[var(--color-ardoise)] text-[0.75rem] font-semibold shadow-[var(--shadow-sm)]">
+                  <MapPin className="w-3.5 h-3.5" aria-hidden="true" />
+                  Voir notre fiche Google
+                </span>
+              </a>
             </div>
           </div>
 

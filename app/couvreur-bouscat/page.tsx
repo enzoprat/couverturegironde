@@ -35,7 +35,7 @@ export default function Page() {
             badges: [
               'Depuis 2005',
               'Décennale active',
-              '5/5 sur 52 avis Google',
+              '5/5 sur 55 avis Google',
               'Urgence 15-30 min',
             ],
           },
@@ -57,7 +57,7 @@ export default function Page() {
           },
 
           heroSubtitle:
-            "Couvreur-zingueur au Bouscat depuis 2005, atelier à Mérignac (5 km, 15-30 min). Spécialiste patrimoine cossu : échoppes tuile canal XIXe, maisons de maître Champ-de-Courses/Lyautey ardoise, zinc soudé étain. Décennale, 5/5 sur 52 avis Google.",
+            "Couvreur-zingueur au Bouscat depuis 2005, atelier à Mérignac (5 km, 15-30 min). Spécialiste patrimoine cossu : échoppes tuile canal XIXe, maisons de maître Champ-de-Courses/Lyautey ardoise, zinc soudé étain. Décennale, 5/5 sur 55 avis Google.",
         contexteLocal: (
           <>
             <p>
@@ -112,7 +112,7 @@ export default function Page() {
               qui se déplace, qui chiffre, qui réalise les travaux et qui
               assure le SAV à long terme. Cette relation directe est ce qui
               nous a permis d'accumuler une{' '}
-              <strong>note de 5/5 sur 52 avis Google</strong>, un signal de
+              <strong>note de 5/5 sur 55 avis Google</strong>, un signal de
               confiance que nous protégeons sur chaque chantier bouscatais.
               Beaucoup de nos clients du Bouscat nous reviennent tous les
               3-4 ans pour l'entretien préventif programmé.

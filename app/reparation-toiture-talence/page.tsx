@@ -33,7 +33,7 @@ export default function Page() {
             name: 'Liroy Delsuc',
             role: 'Couvreur-zingueur, fondateur — atelier Mérignac (9 km de Talence)',
             bio: "Je répare les toitures talençaises depuis 2005. Sur bâti patrimonial (échoppes tuile canal Thouars/Peixotto, maisons bourgeoises ardoise), mortier chaux OBLIGATOIRE. Intervention urgence 30-60 min heures ouvrées depuis Mérignac (9 km). Prise en charge démarches ABF si secteur classé.",
-            badges: ['Depuis 2005', 'Décennale active', '5/5 sur 52 avis Google', 'Mortier chaux bâti ancien'],
+            badges: ['Depuis 2005', 'Décennale active', '5/5 sur 55 avis Google', 'Mortier chaux bâti ancien'],
           },
 
           atelier: {

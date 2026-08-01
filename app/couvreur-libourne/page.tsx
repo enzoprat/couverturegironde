@@ -35,7 +35,7 @@ export default function Page() {
             badges: [
               'Depuis 2005',
               'Décennale active',
-              '5/5 sur 52 avis Google',
+              '5/5 sur 55 avis Google',
               'Tuile romane spécialiste',
             ],
           },
@@ -112,7 +112,7 @@ export default function Page() {
               <strong>direct sans sous-traitance</strong>. C'est l'artisan
               qui chiffre, qui exécute le chantier libournais et qui
               assure le SAV. Cette continuité explique nos{' '}
-              <strong>5/5 sur 52 avis Google</strong> et la recommandation
+              <strong>5/5 sur 55 avis Google</strong> et la recommandation
               de bouche-à-oreille qui nous amène régulièrement de
               nouveaux clients dans le Libournais.
             </p>

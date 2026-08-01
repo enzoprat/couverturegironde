@@ -36,7 +36,7 @@ export default function Page() {
             badges: [
               'Depuis 2005',
               'Décennale active',
-              '5/5 sur 52 avis Google',
+              '5/5 sur 55 avis Google',
               'Dossiers ABF pris en charge',
             ],
           },
@@ -152,7 +152,7 @@ export default function Page() {
               chiffre est celui qui exécute le chantier Chartrons et qui
               revient en SAV. Cette continuité, combinée à notre savoir-faire
               ardoise et zinguerie patrimoniale, explique nos{' '}
-              <strong>5/5 sur 52 avis Google</strong> et notre fidèle
+              <strong>5/5 sur 55 avis Google</strong> et notre fidèle
               clientèle Chartrons.
             </p>
           </>

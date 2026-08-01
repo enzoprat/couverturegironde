@@ -33,7 +33,7 @@ export default function Page() {
             name: 'Liroy Delsuc',
             role: 'Couvreur-zingueur, fondateur — atelier Mérignac (7 km de Pessac)',
             bio: "Je répare les toitures pessacaises depuis 2005. Intervention 30-60 min en heures ouvrées depuis mon atelier Mérignac (7 km). Sur Pessac : tuiles cassées par branches sous couvert Bourgailh, faîtages fissurés bâti ancien centre, noues zinc percées échoppes. Dossier assurance constitué systématiquement.",
-            badges: ['Depuis 2005', 'Décennale active', '5/5 sur 52 avis Google', 'Urgence 30-60 min'],
+            badges: ['Depuis 2005', 'Décennale active', '5/5 sur 55 avis Google', 'Urgence 30-60 min'],
           },
 
           atelier: {

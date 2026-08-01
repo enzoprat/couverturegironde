@@ -35,7 +35,7 @@ export default function Page() {
             badges: [
               'Depuis 2005',
               'Décennale active',
-              '5/5 sur 52 avis Google',
+              '5/5 sur 55 avis Google',
               'Bâti patrimonial',
             ],
           },
@@ -57,7 +57,7 @@ export default function Page() {
           },
 
           heroSubtitle:
-            "Couvreur-zingueur à Talence depuis 2005, atelier à Mérignac (9 km). Spécialiste bâti patrimonial : échoppes tuile canal XIXe, maisons bourgeoises Thouars/Peixotto ardoise, mortier chaux compatible bâti ancien. Intervention 30-60 min, décennale, 5/5 sur 52 avis Google.",
+            "Couvreur-zingueur à Talence depuis 2005, atelier à Mérignac (9 km). Spécialiste bâti patrimonial : échoppes tuile canal XIXe, maisons bourgeoises Thouars/Peixotto ardoise, mortier chaux compatible bâti ancien. Intervention 30-60 min, décennale, 5/5 sur 55 avis Google.",
         contexteLocal: (
           <>
             <p>

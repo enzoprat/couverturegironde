@@ -38,7 +38,7 @@ export default function Page() {
           badges: [
             'Depuis 2005',
             'Décennale active',
-            '5/5 sur 52 avis Google',
+            '5/5 sur 55 avis Google',
             'Diagnostic honnête',
           ],
         },
@@ -90,7 +90,7 @@ export default function Page() {
               régulièrement des chantiers quand le traitement demandé serait
               inutile ou prématuré : la crédibilité d'un artisan se construit
               aussi sur ce qu'il ne vend pas. Cette éthique se traduit dans
-              notre note <strong>5/5 sur 52 avis Google publics</strong>.
+              notre note <strong>5/5 sur 55 avis Google publics</strong>.
             </p>
             <p>
               Notre atelier est situé au <strong>65 rue de Malbos à

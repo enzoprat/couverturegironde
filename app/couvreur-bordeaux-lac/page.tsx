@@ -36,7 +36,7 @@ export default function Page() {
             badges: [
               'Depuis 2005',
               'Décennale active',
-              '5/5 sur 52 avis Google',
+              '5/5 sur 55 avis Google',
               'Étanchéité EPDM/SEL',
             ],
           },
@@ -155,7 +155,7 @@ export default function Page() {
               en SAV. Sur les copropriétés du Lac, beaucoup de nos clients
               syndics nous reviennent tous les 3-5 ans pour les
               maintenances programmées d'étanchéité.{' '}
-              <strong>5/5 sur 52 avis Google</strong>.
+              <strong>5/5 sur 55 avis Google</strong>.
             </p>
           </>
         ),

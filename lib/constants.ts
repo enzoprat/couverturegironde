@@ -56,10 +56,14 @@ export const OPENING_HOURS = {
 
 export const SOCIAL = {
   // Fiche Google Business Profile (lien court g.page officiel).
-  google: 'https://g.page/r/CYcnAtj5cBPVEAE',
+  google: 'https://share.google/RlXzdyVol8f1t6nKO',
   // Deep-link "écrire un avis" — ouvre directement la fenêtre de rédaction
   // d'avis Google. À utiliser en CTA de sollicitation d'avis.
   googleReview: 'https://g.page/r/CYcnAtj5cBPVEAE/review',
+  // Carte intégrée de la fiche GBP (footer sitewide). Le clic sur la carte
+  // renvoie vers la fiche (SOCIAL.google), pas vers une simple adresse.
+  googleMapsEmbed:
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.2839323614126!2d-0.6520652882571153!3d44.81577997634758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54d91c3c0a8983%3A0xd51370f9d8022787!2sCouverture%20Gironde!5e0!3m2!1sfr!2sfr!4v1785602086514!5m2!1sfr!2sfr',
   // Ajouter d'autres profils à mesure
 } as const;
 
@@ -67,9 +71,9 @@ export const TRUST = {
   experienceYears: 20, // depuis 2005
   guaranteeYears: 10, // décennale
   googleRating: 5,
-  // Vérifié sur fiche GBP réelle (2026-07-05) : 5,0 / 52 avis
+  // Vérifié sur fiche GBP réelle (2026-08-01) : 5,0 / 55 avis
   // ⚠️ Mettre à jour mensuellement avec le nombre exact affiché sur GBP
-  googleReviewCount: 52,
+  googleReviewCount: 55,
   responseTimeHours: 24,
   emergencyAvailability: '7j/7',
 } as const;
