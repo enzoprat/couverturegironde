@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   GuidePageLayout,
   generateGuideMetadata,
@@ -399,9 +400,32 @@ export default function Page() {
                   fait avec garantie 10 ans.
                 </p>
                 <p>
+                  Ces fourchettes s'inscrivent dans nos{' '}
+                  <Link href="/tarifs">tarifs indicatifs 2026</Link>, qui
+                  couvrent aussi le{' '}
+                  <Link href="/nettoyage-toiture-bordeaux">
+                    nettoyage haute pression
+                  </Link>{' '}
+                  et le{' '}
+                  <Link href="/traitement-hydrofuge-toiture-bordeaux">
+                    traitement hydrofuge garanti 10 ans
+                  </Link>
+                  . Si vous hésitez encore sur le bon moment pour intervenir,
+                  notre guide{' '}
+                  <Link href="/guides/quand-demousser-toiture-gironde">
+                    quand démousser sa toiture en Gironde
+                  </Link>{' '}
+                  répond à la question de la fréquence.
+                </p>
+                <p>
                   Vous voulez un chiffrage précis sur votre toiture ?
                   Décrivez-nous votre situation, nous établissons un devis
-                  détaillé sous 24h ouvrées, gratuit et sans engagement.
+                  détaillé sous 24h ouvrées, gratuit et sans engagement — voir
+                  notre page{' '}
+                  <Link href="/demoussage-toiture-bordeaux">
+                    démoussage de toiture à Bordeaux
+                  </Link>
+                  .
                 </p>
               </>
             ),

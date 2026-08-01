@@ -60,6 +60,17 @@ export type PageEntry = {
   parentSlug?: string;
   /** Slugs explicitement reliés (override du maillage automatique). */
   relatedSlugs?: string[];
+  /**
+   * Slugs ajoutés EN PLUS du maillage automatique (là où `relatedSlugs` le
+   * remplace).
+   *
+   * Nécessaire pour les pages qu'aucune règle automatique ne peut atteindre :
+   * les guides (leur `type` n'a pas de branche dans `getRelatedPages`) et les
+   * pages service secondaires qui partagent leur `service` avec une page
+   * pilier — le `PAGES.find` ne remonte alors que la première (ex: capotage,
+   * masquée par réparation).
+   */
+  extraRelatedSlugs?: string[];
   /** Visible dans la nav header (item top-level OU dans dropdown). */
   visibleInNav?: boolean;
   /** Position de tri dans la nav (asc). */

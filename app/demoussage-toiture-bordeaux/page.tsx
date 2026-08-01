@@ -58,7 +58,16 @@ export default function Page() {
                 se voit envahir en quelques années, surtout sur les{' '}
                 <strong>versants nord ou sous couvert arboré</strong>{' '}
                 (Caudéran, Bourgailh à Pessac, coteaux Cenon, quartiers boisés
-                de Gradignan).
+                de Gradignan). Sur ces expositions, le bon rythme d'entretien
+                se joue à un ou deux ans près : nous détaillons les signes qui
+                doivent alerter dans notre guide{' '}
+                <Link
+                  href="/guides/quand-demousser-toiture-gironde"
+                  className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+                >
+                  quand démousser sa toiture en Gironde
+                </Link>
+                .
               </p>
               <p>
                 <strong>Une toiture colonisée par les mousses n'est pas un
@@ -104,6 +113,21 @@ export default function Page() {
                 couverture au karcher grande puissance, pas de dépôt
                 anti-écologique laissé à la pluie. Nous protégeons
                 systématiquement les massifs et les évacuations pluviales.
+                Côté budget, nous publions en clair ce qui fait varier le{' '}
+                <Link
+                  href="/guides/prix-demoussage-toiture-bordeaux"
+                  className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+                >
+                  prix d'un démoussage au m² à Bordeaux
+                </Link>{' '}
+                ainsi que l'ensemble de nos{' '}
+                <Link
+                  href="/tarifs"
+                  className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+                >
+                  tarifs indicatifs 2026
+                </Link>
+                .
               </p>
             </>
           ),

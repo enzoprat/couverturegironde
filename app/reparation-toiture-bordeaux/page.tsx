@@ -64,7 +64,15 @@ export default function Page() {
                 sec, étanchéité de raccords, réparation de zinguerie, traitement
                 des points faibles autour des cheminées, abergements
               </strong>
-              . Diagnostic gratuit, devis détaillé sous 24h.
+              . Quand une rive ou un faîtage est attaqué sur toute sa longueur,
+              la reprise ponctuelle ne tient pas : on passe alors par un{' '}
+              <Link
+                href="/capotage-toiture-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                capotage zinc de la rive
+              </Link>
+              , étanche à vie. Diagnostic gratuit, devis détaillé sous 24h.
             </p>
             <p>
               Notre démarche : remonter à la cause, pas juste boucher le

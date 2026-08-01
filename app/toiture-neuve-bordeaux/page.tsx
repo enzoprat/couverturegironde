@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -67,7 +68,16 @@ export default function Page() {
               <strong>zinguerie sur mesure</strong> (gouttières, descentes,
               noues, abergements) et{' '}
               <strong>isolation thermique</strong> (sarking, combles
-              perdus, rampants).
+              perdus, rampants). Sur la partie isolation, une large part du
+              chantier est finançable : nous récapitulons les dispositifs
+              mobilisables dans notre guide des{' '}
+              <Link
+                href="/guides/aides-renovation-toiture-2026"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                aides à la rénovation de toiture en 2026
+              </Link>{' '}
+              (MaPrimeRénov', éco-PTZ, TVA réduite, CEE).
             </p>
             <p>
               Le <strong>choix du matériau</strong> dépend de plusieurs

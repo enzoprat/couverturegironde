@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { Receipt, ShieldCheck, Calculator, ArrowRight } from 'lucide-react';
 import { Hero } from '@/components/sections/Hero';
 import { Container } from '@/components/ui/Container';
@@ -7,6 +8,7 @@ import { Button } from '@/components/ui/Button';
 import { Reassurance } from '@/components/sections/Reassurance';
 import { FAQ } from '@/components/sections/FAQ';
 import { CTAFinal } from '@/components/sections/CTAFinal';
+import { RelatedPages } from '@/components/sections/RelatedPages';
 import { JsonLd } from '@/components/seo/JsonLd';
 import {
   getFAQSchema,
@@ -71,24 +73,28 @@ const TARIF_SECTIONS = [
     services: [
       {
         name: 'Démoussage toiture (avec brossage manuel)',
+        href: '/demoussage-toiture-bordeaux',
         range: '12 – 19 €/m²',
         details:
           'Brossage des zones critiques + traitement anti-mousse rémanent. Garantie décennale.',
       },
       {
         name: 'Démoussage + traitement hydrofuge',
+        href: '/traitement-toiture-bordeaux',
         range: '18 – 28 €/m²',
         details:
           'Combo recommandé. Hydrofuge garanti 10 ans, incolore ou coloré.',
       },
       {
         name: 'Nettoyage haute pression maîtrisé',
+        href: '/nettoyage-toiture-bordeaux',
         range: '12 – 21 €/m²',
         details:
           "Pression adaptée au matériau, démoussage chimique léger inclus.",
       },
       {
         name: 'Traitement hydrofuge seul',
+        href: '/traitement-hydrofuge-toiture-bordeaux',
         range: '6 – 12 €/m²',
         details: 'Sur toiture déjà propre. Application en 2 passages croisés.',
       },
@@ -99,11 +105,13 @@ const TARIF_SECTIONS = [
     services: [
       {
         name: 'Remplacement de tuiles cassées (≤ 10)',
+        href: '/reparation-toiture-bordeaux',
         range: '180 – 480 €',
         details: 'Forfait diagnostic + intervention.',
       },
       {
         name: 'Réfection de faîtage scellé',
+        href: '/faitage-toiture-bordeaux',
         range: '45 – 75 €/ml',
         details: 'Mortier chaux pour bâti ancien, mortier ciment pour récent.',
       },
@@ -114,11 +122,13 @@ const TARIF_SECTIONS = [
       },
       {
         name: "Urgence fuite, mise hors d'eau",
+        href: '/urgence-fuite-toiture-bordeaux',
         range: '250 – 650 €',
         details: 'Bâche technique + sécurisation. Réparation chiffrée à part.',
       },
       {
         name: 'Diagnostic post-tempête (dossier assurance)',
+        href: '/fuite-toiture-tempete-bordeaux',
         range: 'Gratuit',
         details: 'Photos + chiffrage pour votre déclaration de sinistre.',
       },
@@ -129,6 +139,7 @@ const TARIF_SECTIONS = [
     services: [
       {
         name: 'Pose de gouttières zinc demi-rondes',
+        href: '/zinguerie-bordeaux',
         range: '50 – 95 €/ml',
         details: 'Zinc naturel ou prépatiné. Soudure étain.',
       },
@@ -144,11 +155,13 @@ const TARIF_SECTIONS = [
       },
       {
         name: 'Reprise de noue zinc',
+        href: '/zinguerie-arcachon',
         range: '150 – 280 €/ml',
         details: 'Travail technique, étanchéité critique.',
       },
       {
         name: 'Habillage de souche de cheminée',
+        href: '/capotage-toiture-bordeaux',
         range: '350 – 750 €',
         details: 'Mise hors d\u2019eau définitive en zinc.',
       },
@@ -159,6 +172,7 @@ const TARIF_SECTIONS = [
     services: [
       {
         name: 'Réfection complète tuile canal',
+        href: '/couvreur-bordeaux',
         range: '95 – 165 €/m²',
         details: 'Démontage, lattage neuf, pose tuile, faîtages, zinguerie.',
       },
@@ -169,16 +183,19 @@ const TARIF_SECTIONS = [
       },
       {
         name: 'Pose de toiture neuve (avec charpente)',
+        href: '/toiture-neuve-bordeaux',
         range: '180 – 280 €/m²',
         details: "Selon technique et matériau. Inclut isolation possible.",
       },
       {
         name: 'Installation Velux (avec encastrement)',
+        href: '/installation-velux-bordeaux',
         range: '850 – 1 600 €',
         details: "Pose complète, étanchéité, raccords intérieurs.",
       },
       {
         name: 'Traitement charpente curatif',
+        href: '/charpente-bordeaux',
         range: '15 – 28 €/m²',
         details: 'Insectes xylophages, champignons. Garantie 10 ans.',
       },
@@ -286,7 +303,16 @@ export default function Page() {
                       className="border-t border-[var(--color-border)]"
                     >
                       <td className="px-5 py-4 font-semibold text-[var(--color-ardoise)] align-top">
-                        {s.name}
+                        {'href' in s && s.href ? (
+                          <Link
+                            href={s.href}
+                            className="underline decoration-[var(--color-terre)]/40 underline-offset-4 hover:decoration-[var(--color-terre)] transition-colors"
+                          >
+                            {s.name}
+                          </Link>
+                        ) : (
+                          s.name
+                        )}
                       </td>
                       <td className="px-5 py-4 font-bold text-[var(--color-terre)] align-top whitespace-nowrap">
                         {s.range}
@@ -330,6 +356,12 @@ export default function Page() {
       </section>
 
       <FAQ items={TARIFS_FAQ} title="Questions fréquentes sur nos tarifs" />
+
+      <RelatedPages
+        slug={PAGE.slug}
+        eyebrow="Aller plus loin"
+        title="Comprendre ce qui fait le prix"
+      />
 
       <Reassurance />
 

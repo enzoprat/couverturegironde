@@ -64,8 +64,14 @@ export default function Page() {
             <p>
               Notre atelier travaille toutes les configurations : gouttières
               demi-rondes traditionnelles, gouttières havraises, chéneaux
-              encaissés, descentes carrées ou rondes, noues, raccords muraux,
-              habillages de souches de cheminée, abergements de Velux. Nous
+              encaissés, descentes carrées ou rondes, noues, raccords muraux,{' '}
+              <Link
+                href="/capotage-toiture-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                capotage de rives et de faîtages en zinc soudé
+              </Link>
+              , habillages de souches de cheminée, abergements de Velux. Nous
               soudons à l'étain sur place pour les jonctions exposées —
               garantie d'étanchéité supérieure à n'importe quel collage. Après
               un sinistre, la zinguerie est souvent le premier élément atteint :

@@ -41,6 +41,14 @@ const STATIC_PAGES: PageEntry[] = [
       'Couvreur Bordeaux ★ 5/5, 55 avis ★ Devis 24h urgence 7j/7',
     seoDescription:
       "★ Couvreur Bordeaux depuis 2005 · Liroy, artisan direct · 5/5 sur 55 avis Google · Démoussage, réparation, urgence 7j/7 · Devis 24h · Décennale.",
+    // Les 4 pages quartier ont ville:'bordeaux' comme ce hub : aucune règle
+    // automatique ne les relie. Sans ces liens, elles ne vivent que du footer.
+    extraRelatedSlugs: [
+      'couvreur-bordeaux-centre',
+      'couvreur-bordeaux-chartrons',
+      'couvreur-bordeaux-rive-droite',
+      'couvreur-bordeaux-lac',
+    ],
     indexable: true,
     visibleInFooter: true,
     footerSection: 'services',
@@ -74,6 +82,10 @@ const STATIC_PAGES: PageEntry[] = [
       'Démoussage toiture Bordeaux 12-18 €/m² · Devis 24h',
     seoDescription:
       "★ Démoussage toiture Bordeaux 12-18 €/m² · Anti-mousse rémanent + brossage · Liroy artisan direct depuis 2005 · 5/5 sur 55 avis · Devis 24h.",
+    extraRelatedSlugs: [
+      'guides/prix-demoussage-toiture-bordeaux',
+      'guides/quand-demousser-toiture-gironde',
+    ],
     visibleInNav: true,
     navCategory: 'entretien',
     navOrder: 20,
@@ -93,6 +105,7 @@ const STATIC_PAGES: PageEntry[] = [
       'Nettoyage toiture Bordeaux 12-20 €/m² · Devis 24h',
     seoDescription:
       "★ Nettoyage toiture Bordeaux 12-20 €/m² · Haute pression maîtrisée + rinçage · Liroy artisan direct depuis 2005 · 5/5 (55 avis) · Devis 24h.",
+    extraRelatedSlugs: ['guides/quand-demousser-toiture-gironde'],
     visibleInNav: true,
     navCategory: 'entretien',
     navOrder: 21,
@@ -112,6 +125,7 @@ const STATIC_PAGES: PageEntry[] = [
       'Hydrofuge toiture Bordeaux · garantie 10 ans · 6-12 €/m²',
     seoDescription:
       "★ Hydrofuge toiture Bordeaux 6-12 €/m² · Garantie 10 ans · Protection mousses + gel-dégel · Liroy artisan direct · 5/5 (55 avis) · Devis 24h.",
+    extraRelatedSlugs: ['guides/prix-demoussage-toiture-bordeaux'],
     visibleInNav: true,
     navCategory: 'entretien',
     navOrder: 22,
@@ -129,6 +143,10 @@ const STATIC_PAGES: PageEntry[] = [
       'Traitement toiture Bordeaux · démoussage + hydrofuge',
     seoDescription:
       "★ Traitement toiture Bordeaux · Nettoyage, démoussage, hydrofuge, anti-lichens · Liroy artisan direct · 5/5 (55 avis) · Devis 24h · Décennale.",
+    extraRelatedSlugs: [
+      'guides/quand-demousser-toiture-gironde',
+      'guides/prix-demoussage-toiture-bordeaux',
+    ],
     indexable: true,
     visibleInFooter: true,
     footerSection: 'services',
@@ -147,6 +165,7 @@ const STATIC_PAGES: PageEntry[] = [
       'Réparation toiture Bordeaux · diagnostic gratuit · 24h',
     seoDescription:
       "★ Réparation toiture Bordeaux · Tuiles cassées, faîtage, noue, abergement · Diagnostic gratuit · Liroy artisan direct · 5/5 (55 avis) · Devis 24h.",
+    extraRelatedSlugs: ['capotage-toiture-bordeaux'],
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 30,
@@ -234,6 +253,7 @@ const STATIC_PAGES: PageEntry[] = [
       'Pose gouttière + zinguerie Bordeaux · zinc soudé étain',
     seoDescription:
       "★ Zinguerie Bordeaux · Gouttières zinc, noues, chéneaux, capotage · Soudure étain sur place · Liroy artisan direct · 5/5 (55 avis) · Devis 24h.",
+    extraRelatedSlugs: ['capotage-toiture-bordeaux', 'zinguerie-arcachon'],
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 31,
@@ -269,6 +289,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle: 'Toiture neuve Bordeaux · 85-220 €/m² · clé en main',
     seoDescription:
       "★ Toiture neuve Bordeaux · Charpente + couverture + zinguerie + isolation · Liroy artisan direct · 5/5 (55 avis) · Devis 24h · Décennale.",
+    extraRelatedSlugs: ['guides/aides-renovation-toiture-2026'],
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 32,
@@ -320,6 +341,7 @@ const STATIC_PAGES: PageEntry[] = [
       'Charpente Bordeaux · rénovation + traitement · Devis 24h',
     seoDescription:
       "★ Charpentier Bordeaux · Diagnostic bois, traitement insectes/champignons, renforcement · Liroy artisan direct depuis 2005 · 5/5 (55 avis) · Décennale.",
+    extraRelatedSlugs: ['guides/aides-renovation-toiture-2026'],
     visibleInNav: true,
     navCategory: 'urgence',
     navOrder: 42,
@@ -338,6 +360,13 @@ const STATIC_PAGES: PageEntry[] = [
       'Prix démoussage toiture Bordeaux 2026 · Tarifs au m²',
     seoDescription:
       "Combien coûte un démoussage de toiture à Bordeaux en 2026 ? Tarifs au m², facteurs de prix, exemples chiffrés, comparaison devis · Guide Liroy Delsuc.",
+    extraRelatedSlugs: [
+      'demoussage-toiture-bordeaux',
+      'traitement-hydrofuge-toiture-bordeaux',
+      'nettoyage-toiture-bordeaux',
+      'guides/quand-demousser-toiture-gironde',
+      'tarifs',
+    ],
     indexable: true,
     sitemapPriority: 0.7,
   },
@@ -350,6 +379,13 @@ const STATIC_PAGES: PageEntry[] = [
       'Aides toiture 2026 · MaPrimeRénov + éco-PTZ + CEE',
     seoDescription:
       "★ Aides toiture 2026 · MaPrimeRénov' + éco-PTZ + TVA 5,5 % + CEE · Conditions, montants, démarches · Guide couvreur Gironde depuis 2005.",
+    extraRelatedSlugs: [
+      'toiture-neuve-bordeaux',
+      'charpente-bordeaux',
+      'reparation-toiture-bordeaux',
+      'couvreur-gironde',
+      'tarifs',
+    ],
     indexable: true,
     sitemapPriority: 0.7,
   },
@@ -362,6 +398,13 @@ const STATIC_PAGES: PageEntry[] = [
       'Quand démousser sa toiture en Gironde · Fréquence + signes',
     seoDescription:
       "★ Quand démousser sa toiture en Gironde ? Fréquence recommandée, signes d'alerte, meilleur moment · Guide par Liroy Delsuc, couvreur depuis 2005.",
+    extraRelatedSlugs: [
+      'demoussage-toiture-bordeaux',
+      'nettoyage-toiture-bordeaux',
+      'traitement-toiture-bordeaux',
+      'guides/prix-demoussage-toiture-bordeaux',
+      'couvreur-gironde',
+    ],
     indexable: true,
     sitemapPriority: 0.7,
   },
@@ -595,6 +638,12 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle: 'Couvreur Bordeaux Centre ★ échoppes + ABF ★ 5/5',
     seoDescription:
       "★ Couvreur Bordeaux Centre depuis 2005 · Échoppes + UNESCO/ABF · Tuile canal + mortier chaux · Liroy artisan direct · 5/5 (55 avis) · Décennale.",
+    extraRelatedSlugs: [
+      'couvreur-bordeaux-chartrons',
+      'couvreur-bordeaux-rive-droite',
+      'couvreur-bordeaux-lac',
+      'couvreur-bordeaux',
+    ],
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -608,6 +657,12 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle: 'Couvreur Bordeaux Chartrons ★ ardoise + ABF ★ 5/5',
     seoDescription:
       "★ Couvreur Bordeaux Chartrons depuis 2005 ★ Ardoise, hôtels particuliers, quai des Chartrons, secteur ABF ✓ Démoussage, réparation ✓ 5/5 (55 avis).",
+    extraRelatedSlugs: [
+      'couvreur-bordeaux-centre',
+      'couvreur-bordeaux-rive-droite',
+      'couvreur-bordeaux-lac',
+      'couvreur-bordeaux',
+    ],
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -621,6 +676,12 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle: 'Couvreur Bordeaux Rive Droite ★ Bastide + Brazza ★ 5/5',
     seoDescription:
       "★ Couvreur Bordeaux Rive Droite depuis 2005 ★ Bastide, Brazza, Niel, Benauge ✓ Démoussage, réparation, zinguerie, urgence 7j/7 ✓ 5/5 (55 avis).",
+    extraRelatedSlugs: [
+      'couvreur-bordeaux-centre',
+      'couvreur-bordeaux-chartrons',
+      'couvreur-bordeaux-lac',
+      'couvreur-bordeaux',
+    ],
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -634,6 +695,12 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle: 'Couvreur Bordeaux Lac ★ Ginko + toits-terrasses ★ 5/5',
     seoDescription:
       "★ Couvreur Bordeaux Lac depuis 2005 ★ Bassins à flot, Ginko, toits-terrasses copropriétés, étanchéité EPDM ✓ 5/5 (55 avis) ✓ Devis 24h ✓ Décennale.",
+    extraRelatedSlugs: [
+      'couvreur-bordeaux-centre',
+      'couvreur-bordeaux-chartrons',
+      'couvreur-bordeaux-rive-droite',
+      'couvreur-bordeaux',
+    ],
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -707,6 +774,11 @@ const STATIC_PAGES: PageEntry[] = [
       'Tarifs couvreur Bordeaux 2026 · démoussage dès 12 €/m²',
     seoDescription:
       "★ Tarifs couvreur Bordeaux 2026 · Démoussage 12-18 €/m² · Nettoyage 12-20 €/m² · Hydrofuge 6-12 €/m² · Liroy artisan direct · Devis 24h.",
+    extraRelatedSlugs: [
+      'guides/prix-demoussage-toiture-bordeaux',
+      'guides/aides-renovation-toiture-2026',
+      'demande-devis',
+    ],
     visibleInNav: true,
     navOrder: 50,
     visibleInFooter: true,

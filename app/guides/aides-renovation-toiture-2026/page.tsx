@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   GuidePageLayout,
   generateGuideMetadata,
@@ -412,6 +413,22 @@ export default function Page() {
                   vous guide dans le montage du dossier et la chronologie des
                   démarches.
                 </blockquote>
+                <p>
+                  Côté travaux, ces aides concernent surtout les chantiers
+                  lourds :{' '}
+                  <Link href="/toiture-neuve-bordeaux">
+                    pose d'une toiture neuve avec isolation
+                  </Link>
+                  , reprise de{' '}
+                  <Link href="/charpente-bordeaux">charpente</Link> ou{' '}
+                  <Link href="/reparation-toiture-bordeaux">
+                    réfection de couverture
+                  </Link>
+                  . Nous intervenons sur l'ensemble de{' '}
+                  <Link href="/couvreur-gironde">la Gironde</Link> et nos
+                  ordres de grandeur sont publiés sur la page{' '}
+                  <Link href="/tarifs">tarifs</Link>.
+                </p>
               </>
             ),
           },

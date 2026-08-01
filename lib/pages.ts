@@ -280,6 +280,19 @@ export function getRelatedPages(slug: string): RelatedPagesResult {
     }
   }
 
+  // Ajouts manuels — placés en TÊTE de sameSilo pour survivre au `slice(0, 9)`
+  // du rendu. C'est le seul canal de maillage des pages que la logique
+  // automatique ne peut pas atteindre (guides, services secondaires).
+  if (page.extraRelatedSlugs?.length) {
+    const extras = page.extraRelatedSlugs
+      .map((s) => getPageBySlug(s))
+      .filter((p): p is PageEntry => p !== undefined && p.slug !== slug);
+    result.sameSilo = [
+      ...extras,
+      ...result.sameSilo.filter((p) => !extras.some((e) => e.slug === p.slug)),
+    ];
+  }
+
   return result;
 }
 

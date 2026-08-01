@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   GuidePageLayout,
   generateGuideMetadata,
@@ -397,6 +398,29 @@ export default function Page() {
                     légère tous les 5 ans
                   </li>
                 </ul>
+                <p>
+                  Concrètement, la bonne combinaison est presque toujours un{' '}
+                  <Link href="/demoussage-toiture-bordeaux">
+                    démoussage de toiture à Bordeaux
+                  </Link>{' '}
+                  suivi d'un{' '}
+                  <Link href="/traitement-hydrofuge-toiture-bordeaux">
+                    hydrofuge garanti 10 ans
+                  </Link>{' '}
+                  — les deux prestations, avec le{' '}
+                  <Link href="/nettoyage-toiture-bordeaux">
+                    nettoyage haute pression
+                  </Link>
+                  , sont détaillées sur notre page{' '}
+                  <Link href="/traitement-toiture-bordeaux">
+                    traitement de toiture
+                  </Link>
+                  . Pour le budget à prévoir, voir notre guide du{' '}
+                  <Link href="/guides/prix-demoussage-toiture-bordeaux">
+                    prix d'un démoussage au m²
+                  </Link>
+                  .
+                </p>
                 <p>
                   Votre toiture présente des signes d'alerte ? Vous voulez
                   un avis professionnel sans engagement ? Décrivez-nous
