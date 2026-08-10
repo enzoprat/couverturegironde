@@ -25,7 +25,7 @@ export default function Page() {
           <>
             Couvreur en{' '}
             <span className="text-[var(--color-terre)]">Gironde (33)</span>{' '}
-            — Médoc, Bassin d'Arcachon, Libournais &amp; Sud-Gironde
+            depuis 2005 — Bordeaux, Médoc, Bassin, Libournais
           </>
         ),
         heroSubtitle:

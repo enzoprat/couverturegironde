@@ -20,9 +20,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'home',
     title: 'Accueil',
     seoTitle:
-      'Couvreur Bordeaux & Gironde · Couverture Gironde Mérignac · 5/5',
+      'Couverture Gironde · Couvreur Mérignac depuis 2005 · 5/5',
     seoDescription:
-      "Couvreur à Bordeaux et en Gironde depuis 2005 · Réparation, réfection, recherche de fuite, urgence 7j/7 · Liroy, artisan direct · 5/5 (55 avis) · Devis 24h · Décennale.",
+      "Couverture Gironde · Artisan couvreur-zingueur à Mérignac depuis 2005 · Bordeaux Métropole et Gironde · Liroy · 5/5 (55 avis) · Décennale.",
     visibleInNav: true,
     navOrder: 10,
     indexable: true,
@@ -60,9 +60,9 @@ const STATIC_PAGES: PageEntry[] = [
     service: 'couverture',
     title: 'Couvreur Gironde',
     seoTitle:
-      'Couvreur Médoc, Bassin d\u2019Arcachon & Libournais · Gironde 33',
+      'Couvreur Gironde (33) ★ 5/5 · 20 ans ★ Devis 24h',
     seoDescription:
-      "★ Couvreur en Gironde hors métropole : Médoc, Bassin d'Arcachon, Libournais, Sud-Gironde · Chantiers groupés, tarifs maîtrisés · Liroy artisan direct · 5/5 · Devis 24h.",
+      "★ Couvreur Gironde depuis 2005 · Bordeaux Métropole, Médoc, Bassin, Libournais · Liroy artisan direct · 5/5 (55 avis) · Devis 24h · Décennale.",
     indexable: true,
     visibleInFooter: true,
     footerSection: 'services',
