@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -53,7 +54,9 @@ export default function Page() {
               approximatif, dimensionnement inadapté, se traduit
               inévitablement par des infiltrations dans les années qui
               suivent. C'est pourquoi cette prestation doit être confiée à
-              un couvreur expérimenté, pas à un simple poseur généraliste.
+              un couvreur expérimenté, pas à un simple poseur généraliste. C'est le même geste d'étanchéité
+              que celui d'une <Link href="/reparation-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">réparation de couverture</Link> :
+              tout se joue au raccord.
             </p>
             <p>
               Nous installons des Velux sur l'ensemble des configurations
@@ -65,7 +68,10 @@ export default function Page() {
               existante et son traitement d'étanchéité. La marque Velux est
               notre référence, kit d'étanchéité éprouvé, finitions de
               qualité, SAV constructeur efficace, mais nous travaillons
-              aussi avec Roto et Fakro selon les contraintes du projet.
+              aussi avec Roto et Fakro selon les contraintes du projet. Sur une
+              <Link href="/toiture-neuve-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">toiture neuve</Link>, les Velux sont posés
+              en même temps que la couverture, ce qui supprime toute reprise
+              d'étanchéité ultérieure.
             </p>
             <p>
               Avant la pose, nous{' '}
@@ -98,7 +104,10 @@ export default function Page() {
               sauvegardés ou abords de monuments classés (centre Bordeaux,
               quartier Saint-Michel, etc.), l'<strong>avis de l'ABF</strong>{' '}
               est requis. Nous prenons en charge l'intégralité des
-              démarches administratives, vous n'avez qu'à signer.
+              démarches administratives, vous n'avez qu'à signer. Lorsque la pose
+              s'inscrit dans une rénovation avec isolation, une partie du
+              chantier peut être couverte par les
+              <Link href="/guides/aides-renovation-toiture-2026" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">aides à la rénovation de toiture 2026</Link>.
             </p>
           </>
         ),

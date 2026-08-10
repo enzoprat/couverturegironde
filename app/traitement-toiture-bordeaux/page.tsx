@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -46,9 +47,28 @@ export default function Page() {
           <>
             <p>
               L'expression <strong>« traitement de toiture »</strong> recouvre
-              en réalité <strong>quatre prestations distinctes</strong> :
-              nettoyage haute pression, démoussage, application d'un traitement
-              hydrofuge, et parfois traitement anti-lichens curatif. Chacune
+              en réalité <strong>quatre prestations distinctes</strong> :{' '}
+              <Link
+                href="/nettoyage-toiture-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                nettoyage haute pression
+              </Link>
+              ,{' '}
+              <Link
+                href="/demoussage-toiture-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                démoussage
+              </Link>
+              , application d'un{' '}
+              <Link
+                href="/traitement-hydrofuge-toiture-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                traitement hydrofuge
+              </Link>
+              , et parfois traitement anti-lichens curatif. Chacune
               répond à un besoin précis, avec sa technique, son produit et son
               tarif. Le rôle d'un couvreur professionnel n'est pas de vous
               vendre la prestation la plus chère, mais d'orienter vers la
@@ -66,7 +86,16 @@ export default function Page() {
               dense (Caudéran, Gradignan, coteaux Cenon, bord de Garonne). Sans
               traitement régulier, ce couvert biologique retient l'humidité,
               fissure la tuile par cycles gel-dégel, et conduit progressivement
-              à des infiltrations.
+              à des infiltrations. Le bon intervalle entre deux passages n'a
+              rien d'universel — nous l'expliquons exposition par exposition
+              dans notre guide{' '}
+              <Link
+                href="/guides/quand-demousser-toiture-gironde"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                quand démousser sa toiture en Gironde
+              </Link>
+              .
             </p>
             <p>
               L'approche pragmatique se résume à un principe :{' '}
@@ -78,7 +107,22 @@ export default function Page() {
               à 10 sur le coût final du bâti. Les prestations d'entretien de
               toiture ouvrent en outre droit au{' '}
               <strong>taux réduit de TVA à 10 %</strong> pour les logements
-              achevés depuis plus de 2 ans.
+              achevés depuis plus de 2 ans. Le détail poste par poste figure
+              sur notre page{' '}
+              <Link
+                href="/tarifs"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                tarifs couvreur 2026
+              </Link>
+              , et le calcul complet au m² dans le{' '}
+              <Link
+                href="/guides/prix-demoussage-toiture-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                guide prix démoussage
+              </Link>
+              .
             </p>
             <p>
               Chez Couverture Gironde, nous <strong>ne pratiquons pas la

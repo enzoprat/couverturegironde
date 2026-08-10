@@ -86,6 +86,12 @@ export function RelatedPages({
                   <span className="block font-bold text-[var(--color-ardoise)] leading-snug">
                     {p.title}
                   </span>
+                  {/* Le teaser rend chaque carte textuellement unique : sans lui
+                      le bloc n'est qu'une répétition du titre sur toutes les
+                      pages, ce que Google traite comme du boilerplate. */}
+                  <span className="block mt-1.5 text-[0.8125rem] leading-snug text-[var(--color-gris-600)] line-clamp-2">
+                    {p.seoDescription}
+                  </span>
                 </div>
                 <ArrowUpRight
                   className="w-5 h-5 shrink-0 text-[var(--color-gris-400)] group-hover:text-[var(--color-terre)] transition-colors"

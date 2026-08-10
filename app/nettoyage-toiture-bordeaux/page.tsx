@@ -50,7 +50,9 @@ export default function Page() {
               de "passer le karcher" comme on lave une terrasse. Une toiture
               mal nettoyée, pression trop forte, angle inadapté, matériau
               maltraité, c'est plusieurs années d'usure gagnée pour rien et
-              parfois des tuiles à remplacer dès la fin du chantier.
+              parfois des tuiles à remplacer dès la fin du chantier — et donc une
+              <Link href="/reparation-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">réparation de toiture</Link> à financer
+              en plus du nettoyage.
             </p>
             <p>
               <strong>Notre approche du nettoyage de toiture allie efficacité
@@ -59,7 +61,8 @@ export default function Page() {
               support : tuile canal traditionnelle bordelaise, tuile mécanique,
               ardoise naturelle, zinc, fibrociment, bac acier. Chaque
               couverture a sa technique, sa température d'eau, son produit
-              complémentaire.
+              complémentaire. Le protocole complet est décrit sur notre page
+              <Link href="/demoussage-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">démoussage de toiture à Bordeaux</Link>.
             </p>
             <p>
               Nous combinons systématiquement nettoyage et démoussage dans la
@@ -77,7 +80,11 @@ export default function Page() {
               >
                 traitement hydrofuge
               </Link>{' '}
-              en finition pour retarder le retour des mousses de 5 à 10 ans.
+              en finition pour retarder le retour des mousses de 5 à 10 ans. La
+              formule groupée correspondante est le
+              <Link href="/traitement-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">traitement complet de toiture</Link> ; son coût
+              au m² est décomposé dans le
+              <Link href="/guides/prix-demoussage-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">guide des prix de démoussage</Link>.
             </p>
           </>
         ),

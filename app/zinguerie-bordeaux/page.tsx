@@ -50,7 +50,9 @@ export default function Page() {
               finir les jonctions avec les murs et les ouvertures. Mal faite,
               elle est invisible jusqu'au jour où elle déborde et tache vos
               façades. Bien faite, elle dure 30 à 50 ans sans entretien et
-              valorise immédiatement le bâti.
+              valorise immédiatement le bâti. À l'inverse, un chéneau percé se
+              transforme vite en
+              <Link href="/urgence-fuite-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">fuite de toiture à traiter en urgence</Link>.
             </p>
             <p>
               <strong>
@@ -59,7 +61,12 @@ export default function Page() {
               </strong>
               . Sa patine naturelle, sa durabilité et sa compatibilité avec
               tous les matériaux de couverture en font le choix par défaut des
-              architectes des bâtiments de France et des couvreurs sérieux.
+              architectes des bâtiments de France et des couvreurs sérieux. Nous le
+              travaillons aussi bien en
+              <Link href="/ornements-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">ornements de toiture</Link> qu'en
+              zinguerie courante — et, sur le littoral, en version prépatinée
+              anti-air-salin pour nos chantiers de
+              <Link href="/zinguerie-arcachon" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">zinguerie à Arcachon</Link>.
             </p>
             <p>
               Notre atelier travaille toutes les configurations : gouttières

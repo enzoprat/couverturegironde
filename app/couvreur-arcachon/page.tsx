@@ -104,7 +104,8 @@ export default function Page() {
               Bassin). Sur l'ensemble de nos chantiers de zinguerie à
               Arcachon, nous appliquons cette règle systématiquement —
               et nous l'expliquons clairement dans le devis pour que vous
-              compreniez le surcoût matériau.
+              compreniez le surcoût matériau. Le détail technique est développé sur
+              notre page <Link href="/zinguerie-arcachon" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">zinguerie à Arcachon</Link>.
             </p>
             <p>
               Autre point : les <strong>tempêtes hivernales</strong> et
@@ -117,7 +118,10 @@ export default function Page() {
               d'eau immédiate par bâche), puis chiffrons la réparation
               sous 48h. Pour les chantiers planifiés, on organise une
               journée d'intervention sur le Bassin avec 2-3 clients,
-              ce qui réduit les frais de déplacement de 30-40 %.
+              ce qui réduit les frais de déplacement de 30-40 %. Les
+              <Link href="/urgence-fuite-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">interventions d’urgence fuite</Link> suivent le
+              même protocole que sur la métropole : mise hors d'eau d'abord,
+              devis ensuite.
             </p>
             <p>
               Couverture Gironde travaille en{' '}

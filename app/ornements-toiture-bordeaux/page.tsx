@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -55,7 +56,9 @@ export default function Page() {
               <strong>chartreuses</strong>, les{' '}
               <strong>maisons bourgeoises XIXe</strong> et plus largement
               tout le bâti ancien de Bordeaux Métropole, ces ornements
-              sont protégés par les règles d'urbanisme.
+              sont protégés par les règles d'urbanisme. Ils font partie intégrante
+              du travail de
+              <Link href="/couvreur-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">couvreur à Bordeaux</Link> sur bâti patrimonial.
             </p>
             <p>
               Notre savoir-faire couvre la <strong>restauration</strong>{' '}
@@ -77,7 +80,9 @@ export default function Page() {
               décroche au premier coup de vent et peut tomber dans la
               cour. Nous reprenons systématiquement la fixation par
               scellement traditionnel ou par ancrage mécanique selon
-              l'état du support.
+              l'état du support. Cette reprise se combine naturellement avec une
+              <Link href="/faitage-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">rénovation de faîtage</Link>, puisque
+              l'accès à la ligne de faîte est déjà monté.
             </p>
             <p>
               Les <strong>lambrequins en zinc</strong> ornent les rives
@@ -86,7 +91,9 @@ export default function Page() {
               demandent un travail de zingueur fin. Sur les rénovations,
               nous travaillons à partir d'un modèle existant à conserver,
               ou de modèles documentés dans les archives du bâti
-              bordelais. Pose soudée à l'étain, sans collage.
+              bordelais. Pose soudée à l'étain, sans collage — le même atelier que celui qui
+              façonne notre <Link href="/zinguerie-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">zinguerie sur mesure</Link> et nos
+              <Link href="/capotage-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">capotages de rives</Link>.
             </p>
             <p>
               Les <strong>girouettes</strong> et{' '}

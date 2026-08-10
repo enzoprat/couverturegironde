@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -55,6 +56,14 @@ export default function Page() {
               </strong>
               . L'humidité n'est plus retenue, le gel-dégel cesse de fissurer la
               céramique, les mousses ne trouvent plus leur substrat préféré.
+              C'est la deuxième moitié du travail : la première reste le{' '}
+              <Link
+                href="/demoussage-toiture-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                démoussage de la toiture
+              </Link>
+              , sans lequel le produit ne fait qu'emprisonner les spores.
             </p>
             <p>
               Sur le marché bordelais, où le climat océanique humide est le
@@ -63,7 +72,23 @@ export default function Page() {
               <strong>
                 durée de vie de la couverture prolongée de 30 à 50 %
               </strong>
-              , entretien futur réduit, valorisation immédiate du bâti.
+              , entretien futur réduit, valorisation immédiate du bâti. C'est
+              pour cela que nous le proposons le plus souvent en formule
+              groupée&nbsp;:{' '}
+              <Link
+                href="/traitement-toiture-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                démoussage et traitement de toiture en un seul chantier
+              </Link>
+              . Les fourchettes au m² sont détaillées dans notre{' '}
+              <Link
+                href="/guides/prix-demoussage-toiture-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                guide des prix de démoussage à Bordeaux
+              </Link>
+              .
             </p>
             <p>
               Nous appliquons exclusivement des hydrofuges professionnels
@@ -71,7 +96,23 @@ export default function Page() {
               grand public. Application au pulvérisateur basse pression en
               deux passages croisés pour garantir l'uniformité. Et toujours
               après un démoussage complet, un hydrofuge sur tuile sale ne
-              sert à rien.
+              sert à rien. Sur les toitures très encrassées, un{' '}
+              <Link
+                href="/nettoyage-toiture-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                nettoyage haute pression maîtrisé
+              </Link>{' '}
+              précède le traitement. Et si l'inspection révèle des tuiles
+              fendues ou un faîtage disloqué, nous traitons d'abord la{' '}
+              <Link
+                href="/reparation-toiture-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                réparation de la couverture
+              </Link>{' '}
+              — hydrofuger une toiture défectueuse revient à peindre par-dessus
+              le problème.
             </p>
           </>
         ),

@@ -53,7 +53,9 @@ export default function Page() {
               les insectes xylophages, les champignons ou affaiblie par
               des charges mal réparties, peut se dégrader en quelques
               années jusqu'à mettre en cause la sécurité du bâti. C'est
-              un point qu'on ne peut pas se permettre d'ignorer.
+              un point qu'on ne peut pas se permettre d'ignorer : une charpente
+              affaiblie condamne à terme la couverture posée dessus, et impose
+              une <Link href="/toiture-neuve-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">réfection complète de la toiture</Link>.
             </p>
             <p>
               Nous intervenons sur l'ensemble des problématiques charpente
@@ -110,7 +112,10 @@ export default function Page() {
               10 ans contre les attaques traitées. Avant tout traitement,
               <strong> nous diagnostiquons l'origine des attaques</strong>{' '}
               (souvent une infiltration ou un défaut de ventilation) pour
-              que le traitement soit durable.
+              que le traitement soit durable. Neuf fois sur dix, la cause remonte à
+              une <Link href="/urgence-fuite-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">fuite de toiture</Link> restée
+              longtemps sans reprise, ou à un
+              <Link href="/faitage-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">faîtage disloqué</Link>.
             </p>
             <p>
               Sur le <strong>renforcement structurel</strong>, nous
@@ -120,7 +125,9 @@ export default function Page() {
               en remplacement intégral selon l'état. Le dimensionnement
               suit Eurocode 5 (bois) avec calcul des charges climatiques
               spécifiques à la région bordelaise. Toute intervention
-              structurelle est couverte par notre décennale.
+              structurelle est couverte par notre décennale. Quand l'ouverture de
+              la toiture est déjà programmée, c'est aussi le bon moment pour
+              une <Link href="/installation-velux-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">installation de fenêtre de toit Velux</Link>.
             </p>
           </>
         ),

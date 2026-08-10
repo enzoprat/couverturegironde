@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServiceVillePageLayout } from '@/components/content/ServiceVillePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -62,7 +63,9 @@ export default function Page() {
               Nous n'utilisons sur le Bassin que du <strong>zinc naturel
               titane VMZINC (ou équivalent qualité France/Belgique) et du
               prépatiné anti-air-salin</strong> spécifiquement adaptés à ce
-              microclimat.
+              microclimat. C'est la principale différence avec nos chantiers de
+              <Link href="/zinguerie-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">zinguerie à Bordeaux</Link>, où l'air salin
+              n'entre pas en jeu.
             </p>
             <p>
               Le <strong>bâti arcachonnais</strong> concentre des typologies
@@ -74,7 +77,9 @@ export default function Page() {
               et les <strong>pavillons contemporains</strong> du Moulleau,
               Pereire et Aiguillon présentent des gouttières et chéneaux plus
               exposés directement aux embruns : dimensionnement renforcé et
-              zinc prépatiné indispensables.
+              zinc prépatiné indispensables. Le reste de notre offre sur le Bassin
+              est détaillé sur la page
+              <Link href="/couvreur-arcachon" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">couvreur à Arcachon</Link>.
             </p>
             <p>
               La <strong>pluviométrie sur le Bassin</strong> est certes
@@ -85,7 +90,8 @@ export default function Page() {
               (33 minimum)</strong>, avec descentes Ø 100 mm et raccords
               soudés étain. Cette approche coûte 15-25 % plus cher à la pose
               mais évite les débordements récurrents et les reprises
-              intempestives sous garantie.
+              intempestives sous garantie. Après un coup de vent, la reprise relève
+              en revanche du <Link href="/urgence-fuite-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">dépannage fuite en urgence</Link>.
             </p>
             <p>
               Notre atelier étant à <strong>Mérignac (60 km, 1h de route)</strong>,

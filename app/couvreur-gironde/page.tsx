@@ -53,7 +53,9 @@ export default function Page() {
               nous déplaçons sur tout le département pour les chantiers
               dimensionnés : Médoc, Bassin d'Arcachon, Libournais, Saint-Émilion,
               Entre-deux-Mers, Sud-Gironde, La Brède, Langon. Note 5/5 sur 55
-              avis Google.
+              avis Google. Nos deux bases d'activité sont détaillées page par
+              page : <Link href="/couvreur-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">couvreur à Bordeaux</Link> et
+              <Link href="/couvreur-arcachon" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">couvreur sur le Bassin d’Arcachon</Link>.
             </p>
             <p>
               Le département de la Gironde présente une diversité de
@@ -107,7 +109,14 @@ export default function Page() {
               et traitement hydrofuge garanti 10 ans. Le climat girondin fait
               que les toitures locales se dégradent 30 à 50 % plus vite que
               la moyenne nationale sans entretien régulier. Anticiper, c'est
-              dépenser 10 fois moins qu'une réfection complète tardive.
+              dépenser 10 fois moins qu'une réfection complète tardive. Dans le
+              détail, cela recouvre le
+              <Link href="/demoussage-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">démoussage de toiture</Link>, le
+              <Link href="/nettoyage-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">nettoyage adapté au matériau</Link> et le
+              <Link href="/traitement-hydrofuge-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">traitement hydrofuge garanti 10 ans</Link>.
+              Quand la couverture est déjà atteinte, on bascule sur la
+              <Link href="/reparation-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">réparation de toiture</Link> ou, en dernier
+              recours, la <Link href="/toiture-neuve-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">pose d’une toiture neuve</Link>.
             </p>
             <p>
               Atelier basé à <strong>Mérignac (65 rue de Malbos, 33700)</strong>,
@@ -117,7 +126,9 @@ export default function Page() {
               Arcachon (1h), Libourne (45 min) et le Sud-Gironde (1h15). Pour
               les chantiers de plusieurs jours dans le département, nous
               organisons des journées d'intervention groupées pour limiter les
-              frais de déplacement.
+              frais de déplacement. Les fourchettes appliquées sur tout le
+              département sont publiées sur notre page
+              <Link href="/tarifs" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">tarifs couvreur 2026</Link>.
             </p>
           </>
         ),

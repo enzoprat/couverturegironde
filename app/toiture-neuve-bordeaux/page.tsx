@@ -53,7 +53,9 @@ export default function Page() {
               performance thermique, la durabilité, l'esthétique et la
               valeur immobilière du bâti. C'est{' '}
               <strong>une décision qu'on ne reprend pas dix ans plus
-              tard</strong>.
+              tard</strong>. Sur bâti existant, l'alternative reste la
+              <Link href="/reparation-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">réparation ciblée de la couverture</Link> —
+              nous le disons quand la réfection totale n'est pas justifiée.
             </p>
             <p>
               Couverture Gironde intervient en{' '}
@@ -90,7 +92,11 @@ export default function Page() {
               cohérente avec le bâti existant), l'<strong>ardoise
               naturelle</strong> sur le bâti bourgeois, et le{' '}
               <strong>zinc joint debout</strong> pour les architectures
-              contemporaines.
+              contemporaines. Quelle que soit la couverture, les gouttières,
+              descentes et noues relèvent de la
+              <Link href="/zinguerie-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">zinguerie zinc sur mesure</Link>, et les
+              fenêtres de toit d'une
+              <Link href="/installation-velux-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">installation Velux intégrée à la pose</Link>.
             </p>
             <p>
               La <strong>charpente</strong> est l'autre brique critique.
@@ -102,7 +108,9 @@ export default function Page() {
               (région bordelaise = Eurocode 1 charges neige et vent
               spécifiques) et selon la couverture choisie. Une charpente
               sous-dimensionnée se déforme en quelques années ;
-              sur-dimensionnée, elle gonfle inutilement le devis.
+              sur-dimensionnée, elle gonfle inutilement le devis. Le détail de nos
+              interventions structurelles figure sur la page
+              <Link href="/charpente-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">charpente à Bordeaux</Link>.
             </p>
             <p>
               Sur le neuf, la <strong>réglementation thermique RE 2020</strong>{' '}

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -53,7 +54,9 @@ export default function Page() {
               l'eau directement dans la charpente, sans la moindre
               barrière intermédiaire. Une fuite au faîtage se traduit
               immédiatement en infiltration en sous-face et en dégât
-              d'isolation.
+              d'isolation. Si l'eau passe déjà, c'est une
+              <Link href="/urgence-fuite-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">urgence fuite de toiture</Link>
+              avant d'être un chantier de faîtage.
             </p>
             <p>
               Sur le bâti bordelais, on rencontre principalement deux
@@ -64,7 +67,8 @@ export default function Page() {
               contemporaine intégrant un closoir ventilé qui assure
               l'étanchéité et la ventilation de sous-toiture. Chaque
               technique a ses avantages et son contexte d'application —
-              et chacune se rénove différemment.
+              et chacune se rénove différemment. Sur les rives, la solution durable
+              passe souvent par un <Link href="/capotage-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">capotage zinc soudé</Link>.
             </p>
             <p>
               Le <strong>faîtage scellé</strong> est apprécié pour son
@@ -74,7 +78,10 @@ export default function Page() {
               sur les rives des tuiles supérieures. Inconvénient :
               <strong> le mortier fissure et se décolle</strong> sous
               l'effet du gel, du retrait thermique et du temps. Une
-              rénovation est généralement nécessaire tous les 25-40 ans.
+              rénovation est généralement nécessaire tous les 25-40 ans. Sur bâti ancien, la reprise de faîtage est souvent
+              l'occasion de restaurer les
+              <Link href="/ornements-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">épis et ornements de faîtage</Link>
+              d'origine.
             </p>
             <p>
               Le <strong>faîtage à sec ventilé</strong> représente

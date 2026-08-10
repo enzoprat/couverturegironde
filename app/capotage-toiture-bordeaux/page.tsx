@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ServicePageLayout } from '@/components/content/ServicePageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
@@ -55,7 +56,9 @@ export default function Page() {
               Bordeaux, où le climat océanique impose des sollicitations
               hydriques élevées (930 mm/an) et où le bâti mêle échoppes tuile
               canal traditionnelles et construction contemporaine, la qualité
-              du capotage est déterminante.
+              du capotage est déterminante. C'est une spécialité de notre métier de
+              <Link href="/zinguerie-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">zingueur à Bordeaux</Link>,
+              indissociable du travail du zinc en atelier.
             </p>
             <p>
               Nous réalisons nos capotages en <strong>zinc naturel ou
@@ -67,7 +70,8 @@ export default function Page() {
               zingueur, celle qui distingue un travail durable d'une pose
               cosmétique. Notre atelier est équipé pour la découpe et le
               pliage sur mesure, ce qui permet une adaptation parfaite à
-              chaque configuration de toiture bordelaise.
+              chaque configuration de toiture bordelaise — la même soudure que
+              celle employée pour nos <Link href="/ornements-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">ornements de toiture en zinc</Link>.
             </p>
             <p>
               Les <strong>situations les plus courantes</strong> de capotage
@@ -79,7 +83,10 @@ export default function Page() {
               capotages de dômes ou coupoles sur maisons de maître Bouscat/
               Chartrons. Chaque situation demande un dimensionnement et une
               technique différente : nous ne posons jamais un capotage
-              standard.
+              standard. Quand la ligne de faîte elle-même est en cause, la reprise
+              relève plutôt de la <Link href="/faitage-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">rénovation de faîtage</Link> ;
+              quand seules quelques tuiles ont lâché, d'une simple
+              <Link href="/reparation-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">réparation de toiture</Link>.
             </p>
             <p>
               Côté <strong>tarifs</strong>, comptez 55 à 130 €/ml pour un
@@ -90,7 +97,8 @@ export default function Page() {
               d'ornements) sont chiffrés sur mesure après visite. Toutes nos
               interventions sont couvertes par notre décennale (10 ans),
               avec une durabilité intrinsèque du zinc soudé estimée à 30-50
-              ans sans reprise.
+              ans sans reprise. Les fourchettes de tous nos postes sont publiées sur
+              la page <Link href="/tarifs" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">tarifs couvreur 2026</Link>.
             </p>
           </>
         ),
