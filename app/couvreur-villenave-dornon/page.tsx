@@ -35,7 +35,7 @@ export default function Page() {
             badges: [
               'Depuis 2005',
               'Décennale active',
-              '5/5 sur 55 avis Google',
+              '5/5 sur 57 avis Google',
               'Urgence 45-75 min',
             ],
           },
@@ -57,7 +57,7 @@ export default function Page() {
           },
 
           heroSubtitle:
-            "Couvreur-zingueur à Villenave-d'Ornon depuis 2005, atelier à Mérignac (13 km). Spécialiste pavillonnaire tuile mécanique 70-90 : démoussage + hydrofuge fortement recommandé (mousses versants nord). Intervention 45-75 min, décennale, 5/5 sur 55 avis Google.",
+            "Couvreur-zingueur à Villenave-d'Ornon depuis 2005, atelier à Mérignac (13 km). Spécialiste pavillonnaire tuile mécanique 70-90 : démoussage + hydrofuge fortement recommandé (mousses versants nord). Intervention 45-75 min, décennale, 5/5 sur 57 avis Google.",
         contexteLocal: (
           <>
             <p>

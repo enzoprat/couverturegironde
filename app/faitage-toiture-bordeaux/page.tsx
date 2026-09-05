@@ -39,7 +39,7 @@ export default function Page() {
           badges: [
             'Depuis 2005',
             'Décennale active',
-            '5/5 sur 55 avis Google',
+            '5/5 sur 57 avis Google',
             'DTU 40.211',
           ],
         },

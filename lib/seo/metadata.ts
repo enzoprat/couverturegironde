@@ -4,7 +4,7 @@ import { SITE } from '@/lib/constants';
 type BuildMetadataParams = {
   title: string;
   description: string;
-  /** Path relatif sans query string, ex: `/demoussage-toiture-bordeaux` */
+  /** Path relatif sans query string, ex: `/nettoyage-toiture-bordeaux` */
   path: string;
   /** Image OG absolue ou relative à `/public`. Si non fournie, fallback global. */
   image?: string;

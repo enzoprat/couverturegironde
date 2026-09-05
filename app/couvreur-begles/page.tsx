@@ -35,7 +35,7 @@ export default function Page() {
             badges: [
               'Depuis 2005',
               'Décennale active',
-              '5/5 sur 55 avis Google',
+              '5/5 sur 57 avis Google',
               'Urgence 30-90 min',
             ],
           },
@@ -57,7 +57,7 @@ export default function Page() {
           },
 
           heroSubtitle:
-            "Couvreur-zingueur à Bègles depuis 2005, atelier à Mérignac (11 km). Spécialiste 2 typologies : échoppes ouvrières traditionnelles (Terres-Neuves, Birambits) et toits-terrasses ZAC récentes (EPDM, SEL). Intervention 30-90 min, décennale, 5/5 sur 55 avis Google.",
+            "Couvreur-zingueur à Bègles depuis 2005, atelier à Mérignac (11 km). Spécialiste 2 typologies : échoppes ouvrières traditionnelles (Terres-Neuves, Birambits) et toits-terrasses ZAC récentes (EPDM, SEL). Intervention 30-90 min, décennale, 5/5 sur 57 avis Google.",
         contexteLocal: (
           <>
             <p>

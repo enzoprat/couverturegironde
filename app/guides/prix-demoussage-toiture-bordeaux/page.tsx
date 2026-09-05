@@ -422,7 +422,7 @@ export default function Page() {
                   Décrivez-nous votre situation, nous établissons un devis
                   détaillé sous 24h ouvrées, gratuit et sans engagement — voir
                   notre page{' '}
-                  <Link href="/demoussage-toiture-bordeaux">
+                  <Link href="/nettoyage-toiture-bordeaux">
                     démoussage de toiture à Bordeaux
                   </Link>
                   .

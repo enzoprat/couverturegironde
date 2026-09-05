@@ -552,7 +552,7 @@ export function getLocalBusinessAtCitySchema(params: {
         longitude: params.cityLng,
       },
     },
-    // NB : PAS d'aggregateRating ici. Le même total global (55 avis) répliqué
+    // NB : PAS d'aggregateRating ici. Le même total global (57 avis) répliqué
     // à l'identique sur 11 entités ville quasi-dupliquées est un motif classique
     // de suppression des étoiles ("avis non spécifiques à l'entité"). La note
     // par ville est portée par les Review individuels filtrés sur la ville

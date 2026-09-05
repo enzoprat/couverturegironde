@@ -20,9 +20,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'home',
     title: 'Accueil',
     seoTitle:
-      'Couverture Gironde · Couvreur Mérignac depuis 2005 · 5/5',
+      'Couverture Gironde · Couvreur Bordeaux, Mérignac & Gironde',
     seoDescription:
-      "Couverture Gironde · Artisan couvreur-zingueur à Mérignac depuis 2005 · Bordeaux Métropole et Gironde · Liroy · 5/5 (55 avis) · Décennale.",
+      "Couverture Gironde · Artisan couvreur-zingueur à Mérignac depuis 2005 · Bordeaux Métropole et Gironde · Liroy · 5/5 (57 avis) · Décennale.",
     visibleInNav: true,
     navOrder: 10,
     indexable: true,
@@ -38,9 +38,9 @@ const STATIC_PAGES: PageEntry[] = [
     service: 'couverture',
     title: 'Couvreur Bordeaux',
     seoTitle:
-      'Couvreur Bordeaux ★ 5/5, 55 avis ★ Devis 24h urgence 7j/7',
+      'Couvreur Bordeaux ★ 5/5, 57 avis ★ Devis 24h urgence 7j/7',
     seoDescription:
-      "★ Couvreur Bordeaux depuis 2005 · Liroy, artisan direct · 5/5 sur 55 avis Google · Démoussage, réparation, urgence 7j/7 · Devis 24h · Décennale.",
+      "★ Couvreur Bordeaux depuis 2005 · Liroy, artisan direct · 5/5 sur 57 avis Google · Démoussage, réparation, urgence 7j/7 · Devis 24h · Décennale.",
     // Les 4 pages quartier ont ville:'bordeaux' comme ce hub : aucune règle
     // automatique ne les relie. Sans ces liens, elles ne vivent que du footer.
     extraRelatedSlugs: [
@@ -62,7 +62,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Couvreur Gironde (33) ★ 5/5 · 20 ans ★ Devis 24h',
     seoDescription:
-      "★ Couvreur Gironde depuis 2005 · Bordeaux Métropole, Médoc, Bassin, Libournais · Liroy artisan direct · 5/5 (55 avis) · Devis 24h · Décennale.",
+      "★ Couvreur Gironde depuis 2005 · Bordeaux Métropole, Médoc, Bassin, Libournais · Liroy artisan direct · 5/5 (57 avis) · Devis 24h · Décennale.",
     indexable: true,
     visibleInFooter: true,
     footerSection: 'services',
@@ -70,29 +70,6 @@ const STATIC_PAGES: PageEntry[] = [
   },
 
   // ============ SILO PRIORITAIRE (démoussage / nettoyage / hydrofuge) ============
-  {
-    slug: 'demoussage-toiture-bordeaux',
-    path: '/demoussage-toiture-bordeaux',
-    type: 'service',
-    service: 'demoussage',
-    parentSlug: 'traitement-toiture-bordeaux',
-    title: 'Démoussage toiture Bordeaux',
-    navLabel: 'Démoussage toiture',
-    seoTitle:
-      'Démoussage toiture Bordeaux 12-18 €/m² · Devis 24h',
-    seoDescription:
-      "★ Démoussage toiture Bordeaux 12-18 €/m² · Anti-mousse rémanent + brossage · Liroy artisan direct depuis 2005 · 5/5 sur 55 avis · Devis 24h.",
-    extraRelatedSlugs: [
-      'guides/prix-demoussage-toiture-bordeaux',
-      'guides/quand-demousser-toiture-gironde',
-    ],
-    visibleInNav: true,
-    navCategory: 'entretien',
-    navOrder: 20,
-    visibleInFooter: true,
-    footerSection: 'services',
-    indexable: true,
-  },
   {
     slug: 'nettoyage-toiture-bordeaux',
     path: '/nettoyage-toiture-bordeaux',
@@ -102,9 +79,9 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Nettoyage toiture Bordeaux',
     navLabel: 'Nettoyage toiture',
     seoTitle:
-      'Nettoyage toiture Bordeaux 12-20 €/m² · Devis 24h',
+      'Nettoyage & démoussage toiture Bordeaux 12-20 €/m²',
     seoDescription:
-      "★ Nettoyage toiture Bordeaux 12-20 €/m² · Haute pression maîtrisée + rinçage · Liroy artisan direct depuis 2005 · 5/5 (55 avis) · Devis 24h.",
+      "★ Nettoyage et démoussage de toiture à Bordeaux 12-20 €/m² · Haute pression maîtrisée, anti-mousse rémanent et brossage · Liroy artisan direct · Devis 24h.",
     extraRelatedSlugs: ['guides/quand-demousser-toiture-gironde'],
     visibleInNav: true,
     navCategory: 'entretien',
@@ -124,7 +101,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Hydrofuge toiture Bordeaux · garantie 10 ans · 6-12 €/m²',
     seoDescription:
-      "★ Hydrofuge toiture Bordeaux 6-12 €/m² · Garantie 10 ans · Protection mousses + gel-dégel · Liroy artisan direct · 5/5 (55 avis) · Devis 24h.",
+      "★ Hydrofuge toiture Bordeaux 6-12 €/m² · Garantie 10 ans · Protection mousses + gel-dégel · Liroy artisan direct · 5/5 (57 avis) · Devis 24h.",
     extraRelatedSlugs: ['guides/prix-demoussage-toiture-bordeaux'],
     visibleInNav: true,
     navCategory: 'entretien',
@@ -142,7 +119,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Traitement toiture Bordeaux · démoussage + hydrofuge',
     seoDescription:
-      "★ Traitement toiture Bordeaux · Nettoyage, démoussage, hydrofuge, anti-lichens · Liroy artisan direct · 5/5 (55 avis) · Devis 24h · Décennale.",
+      "★ Traitement toiture Bordeaux · Nettoyage, démoussage, hydrofuge, anti-lichens · Liroy artisan direct · 5/5 (57 avis) · Devis 24h · Décennale.",
     extraRelatedSlugs: [
       'guides/quand-demousser-toiture-gironde',
       'guides/prix-demoussage-toiture-bordeaux',
@@ -164,7 +141,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Réparation toiture Bordeaux · diagnostic gratuit · 24h',
     seoDescription:
-      "★ Réparation toiture Bordeaux · Tuiles cassées, faîtage, noue, abergement · Diagnostic gratuit · Liroy artisan direct · 5/5 (55 avis) · Devis 24h.",
+      "★ Réparation toiture Bordeaux · Tuiles cassées, faîtage, noue, abergement · Diagnostic gratuit · Liroy artisan direct · 5/5 (57 avis) · Devis 24h.",
     extraRelatedSlugs: ['capotage-toiture-bordeaux'],
     visibleInNav: true,
     navCategory: 'travaux',
@@ -252,7 +229,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Pose gouttière + zinguerie Bordeaux · zinc soudé étain',
     seoDescription:
-      "★ Zinguerie Bordeaux · Gouttières zinc, noues, chéneaux, capotage · Soudure étain sur place · Liroy artisan direct · 5/5 (55 avis) · Devis 24h.",
+      "★ Zinguerie Bordeaux · Gouttières zinc, noues, chéneaux, capotage · Soudure étain sur place · Liroy artisan direct · 5/5 (57 avis) · Devis 24h.",
     extraRelatedSlugs: ['capotage-toiture-bordeaux', 'zinguerie-arcachon'],
     visibleInNav: true,
     navCategory: 'travaux',
@@ -271,7 +248,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Pose Velux Bordeaux · 1200-2400 € · Devis 24h',
     seoDescription:
-      "★ Pose Velux Bordeaux · Installation + remplacement · Kit Velux d'origine · Liroy artisan direct · 5/5 (55 avis) · Devis 24h.",
+      "★ Pose Velux Bordeaux · Installation + remplacement · Kit Velux d'origine · Liroy artisan direct · 5/5 (57 avis) · Devis 24h.",
     visibleInNav: true,
     navCategory: 'urgence',
     navOrder: 41,
@@ -288,7 +265,7 @@ const STATIC_PAGES: PageEntry[] = [
     navLabel: 'Toiture neuve',
     seoTitle: 'Toiture neuve Bordeaux · 85-220 €/m² · clé en main',
     seoDescription:
-      "★ Toiture neuve Bordeaux · Charpente + couverture + zinguerie + isolation · Liroy artisan direct · 5/5 (55 avis) · Devis 24h · Décennale.",
+      "★ Toiture neuve Bordeaux · Charpente + couverture + zinguerie + isolation · Liroy artisan direct · 5/5 (57 avis) · Devis 24h · Décennale.",
     extraRelatedSlugs: ['guides/aides-renovation-toiture-2026'],
     visibleInNav: true,
     navCategory: 'travaux',
@@ -306,7 +283,7 @@ const STATIC_PAGES: PageEntry[] = [
     navLabel: 'Faîtage toiture',
     seoTitle: 'Faîtage toiture Bordeaux · scellé chaux ou closoir ventilé',
     seoDescription:
-      "★ Faîtage toiture Bordeaux · Scellé mortier chaux ou closoir ventilé · 45-70 €/ml · Liroy artisan direct · 5/5 (55 avis) · Décennale.",
+      "★ Faîtage toiture Bordeaux · Scellé mortier chaux ou closoir ventilé · 45-70 €/ml · Liroy artisan direct · 5/5 (57 avis) · Décennale.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 33,
@@ -324,7 +301,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Ornements toiture Bordeaux · épis, lambrequins, girouettes',
     seoDescription:
-      "★ Ornements toiture Bordeaux · Épis, lambrequins, girouettes, rives décoratives · Liroy artisan direct · 5/5 (55 avis) · Décennale · Devis 24h.",
+      "★ Ornements toiture Bordeaux · Épis, lambrequins, girouettes, rives décoratives · Liroy artisan direct · 5/5 (57 avis) · Décennale · Devis 24h.",
     visibleInNav: true,
     navCategory: 'travaux',
     navOrder: 34,
@@ -340,7 +317,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Charpente Bordeaux · rénovation + traitement · Devis 24h',
     seoDescription:
-      "★ Charpentier Bordeaux · Diagnostic bois, traitement insectes/champignons, renforcement · Liroy artisan direct depuis 2005 · 5/5 (55 avis) · Décennale.",
+      "★ Charpentier Bordeaux · Diagnostic bois, traitement insectes/champignons, renforcement · Liroy artisan direct depuis 2005 · 5/5 (57 avis) · Décennale.",
     extraRelatedSlugs: ['guides/aides-renovation-toiture-2026'],
     visibleInNav: true,
     navCategory: 'urgence',
@@ -361,7 +338,6 @@ const STATIC_PAGES: PageEntry[] = [
     seoDescription:
       "Combien coûte un démoussage de toiture à Bordeaux en 2026 ? Tarifs au m², facteurs de prix, exemples chiffrés, comparaison devis · Guide Liroy Delsuc.",
     extraRelatedSlugs: [
-      'demoussage-toiture-bordeaux',
       'traitement-hydrofuge-toiture-bordeaux',
       'nettoyage-toiture-bordeaux',
       'guides/quand-demousser-toiture-gironde',
@@ -399,7 +375,6 @@ const STATIC_PAGES: PageEntry[] = [
     seoDescription:
       "★ Quand démousser sa toiture en Gironde ? Fréquence recommandée, signes d'alerte, meilleur moment · Guide par Liroy Delsuc, couvreur depuis 2005.",
     extraRelatedSlugs: [
-      'demoussage-toiture-bordeaux',
       'nettoyage-toiture-bordeaux',
       'traitement-toiture-bordeaux',
       'guides/prix-demoussage-toiture-bordeaux',
@@ -419,7 +394,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Couvreur Mérignac ★ atelier rue de Malbos ★ 5/5',
     seoDescription:
-      "★ Couvreur Mérignac depuis 2005 · Liroy, artisan direct · atelier 65 rue de Malbos · Urgence 15-30 min · 5/5 sur 55 avis · Devis 24h.",
+      "★ Couvreur Mérignac depuis 2005 · Liroy, artisan direct · atelier 65 rue de Malbos · Urgence 15-30 min · 5/5 sur 57 avis · Devis 24h.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -432,7 +407,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Pessac',
     seoTitle: 'Couvreur Pessac ★ réparation fuite + démoussage ★ 5/5',
     seoDescription:
-      "★ Couvreur Pessac depuis 2005 · Réparation fuite, démoussage, zinguerie · Urgence 30-60 min · Liroy artisan direct · 5/5 (55 avis) · Devis 24h.",
+      "★ Couvreur Pessac depuis 2005 · Réparation fuite, démoussage, zinguerie · Urgence 30-60 min · Liroy artisan direct · 5/5 (57 avis) · Devis 24h.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -445,7 +420,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Talence',
     seoTitle: 'Couvreur Talence ★ réparation fuite + démoussage ★ 5/5',
     seoDescription:
-      "★ Couvreur Talence depuis 2005 · Échoppes tuile canal + maisons bourgeoises ardoise · Liroy artisan direct · 5/5 (55 avis) · Devis 24h.",
+      "★ Couvreur Talence depuis 2005 · Échoppes tuile canal + maisons bourgeoises ardoise · Liroy artisan direct · 5/5 (57 avis) · Devis 24h.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -458,7 +433,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Bègles',
     seoTitle: 'Couvreur Bègles ★ échoppes + ZAC récentes ★ 5/5',
     seoDescription:
-      "★ Couvreur Bègles depuis 2005 · Échoppes ouvrières + toits-terrasses ZAC · Liroy artisan direct · 5/5 (55 avis) · Devis 24h · Décennale.",
+      "★ Couvreur Bègles depuis 2005 · Échoppes ouvrières + toits-terrasses ZAC · Liroy artisan direct · 5/5 (57 avis) · Devis 24h · Décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -472,7 +447,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       "Couvreur Villenave-d'Ornon ★ tuile mécanique 70-90 ★ 5/5",
     seoDescription:
-      "★ Couvreur Villenave-d'Ornon depuis 2005 · Pavillonnaire tuile mécanique 70-90 · Liroy artisan direct · 5/5 (55 avis) · Devis 24h · Décennale.",
+      "★ Couvreur Villenave-d'Ornon depuis 2005 · Pavillonnaire tuile mécanique 70-90 · Liroy artisan direct · 5/5 (57 avis) · Devis 24h · Décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -486,7 +461,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Le Bouscat',
     seoTitle: 'Couvreur Le Bouscat ★ échoppes tuile canal ★ 5/5',
     seoDescription:
-      "★ Couvreur Le Bouscat depuis 2005 · Échoppes tuile canal + maisons de maître · Liroy artisan direct · 5/5 (55 avis) · Devis 24h · Décennale.",
+      "★ Couvreur Le Bouscat depuis 2005 · Échoppes tuile canal + maisons de maître · Liroy artisan direct · 5/5 (57 avis) · Devis 24h · Décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -499,7 +474,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Gradignan',
     seoTitle: 'Couvreur Gradignan ★ pavillons boisés · hydrofuge ★ 5/5',
     seoDescription:
-      "★ Couvreur Gradignan depuis 2005 · Pavillons boisés · Démoussage + hydrofuge indispensable · Liroy artisan direct · 5/5 (55 avis) · Devis 24h.",
+      "★ Couvreur Gradignan depuis 2005 · Pavillons boisés · Démoussage + hydrofuge indispensable · Liroy artisan direct · 5/5 (57 avis) · Devis 24h.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -512,7 +487,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Eysines',
     seoTitle: 'Couvreur Eysines ★ atelier 4 km · urgence 15-30 min ★ 5/5',
     seoDescription:
-      "★ Couvreur Eysines depuis 2005 · Atelier voisin à 4 km · Urgence 15-30 min · Liroy artisan direct · 5/5 (55 avis) · Devis 24h · Décennale.",
+      "★ Couvreur Eysines depuis 2005 · Atelier voisin à 4 km · Urgence 15-30 min · Liroy artisan direct · 5/5 (57 avis) · Devis 24h · Décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -525,7 +500,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Arcachon',
     seoTitle: 'Couvreur Arcachon Bassin ★ zinguerie marine ★ 5/5',
     seoDescription:
-      "★ Couvreur Arcachon depuis 2005 · Villas Ville d'Hiver, air salin, zinc marine · Liroy artisan direct · 5/5 (55 avis) · Décennale · Devis 24h.",
+      "★ Couvreur Arcachon depuis 2005 · Villas Ville d'Hiver, air salin, zinc marine · Liroy artisan direct · 5/5 (57 avis) · Décennale · Devis 24h.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -538,7 +513,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Libourne',
     seoTitle: 'Couvreur Libourne ★ tuile romane + Libournais ★ 5/5',
     seoDescription:
-      "★ Couvreur Libourne depuis 2005 · Bâti girondin pierre + tuile romane · Châteaux viticoles · Liroy artisan direct · 5/5 (55 avis) · Décennale.",
+      "★ Couvreur Libourne depuis 2005 · Bâti girondin pierre + tuile romane · Châteaux viticoles · Liroy artisan direct · 5/5 (57 avis) · Décennale.",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -554,7 +529,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Réparation fuite toiture Pessac ★ 30-60 min 7j/7 · 5/5',
     seoDescription:
-      "★ Réparation fuite toiture Pessac ★ Intervention 30-60 min heures ouvrées ✓ Tuiles cassées, faîtage, noue zinc, abergements ✓ Devis 24h ✓ 5/5 (55 avis).",
+      "★ Réparation fuite toiture Pessac ★ Intervention 30-60 min heures ouvrées ✓ Tuiles cassées, faîtage, noue zinc, abergements ✓ Devis 24h ✓ 5/5 (57 avis).",
     indexable: true,
     sitemapPriority: 0.85,
   },
@@ -568,7 +543,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Réparation fuite toiture Talence ★ échoppes tuile canal',
     seoDescription:
-      "★ Réparation fuite toiture Talence ★ Échoppes tuile canal, faîtage scellé chaux, noues zinc ✓ Intervention rapide 7j/7 ✓ Devis 24h ✓ 5/5 (55 avis).",
+      "★ Réparation fuite toiture Talence ★ Échoppes tuile canal, faîtage scellé chaux, noues zinc ✓ Intervention rapide 7j/7 ✓ Devis 24h ✓ 5/5 (57 avis).",
     indexable: true,
     sitemapPriority: 0.85,
   },
@@ -582,7 +557,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Réparation fuite toiture Mérignac ★ intervention 15-30 min',
     seoDescription:
-      "★ Réparation fuite toiture Mérignac ★ Atelier rue de Malbos, intervention 15-30 min ✓ Tuiles cassées, faîtage, gouttières ✓ 5/5 (55 avis) ✓ Devis 24h.",
+      "★ Réparation fuite toiture Mérignac ★ Atelier rue de Malbos, intervention 15-30 min ✓ Tuiles cassées, faîtage, gouttières ✓ 5/5 (57 avis) ✓ Devis 24h.",
     indexable: true,
     sitemapPriority: 0.85,
   },
@@ -595,7 +570,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Capotage toiture Bordeaux · rives + faîtage zinc soudé',
     seoDescription:
-      "★ Capotage toiture Bordeaux · Rives, faîtages, jonctions maçonnerie en zinc soudé étain · Liroy artisan direct · 5/5 (55 avis) · Décennale.",
+      "★ Capotage toiture Bordeaux · Rives, faîtages, jonctions maçonnerie en zinc soudé étain · Liroy artisan direct · 5/5 (57 avis) · Décennale.",
     indexable: true,
     sitemapPriority: 0.75,
   },
@@ -609,7 +584,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Zinguerie Arcachon Bassin ★ zinc marine anti-air-salin',
     seoDescription:
-      "★ Zinguerie Arcachon & Bassin depuis 2005 ★ Zinc anti-air-salin, alliage marine ✓ Gouttières, noues, chéneaux ✓ Soudure étain ✓ 5/5 (55 avis) ✓ Devis 24h.",
+      "★ Zinguerie Arcachon & Bassin depuis 2005 ★ Zinc anti-air-salin, alliage marine ✓ Gouttières, noues, chéneaux ✓ Soudure étain ✓ 5/5 (57 avis) ✓ Devis 24h.",
     indexable: true,
     sitemapPriority: 0.8,
   },
@@ -623,7 +598,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Couvreur Cenon 33150 ★ rive droite ★ 5/5 · Devis 24h',
     seoDescription:
-      "★ Couvreur Cenon rive droite depuis 2005 ★ Coteaux Haut Cenon, plateau Palmer, Beauval-Loret ✓ Démoussage, réparation, zinguerie ✓ 5/5 (55 avis).",
+      "★ Couvreur Cenon rive droite depuis 2005 ★ Coteaux Haut Cenon, plateau Palmer, Beauval-Loret ✓ Démoussage, réparation, zinguerie ✓ 5/5 (57 avis).",
     visibleInFooter: true,
     footerSection: 'villes',
     indexable: true,
@@ -637,7 +612,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Bordeaux Centre',
     seoTitle: 'Couvreur Bordeaux Centre ★ échoppes + ABF ★ 5/5',
     seoDescription:
-      "★ Couvreur Bordeaux Centre depuis 2005 · Échoppes + UNESCO/ABF · Tuile canal + mortier chaux · Liroy artisan direct · 5/5 (55 avis) · Décennale.",
+      "★ Couvreur Bordeaux Centre depuis 2005 · Échoppes + UNESCO/ABF · Tuile canal + mortier chaux · Liroy artisan direct · 5/5 (57 avis) · Décennale.",
     extraRelatedSlugs: [
       'couvreur-bordeaux-chartrons',
       'couvreur-bordeaux-rive-droite',
@@ -656,7 +631,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Bordeaux Chartrons',
     seoTitle: 'Couvreur Bordeaux Chartrons ★ ardoise + ABF ★ 5/5',
     seoDescription:
-      "★ Couvreur Bordeaux Chartrons depuis 2005 ★ Ardoise, hôtels particuliers, quai des Chartrons, secteur ABF ✓ Démoussage, réparation ✓ 5/5 (55 avis).",
+      "★ Couvreur Bordeaux Chartrons depuis 2005 ★ Ardoise, hôtels particuliers, quai des Chartrons, secteur ABF ✓ Démoussage, réparation ✓ 5/5 (57 avis).",
     extraRelatedSlugs: [
       'couvreur-bordeaux-centre',
       'couvreur-bordeaux-rive-droite',
@@ -675,7 +650,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Bordeaux Rive Droite',
     seoTitle: 'Couvreur Bordeaux Rive Droite ★ Bastide + Brazza ★ 5/5',
     seoDescription:
-      "★ Couvreur Bordeaux Rive Droite depuis 2005 ★ Bastide, Brazza, Niel, Benauge ✓ Démoussage, réparation, zinguerie, urgence 7j/7 ✓ 5/5 (55 avis).",
+      "★ Couvreur Bordeaux Rive Droite depuis 2005 ★ Bastide, Brazza, Niel, Benauge ✓ Démoussage, réparation, zinguerie, urgence 7j/7 ✓ 5/5 (57 avis).",
     extraRelatedSlugs: [
       'couvreur-bordeaux-centre',
       'couvreur-bordeaux-chartrons',
@@ -694,7 +669,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Couvreur Bordeaux Lac',
     seoTitle: 'Couvreur Bordeaux Lac ★ Ginko + toits-terrasses ★ 5/5',
     seoDescription:
-      "★ Couvreur Bordeaux Lac depuis 2005 ★ Bassins à flot, Ginko, toits-terrasses copropriétés, étanchéité EPDM ✓ 5/5 (55 avis) ✓ Devis 24h ✓ Décennale.",
+      "★ Couvreur Bordeaux Lac depuis 2005 ★ Bassins à flot, Ginko, toits-terrasses copropriétés, étanchéité EPDM ✓ 5/5 (57 avis) ✓ Devis 24h ✓ Décennale.",
     extraRelatedSlugs: [
       'couvreur-bordeaux-centre',
       'couvreur-bordeaux-chartrons',
@@ -716,7 +691,7 @@ const STATIC_PAGES: PageEntry[] = [
     seoTitle:
       'Nettoyage toiture Pessac : démoussage + hydrofuge | 5/5 avis',
     seoDescription:
-      "Nettoyage toiture à Pessac par couvreur depuis 2005. Démoussage, haute pression maîtrisée, hydrofuge longue durée. Note 5/5 (55 avis). Devis gratuit 24h.",
+      "Nettoyage toiture à Pessac par couvreur depuis 2005. Démoussage, haute pression maîtrisée, hydrofuge longue durée. Note 5/5 (57 avis). Devis gratuit 24h.",
     indexable: true,
   },
 
@@ -743,7 +718,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Contact',
     seoTitle: 'Contact Couverture Gironde · ☎ 07 68 69 78 48',
     seoDescription:
-      "Contact Couverture Gironde · ☎ 07 68 69 78 48 · Atelier 65 rue de Malbos Mérignac · Liroy artisan direct · 5/5 (55 avis) · Réponse 24h.",
+      "Contact Couverture Gironde · ☎ 07 68 69 78 48 · Atelier 65 rue de Malbos Mérignac · Liroy artisan direct · 5/5 (57 avis) · Réponse 24h.",
     visibleInNav: true,
     navOrder: 80,
     visibleInFooter: true,
@@ -758,7 +733,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'À propos',
     seoTitle: 'À propos · Liroy Delsuc, couvreur Bordeaux depuis 2005',
     seoDescription:
-      "Couverture Gironde, fondée par Liroy Delsuc en 2005 à Mérignac. 20 ans d'expérience, atelier rue de Malbos. 5/5 (55 avis) · Décennale active.",
+      "Couverture Gironde, fondée par Liroy Delsuc en 2005 à Mérignac. 20 ans d'expérience, atelier rue de Malbos. 5/5 (57 avis) · Décennale active.",
     visibleInNav: true,
     navOrder: 70,
     visibleInFooter: true,
@@ -807,7 +782,7 @@ const STATIC_PAGES: PageEntry[] = [
     title: 'Demande de devis',
     seoTitle: 'Devis toiture Bordeaux gratuit 24h · ☎ 07 68 69 78 48',
     seoDescription:
-      "★ Devis toiture Bordeaux gratuit 24h · Démoussage, réparation, zinguerie · Sans engagement · Liroy artisan direct · 5/5 (55 avis) · Décennale.",
+      "★ Devis toiture gratuit sous 24h · Formulaire en 2 minutes · Visite sur site si nécessaire · Sans engagement · Liroy, artisan direct à Mérignac.",
     visibleInNav: true,
     navOrder: 60,
     visibleInFooter: true,

@@ -47,10 +47,10 @@ export default function Page() {
               <span className="text-[var(--color-terre)]">réponse gratuite sous 24h</span>
             </h1>
             <p className="text-lead">
-              Démoussage, nettoyage, réparation, zinguerie ou projet plus
-              complet : remplissez ce formulaire en 2 minutes. Un de nos
-              artisans étudie votre demande et vous propose un devis détaillé,
-              transparent et chiffré ligne par ligne.
+              Remplissez ce formulaire en 2 minutes : décrivez votre toiture et
+              ce qui vous inquiète. Liroy étudie votre demande, passe sur place
+              si c'est nécessaire, et vous envoie un devis détaillé, transparent
+              et chiffré ligne par ligne.
             </p>
           </div>
 

@@ -90,7 +90,7 @@ export function ServicesGrid({
 function ServiceCard({ service }: { service: ServiceDefinition }) {
   // Map serviceId → slug de page (pour le moment : `{type}-bordeaux`)
   const SLUG_MAP: Record<string, string> = {
-    demoussage: 'demoussage-toiture-bordeaux',
+    demoussage: 'nettoyage-toiture-bordeaux',
     nettoyage: 'nettoyage-toiture-bordeaux',
     hydrofuge: 'traitement-hydrofuge-toiture-bordeaux',
     reparation: 'reparation-toiture-bordeaux',

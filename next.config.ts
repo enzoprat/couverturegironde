@@ -86,6 +86,14 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       // Migration depuis l'ancien site Webflow — préservation du SEO
+      // Fusion du doublon démoussage → nettoyage (audit GSC 2026-09-05).
+      // Sur « démoussage toiture bordeaux » (472 imp/90j), /nettoyage était
+      // en position 12,8 et /demoussage en 28,9 : Google avait déjà tranché.
+      {
+        source: '/demoussage-toiture-bordeaux',
+        destination: '/nettoyage-toiture-bordeaux',
+        permanent: true,
+      },
       {
         source: '/couverture-bordeaux',
         destination: '/couvreur-bordeaux',

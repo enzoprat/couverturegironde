@@ -49,7 +49,7 @@ const DEFAULT_POINTS: ReassurancePoint[] = [
   },
   {
     icon: Users,
-    title: '55 avis Google 5/5',
+    title: '57 avis Google 5/5',
     description:
       "La satisfaction de nos clients est notre meilleure publicité. Consultez nos avis vérifiés avant de nous confier votre toiture.",
   },

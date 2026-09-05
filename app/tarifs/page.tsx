@@ -73,7 +73,7 @@ const TARIF_SECTIONS = [
     services: [
       {
         name: 'Démoussage toiture (avec brossage manuel)',
-        href: '/demoussage-toiture-bordeaux',
+        href: '/nettoyage-toiture-bordeaux',
         range: '12 – 19 €/m²',
         details:
           'Brossage des zones critiques + traitement anti-mousse rémanent. Garantie décennale.',

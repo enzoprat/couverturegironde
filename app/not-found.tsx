@@ -22,7 +22,7 @@ export default function NotFound() {
   const priorityServices = getPrioritySiloServices()
     .map((s) => {
       const slugMap: Record<string, string> = {
-        demoussage: 'demoussage-toiture-bordeaux',
+        demoussage: 'nettoyage-toiture-bordeaux',
         nettoyage: 'nettoyage-toiture-bordeaux',
         hydrofuge: 'traitement-hydrofuge-toiture-bordeaux',
       };

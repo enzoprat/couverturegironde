@@ -23,7 +23,7 @@ export default function Page() {
         slug: PAGE.slug,
         h1: (
           <>
-            Nettoyage toiture à{' '}
+            Nettoyage et démoussage de toiture à{' '}
             <span className="text-[var(--color-terre)]">Bordeaux</span> — haute
             pression maîtrisée 12-20 €/m²
           </>
@@ -39,7 +39,7 @@ export default function Page() {
           badges: [
             'Depuis 2005',
             'Décennale active',
-            '5/5 sur 55 avis Google',
+            '5/5 sur 57 avis Google',
             'Pression adaptée matériau',
           ],
         },
@@ -61,8 +61,9 @@ export default function Page() {
               support : tuile canal traditionnelle bordelaise, tuile mécanique,
               ardoise naturelle, zinc, fibrociment, bac acier. Chaque
               couverture a sa technique, sa température d'eau, son produit
-              complémentaire. Le protocole complet est décrit sur notre page
-              <Link href="/demoussage-toiture-bordeaux" className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline">démoussage de toiture à Bordeaux</Link>.
+              complémentaire. Le démoussage est traité dans la même
+              intervention : produit anti-mousse rémanent et brossage manuel des
+              zones critiques, décrits plus bas dans le déroulé du chantier.
             </p>
             <p>
               Nous combinons systématiquement nettoyage et démoussage dans la

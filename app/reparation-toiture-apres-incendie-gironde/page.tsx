@@ -51,7 +51,7 @@ export default function Page() {
             bio: "Notre atelier est au 65 rue de Malbos à Mérignac, une des communes concernées par les évacuations de juillet 2026. Nous connaissons le terrain, les toitures locales et l'urgence de la situation. Je réponds personnellement au téléphone et je me déplace sur l'ensemble de la Gironde sinistrée pour établir un diagnostic honnête, sans profiter de la détresse des propriétaires.",
             badges: [
               'Décennale active',
-              '5/5 sur 55 avis Google',
+              '5/5 sur 57 avis Google',
               'Atelier Mérignac — zone sinistrée',
               'Diagnostic gratuit',
             ],

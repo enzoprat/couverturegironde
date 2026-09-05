@@ -38,7 +38,7 @@ export type ServiceCategory =
 export type NavCategory = 'entretien' | 'travaux' | 'urgence';
 
 export type PageEntry = {
-  /** Slug sans slash initial, ex. `demoussage-toiture-bordeaux`. La home a slug `''`. */
+  /** Slug sans slash initial, ex. `nettoyage-toiture-bordeaux`. La home a slug `''`. */
   slug: string;
   /** URL complète (avec `/`). Dérivée du slug. */
   path: string;

@@ -301,7 +301,7 @@ export function QuartierBordeauxPageLayout({ content }: { content: QuartierConte
       <AvisGoogle
         eyebrow="Avis clients Bordeaux"
         title="Ce que disent nos clients à Bordeaux"
-        intro={`Plus de 55 avis 5/5 vérifiés sur l'ensemble de Bordeaux Métropole, incluant le quartier ${content.quartier}.`}
+        intro={`Plus de 57 avis 5/5 vérifiés sur l'ensemble de Bordeaux Métropole, incluant le quartier ${content.quartier}.`}
       />
 
       {/* SECTION 6 — Réalisations Bordeaux Métropole */}

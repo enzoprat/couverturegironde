@@ -38,7 +38,7 @@ export default function Page() {
             bio: "Le climat atlantique bordelais expose les toitures aux dépressions d'ouest : Klaus (2009, rafales à 172 km/h au Cap-Ferret), Xynthia, et chaque hiver son lot de coups de vent >100 km/h. Après une tempête, deux urgences se cumulent : arrêter l'eau vite, et sécuriser vos droits à indemnisation avant que les délais assurance ne courent. Je gère les deux — bâchage immédiat et dossier photo solide pour l'expert.",
             badges: [
               'Décennale active',
-              '5/5 sur 55 avis Google',
+              '5/5 sur 57 avis Google',
               'Dossier assurance inclus',
               'Saison tempête renforcée',
             ],

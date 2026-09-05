@@ -35,7 +35,7 @@ export default function Page() {
             badges: [
               'Depuis 2005',
               'Décennale active',
-              '5/5 sur 55 avis Google',
+              '5/5 sur 57 avis Google',
               'Urgence 30-60 min (ouvré)',
             ],
           },
@@ -57,7 +57,7 @@ export default function Page() {
           },
 
           heroSubtitle:
-            "Couvreur-zingueur à Pessac depuis 2005, atelier à Mérignac (7 km). Intervention 30-60 min en heures ouvrées sur toutes les toitures pessacaises : centre bourgeois, Saige, Cap-de-Bos, Toctoucau, Alouette. Démoussage, hydrofuge, réparation, zinguerie. Devis 24h, décennale, 5/5 sur 55 avis Google.",
+            "Couvreur-zingueur à Pessac depuis 2005, atelier à Mérignac (7 km). Intervention 30-60 min en heures ouvrées sur toutes les toitures pessacaises : centre bourgeois, Saige, Cap-de-Bos, Toctoucau, Alouette. Démoussage, hydrofuge, réparation, zinguerie. Devis 24h, décennale, 5/5 sur 57 avis Google.",
         contexteLocal: (
           <>
             <p>
@@ -109,7 +109,7 @@ export default function Page() {
               chiffre, qui réalise les travaux et qui assure le SAV. Cette
               relation directe avec le client est ce qui nous a permis
               d'accumuler une note de {''}
-              <strong>5/5 sur 55 avis Google</strong>, un signal de confiance
+              <strong>5/5 sur 57 avis Google</strong>, un signal de confiance
               que nous protégeons sur chaque chantier pessacais.
             </p>
           </>

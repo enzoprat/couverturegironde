@@ -728,7 +728,7 @@ function getServicePageSlugForVille(
   const override = SERVICE_SLUG_BY_VILLE[villeSlug]?.[serviceId];
   if (override && getPageBySlug(override)) return override;
   const SLUG_MAP: Record<string, string> = {
-    demoussage: 'demoussage-toiture-bordeaux',
+    demoussage: 'nettoyage-toiture-bordeaux',
     nettoyage: 'nettoyage-toiture-bordeaux',
     hydrofuge: 'traitement-hydrofuge-toiture-bordeaux',
     reparation: 'reparation-toiture-bordeaux',

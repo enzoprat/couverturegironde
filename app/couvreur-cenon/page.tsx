@@ -35,7 +35,7 @@ export default function Page() {
             badges: [
               'Depuis 2005',
               'Décennale active',
-              '5/5 sur 55 avis Google',
+              '5/5 sur 57 avis Google',
               'Urgence 30-45 min',
             ],
           },
@@ -137,7 +137,7 @@ export default function Page() {
               assure le SAV en cas de besoin ultérieur. C'est cette
               continuité de l'interlocuteur, combinée à notre{' '}
               <strong>garantie décennale</strong> systématique, qui nous vaut
-              la note <strong>5/5 sur 55 avis Google publics</strong>. Notre
+              la note <strong>5/5 sur 57 avis Google publics</strong>. Notre
               exigence à Cenon est la même que partout ailleurs : devis
               chiffré ligne par ligne, acompte limité à 30 %, solde à la fin
               du chantier après votre validation.

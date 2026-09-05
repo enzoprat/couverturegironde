@@ -36,7 +36,7 @@ export default function Page() {
             badges: [
               'Depuis 2005',
               'Décennale active',
-              '5/5 sur 55 avis Google',
+              '5/5 sur 57 avis Google',
               'Urgence 30-45 min',
             ],
           },
@@ -150,7 +150,7 @@ export default function Page() {
               <strong>direct sans sous-traitance</strong>. C'est l'artisan
               qui chiffre, qui exécute le chantier sur la Rive Droite,
               qui revient en SAV. Cette continuité explique nos{' '}
-              <strong>5/5 sur 55 avis Google</strong> et notre
+              <strong>5/5 sur 57 avis Google</strong> et notre
               recommandation régulière par syndics et copropriétaires de
               Brazza, Niel et Benauge.
             </p>

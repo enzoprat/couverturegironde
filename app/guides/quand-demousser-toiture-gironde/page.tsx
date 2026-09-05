@@ -400,7 +400,7 @@ export default function Page() {
                 </ul>
                 <p>
                   Concrètement, la bonne combinaison est presque toujours un{' '}
-                  <Link href="/demoussage-toiture-bordeaux">
+                  <Link href="/nettoyage-toiture-bordeaux">
                     démoussage de toiture à Bordeaux
                   </Link>{' '}
                   suivi d'un{' '}

@@ -385,7 +385,7 @@ export default async function Page({ params }: PageProps) {
               chantier de {service?.name.toLowerCase() ?? 'toiture'}{' '}
               {toLocatif(realisation.villeName)} est diagnostiqué, chiffré et supervisé
               personnellement — aucune sous-traitance, décennale active, 5/5 sur
-              55 avis Google.
+              57 avis Google.
             </p>
           </div>
         </Container>

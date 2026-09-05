@@ -40,7 +40,7 @@ export default function Page() {
             badges: [
               'Atelier Mérignac depuis 2005',
               'Décennale active',
-              '5/5 sur 55 avis Google',
+              '5/5 sur 57 avis Google',
               'Urgence 15-30 min (ouvré)',
             ],
           },
@@ -124,7 +124,7 @@ export default function Page() {
                 supervise les travaux et qui assure le SAV après réception.
                 Cette continuité de l'interlocuteur, combinée à notre ancrage
                 merignacais, est ce qui nous a permis d'atteindre la{' '}
-                <strong>note 5/5 sur 55 avis Google</strong> que vous pouvez
+                <strong>note 5/5 sur 57 avis Google</strong> que vous pouvez
                 vérifier publiquement. Sur Mérignac particulièrement, le
                 bouche-à-oreille fonctionne : nous intervenons régulièrement
                 sur recommandation de voisins satisfaits, à quelques rues près.

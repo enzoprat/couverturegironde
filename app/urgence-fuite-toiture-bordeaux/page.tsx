@@ -41,7 +41,7 @@ export default function Page() {
             bio: "Je réponds personnellement aux appels d'urgence pendant les heures ouvrées (6h-22h). Pour les urgences nuit/dimanche : message vocal, je rappelle en priorité dès la première heure du jour ouvré suivant. En saison tempête (novembre-mars), la veille des appels est renforcée le week-end.",
             badges: [
               'Décennale active',
-              '5/5 sur 55 avis Google',
+              '5/5 sur 57 avis Google',
               'Depuis 2005',
               'Atelier Mérignac',
             ],

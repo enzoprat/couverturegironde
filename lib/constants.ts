@@ -102,9 +102,9 @@ export const TRUST = {
   experienceYears: 20, // depuis 2005
   guaranteeYears: 10, // décennale
   googleRating: 5,
-  // Vérifié sur fiche GBP réelle (2026-08-01) : 5,0 / 55 avis
+  // Vérifié sur fiche GBP réelle (2026-09-05) : 5,0 / 57 avis
   // ⚠️ Mettre à jour mensuellement avec le nombre exact affiché sur GBP
-  googleReviewCount: 55,
+  googleReviewCount: 57,
   responseTimeHours: 24,
   emergencyAvailability: '7j/7',
 } as const;

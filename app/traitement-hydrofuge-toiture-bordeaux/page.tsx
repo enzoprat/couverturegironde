@@ -39,7 +39,7 @@ export default function Page() {
           badges: [
             'Depuis 2005',
             'Garantie 10 ans',
-            '5/5 sur 55 avis Google',
+            '5/5 sur 57 avis Google',
             'Anti-mousse rémanent',
           ],
         },
@@ -58,7 +58,7 @@ export default function Page() {
               céramique, les mousses ne trouvent plus leur substrat préféré.
               C'est la deuxième moitié du travail : la première reste le{' '}
               <Link
-                href="/demoussage-toiture-bordeaux"
+                href="/nettoyage-toiture-bordeaux"
                 className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
               >
                 démoussage de la toiture
