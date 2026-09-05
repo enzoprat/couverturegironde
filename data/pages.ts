@@ -20,9 +20,9 @@ const STATIC_PAGES: PageEntry[] = [
     type: 'home',
     title: 'Accueil',
     seoTitle:
-      'Couverture Gironde · Couvreur Bordeaux, Mérignac & Gironde',
+      'Couvreur Bordeaux & Gironde · Couverture Gironde · Devis 24h',
     seoDescription:
-      "Couverture Gironde · Artisan couvreur-zingueur à Mérignac depuis 2005 · Bordeaux Métropole et Gironde · Liroy · 5/5 (57 avis) · Décennale.",
+      "Couvreur-zingueur à Bordeaux et en Gironde depuis 2005 · Démoussage, réparation, urgence fuite 7j/7 · Couverture Gironde, atelier Mérignac · 5/5 (57 avis).",
     visibleInNav: true,
     navOrder: 10,
     indexable: true,
