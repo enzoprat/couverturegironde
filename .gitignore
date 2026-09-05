@@ -64,3 +64,6 @@ _gsc-data/
 # Audits GSC (données brutes + snapshots)
 /gsc-audit/data/
 /.gsc/
+
+# Artefacts de travail SEO (crawl, baselines)
+/.seo/
