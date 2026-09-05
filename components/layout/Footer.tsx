@@ -4,7 +4,7 @@ import { MapPin, MessageCircle, Phone, Star } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { GoogleBadge } from '@/components/ui/GoogleBadge';
 import { getFooterSections } from '@/lib/pages';
-import { NAP, SITE, SOCIAL, TRUST } from '@/lib/constants';
+import { LEGAL, NAP, SITE, SOCIAL, TRUST } from '@/lib/constants';
 
 /**
  * Footer — data-driven via le registre des pages.
@@ -174,6 +174,14 @@ export function Footer() {
             <p>
               © {year} {SITE.legalName}. Tous droits réservés. Garantie
               décennale.
+            </p>
+            {/* Identité juridique complète : relie la marque du site au nom
+                sous lequel l'entreprise est référencée sur Google (fiche GBP
+                « {SITE.gbpName} »). */}
+            <p>
+              {SITE.legalName} — {LEGAL.operatorName}, {LEGAL.legalForm}
+              {LEGAL.siren ? ` — SIREN ${LEGAL.siren}` : ''} —{' '}
+              {NAP.streetAddress}, {NAP.postalCode} {NAP.addressLocality}
             </p>
           </div>
           {sections.legal && sections.legal.length > 0 && (

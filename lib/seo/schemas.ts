@@ -14,7 +14,7 @@ import type {
   WebSite,
   WithContext,
 } from 'schema-dts';
-import { NAP, OPENING_HOURS, SITE } from '@/lib/constants';
+import { LEGAL, NAP, OPENING_HOURS, SITE, SOCIAL } from '@/lib/constants';
 import { getLocationBySlug, LOCATIONS } from '@/data/locations';
 import type { BreadcrumbItem } from '@/lib/pages';
 
@@ -33,7 +33,12 @@ export function getOrganizationSchema(): WithContext<Organization> {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': `${SITE.url}/#organization`,
-    name: SITE.legalName,
+    name: SITE.name,
+    // Lie la marque du site au nom de la fiche GBP (imposé par la validation
+    // LSA pour un EI). Sans ça, Google voit deux entités distinctes.
+    alternateName: SITE.gbpName,
+    legalName: LEGAL.operatorName,
+    sameAs: [SOCIAL.googleMaps],
     url: SITE.url,
     logo: `${SITE.url}/logo.png`,
     foundingDate: String(SITE.foundingYear),
@@ -122,6 +127,12 @@ export function getLocalBusinessSchema(): WithContext<LocalBusiness> {
     '@type': 'RoofingContractor',
     '@id': `${SITE.url}/#localbusiness`,
     name: SITE.name,
+    // Réconciliation d'entité site ↔ fiche GBP : la fiche porte le nom de
+    // l'entrepreneur individuel (contrainte de validation Local Services Ads).
+    alternateName: SITE.gbpName,
+    legalName: LEGAL.operatorName,
+    sameAs: [SOCIAL.googleMaps],
+    hasMap: SOCIAL.googleMaps,
     url: SITE.url,
     image: `${SITE.url}/og-default.jpg`,
     telephone: NAP.phone,

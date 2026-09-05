@@ -6,7 +6,17 @@
 
 export const SITE = {
   name: 'Couverture Gironde',
+  /** Nom commercial affiché. Pour la raison sociale au sens juridique (EI), voir LEGAL. */
   legalName: 'Couverture Gironde',
+  /**
+   * Nom exact de la fiche Google Business Profile.
+   * Diverge volontairement de la marque : Google impose les nom et prénom de
+   * la personne physique pour valider les Local Services Ads d'un entrepreneur
+   * individuel. On ne renomme PAS le site (le domaine et la requête de marque
+   * « couverture gironde » sont les seuls actifs organiques qui convertissent) :
+   * les deux entités sont reliées via schema.org (alternateName + sameAs).
+   */
+  gbpName: 'Liroy Delsuc Couvreur Bordeaux',
   url: 'https://www.couverturegironde.fr',
   locale: 'fr-FR',
   tagline:
@@ -34,6 +44,23 @@ export const NAP = {
 } as const;
 
 /**
+ * Identité juridique de l'exploitant.
+ * « Couverture Gironde » est le nom commercial ; l'entité juridique est
+ * l'entrepreneur individuel Liroy Delsuc. C'est ce nom qui figure sur la
+ * fiche Google Business Profile et sur la validation Local Services Ads.
+ */
+export const LEGAL: {
+  operatorName: string;
+  legalForm: string;
+  /** SIREN à 9 chiffres. `null` tant qu'il n'est pas confirmé : ne jamais l'inventer. */
+  siren: string | null;
+} = {
+  operatorName: 'Liroy Delsuc',
+  legalForm: 'entrepreneur individuel',
+  siren: null,
+};
+
+/**
  * Clé Web3Forms — backend du formulaire de demande de devis.
  * Clé publique par design (visible côté client dans le bundle JS).
  * Le mail destinataire est configuré côté Web3Forms (non-visible côté site).
@@ -57,6 +84,10 @@ export const OPENING_HOURS = {
 export const SOCIAL = {
   // Fiche Google Business Profile (lien court g.page officiel).
   google: 'https://share.google/RlXzdyVol8f1t6nKO',
+  // URL canonique Maps de la fiche (CID). Forme stable et résolvable par
+  // Google — c'est celle qu'on met en `sameAs` pour lier l'entité du site
+  // (« Couverture Gironde ») à la fiche (« Liroy Delsuc Couvreur Bordeaux »).
+  googleMaps: 'https://www.google.com/maps?cid=15353739773009340295',
   // Deep-link "écrire un avis" — ouvre directement la fenêtre de rédaction
   // d'avis Google. À utiliser en CTA de sollicitation d'avis.
   googleReview: 'https://g.page/r/CYcnAtj5cBPVEAE/review',

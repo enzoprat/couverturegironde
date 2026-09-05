@@ -60,3 +60,7 @@ _gsc-data/
 
 # Documents administratifs perso (SIREN/SIRET, courriers INSEE… — hors code site)
 /tableau-activite-insee.html
+
+# Audits GSC (données brutes + snapshots)
+/gsc-audit/data/
+/.gsc/

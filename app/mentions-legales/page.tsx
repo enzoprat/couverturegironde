@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/content/LegalPageLayout';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { requirePage } from '@/lib/pages';
-import { NAP, SITE } from '@/lib/constants';
+import { LEGAL, NAP, SITE, SOCIAL } from '@/lib/constants';
 
 const PAGE = requirePage('mentions-legales');
 
@@ -17,7 +17,7 @@ export default function Page() {
     <LegalPageLayout
       slug={PAGE.slug}
       title="Mentions légales"
-      updatedAt="2026-05-26"
+      updatedAt="2026-08-23"
     >
       <p>
         Conformément à l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour
@@ -28,7 +28,9 @@ export default function Page() {
 
       <h2>Éditeur du site</h2>
       <p>
-        <strong>{SITE.legalName}</strong>
+        <strong>{SITE.legalName}</strong> — {LEGAL.operatorName},{' '}
+        {LEGAL.legalForm}
+        {LEGAL.siren ? ` — SIREN ${LEGAL.siren}` : ''}
         <br />
         {NAP.streetAddress}
         <br />
@@ -42,11 +44,21 @@ export default function Page() {
         Activité : entreprise de couverture, zinguerie, démoussage et entretien
         de toiture, exerçant en Gironde depuis {SITE.foundingYear}.
       </p>
+      <p>
+        « {SITE.legalName} » est le nom commercial sous lequel{' '}
+        {LEGAL.operatorName} exerce son activité. L'entreprise est également
+        référencée sous le nom «&nbsp;{SITE.gbpName}&nbsp;» sur sa{' '}
+        <a href={SOCIAL.googleMaps} rel="noopener noreferrer" target="_blank">
+          fiche Google Business Profile
+        </a>
+        . Il s'agit de la même et unique entité, à la même adresse et au même
+        numéro de téléphone.
+      </p>
 
       <h2>Directeur de la publication</h2>
       <p>
-        Le directeur de la publication est le représentant légal de{' '}
-        {SITE.legalName}.
+        Le directeur de la publication est {LEGAL.operatorName}, en sa qualité
+        de représentant légal de {SITE.legalName}.
       </p>
 
       <h2>Hébergeur du site</h2>
