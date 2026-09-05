@@ -1,0 +1,10 @@
+requete,page,pos_depart,impressions_28j,clics_28j,action,critere_reussite,date_controle
+couvreur gironde,/,24.0,562,0,H1+title home : Bordeaux/Gironde restaurés,position < 15,2026-10-03
+couvreur bordeaux,/,32.9,506,0,H1+title home : Bordeaux/Gironde restaurés,position < 25,2026-10-03
+couvreur mérignac,/,21.5,226,0,H1+title home,position < 18,2026-10-03
+couverture gironde,/,2.3,61,6,témoin de non-régression marque,position ≤ 4 ET clics ≥ 4,2026-10-03
+velux bordeaux,/installation-velux-bordeaux,11.8,141,0,"2 liens en prose ajoutés (3 → 5, médiane site 44)",position < 10,2026-10-03
+installateur velux bordeaux,/installation-velux-bordeaux,14.1,72,0,idem,position < 12,2026-10-03
+démoussage toiture bordeaux,/nettoyage-toiture-bordeaux,13.9,87,0,fusion 301 + H1/title absorbent « démoussage »,position < 10,2026-10-03
+nettoyage de toiture bordeaux,/nettoyage-toiture-bordeaux,14.8,143,0,idem,position < 12,2026-10-03
+devis toiture bordeaux,/demande-devis,5.7,3,0,dé-optimisation service de /demande-devis,"les pages service remontent, /demande-devis peut baisser",2026-10-03
