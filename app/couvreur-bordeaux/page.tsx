@@ -116,7 +116,16 @@ export default function Page() {
                 Bassin d'Arcachon
               </Link>
               , où le climat maritime impose une zinguerie renforcée et un
-              traitement hydrofuge adaptés.
+              traitement hydrofuge adaptés. Sur les combles bordelais que nous
+              rénovons, la demande la plus fréquente reste l'{' '}
+              <Link
+                href="/installation-velux-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                installation de fenêtres de toit Velux à Bordeaux
+              </Link>{' '}
+              : encastrement, raccord d'étanchéité et habillage intérieur sont
+              traités dans la même intervention que la couverture.
             </p>
           </>
         ),

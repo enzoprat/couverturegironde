@@ -95,7 +95,16 @@ export default function Page() {
               >
                 réparation de toiture après incendie en Gironde
               </Link>{' '}
-              détaille le diagnostic et le dossier assurance spécifiques.
+              détaille le diagnostic et le dossier assurance spécifiques. Une
+              fuite localisée au pourtour d'une fenêtre de toit relève, elle,
+              de la{' '}
+              <Link
+                href="/installation-velux-bordeaux"
+                className="text-[var(--color-terre)] underline underline-offset-2 hover:no-underline"
+              >
+                pose et reprise d'étanchéité Velux
+              </Link>{' '}
+              : c'est le raccord, pas la tuile, qu'il faut reprendre.
             </p>
           </>
         ),
