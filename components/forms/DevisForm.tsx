@@ -5,6 +5,7 @@ import { Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { getServicesByPriority } from '@/data/services';
 import { WEB3FORMS_KEY } from '@/lib/constants';
+import { appendLeadSource } from '@/lib/lead-source';
 import { cn } from '@/lib/utils';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
@@ -69,6 +70,9 @@ export function DevisForm({
       `Nouveau devis Couverture Gironde — ${String(formData.get('service') ?? '?')}`,
     );
     formData.append('from_name', 'couverturegironde.fr');
+    // Provenance du lead : sans ça, impossible de distinguer le SEO
+    // de la fiche Google Business Profile ou d'un accès direct.
+    appendLeadSource(formData);
     // Replyto = email du client (si fourni) pour faciliter la réponse directe
     const clientEmail = String(formData.get('email') ?? '');
     if (clientEmail) {

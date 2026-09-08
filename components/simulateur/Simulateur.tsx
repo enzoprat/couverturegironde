@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/Button';
 import { SIMULATEUR_CONFIG } from '@/data/simulateur';
 import type { Branch, LeadPayload } from './types';
 import { WEB3FORMS_KEY, NAP } from '@/lib/constants';
+import { appendLeadSource } from '@/lib/lead-source';
 import { toLocatif } from '@/lib/utils';
 import { cn } from '@/lib/utils';
 
@@ -245,6 +246,7 @@ export function Simulateur({
       `Nouveau lead — ${branch.label}${subjectRecap}${subjectVille}`,
     );
     w3.append('from_name', 'Simulateur couverturegironde.fr');
+    appendLeadSource(w3);
     w3.append('Type de chantier', branch.label);
     for (const [label, value] of Object.entries(reponses)) {
       w3.append(label, value);
