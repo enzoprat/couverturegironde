@@ -1,546 +1,467 @@
 query,intention,clicks,impressions,ctr,position
-couverture gironde,marque,6,61,0.09836065573770492,2.2622950819672134
-nettoyage toiture pas cher,transactionnelle,2,29,0.06896551724137931,6.9655172413793105
-couvreur arcachon,locale,1,121,0.008264462809917356,12.570247933884298
-couvreur cenon,locale,1,22,0.045454545454545456,11.045454545454545
-couvreur en urgence,transactionnelle,1,5,0.2,5
-couvreur le bouscat,locale,1,32,0.03125,10.65625
-couvreur merignac,locale,1,86,0.011627906976744186,9.069767441860465
+couvreur bordeaux,locale,2,590,0.003389830508474576,26.583050847457628
+couverture gironde,marque,1,54,0.018518518518518517,2.6296296296296298
+couvreur begles,locale,1,11,0.09090909090909091,13.090909090909092
+couvreur en urgence,transactionnelle,1,3,0.3333333333333333,5.333333333333333
+couvreur mérignac,locale,1,237,0.004219409282700422,18.945147679324894
+demoussage toiture bordeaux,locale,1,42,0.023809523809523808,10.5
+fuite toiture bordeaux,locale,1,51,0.0196078431372549,4.764705882352941
+nettoyage toiture bordeaux,locale,1,230,0.004347826086956522,16.547826086956523
+nettoyage toiture pas cher,transactionnelle,1,47,0.02127659574468085,6.51063829787234
 "oui, merci.",non classée,1,1,1,4
-artisan couvreur,transactionnelle,0,6,0,15.833333333333334
-artisan couvreur & charpentier en gironde,transactionnelle,0,30,0,3.7666666666666666
-artisan couvreur arcachon,transactionnelle,0,1,0,8
-artisan couvreur autour de moi,transactionnelle,0,1,0,14
-artisan couvreur bordeaux,transactionnelle,0,31,0,23.419354838709676
-artisan couvreur et charpentier en gironde,transactionnelle,0,26,0,37.5
-artisan couvreur gironde,transactionnelle,0,31,0,27.35483870967742
-artisan couvreur libourne,transactionnelle,0,2,0,18
-artisan gouttière,transactionnelle,0,1,0,9
-artisan nettoyage toiture,transactionnelle,0,45,0,22.555555555555557
-artisan pose velux,transactionnelle,0,110,0,36.03636363636364
-artisan toiture bordeaux,transactionnelle,0,32,0,27.25
-artisans locaux,transactionnelle,0,1,0,6
-bordeaux charpente couverture,locale,0,9,0,34.22222222222222
-bordeaux couverture,locale,0,4,0,9.5
+20 m2,non classée,0,1,0,1
+aquitainetravauxrenovation.fr gouttière zinc,locale,0,1,0,4
+artisan couverture toiture,transactionnelle,0,1,0,20
+artisan couvreur,transactionnelle,0,4,0,14.5
+artisan couvreur & charpentier en gironde,transactionnelle,0,30,0,2.7
+artisan couvreur bordeaux,transactionnelle,0,37,0,21.62162162162162
+artisan couvreur et charpentier en gironde,transactionnelle,0,18,0,39.5
+artisan couvreur gironde,transactionnelle,0,25,0,27.8
+artisan couvreur libourne,transactionnelle,0,1,0,22
+artisan diagnostic toiture,transactionnelle,0,9,0,39.55555555555556
+artisan nettoyage toiture,transactionnelle,0,53,0,26.566037735849058
+artisan pose velux,transactionnelle,0,77,0,36.22077922077922
+artisan toiture bordeaux,transactionnelle,0,24,0,26.25
+bordeaux charpente couverture,locale,0,11,0,29.636363636363637
+bordeaux couverture,locale,0,17,0,8.823529411764707
 capot zinc toiture,non classée,0,1,0,14
-capotage toiture bordeaux,locale,0,30,0,1.8666666666666667
-changement velux,non classée,0,1,0,99
-charpente bordeaux,locale,0,32,0,49.25
-charpente et couverture à eysines,locale,0,32,0,24.5
-charpentier,non classée,0,7,0,3.857142857142857
-charpentier bordeaux,locale,0,50,0,35.2
-charpentier couvreur dans la gironde,locale,0,4,0,1.25
-charpentier couvreur gironde,locale,0,11,0,39.72727272727273
-charpentier gironde,locale,0,2,0,4
+capotage toiture bordeaux,locale,0,30,0,2.3
+charpente bordeaux,locale,0,29,0,43.51724137931034
+charpente et couverture à eysines,locale,0,21,0,31.142857142857142
+charpenter,non classée,0,1,0,7
+charpentier,non classée,0,7,0,4
+charpentier bordeaux,locale,0,96,0,31.760416666666668
+charpentier couvreur autour de moi,non classée,0,4,0,6
+charpentier couvreur bordeaux,locale,0,1,0,24
+charpentier couvreur gironde,locale,0,12,0,24.333333333333332
+charpentier gironde,locale,0,2,0,21
+charpentier merignac,locale,0,2,0,7
+charpentier rénovation,non classée,0,22,0,48.22727272727273
 cheneau encaissé,non classée,0,1,0,55
 ciment faitage toiture,non classée,0,1,0,11
-ciment toiture faitage,non classée,0,3,0,11.666666666666666
+ciment toiture faitage,non classée,0,4,0,12.25
 closoir,non classée,0,1,0,6
 combien coûte un nettoyage de toiture,transactionnelle,0,1,0,33
-controle charpente bordeaux,locale,0,32,0,8.6875
-couvertine cheminée,non classée,0,4,0,13.75
-couverture,non classée,0,1,0,2
-couverture arcachon,locale,0,90,0,11.233333333333333
+construction couverture,non classée,0,2,0,50
+controle charpente bordeaux,locale,0,27,0,7.222222222222222
+couverture,non classée,0,1,0,4
+couverture arcachon,locale,0,98,0,11.346938775510203
 couverture bordeau,non classée,0,1,0,8
-couverture bordeaux,locale,0,28,0,24.25
-couverture marignac,non classée,0,2,0,15.5
-couverture toit gironde,locale,0,32,0,4.15625
-couverture toiture bordeaux,locale,0,7,0,36.57142857142857
-couverture toiture gironde,locale,0,33,0,2.9393939393939394
-couverture zinguerie,non classée,0,1,0,11
-couvreur,non classée,0,41,0,12.073170731707316
-couvreur 33,non classée,0,31,0,29.225806451612904
-couvreur a bordeaux,locale,0,25,0,34
-couvreur agréé velux,non classée,0,2,0,21.5
-couvreur aquitaine,locale,0,34,0,55.6764705882353
-couvreur autour de moi,non classée,0,13,0,14.153846153846153
-couvreur bassin arcachon,locale,0,4,0,13
-couvreur bassin d'arcachon,locale,0,12,0,11.166666666666666
-couvreur batiment industriel gironde,locale,0,20,0,20.2
-couvreur batiment industriel saint emilion,non classée,0,13,0,78.84615384615384
-couvreur begles,locale,0,16,0,15.1875
-couvreur bordeaux,locale,0,506,0,32.85770750988142
-couvreur bordeaux 33,locale,0,2,0,10.5
-couvreur bordeaux bastide,locale,0,35,0,9.17142857142857
-couvreur bordelais,non classée,0,1,0,21
-couvreur bouliac,non classée,0,1,0,30
-couvreur bègles,locale,0,8,0,11.875
-couvreur carcans,non classée,0,1,0,60
-couvreur cavignac,non classée,0,1,0,63
-couvreur charpente zingueur,non classée,0,1,0,72
-couvreur depannage,transactionnelle,0,7,0,11.428571428571429
-couvreur depuis 1983,non classée,0,14,0,66.5
-couvreur devis,transactionnelle,0,34,0,15.676470588235293
-couvreur devis gratuit,transactionnelle,0,10,0,24.1
-couvreur eysines,locale,0,102,0,14.519607843137255
-couvreur floirac,locale,0,2,0,54.5
-couvreur fronsac,non classée,0,41,0,21.5609756097561
-couvreur gignac,non classée,0,2,0,32
-couvreur gignac la nerthe,non classée,0,1,0,57
-couvreur gironde,locale,0,562,0,24.04270462633452
-couvreur gujan-mestras,locale,0,1,0,86
-couvreur intervention rapide,non classée,0,1,0,23
-couvreur le teich,non classée,0,1,0,58
-couvreur libourne,locale,0,150,0,18.28
-couvreur lège-cap-ferret,non classée,0,1,0,55
-couvreur marin,non classée,0,7,0,35.285714285714285
-couvreur mérignac,locale,0,226,0,21.539823008849556
+couverture bordeaux,locale,0,30,0,27
+couverture construction,non classée,0,1,0,47
+couverture marignac,non classée,0,3,0,13.666666666666666
+couverture toit gironde,locale,0,29,0,4.068965517241379
+couverture toiture bordeaux,locale,0,4,0,31.75
+couverture toiture gironde,locale,0,37,0,2.8378378378378377
+couverture travaux,non classée,0,5,0,39.4
+couvreur,non classée,0,43,0,10.023255813953488
+couvreur 24h/24,non classée,0,2,0,22
+couvreur 33,non classée,0,30,0,28.766666666666666
+couvreur a bordeaux,locale,0,24,0,27.375
+couvreur a proximite,locale,0,2,0,13
+couvreur agréé velux,non classée,0,1,0,18
+couvreur aquitaine,locale,0,20,0,57.65
+couvreur arcachon,locale,0,98,0,14.081632653061224
+couvreur arcins,non classée,0,5,0,19.6
+couvreur artisan,transactionnelle,0,1,0,13
+couvreur autour de moi,non classée,0,14,0,15.857142857142858
+couvreur bassin arcachon,locale,0,6,0,11.166666666666666
+couvreur bassin d'arcachon,locale,0,28,0,11.892857142857142
+couvreur bassin d’arcachon,locale,0,6,0,11
+couvreur batiment industriel gironde,locale,0,24,0,25.541666666666668
+couvreur batiment industriel saint emilion,non classée,0,15,0,72.53333333333333
+couvreur bordeaux 33,locale,0,2,0,20.5
+couvreur bordeaux bastide,locale,0,38,0,8.947368421052632
+couvreur bègles,locale,0,5,0,13.6
+couvreur cavignac,non classée,0,2,0,62
+couvreur cenon,locale,0,28,0,9.714285714285714
+couvreur de toiture,non classée,0,1,0,10
+couvreur depannage,transactionnelle,0,2,0,10.5
+couvreur devis,transactionnelle,0,58,0,13.46551724137931
+couvreur devis gratuit,transactionnelle,0,15,0,23.066666666666666
+couvreur eysines,locale,0,52,0,25.384615384615383
+couvreur fronsac,non classée,0,29,0,20
+couvreur gironde,locale,0,464,0,26.474137931034484
+couvreur intervention rapide,non classée,0,1,0,42
+couvreur le bouscat,locale,0,24,0,7.541666666666667
+couvreur le teich,non classée,0,1,0,67
+couvreur libourne,locale,0,108,0,23.046296296296298
+couvreur merignac,locale,0,100,0,8.08
 couvreur nettoyage toiture,non classée,0,2,0,9
-couvreur nouveau-bordeaux,locale,0,2,0,60
-couvreur pas cher,transactionnelle,0,1,0,24
-couvreur pessac,locale,0,53,0,16.37735849056604
-couvreur pomerol,non classée,0,4,0,27
-couvreur prix,transactionnelle,0,2,0,3
-couvreur près de bordeaux,locale,0,2,0,33.5
-couvreur près de chez moi,locale,0,1,0,31
-couvreur près de eysines,locale,0,13,0,9.461538461538462
-couvreur près de le bouscat,locale,0,11,0,11.272727272727273
-couvreur près de pessac,locale,0,23,0,11.26086956521739
-couvreur pyla-sur-mer,non classée,0,1,0,18
-couvreur roussillon,non classée,0,2,0,5
-couvreur réparation toiture,non classée,0,1,0,22
-couvreur saint jean d'illac,non classée,0,2,0,64.5
-couvreur saint-émilion,non classée,0,2,0,56
-couvreur salles,non classée,0,2,0,34
-couvreur sur bordeaux,locale,0,3,0,31
-couvreur talence,locale,0,132,0,13.121212121212121
-couvreur toiture,non classée,0,1,0,5
-couvreur toiture bordeaux,locale,0,19,0,30.736842105263158
-couvreur urgence,transactionnelle,0,35,0,17.942857142857143
+couvreur pas cher,transactionnelle,0,1,0,8
+couvreur pessac,locale,0,2,0,20
+couvreur pomerol,non classée,0,2,0,25.5
+couvreur près de bordeaux,locale,0,3,0,28.333333333333332
+"couvreur près de bordeaux-lac, bordeaux",locale,0,16,0,9.5625
+couvreur près de chez moi,locale,0,1,0,13
+couvreur près de le bouscat,locale,0,3,0,9
+couvreur près de pessac,locale,0,1,0,12
+couvreur pyla-sur-mer,non classée,0,7,0,21.428571428571427
+couvreur rive-de-gier,non classée,0,3,0,37.333333333333336
+couvreur roussillon,non classée,0,7,0,13.285714285714286
+couvreur réparation toiture,non classée,0,1,0,11
+couvreur saint-jean-d’illac,non classée,0,3,0,74
+couvreur saint-émilion,non classée,0,4,0,51
+couvreur sur bordeaux,locale,0,2,0,16.5
+couvreur talence,locale,0,55,0,18.09090909090909
+couvreur tarif,transactionnelle,0,1,0,1
+couvreur toiture bordeaux,locale,0,20,0,28.3
+couvreur tuile,non classée,0,1,0,9
+couvreur urgence,transactionnelle,0,28,0,23.392857142857142
+couvreur urgence bordeaux,transactionnelle,0,6,0,11.333333333333334
 couvreur urgence toiture,transactionnelle,0,1,0,7
-couvreur villenave d'ornon,locale,0,25,0,13.12
-couvreur villenave-d'ornon,locale,0,6,0,11.333333333333334
-couvreur zingueur,non classée,0,5,0,31.4
-couvreur zingueur bordeaux,locale,0,50,0,26.66
-couvreur zingueur gironde,locale,0,12,0,30.833333333333332
-couvreur zingueur la teste de buch,locale,0,2,0,59
-couvreur zingueur le teich,non classée,0,8,0,48.5
-couvreur zingueur libourne,locale,0,38,0,17.394736842105264
-couvreur zingueur mérignac,locale,0,10,0,12.6
-couvreur à arsac,non classée,0,3,0,33.333333333333336
-couvreur à bordeaux,locale,0,14,0,31.928571428571427
-couvreur à castelnau-de-médoc,locale,0,5,0,55.2
-couvreur à eysines,locale,0,34,0,19.91176470588235
-couvreur à mérignac,locale,0,2,0,17
-couvreur à pauillac,non classée,0,5,0,21.6
-couvreur à proximité,locale,0,5,0,27.6
-"couvreur, zingueur à castelnau-de-médoc",locale,0,6,0,55.833333333333336
-"couvreur, zingueur à lacanau",non classée,0,11,0,66.72727272727273
-"couvreur, zingueur à pauillac",non classée,0,10,0,21.7
-"couvreur, zingueur à soulac-sur-mer",non classée,0,16,0,44.1875
-couvreur-zingueur,non classée,0,1,0,33
-couvreurs,non classée,0,4,0,37.25
-couvreurs bordeaux,locale,0,7,0,29.285714285714285
-couvreurs professionnels,transactionnelle,0,1,0,29
-coût nettoyage toiture,transactionnelle,0,1,0,39
-dabat renovation,non classée,0,12,0,51.083333333333336
-debouchage canalisation talence,locale,0,3,0,68.66666666666667
-demande de devis bordeaux,transactionnelle,0,1,0,17
-demoussage toiture bordeaux,locale,0,45,0,16.133333333333333
+couvreur urgent,non classée,0,1,0,42
+couvreur villenave d'ornon,locale,0,6,0,21.666666666666668
+couvreur villenave-d'ornon,locale,0,3,0,24.333333333333332
+couvreur zingueur,non classée,0,1,0,3
+couvreur zingueur bordeaux,locale,0,41,0,19.024390243902438
+couvreur zingueur gironde,locale,0,13,0,23.384615384615383
+couvreur zingueur le teich,non classée,0,6,0,26.833333333333332
+couvreur zingueur libourne,locale,0,28,0,21.357142857142858
+couvreur zingueur mérignac,locale,0,6,0,14.666666666666666
+couvreur à bordeaux,locale,0,9,0,20.88888888888889
+couvreur à eysines,locale,0,33,0,25.636363636363637
+couvreur à pauillac,non classée,0,4,0,24.25
+couvreur à proximité,locale,0,6,0,18
+couvreurs,non classée,0,3,0,47
+couvreurs bordeaux,locale,0,5,0,33.4
+couvreurs professionnels,transactionnelle,0,1,0,36
+coût nettoyage toiture,transactionnelle,0,2,0,44
+création site internet couvreur bordeaux,locale,0,1,0,54
+dabat renovation,non classée,0,17,0,53.411764705882355
+demoussage toiture prix,transactionnelle,0,1,0,41
 demoussage toiture prix au m2,transactionnelle,0,1,0,45
-demoussage toiture tarif,transactionnelle,0,1,0,56
-demousser un toit prix,transactionnelle,0,2,0,42
-depannage couvreur,transactionnelle,0,1,0,12
-dessus de mur à arcachon,locale,0,2,0,30.5
-dessus de mur à mérignac,locale,0,3,0,22
-devis couvreur,transactionnelle,0,50,0,21.5
-devis couvreur 0,transactionnelle,0,20,0,9.6
-devis couvreur gratuit,transactionnelle,0,19,0,10.052631578947368
-devis couvreur zingueur,transactionnelle,0,16,0,17.9375
-devis demoussage toiture,transactionnelle,0,5,0,46.8
-devis faire poser velux,transactionnelle,0,33,0,30.636363636363637
-devis faitage toiture,transactionnelle,0,1,0,11
-devis façonnés denses,transactionnelle,0,1,0,34
-devis gratuit couverture,transactionnelle,0,12,0,6.333333333333333
-devis gratuit toiture,transactionnelle,0,1,0,13
-devis hydrofuge,transactionnelle,0,15,0,12.066666666666666
-devis hydrofuge toiture,transactionnelle,0,3,0,6
-devis installation toiture neuve,transactionnelle,0,16,0,20.875
-devis nettoyage toiture,transactionnelle,0,10,0,26.4
+demoussage toiture tarif au m2,transactionnelle,0,1,0,69
+depannage couvreur,transactionnelle,0,2,0,50.5
+depannage toiture,transactionnelle,0,1,0,12
+des images,non classée,0,1,0,25
+devis couverture et équipements,transactionnelle,0,1,0,5
+devis couvreur,transactionnelle,0,35,0,21.6
+devis couvreur 0,transactionnelle,0,20,0,8.05
+devis couvreur gratuit,transactionnelle,0,3,0,10
+devis couvreur zingueur,transactionnelle,0,12,0,14.416666666666666
+devis demoussage toiture,transactionnelle,0,1,0,47
+devis faire poser velux,transactionnelle,0,11,0,37.54545454545455
+devis faitage toiture,transactionnelle,0,1,0,9
+devis façonnés denses,transactionnelle,0,1,0,25
+devis gratuit couverture,transactionnelle,0,5,0,4.8
+devis gratuit toiture,transactionnelle,0,2,0,13.5
+devis hydrofuge,transactionnelle,0,15,0,15
+devis installation toiture neuve,transactionnelle,0,29,0,23.586206896551722
+devis nettoyage toiture,transactionnelle,0,4,0,15
 devis pour nettoyage toiture,transactionnelle,0,1,0,43
-devis toiture bordeaux,transactionnelle,0,3,0,5.666666666666667
-devis toiture en ligne gratuit,transactionnelle,0,1,0,10
-devis toiture gratuit,transactionnelle,0,1,0,6
-devis toiture nettoyage,transactionnelle,0,8,0,28.375
-devis toitures,transactionnelle,0,1,0,32
-devis traitement toiture,transactionnelle,0,11,0,34.27272727272727
-devis velux,transactionnelle,0,1,0,35
-devis zinguerie,transactionnelle,0,54,0,25.61111111111111
-diagnostic toiture bordeaux,locale,0,24,0,6.916666666666667
-débouchage canalisation talence,locale,0,3,0,65
-décapage toiture libourne,locale,0,3,0,24.333333333333332
-dégât des eaux en gironde,locale,0,4,0,44.5
-démoussage bordeaux,locale,0,36,0,36.77777777777778
-démoussage de toiture bordeaux,locale,0,2,0,24
-démoussage eysines,locale,0,42,0,9.095238095238095
-démoussage toiture aquitaine,locale,0,7,0,25.142857142857142
-démoussage toiture bordeaux,locale,0,87,0,13.873563218390805
-démoussage toiture prix,transactionnelle,0,1,0,54
-démoussage toiture prix au m2,transactionnelle,0,1,0,37
-démoussage toiture saint-paul-lès-dax,non classée,0,2,0,46
-démoussage toiture tarif,transactionnelle,0,1,0,37
-démoussage toiture tuile céramique,non classée,0,3,0,65
-"démoussage, traitement des toitures (entreprises) bordeaux",transactionnelle,0,749,0,10.068090787716956
+devis toiture bordeaux,transactionnelle,0,8,0,5.375
+devis toiture nettoyage,transactionnelle,0,2,0,36
+devis traitement toiture,transactionnelle,0,1,0,3
+devis zinguerie,transactionnelle,0,37,0,26.405405405405407
+diagnostic toiture bordeaux,locale,0,1,0,11
+dr couverture,non classée,0,1,0,7
+décapage toiture libourne,locale,0,4,0,22.75
+dégât des eaux en gironde,locale,0,2,0,49.5
+démoussage bordeaux,locale,0,51,0,19.666666666666668
+démoussage de toiture rive-de-gier,non classée,0,2,0,13
+démoussage eysines,locale,0,34,0,10.5
+démoussage toiture aquitaine,locale,0,5,0,10.6
+démoussage toiture bordeaux,locale,0,80,0,14.1875
 démousser toiture prix,transactionnelle,0,1,0,60
-dépannage couverture,transactionnelle,0,19,0,65.89473684210526
-dépannage toiture libourne,transactionnelle,0,1,0,20
-dépannage toiture urgence,transactionnelle,0,4,0,44.75
-désinfection de toiture,non classée,0,4,0,27
-entablement en zinc,non classée,0,7,0,10
-entablement toiture,non classée,0,10,0,7.4
-entablement zinc,non classée,0,60,0,9.45
-entreprise couverture bordeaux,transactionnelle,0,1,0,29
-entreprise couvreur,transactionnelle,0,1,0,14
-entreprise de couverture,transactionnelle,0,7,0,17.714285714285715
-entreprise de couverture arcachon,transactionnelle,0,41,0,13.097560975609756
-entreprise de couverture autour de moi,transactionnelle,0,5,0,12.2
-entreprise de couverture bordeaux,transactionnelle,0,64,0,27.625
-entreprise de couverture eysines,transactionnelle,0,35,0,22.428571428571427
-entreprise de couverture mérignac,transactionnelle,0,37,0,18.756756756756758
+dépannage couverture,transactionnelle,0,14,0,63
+dépannage toiture urgence,transactionnelle,0,7,0,41.714285714285715
+déplacement,non classée,0,1,0,1
+en gironde,locale,0,1,0,3
+en image,non classée,0,1,0,1
+entablement en zinc,non classée,0,2,0,11
+entablement zinc,non classée,0,16,0,11.375
+entreprise couverture bordeaux,transactionnelle,0,4,0,30
+entreprise de couverture,transactionnelle,0,6,0,18.333333333333332
+entreprise de couverture arcachon,transactionnelle,0,44,0,14.090909090909092
+entreprise de couverture bordeaux,transactionnelle,0,54,0,22
+entreprise de couverture eysines,transactionnelle,0,31,0,28.483870967741936
+entreprise de couverture mérignac,transactionnelle,0,28,0,21.25
 entreprise de couverture pessac,transactionnelle,0,1,0,12
-entreprise de couverture talence,transactionnelle,0,32,0,15.375
-entreprise de demoussage toiture,transactionnelle,0,1,0,37
-entreprise de démoussage de toiture,transactionnelle,0,1,0,22
-entreprise de nettoyage de toiture,transactionnelle,0,16,0,48.875
-entreprise de nettoyage de toiture autour de moi,transactionnelle,0,1,0,29
-entreprise de nettoyage parties communes à villenave-d'ornon,transactionnelle,0,18,0,69.38888888888889
-entreprise de nettoyage toiture,transactionnelle,0,1,0,33
-entreprise de nettoyage toiture facade,transactionnelle,0,2,0,73
-entreprise demoussage toiture,transactionnelle,0,9,0,27.11111111111111
-entreprise démoussage toiture,transactionnelle,0,1,0,48
-entreprise hydrofuge toiture,transactionnelle,0,107,0,23.35514018691589
-entreprise isolation extérieure le bouscat,transactionnelle,0,6,0,26.5
-entreprise nettoyage de toiture,transactionnelle,0,3,0,19
-entreprise nettoyage toiture,transactionnelle,0,68,0,36.86764705882353
-entreprise nettoyage toiture autour de moi,transactionnelle,0,3,0,11.333333333333334
-entreprise nettoyage toiture et façade,transactionnelle,0,1,0,12
-entreprise pose de velux,transactionnelle,0,1,0,74
-entreprise pose velux,transactionnelle,0,212,0,54.716981132075475
-entreprise pour démoussage de tuiles sur toiture,transactionnelle,0,6,0,65.83333333333333
+entreprise de couverture talence,transactionnelle,0,31,0,16.483870967741936
+entreprise de demoussage toiture,transactionnelle,0,9,0,35.44444444444444
+entreprise de démoussage,transactionnelle,0,1,0,17
+entreprise de démoussage de toiture,transactionnelle,0,2,0,18
+entreprise de nettoyage de toiture,transactionnelle,0,7,0,24.285714285714285
+entreprise de nettoyage de toiture autour de moi,transactionnelle,0,4,0,26.5
+entreprise de nettoyage parties communes à villenave-d'ornon,transactionnelle,0,2,0,74.5
+entreprise de nettoyage toiture,transactionnelle,0,1,0,11
+entreprise de nettoyage toiture facade,transactionnelle,0,6,0,55.333333333333336
+entreprise demoussage toiture,transactionnelle,0,21,0,30.285714285714285
+entreprise démoussage toiture,transactionnelle,0,8,0,23.875
+entreprise hydrofuge toiture,transactionnelle,0,88,0,16.204545454545453
+entreprise isolation extérieure le bouscat,transactionnelle,0,24,0,25.25
+entreprise nettoyage de toiture,transactionnelle,0,2,0,10
+entreprise nettoyage toiture,transactionnelle,0,28,0,34.67857142857143
+entreprise nettoyage toiture autour de moi,transactionnelle,0,3,0,10.333333333333334
+entreprise nettoyage toiture et façade,transactionnelle,0,2,0,10.5
+entreprise pose velux,transactionnelle,0,156,0,58.76282051282051
 entreprise pour nettoyage toiture,transactionnelle,0,1,0,11
-entreprise rénovation toiture bordeaux,transactionnelle,0,13,0,27
-entreprise toiture,transactionnelle,0,2,0,12
-entreprise toiture aquitaine,transactionnelle,0,34,0,58.029411764705884
-entreprise toiture bordeaux,transactionnelle,0,11,0,33.90909090909091
-entreprise traitement toiture bordeaux,transactionnelle,0,75,0,17.8
-entreprise traitement toiture libourne,transactionnelle,0,26,0,35.34615384615385
-entreprise traitement toiture talence,transactionnelle,0,53,0,21.92452830188679
-entreprise étanchéité velux,transactionnelle,0,22,0,31.5
-entretien charpente gironde,locale,0,31,0,10.838709677419354
-entretien de couverture à eysines,locale,0,31,0,12.838709677419354
-entretien toiture bordeaux,locale,0,119,0,19.680672268907564
-entretien toiture bureaux,non classée,0,5,0,74
-entretien toiture cher,non classée,0,19,0,15.578947368421053
-entretien toiture entreprise,transactionnelle,0,8,0,67.25
-entretien toiture gironde,locale,0,45,0,11.133333333333333
-entretien toiture mérignac,locale,0,2,0,21
-entretien toiture nouvelle aquitaine,locale,0,30,0,25.433333333333334
-"entretien, nettoyage et démoussage de toiture à lacanau",non classée,0,5,0,35.8
-epis de faitage zinc,non classée,0,1,0,3
-etancheur gironde,locale,0,1,0,45
-faitage,non classée,0,6,0,53.333333333333336
+entreprise pour nettoyer toiture,transactionnelle,0,1,0,10
+entreprise rénovation toiture bordeaux,transactionnelle,0,7,0,26.571428571428573
+entreprise toiture,transactionnelle,0,3,0,15
+entreprise toiture aquitaine,transactionnelle,0,19,0,58.89473684210526
+entreprise toiture bordeaux,transactionnelle,0,20,0,31.7
+entreprise traitement toiture bordeaux,transactionnelle,0,70,0,23.67142857142857
+entreprise traitement toiture libourne,transactionnelle,0,22,0,34.63636363636363
+entreprise traitement toiture talence,transactionnelle,0,51,0,23.941176470588236
+entreprise étanchéité velux,transactionnelle,0,22,0,23.772727272727273
+entreprises couverture toiture,transactionnelle,0,2,0,10
+entreprises nettoyage toiture,transactionnelle,0,4,0,30.25
+entretien charpente gironde,locale,0,30,0,8.7
+entretien de couverture à eysines,locale,0,34,0,15.764705882352942
+entretien toiture bordeaux,locale,0,94,0,19.74468085106383
+entretien toiture bègles,locale,0,8,0,5.375
+entretien toiture cher,non classée,0,11,0,19.90909090909091
+entretien toiture entreprise,transactionnelle,0,4,0,62.25
+entretien toiture eysines,locale,0,6,0,16.666666666666664
+entretien toiture gironde,locale,0,60,0,14.266666666666667
+entretien toiture mérignac,locale,0,9,0,28.77777777777778
+entretien toiture nouvelle aquitaine,locale,0,18,0,27.666666666666668
+faitage,non classée,0,3,0,54.666666666666664
 faitage du toit,non classée,0,1,0,46
-faitage maison,non classée,0,1,0,35
-faitage scellé,non classée,0,1,0,8
-faitage toiture,non classée,0,54,0,22.037037037037038
-faitages toiture,non classée,0,1,0,53
-faîtage,non classée,0,4,0,58.75
-faîtage toit,non classée,0,1,0,38
-faîtage toiture,non classée,0,3,0,13.666666666666666
-faîtage toiture prix,transactionnelle,0,1,0,11
-fuite toiture bordeaux,locale,0,34,0,6.235294117647059
-fuite toiture urgence,transactionnelle,0,5,0,18.8
-fuites mise en eau toiture gironde,locale,0,43,0,2.953488372093023
-gironde-toiture-service.fr,locale,0,14,0,5.5
-"gironde-toiture-service.fr ""charpente"" et toiture",locale,0,2,0,10
-gironde-toiture-service.fr charpente et toiture,locale,0,56,0,9.375
-gironde-toiture-service.fr expert en renovation,locale,0,143,0,8.18881118881119
-gouttieres en zinc a leognan,locale,0,63,0,12.73015873015873
-gouttieres leognan,locale,0,26,0,28.53846153846154
-gouttière bordeaux,locale,0,3,0,9.333333333333334
-gouttière zinc soudure,non classée,0,1,0,53
-hydrofuge toit,non classée,0,2,0,70
-hydrofuge toiture,non classée,0,5,0,41.4
-hydrofuge toiture bordeaux,locale,0,4,0,1.5
-hydrofuge toiture garantie 10 ans,non classée,0,18,0,9.944444444444445
-hydrofuge toiture mourenx,non classée,0,18,0,31.5
-hydrofuge toiture nord,non classée,0,1,0,60
+faitage toiture,non classée,0,91,0,16.065934065934066
+faîtage,non classée,0,2,0,59
+faîtage toiture,non classée,0,13,0,8.384615384615385
+faîtage toiture prix,transactionnelle,0,7,0,11.857142857142858
+faîtage à sec prix,transactionnelle,0,1,0,11
+faîtières toiture,non classée,0,3,0,11
+fetage toiture,non classée,0,1,0,8
+fuite toiture urgence,transactionnelle,0,2,0,35
+fuites mise en eau toiture gironde,locale,0,33,0,2.606060606060606
+gouttieres en zinc a leognan,locale,0,63,0,7.190476190476191
+gouttieres leognan,locale,0,33,0,26.545454545454547
+gouttière bordeaux,locale,0,5,0,8
+hydrofuge toiture,non classée,0,2,0,50
+hydrofuge toiture bordeaux,locale,0,6,0,3.8333333333333335
+hydrofuge toiture garantie 10 ans,non classée,0,19,0,8.894736842105264
 installateur de velux,non classée,0,1,0,49
 installateur fenêtre velux,non classée,0,3,0,18.666666666666668
-installateur gouttière,non classée,0,1,0,9
-installateur velux,non classée,0,120,0,47.5
-installateur velux agréé,non classée,0,88,0,44.98863636363637
-installateur velux autour de moi,non classée,0,2,0,10
-installateur velux bordeaux,locale,0,72,0,14.13888888888889
-installation de toiture bac acier langon,locale,0,35,0,11.542857142857143
-installation de toiture en bac acier gironde,locale,0,9,0,4.333333333333334
-installation de velux gironde,locale,0,33,0,11.909090909090908
-installation de velux langon,locale,0,33,0,16.757575757575758
-installation gouttière gironde,locale,0,16,0,10.6875
-installation gouttière langon,locale,0,12,0,17.083333333333332
-installation toiture bordeaux,locale,0,32,0,9.5625
-installation toiture neuve,non classée,0,20,0,24.3
-installation velux,non classée,0,2,0,76
-installation zinguerie gironde,locale,0,36,0,6.027777777777778
-installer velux,non classée,0,2,0,84
-intervention rapide couvreur,non classée,0,12,0,28.333333333333332
-intervention toiture,non classée,0,1,0,62
-intervention urgente toiture bordeaux,locale,0,23,0,2.782608695652174
-isolation extérieure cenon,locale,0,1,0,51
-isolation extérieure talence,locale,0,5,0,43.8
-isolation murs extérieurs cenon,locale,0,1,0,51
-isolation murs extérieurs talence,locale,0,1,0,56
-jonction toit mur,non classée,0,3,0,20.333333333333332
-jonction toiture mur,non classée,0,1,0,19
-lambrequins zinc,non classée,0,1,0,11
-le cuvelage à libourne,locale,0,1,0,60
+installateur velux,non classée,0,82,0,48.926829268292686
+installateur velux agréé,non classée,0,106,0,44.783018867924525
+installateur velux autour de moi,non classée,0,4,0,11.5
+installateur velux bordeaux,locale,0,57,0,14.842105263157896
+installateurs velux,non classée,0,1,0,8
+installation de toiture bac acier langon,locale,0,39,0,10.538461538461538
+installation de velux gironde,locale,0,30,0,12.166666666666666
+installation de velux langon,locale,0,31,0,12.612903225806452
+installation gouttière gironde,locale,0,31,0,9.193548387096774
+installation gouttière langon,locale,0,13,0,16.153846153846153
+installation toiture bordeaux,locale,0,32,0,8.03125
+installation toiture neuve,non classée,0,26,0,16.923076923076923
+installation velux,non classée,0,1,0,81
+installation velux saint-léonard,non classée,0,6,0,62.666666666666664
+installation zinguerie gironde,locale,0,38,0,6.7368421052631575
+intervention rapide couvreur,non classée,0,13,0,25.384615384615383
+intervention toiture urgence jeasvdb,transactionnelle,0,1,0,11
+intervention urgente toiture bordeaux,locale,0,34,0,4.764705882352941
+isolation au bouscat,locale,0,2,0,24
+isolation le bouscat,locale,0,3,0,27.333333333333332
+isolation maison talence,locale,0,2,0,37
+jonction toit mur,non classée,0,2,0,12.5
+le cuvelage à libourne,locale,0,2,0,61.5
 le faitage toiture,non classée,0,6,0,4.666666666666666
-le pavillon bleu villenave d'ornon,locale,0,1,0,74
-maison delsuc avis,marque,0,1,0,17
-meilleur couvreur bordeaux,locale,0,2,0,17.5
-meilleure entreprise de traitement de charpente à bordeaux,transactionnelle,0,23,0,9.695652173913043
-nettoyage bardage bordeaux,locale,0,19,0,36.94736842105263
-nettoyage complet devis toiture,transactionnelle,0,16,0,12.1875
-nettoyage de toiture,non classée,0,5,0,24.2
-nettoyage de toiture autour de moi,non classée,0,2,0,8
-nettoyage de toiture bordeaux,locale,0,143,0,14.846153846153847
-nettoyage de toiture bègles,locale,0,2,0,7.5
-nettoyage de toiture chartrons,non classée,0,2,0,14.5
-nettoyage de toiture décines-charpieu,non classée,0,1,0,16
-nettoyage de toiture libourne,locale,0,3,0,25.333333333333332
-nettoyage de toiture nansouty,non classée,0,2,0,12
-nettoyage de toiture pessac,locale,0,3,0,8.666666666666668
+les moins chers,non classée,0,1,0,3
+liroy,marque,0,1,0,5
+maison de l'étancheur merignac,locale,0,1,0,45
+meilleure entreprise de traitement de charpente à bordeaux,transactionnelle,0,11,0,11
+merignac toiture,locale,0,1,0,40
+mortier pour toiture,non classée,0,1,0,54
+mur mitoyen,non classée,0,1,0,2
+nettoyage &démoussage toiture et façade,non classée,0,1,0,35
+nettoyage bardage bordeaux,locale,0,5,0,29.8
+nettoyage complet devis toiture,transactionnelle,0,8,0,16
+nettoyage de toiture,non classée,0,4,0,28.25
+nettoyage de toiture autour de moi,non classée,0,1,0,8
+nettoyage de toiture bordeaux,locale,0,95,0,12.052631578947368
+nettoyage de toiture bègles,locale,0,6,0,9.166666666666666
+nettoyage de toiture chartrons,locale,0,2,0,10.5
+nettoyage de toiture libourne,locale,0,2,0,27
+nettoyage de toiture nansouty,non classée,0,2,0,5
+nettoyage de toiture pessac,locale,0,6,0,14.166666666666666
 nettoyage de toiture prix,transactionnelle,0,1,0,6
-nettoyage de toiture professionnel,transactionnelle,0,1,0,32
-nettoyage de toiture saint-emilion,non classée,0,1,0,17
-nettoyage de toiture talence,locale,0,3,0,8.666666666666668
-nettoyage de toiture à bordeaux,locale,0,4,0,9.25
-nettoyage de toiture à bègles,locale,0,2,0,7.5
-nettoyage de toiture à chartrons,non classée,0,2,0,8.5
-nettoyage de toiture à nansouty,non classée,0,2,0,9.5
-nettoyage de toiture à pessac,locale,0,1,0,9
-nettoyage de toiture à saint-emilion,non classée,0,2,0,19
-nettoyage de toiture à talence,locale,0,3,0,9.333333333333334
-nettoyage et entretien toiture bordeaux,locale,0,39,0,14.205128205128204
-nettoyage toiture,non classée,0,1,0,78
-nettoyage toiture 33,non classée,0,1,0,13
-nettoyage toiture autour de moi,non classée,0,6,0,9.833333333333334
-nettoyage toiture bordeaux,locale,0,198,0,16.070707070707073
-nettoyage toiture devis,transactionnelle,0,211,0,23.644549763033176
-nettoyage toiture devis 0,transactionnelle,0,24,0,11.708333333333334
-nettoyage toiture entreprise,transactionnelle,0,2,0,71
-nettoyage toiture gironde,locale,0,103,0,16.92233009708738
-nettoyage toiture hydrofuge,non classée,0,1,0,43
-nettoyage toiture mérignac,locale,0,5,0,21.8
-nettoyage toiture pessac,locale,0,20,0,13.5
-nettoyage toiture prix,transactionnelle,0,6,0,9
-nettoyage toiture professionnel,transactionnelle,0,11,0,30.90909090909091
-nettoyage toiture saint-émilion,non classée,0,4,0,17.5
-nettoyage toiture salles,non classée,0,1,0,20
-nettoyage toiture service à la personne,non classée,0,1,0,10
-nettoyer toiture prix,transactionnelle,0,2,0,39
-nettoyer toiture verte de mousse gironde,locale,0,6,0,6.333333333333333
-nouvelle toiture,non classée,0,1,0,11
-obtenir devis couverture renovation-as.fr,transactionnelle,0,1,0,7
-ornement de toit,non classée,0,1,0,9
-ornement de toiture,non classée,0,9,0,9.444444444444445
-ornement de toiture en terre cuite,non classée,0,3,0,8.333333333333332
-ornement toiture,non classée,0,31,0,10.548387096774194
+nettoyage de toiture rive-de-gier,non classée,0,3,0,12.333333333333334
+nettoyage de toiture talence,locale,0,5,0,10.6
+nettoyage de toiture à bordeaux,locale,0,4,0,11.75
+nettoyage de toiture à bègles,locale,0,2,0,10.5
+nettoyage de toiture à chartrons,locale,0,2,0,8
+nettoyage de toiture à libourne,locale,0,2,0,21.5
+nettoyage de toiture à nansouty,non classée,0,2,0,5.5
+nettoyage de toiture à pessac,locale,0,2,0,6
+nettoyage de toiture à saint-emilion,non classée,0,2,0,27
+nettoyage de toiture à talence,locale,0,2,0,12.5
+nettoyage et entretien toiture bordeaux,locale,0,33,0,11.666666666666666
+nettoyage toiture 33,non classée,0,2,0,22
+nettoyage toiture arcachon,locale,0,1,0,59
+nettoyage toiture autour de moi,non classée,0,5,0,10.2
+nettoyage toiture devis,transactionnelle,0,90,0,22.333333333333332
+nettoyage toiture devis 0,transactionnelle,0,20,0,11.65
+nettoyage toiture entreprise,transactionnelle,0,3,0,72.33333333333333
+nettoyage toiture et façade,non classée,0,1,0,75
+nettoyage toiture facade,non classée,0,4,0,55.5
+nettoyage toiture gironde,locale,0,89,0,18.134831460674157
+nettoyage toiture mérignac,locale,0,6,0,19
+nettoyage toiture pessac,locale,0,8,0,14.875
+nettoyage toiture prix,transactionnelle,0,4,0,3.5
+nettoyage toiture professionnel,transactionnelle,0,11,0,34
+nettoyage toiture saint-émilion,non classée,0,4,0,23
+nettoyage toiture salles,non classée,0,2,0,16
+nettoyage toiture tarif,transactionnelle,0,1,0,47
+nettoyage toitures,non classée,0,3,0,41
+nettoyer toiture verte de mousse gironde,locale,0,1,0,7
+omavar couverture,non classée,0,2,0,19
+ornement de toiture,non classée,0,2,0,10
+ornement toiture,non classée,0,9,0,12
 ornemente ton toit,non classée,0,1,0,26
-ornements de toiture,non classée,0,6,0,12.166666666666666
-oui,non classée,0,2,0,2
-pente toiture gironde,locale,0,10,0,36.3
-pose charpente bordeaux,locale,0,25,0,18.92
-pose couverture gironde,marque,0,39,0,2.3846153846153846
-pose de bac acier toiture en gironde,locale,0,15,0,16.666666666666664
-pose de bac acier toiture à langon,locale,0,34,0,10.941176470588236
-pose de charpente gironde,locale,0,14,0,16.57142857142857
-pose de chéneaux saint-léonard,non classée,0,29,0,25.06896551724138
-pose de fenêtres de toit gironde,locale,0,34,0,17.352941176470587
-pose de fenêtres de toit langon,locale,0,16,0,30
-pose de gouttière bassin d’arcachon,locale,0,5,0,31.6
-pose de gouttière biganos,non classée,0,2,0,27
-pose de gouttière bordeaux,locale,0,23,0,6.304347826086956
-pose de gouttière demi ronde en zinc par zingueur,non classée,0,1,0,26
-pose de gouttières saint-geours-de-maremne,non classée,0,5,0,26
-pose de gouttières saint-léonard,non classée,0,11,0,78.63636363636364
-pose de tuile bordeaux,locale,0,24,0,9.458333333333334
-pose de velux gironde,locale,0,33,0,11.484848484848484
-pose de velux langon,locale,0,32,0,13.3125
-pose et installation de gouttière demi-ronde sur maison neuve par zingueur,non classée,0,2,0,12.5
-pose gouttière zinc,non classée,0,4,0,60.25
-pose gouttières anzin,non classée,0,1,0,37
-pose toiture gironde,locale,0,35,0,14.714285714285714
-pose velux bordeaux,locale,0,46,0,11.804347826086957
-pose velux sur ardoise,non classée,0,2,0,77
-pose velux tarif,transactionnelle,0,1,0,36
-pose vélux bordeaux,locale,0,22,0,10.318181818181818
-pose vélux prix,transactionnelle,0,1,0,39
-poser un velux,non classée,0,2,0,85.5
-poseur de velux,non classée,0,4,0,32.25
-poseur de velux autour de moi,non classée,0,2,0,15.5
-poseur velux,non classée,0,10,0,30.1
-prix du nettoyage de toiture,transactionnelle,0,1,0,44
-prix démoussage de toiture de maison par couvreur,transactionnelle,0,6,0,31.666666666666668
-prix démoussage toiture au black,transactionnelle,0,3,0,10.666666666666666
-prix démoussage toiture m2,transactionnelle,0,1,0,50
-prix entreprise pour le nettoyage de toiture,transactionnelle,0,6,0,32.5
-prix entretien toiture,transactionnelle,0,7,0,37
-prix entretien toiture shingle,transactionnelle,0,12,0,24.083333333333332
-prix faire poser velux,transactionnelle,0,11,0,47.54545454545455
-prix faîtage ml,transactionnelle,0,1,0,7
+oui,non classée,0,3,0,4.333333333333334
+pente toiture gironde,locale,0,14,0,33.5
+petite réparation toiture jeasvdb,non classée,0,1,0,6
+photo,non classée,0,1,0,1
+pose charpente bordeaux,locale,0,19,0,21.57894736842105
+pose couverture gironde,marque,0,34,0,2.5294117647058822
+pose de bac acier toiture à langon,locale,0,37,0,11.567567567567568
+pose de chéneaux saint-léonard,non classée,0,16,0,25.4375
+pose de fenêtres de toit gironde,locale,0,30,0,16.566666666666666
+pose de fenêtres de toit langon,locale,0,6,0,22.166666666666668
+pose de gouttière bassin d’arcachon,locale,0,4,0,32
+pose de gouttière biganos,non classée,0,1,0,22
+pose de gouttière bordeaux,locale,0,29,0,8.344827586206897
+pose de gouttières saint-geours-de-maremne,non classée,0,2,0,14.5
+pose de gouttières saint-léonard,non classée,0,12,0,80.16666666666667
+pose de tuile bordeaux,locale,0,23,0,7.3478260869565215
+pose de velux gironde,locale,0,34,0,12.882352941176471
+pose de velux langon,locale,0,27,0,13.814814814814815
+pose gouttiere zinc,non classée,0,2,0,40
+pose gouttière zinc,non classée,0,2,0,43.5
+pose gouttières anzin,non classée,0,1,0,31
+pose toiture gironde,locale,0,33,0,13.606060606060606
+pose velux bordeaux,locale,0,47,0,12.680851063829786
+pose vélux bordeaux,locale,0,22,0,9.863636363636363
+poser des gouttières en zinc,non classée,0,1,0,54
+poseur de velux,non classée,0,4,0,38.75
+poseur de velux autour de moi,non classée,0,1,0,22
+poseur velux,non classée,0,11,0,25.181818181818183
+prix démoussage toiture au black,transactionnelle,0,4,0,10.5
+prix faire poser velux,transactionnelle,0,4,0,45
+prix faitage,transactionnelle,0,1,0,14
 prix faîtage toiture,transactionnelle,0,1,0,8
-prix faîtage à sec avec closoir,transactionnelle,0,2,0,16
-prix mètre linéaire faîtage,transactionnelle,0,2,0,9.5
-prix nettoyage toiture,transactionnelle,0,11,0,37.81818181818182
-prix nettoyage toiture 150 m2,transactionnelle,0,1,0,12
-prix nettoyage toiture hydrofuge bordeaux,transactionnelle,0,22,0,1.4545454545454546
-prix pour nettoyage toiture,transactionnelle,0,1,0,35
-prix pour nettoyer un toit,transactionnelle,0,3,0,34.333333333333336
-prix pour nettoyer une toiture,transactionnelle,0,1,0,10
-prix toiture en étanchéité rungis,transactionnelle,0,3,0,48
-prix toiture neuve,transactionnelle,0,1,0,46
-prix velux et pose,transactionnelle,0,1,0,36
-proche mer,non classée,0,1,0,7
-produits hydrofuge pour toiture,non classée,0,1,0,52
-professionnel entretien toiture,transactionnelle,0,1,0,30
-quel artisan pour poser un velux,transactionnelle,0,2,0,29
-qui appeler pour une fuite de toiture industrielle,non classée,0,36,0,32.47222222222222
-ravalement de façade talence,locale,0,4,0,54.75
-recherche de fuite toiture mérignac,locale,0,2,0,31.5
-recherche de fuite villenave-d'ornon,locale,0,2,0,91.5
-recouvrement bordeaux,locale,0,5,0,89.8
-recouvrement gironde,locale,0,28,0,80.32142857142857
-refaire faîtage ciment prix,transactionnelle,0,49,0,11.183673469387756
-refaire toiture prix m2,transactionnelle,0,1,0,90
-remplacement gouttières zinc dax,non classée,0,31,0,38.16129032258065
+prix faîtage à sec avec closoir,transactionnelle,0,8,0,11
+prix mètre linéaire faîtage,transactionnelle,0,1,0,10
+prix nettoyage toiture,transactionnelle,0,1,0,42
+prix nettoyage toiture 150 m2,transactionnelle,0,2,0,9
+prix nettoyage toiture hydrofuge bordeaux,transactionnelle,0,60,0,1.7666666666666666
+prix pose closoir ventilé,transactionnelle,0,1,0,1
+prix pose velux,transactionnelle,0,1,0,45
+prix remplacement closoir de faitage,transactionnelle,0,2,0,10
+professionnel entretien toiture,transactionnelle,0,5,0,38.2
+quel artisan pour poser un velux,transactionnelle,0,2,0,26.5
+qui appeler pour une fuite de toiture industrielle,non classée,0,35,0,31.942857142857143
+ravalement de façade talence,locale,0,1,0,65
+recherche de fuite toiture bordeaux,locale,0,9,0,16.88888888888889
+recouvrement gironde,locale,0,32,0,79.6875
+refaire faîtage ciment prix,transactionnelle,0,43,0,11.511627906976743
+refection de toiture bordeaux,locale,0,8,0,16.5
+remplacement gouttières zinc dax,non classée,0,28,0,38.25
 remplacement gouttières zinc tarnos,non classée,0,1,0,76
-renovation toiture bordeaux,locale,0,1,0,28
-reparateur de toiture,non classée,0,7,0,22.142857142857142
-reparateur toiture,non classée,0,7,0,20
-reparation charpente toiture,non classée,0,3,0,6.333333333333333
-reparation de toiture,non classée,0,2,0,25
-reparation faitage toiture prix,transactionnelle,0,1,0,11
-reparation toiture,non classée,0,4,0,8
-reparation toiture autour de moi,non classée,0,14,0,25.428571428571427
-reparation velux autour de moi,non classée,0,4,0,13.5
-repare toiture,non classée,0,3,0,22.333333333333332
-réfection faitage toiture,non classée,0,2,0,48
-rénovation couverture,non classée,0,1,0,52
-rénovation de façade et toiture villenave-d'ornon,locale,0,4,0,43.5
-rénovation de toiture gironde,locale,0,1,0,35
-rénovation toiture bassin d'arcachon,locale,0,3,0,60.333333333333336
-rénovation toiture bordeaux,locale,0,32,0,33.28125
-rénovation toiture gironde,locale,0,35,0,10.2
-répararation fuite toiture eysines,locale,0,29,0,12.241379310344827
-répararation fuite toiture mérignac,locale,0,33,0,4.757575757575758
-répararation fuite toiture pessac,locale,0,37,0,2.621621621621622
-réparateur toiture,non classée,0,1,0,60
-réparation après incendie,non classée,0,5,0,40.6
-réparation charpente,non classée,0,1,0,50
-réparation charpente gironde,locale,0,43,0,8.558139534883722
-réparation chéneau saint-léonard,non classée,0,2,0,69.5
-réparation de couverture,non classée,0,2,0,22.5
-réparation de toiture,non classée,0,14,0,28.928571428571427
-réparation de toiture bordeaux,locale,0,18,0,25
-réparation faîtage toiture prix,transactionnelle,0,4,0,13.25
-réparation fissure maison cenon,locale,0,61,0,21.311475409836067
-réparation fissure maison pessac,locale,0,5,0,34
-réparation fissure maison talence,locale,0,81,0,30.419753086419753
-réparation fuite de toit arcachon,locale,0,1,0,20
-réparation fuite toiture arcachon,locale,0,41,0,16.70731707317073
-réparation fuite toiture eysines,locale,0,8,0,21.5
-réparation fuite toiture mérignac,locale,0,37,0,47.729729729729726
-réparation fuite toiture pessac,locale,0,67,0,11.283582089552239
-réparation fuite toiture talence,locale,0,33,0,2.6969696969696972
-réparation rive urgence,transactionnelle,0,59,0,39.52542372881356
-réparation toiture,non classée,0,20,0,24.25
-réparation toiture bordeaux,locale,0,45,0,28.488888888888887
+remplacement velux saint-léonard,non classée,0,5,0,26
+renovation toiture bordeaux,locale,0,2,0,25
+reparation charpente toiture,non classée,0,4,0,7.75
+reparation toiture urgence,transactionnelle,0,1,0,32
+reparation velux autour de moi,non classée,0,1,0,12
+rénovation de façade et toiture villenave-d'ornon,locale,0,2,0,59.5
+rénovation toiture aquitaine,locale,0,5,0,49.6
+rénovation toiture bordeaux,locale,0,29,0,31.275862068965516
+rénovation toiture gironde,locale,0,35,0,11.085714285714285
+répararation fuite toiture eysines,locale,0,24,0,11.708333333333334
+répararation fuite toiture mérignac,locale,0,33,0,2.8484848484848486
+répararation fuite toiture pessac,locale,0,34,0,2.2058823529411766
+réparation après incendie,non classée,0,1,0,41
+réparation charpente gironde,locale,0,41,0,12.097560975609756
+réparation chéneau saint-léonard,non classée,0,8,0,76.875
+réparation de toiture bordeaux,locale,0,14,0,23.285714285714285
+réparation faîtage toiture prix,transactionnelle,0,9,0,7.666666666666667
+réparation fissure maison cenon,locale,0,77,0,21.90909090909091
+réparation fissure maison talence,locale,0,97,0,30.422680412371133
+réparation fuite toiture arcachon,locale,0,42,0,15.595238095238095
+réparation fuite toiture eysines,locale,0,8,0,21.625
+réparation fuite toiture mérignac,locale,0,19,0,44.10526315789474
+réparation fuite toiture pessac,locale,0,64,0,10.3125
+réparation fuite toiture talence,locale,0,33,0,2.787878787878788
+réparation noue toiture,non classée,0,2,0,78.5
+réparation rive urgence,transactionnelle,0,36,0,32.08333333333333
+réparation toiture autour de moi,non classée,0,1,0,12
+réparation toiture bordeaux,locale,0,53,0,24.71698113207547
 réparation toiture fuite prix,transactionnelle,0,1,0,41
-réparation toiture gironde,locale,0,65,0,24.753846153846155
-réparation toiture libourne,locale,0,1,0,15
-réparation toiture mérignac,locale,0,1,0,36
-réparation toiture urgence,transactionnelle,0,11,0,44.09090909090909
-réparation velux,non classée,0,2,0,92
-réparation velux autour de moi,non classée,0,1,0,10
-réparation velux bordeaux,locale,0,1,0,11
-réparation velux gironde,locale,0,33,0,12.121212121212121
-réparation zinguerie,non classée,0,2,0,17
-service couverture gironde,marque,0,35,0,2.2857142857142856
-site internet couvreur urgence,transactionnelle,0,1,0,78
-société de recouvrement gironde,transactionnelle,0,50,0,70.54
-société nettoyage toiture,transactionnelle,0,3,0,10
-tarif,transactionnelle,0,1,0,2
+réparation toiture gironde,locale,0,62,0,21.56451612903226
+réparation toiture urgence,transactionnelle,0,12,0,45.5
+réparation velux,non classée,0,1,0,91
+réparation velux bordeaux,locale,0,1,0,24
+réparation velux gironde,locale,0,30,0,12.1
+service couverture gironde,marque,0,31,0,2.5806451612903225
+site couvreur,non classée,0,1,0,9
+site internet couvreur urgence,transactionnelle,0,3,0,86.66666666666667
+société de recouvrement gironde,transactionnelle,0,35,0,72.74285714285715
+solin jonction toiture et mur,non classée,0,1,0,13
+soudure cheneau zinc,non classée,0,1,0,35
 tarif charpente couverture au m2,transactionnelle,0,1,0,58
 tarif couvreur fuite,transactionnelle,0,1,0,33
-tarif demoussage toiture,transactionnelle,0,1,0,53
-tarif démoussage toiture,transactionnelle,0,1,0,43
-tarif nettoyage toiture hydrofuge,transactionnelle,0,1,0,52
-tarif nettoyage toiture hydrofuge aix-les-bains,transactionnelle,0,4,0,46.25
-tarif pour nettoyage toiture,transactionnelle,0,1,0,36
-toiture bassin,locale,0,4,0,24.75
-toiture bordeaux,locale,0,46,0,40.391304347826086
-toiture construction,non classée,0,2,0,23
-toiture devis gratuit,transactionnelle,0,2,0,11
-toiture hydrofuge,non classée,0,1,0,48
-toiture hydrofuge quand appliquer,informationnelle,0,4,0,54
-toiture nettoyage,non classée,0,1,0,71
-toiture neuve,non classée,0,1,0,1
-toiture neuve et rénovation à pauillac,non classée,0,22,0,13
-toiture neuve et rénovation à saint-aubin-de-médoc,locale,0,11,0,30.363636363636363
-toiture neuve gironde,locale,0,41,0,2.4878048780487805
-toiture qui coule que faire,non classée,0,1,0,81
-toiture réparation,non classée,0,5,0,17.2
-toiture urgence,transactionnelle,0,2,0,50.5
-traitement anti mousse gironde,locale,0,32,0,9.8125
-traitement charpente bordeaux,locale,0,31,0,17.903225806451612
-traitement contre l humidité villenave-d'ornon,locale,0,1,0,36
-traitement de toiture gironde,locale,0,2,0,12.5
-traitement hydrofuge gironde,locale,0,35,0,2.2857142857142856
-traitement hydrofuge langon,locale,0,24,0,20.333333333333332
-traitement hydrofuge toiture,non classée,0,4,0,48.75
-traitement hydrofuge toiture prix au m2,transactionnelle,0,3,0,37.666666666666664
-traitement toiture 18,non classée,0,1,0,12
-traitement toiture bordeaux,locale,0,13,0,10
-traitement toiture mérignac,locale,0,2,0,20
-traitement toiture pessac,locale,0,1,0,6
-travaux d étanchéité villenave-d'ornon,locale,0,3,0,45.333333333333336
-travaux de couverture bordeaux,locale,0,6,0,9.5
-travaux de couverture talence,locale,0,5,0,15.2
+tarif nettoyage toiture hydrofuge,transactionnelle,0,1,0,33
+toiture bassin,locale,0,3,0,27
+toiture bordeaux,locale,0,55,0,36.50909090909091
+toiture construction,non classée,0,5,0,26.6
+toiture devis gratuit,transactionnelle,0,1,0,11
+toiture nettoyage,non classée,0,6,0,39.833333333333336
+toiture neuve,non classée,0,2,0,12
+toiture neuve et rénovation à pauillac,non classée,0,14,0,12.642857142857142
+toiture neuve et rénovation à saint-aubin-de-médoc,locale,0,20,0,29.5
+toiture neuve gironde,locale,0,34,0,2.3529411764705883
+toiture urgence,transactionnelle,0,2,0,17.5
+touture,non classée,0,1,0,1
+traitement anti mousse gironde,locale,0,16,0,10
+traitement charpente bordeaux,locale,0,38,0,12
+traitement contre l humidité villenave-d'ornon,locale,0,2,0,70.5
+traitement de fissures bègles,locale,0,1,0,29
+traitement de toiture gironde,locale,0,5,0,14
+traitement hydrofuge gironde,locale,0,37,0,2.4594594594594597
+traitement hydrofuge langon,locale,0,5,0,19.8
+traitement toiture bordeaux,locale,0,17,0,22.88235294117647
+traitement toiture cher,non classée,0,2,0,33
+traitement toiture mérignac,locale,0,2,0,25
+traitement toiture pessac,locale,0,3,0,8.666666666666668
+travaux de couverture bordeaux,locale,0,1,0,11
+travaux de couverture talence,locale,0,2,0,14.5
 travaux de couverture villenave-d'ornon,locale,0,5,0,20
-travaux toiture bordeaux,locale,0,3,0,32.33333333333333
-tuile bordeaux,locale,0,32,0,24.1875
-tuile de rive,non classée,0,2,0,3
-tuile de rive universelle occasion,non classée,0,1,0,4
+travaux toiture bordeaux,locale,0,10,0,27.5
+tuile bordeaux,locale,0,28,0,24.571428571428573
 tuile gironde,locale,0,1,0,6
-tuile poreuse assurance,non classée,0,1,0,60
-urgence couvreur,transactionnelle,0,5,0,24.8
-urgence fuite toiture,transactionnelle,0,63,0,17.142857142857142
-urgence fuite toiture bassin d'arcachon,transactionnelle,0,16,0,9.375
-urgence fuite toiture saint-léonard,transactionnelle,0,31,0,22.322580645161292
-urgence toiture,transactionnelle,0,129,0,35.51937984496124
-urgence toiture 24h,transactionnelle,0,2,0,16.5
-urgence-fuite toiture dans la gironde,transactionnelle,0,44,0,4.272727272727273
-velux bordeaux,locale,0,141,0,11.843971631205674
+un remplacement,non classée,0,1,0,3
+urgence couvreur,transactionnelle,0,6,0,29.5
+urgence fuite toiture,transactionnelle,0,26,0,13.884615384615385
+urgence fuite toiture bassin d'arcachon,transactionnelle,0,16,0,9.4375
+urgence fuite toiture saint-léonard,transactionnelle,0,13,0,20.076923076923077
+urgence toiture,transactionnelle,0,94,0,37.159574468085104
+urgence toiture 24h,transactionnelle,0,1,0,4
+urgence toiture bordeaux,transactionnelle,0,2,0,3.5
+urgence-fuite toiture dans la gironde,transactionnelle,0,30,0,2.2333333333333334
+velux bordeaux,locale,0,129,0,12.496124031007753
 velux installateur,non classée,0,1,0,11
 velux window service engineers near me,non classée,0,1,0,7
 vous avez une photo,non classée,0,1,0,28
-vélux sur bac acier,non classée,0,1,0,92
-zinc,non classée,0,1,0,1
-zinguerie,non classée,0,1,0,12
-zinguerie aquitaine,locale,0,5,0,48.6
-zinguerie arcachon,locale,0,76,0,8.118421052631579
-zinguerie bassin arcachon,locale,0,71,0,5.816901408450704
-zinguerie bassin d'arcachon,locale,0,2,0,7.5
-zinguerie bordeaux,locale,0,57,0,21.24561403508772
-zinguerie gironde,locale,0,4,0,13.5
-zinguerie gouttière,non classée,0,1,0,3
+zinguerie aquitaine,locale,0,2,0,57
+zinguerie arcachon,locale,0,77,0,7.298701298701299
+zinguerie bassin arcachon,locale,0,104,0,6.846153846153846
+zinguerie bordeaux,locale,0,42,0,20.738095238095237
+zinguerie gironde,locale,0,5,0,13.2
+zinguerie gouttière,non classée,0,1,0,1
 zinguerie lège-cap-ferret,non classée,0,1,0,39
-zinguerie pessac,locale,0,4,0,11.75
-zinguerie à eysines,locale,0,32,0,14.65625
-zingueur,non classée,0,2,0,1.5
-zingueur arcachon,locale,0,4,0,11.5
-zingueur autour de moi,non classée,0,1,0,89
-zingueur bordeaux,locale,0,30,0,27.7
-zingueur gironde,locale,0,1,0,2
-zingueur libourne,locale,0,6,0,12.833333333333334
+zinguerie pessac,locale,0,2,0,12
+zinguerie pyla-sur-mer,non classée,0,9,0,16.88888888888889
+zinguerie sur mesure,non classée,0,1,0,1
+zinguerie à eysines,locale,0,30,0,20.633333333333333
+zingueur,non classée,0,3,0,5
+zingueur arcachon,locale,0,12,0,11.75
+zingueur bordeaux,locale,0,13,0,22.53846153846154
+zingueur gironde,locale,0,7,0,32.85714285714286
+zingueur gouttière,non classée,0,1,0,4
+zingueur libourne,locale,0,2,0,15.5
+étanchéité faîtage,non classée,0,1,0,1

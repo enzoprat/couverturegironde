@@ -1,60 +1,54 @@
-page,n_requetes,clics,impressions,pos_ponderee,requete_principale
-/,225,23,12470,13.5,gironde-toiture-service.fr charpente et toiture
-/nettoyage-toiture-bordeaux,139,4,4412,18.1,"démoussage, traitement des toitures (entreprises) bordeaux"
-/installation-velux-bordeaux,70,1,2702,22.7,velux bordeaux
-/demande-devis,60,0,1596,16.8,gironde-toiture-service.fr charpente et toiture
-/reparation-toiture-bordeaux,51,0,1059,22.6,réparation toiture bordeaux
-/urgence-fuite-toiture-bordeaux,37,2,1006,13.6,urgence-fuite toiture dans la gironde
-/couvreur-talence,21,2,987,15,couvreur talence
-/couvreur-arcachon,32,1,955,11.8,couvreur arcachon
-/traitement-hydrofuge-toiture-bordeaux,41,0,842,16.5,entreprise hydrofuge toiture
-/couvreur-gironde,28,0,786,40.3,couvreur gironde
-/couvreur-eysines,21,1,687,13.5,couvreur eysines
-/demoussage-toiture-bordeaux,16,0,661,29,démoussage toiture bordeaux
-/couvreur-libourne,24,0,580,20.9,couvreur libourne
-/contact,28,0,553,46.8,couvreur gironde
-/couvreur-bordeaux,25,1,539,34.4,couvreur bordeaux
-/charpente-bordeaux,15,0,528,20.8,réparation charpente gironde
-/toiture-neuve-bordeaux,24,0,521,18.7,toiture neuve gironde
-/couvreur-merignac,26,1,490,27.4,couvreur mérignac
-/couvreur-pessac,14,0,472,13.5,couvreur pessac
-/tarifs,27,1,455,21.6,nettoyage de toiture bordeaux
-/urgence,17,1,425,31,urgence toiture
-/devis-couvreur-gironde,26,0,424,19.6,couvreur gironde
-/zinguerie-bordeaux,28,0,420,21.5,gouttieres en zinc a leognan
-/faitage-toiture-bordeaux,50,0,326,21.9,faitage toiture
-/couverture-bordeaux,16,0,255,33,devis toiture bordeaux
-/zinguerie-gouttieres-bordeaux,32,0,198,13.6,zinguerie
-/couvreur-cenon,6,1,183,20.3,réparation fissure maison cenon
-/realisations/creation-entablement-cheneau-zinc-bordeaux-2024,5,2,174,9.6,entablement zinc
-/couvreur-bouscat,20,1,173,15.1,couvreur le bouscat
-/couvreur-begles,16,0,168,14.7,couvreur bègles
-/reparation-toiture-pessac,6,0,168,9.6,réparation fuite toiture pessac
-/couvreur-villenave-dornon,15,0,149,36.3,couvreur villenave d'ornon
-/realisations/pose-toiture-bac-acier-lanton-2024,3,0,121,11.9,pose de bac acier toiture à langon
-/realisations/demoussage-toiture-talence-lichens-2026,3,0,106,19.7,entreprise traitement toiture talence
-/reparation-toiture-talence,2,0,101,28,réparation fissure maison talence
-/capotage-toiture-bordeaux,3,0,77,2.7,capotage toiture bordeaux
-/couvreur-bordeaux-rive-droite,1,0,70,9.1,couvreur bordeaux bastide
-/reparation-toiture-merignac,3,0,70,7.8,répararation fuite toiture mérignac
-/realisations/toiture-bac-acier-merignac-2024,3,0,65,4.3,pose de bac acier toiture en gironde
-/ornements-toiture-bordeaux,11,0,64,10.6,ornement toiture
-/traitement-toiture-bordeaux,4,0,45,23.8,entreprise traitement toiture bordeaux
-/nettoyage-toiture-pessac,6,0,36,32.7,entretien toiture gironde
+page,n_req,clics,imp,pos_ponderee,requete_principale
+/,215,22,8014,21.4,couvreur gironde
+/nettoyage-toiture-bordeaux,147,5,4619,19.1,"démoussage, traitement des toitures (entreprises) bordeaux"
+/installation-velux-bordeaux,72,0,2853,24.8,velux bordeaux
+/demande-devis,62,0,1659,18.1,couvreur gironde
+/couvreur-arcachon,32,1,1333,11.6,couvreur arcachon
+/couvreur-gironde,28,0,1049,40.8,couvreur gironde
+/urgence-fuite-toiture-bordeaux,37,2,969,14.4,urgence-fuite toiture dans la gironde
+/couvreur-talence,24,1,947,16.8,couvreur talence
+/couvreur-eysines,21,0,869,15.2,couvreur eysines
+/traitement-hydrofuge-toiture-bordeaux,37,0,848,15.1,entreprise hydrofuge toiture
+/charpente-bordeaux,16,0,762,22.4,charpentier bordeaux
+/reparation-toiture-bordeaux,48,0,760,26.6,réparation toiture
+/couvreur-bordeaux,27,1,692,34.7,couvreur bordeaux
+/toiture-neuve-bordeaux,26,0,678,18.9,toiture neuve gironde
+/couvreur-libourne,23,0,677,20.9,couvreur libourne
+/contact,28,0,665,51.7,couvreur gironde
+/zinguerie-bordeaux,33,0,599,21.2,gouttieres en zinc a leognan
+/urgence,20,1,591,32.4,urgence toiture
+/demoussage-toiture-bordeaux,16,0,582,31.7,démoussage toiture bordeaux
+/couvreur-merignac,23,1,516,29.3,couvreur mérignac
+/tarifs,30,0,494,21.5,nettoyage de toiture bordeaux
+/couvreur-pessac,13,0,475,14,couvreur pessac
+/faitage-toiture-bordeaux,47,0,443,21.7,faitage toiture
+/couvreur-cenon,6,1,267,19.8,réparation fissure maison cenon
+/reparation-toiture-pessac,6,0,223,8,réparation fuite toiture pessac
+/realisations/creation-entablement-cheneau-zinc-bordeaux-2024,5,2,191,9.7,entablement zinc
+/traitement-toiture-bordeaux,9,1,188,27.9,entreprise traitement toiture bordeaux
+/realisations/pose-toiture-bac-acier-lanton-2024,3,0,180,11.7,pose de bac acier toiture à langon
+/couvreur-bouscat,14,1,175,13.4,couvreur le bouscat
+/couvreur-begles,17,1,161,13.7,couvreur bègles
+/couverture-bordeaux,8,0,138,40.6,service couverture gironde
+/couvreur-villenave-dornon,11,0,137,35.9,couvreur villenave d'ornon
+/realisations/demoussage-toiture-talence-lichens-2026,3,0,121,16.2,entreprise traitement toiture talence
+/reparation-toiture-talence,2,0,118,30.7,réparation fissure maison talence
+/couvreur-bordeaux-rive-droite,1,0,98,9,couvreur bordeaux bastide
+/capotage-toiture-bordeaux,3,0,97,2.5,capotage toiture bordeaux
+/reparation-toiture-merignac,3,0,96,6.3,répararation fuite toiture mérignac
+/ornements-toiture-bordeaux,11,0,69,10.7,ornement toiture
+/realisations/toiture-bac-acier-merignac-2024,3,0,49,4,pose de bac acier toiture en gironde
 /zinguerie-arcachon,2,0,31,15.7,zinguerie bassin arcachon
-/a-propos,7,1,21,22.6,delsuc couvreur
-/realisations/creation-capot-zinc-etancheite-cheminee-pessac-2024,4,0,16,23.8,devis façonnés denses
+/realisations/closoir-ventile-faitage-saint-aubin-de-medoc-2024,1,0,23,31.2,toiture neuve et rénovation à saint-aubin-de-médoc
+/zinguerie-gouttieres-bordeaux,11,0,21,12,zinguerie
+/realisations/creation-capot-zinc-etancheite-cheminee-pessac-2024,4,0,17,23.9,devis façonnés denses
+/realisations/creation-solin-zinc-jonction-mur-bordeaux-2024,8,0,14,17.2,jonction toit mur
 /realisations,4,0,13,53.8,pose de bac acier toiture en gironde
-/realisations/zinguerie-abergement-cheminee-merignac-2024,1,0,11,6.7,abergement cheminée gironde
-/reparation-toiture-apres-incendie-gironde,7,0,11,46.2,réparation après incendie
-/realisations/closoir-ventile-faitage-saint-aubin-de-medoc-2024,1,0,11,30.4,toiture neuve et rénovation à saint-aubin-de-médoc
-/realisations/creation-solin-zinc-jonction-mur-bordeaux-2024,4,0,9,23.6,jonction toit mur
+/reparation-toiture-apres-incendie-gironde,9,0,13,41.1,réparation après incendie
+/nettoyage-toiture-pessac,2,0,9,10.8,nettoyage de toiture pessac
+/realisations/zinguerie-abergement-cheminee-merignac-2024,1,0,8,4.9,abergement cheminée gironde
 /fuite-toiture-tempete-bordeaux,5,0,8,25.1,bâchage toiture assurance
-/guides/prix-demoussage-toiture-bordeaux,5,0,6,43.8,nettoyage toiture bordeaux
-/guides/quand-demousser-toiture-gironde,3,0,5,7,nettoyer toiture verte de mousse gironde
-/charpente-bordeaux-reparation-traitement-renforcement---devis-gratuit,2,0,4,29.8,renforcement de structures bordeaux
+/a-propos,5,0,8,8.9,delsuc couvreur
 /realisations/traitement-hydrofuge-anti-mousse-toiture-merignac-2024,2,0,3,22,demoussage toiture bordeaux
-/guides/aides-renovation-toiture-2026,2,0,2,35.5,aide pour refaire sa toiture 2026
 /realisations/abergement-cheminee-zinc-solins-merignac-2024,1,0,1,3,abergement cheminée gironde
 /realisations/nettoyage-peinture-toiture-fibrociment-mios-2024,1,0,1,10,nettoyage toiture mios
-/realisations/demoussage-toiture-merignac-2024,1,0,1,15,nettoyage toiture mérignac
