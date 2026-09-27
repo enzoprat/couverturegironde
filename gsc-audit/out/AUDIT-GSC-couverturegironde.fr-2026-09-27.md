@@ -26,6 +26,7 @@ C'est ce tableau qui compte. L'audit initial ne se vend qu'une fois.
 | Pages indexées (sur celles inspectées) | 56 / 57 | **58 / 58** | ✅ |
 | Anomalies de canonique | 0 | 0 | → |
 | Part de clics anonymisés | 70,2 % | **76,6 %** | ❌ analyse par requête encore plus fragile |
+| Volet IA générative | non mesuré | **418 imp · 2,8 %** | ✅ mesuré — et l'hypothèse IA est réfutée |
 | Part desktop des impressions | 66,5 % | **71,1 %** | ❌ |
 
 **Le correctif du 8 septembre a marché, mais pas assez pour valider ses propres critères.** Panier constant de 256 requêtes présentes avant ET après le déploiement : position pondérée **21,8 → 19,0 (−2,7 rangs)**. La home : **24,9 → 19,9 (−5,0 rangs)**, clics 7 → 8.
@@ -39,6 +40,7 @@ C'est ce tableau qui compte. L'audit initial ne se vend qu'une fois.
 3. **Les clics baissent de 13 % (54 → 47) pour une raison saisonnière, pas de classement** : décomposition = **−5,0 clics imputables aux impressions**, −2,0 au CTR. Les impressions hebdomadaires sont passées de 5 104 (S30) à 2 691 (S38) — exactement le même reflux qu'en 2025.
 4. **Sur un an, la progression est réelle** : +88 % de clics, +107,6 % d'impressions, −2,0 rangs.
 5. **Le site ne vit plus de sa marque** : la part de clics marque tombe de 42,9 % à 9,1 %. Il capte de la demande locale hors marque — mais sur 11 clics attribués seulement, ce chiffre est fragile.
+6. **L'IA générative n'est pas le problème** : 418 impressions sur 28 jours, soit 2,8 % du total. L'hypothèse que je portais depuis deux audits pour expliquer les impressions top-5 sans clic est **réfutée** (§4bis).
 
 ---
 
@@ -54,7 +56,7 @@ C'est ce tableau qui compte. L'audit initial ne se vend qu'une fois.
 | Seuil clics | `max(3, p75)` = **3** | |
 
 **Non mesuré :**
-- **Volet IA générative** (AI Overviews / AI Mode) : pas d'API, pas d'export BigQuery. Nécessite l'export CSV manuel depuis l'interface → `data/manual/ai_generative.csv`. **Non mesuré pour le deuxième audit consécutif.**
+- **Volet IA générative** : ✅ **mesuré**, via l'export manuel de l'interface (pas d'API, pas de BigQuery). Voir §4bis. L'export ne contient que des impressions — ni clics, ni CTR, ni requêtes, ni position.
 - **Volumes de recherche** : la GSC donne des impressions, pas des volumes. Aucun volume ne figure dans ce document.
 - **Concurrence SERP** : hors de portée sans navigateur pilotable ni API.
 - **Anomalies de CTR (3.3b)** : le calcul exige une médiane de référence non nulle, qui n'existe pas ici. **Rien à signaler sur ce point.**
@@ -75,7 +77,7 @@ Gain = plafond théorique, calculé sur le **CTR agrégé réellement mesuré su
 | 6 | **Supprimer ou refondre les 3 guides.** | 3 pages | `/guides/prix-demoussage`, `/guides/aides-renovation-2026`, `/guides/quand-demousser` sont passés à **zéro impression sur 90 jours**. Deux ne sont plus recrawlés depuis juin. Le format guide ne prend pas sur cette propriété. | 0 | M |
 | 7 | **Ajouter Cenon, Le Bouscat et Yvrac aux zones de la fiche Google.** | GBP | Trois demandes reçues sur ces communes début septembre ; aucune n'est déclarée dans les 13 zones de la fiche. Gratuit. | non mesurable | S |
 | 8 | **Publier l'app GCP (OAuth « Testing » → « Production »).** | infra | Token expiré **11 fois**. Chaque audit coûte une re-validation manuelle. | 0 | S |
-| 9 | **Exporter le rapport IA générative.** | GSC | Non mesuré depuis deux audits. C'est l'hypothèse n°1 pour expliquer les 1 351 impressions top-5 sans clic. | 0 | S |
+| 9 | **Mesurer la part du pack local dans les SERP cibles.** | — | L'hypothèse IA est **réfutée** (§4bis) : 418 impressions IA seulement, contre 1 351 impressions top-5 sans clic. Le pack local reste la seule explication non testée. | 0 | M |
 | 10 | **Ne pas créer de page.** | — | 26 URLs du sitemap sur 76 font zéro impression en 90 j, dont les 3 pages quartier Bordeaux et 15 réalisations. Le stock existant n'est pas saturé. | 0 | S |
 
 **Ce qu'aucune de ces actions ne change** : le site produit 47 clics / 28 jours, dont 11 attribuables. Le plafond cumulé des actions 2 à 5 est d'environ **10 clics/28 j**. C'est un doublement en proportion, et cela reste marginal en valeur absolue.
@@ -152,7 +154,7 @@ C'est le chiffre le plus important de cet audit : **la seule tendance statistiqu
 
 **Les impressions top-5 sans clic passent de 6 681 à 1 351 (−80 %).** La cause est identifiée : les requêtes contenant le domaine du concurrent (`gironde-toiture-service.fr`), qui représentaient 4 445 de ces impressions, ont quasiment disparu. Elles sont exclues du calcul ci-dessus.
 
-Il reste **1 351 impressions en position 1, 3, 4 et 5 pour 1 clic**. À un CTR humain de 2 %, on attendrait 27 clics. L'écart reste inexpliqué — **c'est ce que l'export IA générative permettrait de trancher** (action 9).
+Il reste **1 351 impressions en position 1, 3, 4 et 5 pour 1 clic**. À un CTR humain de 2 %, on attendrait 27 clics. **L'export IA générative, obtenu depuis, réfute l'hypothèse des AI Overviews** (§4bis) : le site ne totalise que 418 impressions IA sur 28 jours, toutes positions confondues. L'écart reste inexpliqué ; le pack local devient l'explication la plus probable.
 
 ### 3.4 Cannibalisation → [`cannibalisation.csv`](cannibalisation.csv)
 
@@ -315,6 +317,56 @@ Une seule apparence enrichie active, inchangée. Son CTR (0,40 %) reste **3,3× 
 Types `video` et `discover` : **0 impression**, rien à signaler.
 
 Les photos de chantier réelles produisent des clics là où les pages ne produisent rien. C'est le seul gisement neuf de cet audit — d'où l'action 2.
+
+---
+
+## 4bis. IA générative — AI Overviews et AI Mode → [`ia_generative.csv`](ia_generative.csv)
+
+Source : export manuel de l'interface Search Console (aucune API, aucun export BigQuery ne fournit ces données).
+Périmètre déclaré par l'export : **Type de recherche Web · 28 derniers jours (2026-08-28 → 2026-09-24)**.
+**L'export ne contient que des impressions** : ni clics, ni CTR, ni requêtes, ni position. Rien de ce qui suit ne peut être converti en trafic.
+
+| | Valeur |
+|---|---|
+| Impressions IA (28 j) | **418** |
+| Impressions web (28 j) | 14 809 |
+| **Part IA** | **2,8 % des impressions du site** |
+| Moyenne journalière | 14,5 (min 3, max 28) — aucune tendance |
+| Appareils | Ordinateur 212 (52 %) · Mobile 189 (46 %) · Tablette 6 (1 %) |
+| France | 363 / 418 = **87 %** |
+
+### L'hypothèse principale du diagnostic est réfutée
+
+Depuis deux audits, j'avançais que les AI Overviews étaient l'explication n°1 des impressions en top-5 sans clic. **C'est faux.**
+
+Le site totalise **418 impressions IA** toutes positions et toutes pages confondues, quand il faut expliquer **1 351 impressions en position 1, 3, 4 et 5 pour 1 clic**. L'ordre de grandeur ne colle pas. Même en supposant un CTR nul sur 100 % des apparitions IA, il resterait l'essentiel de l'anomalie.
+
+**Ce qui reste comme explication la plus probable : le pack local.** Sur les requêtes « couvreur + ville », les trois fiches Google et la carte occupent le haut de la page ; une position organique 4 ou 5 se trouve physiquement sous le pli. C'est cohérent avec tout le reste du dossier — et cela explique pourquoi la fiche Google pèse davantage que le site sur ce marché. **Cette hypothèse n'est pas vérifiée** : elle demande des SERP géolocalisées, hors de portée sans API.
+
+### Pages les plus exposées
+
+| Page | Imp. IA | Imp. web | Clics web | Pos. web | Part IA |
+|---|---|---|---|---|---|
+| `/faitage-toiture-bordeaux` | **110** | 1 312 | 2 | 10,4 | **8,4 %** |
+| `/zinguerie-bordeaux` | 41 | 627 | 2 | 17,7 | 6,5 % |
+| `/realisations/creation-solin-zinc-jonction-mur-bordeaux-2024` | 29 | 110 | 3 | 6,9 | **26,4 %** |
+| `/urgence-fuite-toiture-bordeaux` | 26 | 478 | 5 | 13,1 | 5,4 % |
+| `/tarifs` | 24 | 239 | 3 | 14,9 | 10,0 % |
+| `/nettoyage-toiture-bordeaux` | 22 | 1 477 | 2 | 17,5 | 1,5 % |
+| `/toiture-neuve-bordeaux` | 20 | 431 | 1 | 15,3 | 4,6 % |
+| `/` | 14 | 2 924 | 12 | 22,0 | 0,5 % |
+
+**`/faitage-toiture-bordeaux` concentre 26 % de toutes les impressions IA du site.** C'est aussi la page repérée en §3.5 comme la seule anomalie de CTR : +642 impressions, +1,4 rang de position, et **−2 clics**.
+
+L'IA contribue — 110 de ses 1 312 impressions — mais ne suffit pas : il reste 1 202 impressions classiques à position 10,4 pour 2 clics, soit 0,17 %. **Le compte n'y est toujours pas.**
+
+À noter : c'est également la page n°1 en recherche Images (2 314 impressions, §3.13). Une même page domine trois canaux sans produire de clic dans aucun.
+
+### Ce qu'on en fait
+
+**Rien pour l'instant.** À 2,8 % des impressions et sans aucune donnée de clic, il n'y a pas de levier actionnable ni de mesure de perte possible. Aucune technique d'« optimisation GEO » n'a d'effet causal établi, et `llms.txt` n'est pas une piste — Google indique explicitement qu'aucun fichier de ce type n'est nécessaire.
+
+La seule chose à faire est de **refaire cet export à chaque audit** et de surveiller la part IA. Si elle passe de 2,8 % à 15-20 %, la question deviendra sérieuse. Aujourd'hui elle ne l'est pas.
 
 ---
 
