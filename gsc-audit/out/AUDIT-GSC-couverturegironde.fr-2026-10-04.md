@@ -389,3 +389,57 @@ Les 3 pages légales dans le même état sont **normales et sans enjeu**.
 **Réserve principale** : 42 clics sur 28 jours, **78,6 % d'anonymisation**, **9 clics attribués**. Les analyses par impressions, position et page sont solides ; celles par clics ne le sont pas.
 
 **Prochain audit : 2026-11-01** (cadence mensuelle — cf. action 10).
+
+---
+
+## 8. Correction — les deux « signaux neufs » ne tiennent pas
+
+Vérification faite après rédaction, au niveau requête. **Les deux anomalies annoncées plus haut sont des artefacts. Elles sont retirées du plan d'action.**
+
+### `/faitage-toiture-bordeaux` : c'est du bruit, pas une anomalie
+
+Les 5 clics du mois précédent **ne venaient d'aucune des requêtes visibles** : les 8 premières requêtes de la page affichent 0 clic dans les deux périodes. Ces 5 clics étaient dans la traîne anonymisée.
+
+| | Mois précédent | Ce mois |
+|---|---|---|
+| Impressions | 1 006 | 1 026 |
+| Clics | 5 | 0 |
+| CTR | **0,50 %** | 0,00 % |
+| CTR mesuré du site à position 6-10 | **0,16 %** | 0,16 % |
+
+À 0,16 % de CTR, 1 026 impressions donnent **1,6 clic attendu**, et `P(0 clic) = e^−1,6 = 19 %`. Observer zéro clic est banal.
+
+**C'est le mois précédent qui était l'exception** : 0,50 % de CTR, soit 3 fois la moyenne du site à cette position. La page est revenue à la normale, elle ne s'est pas effondrée.
+
+→ **L'action n°1 du §3 est annulée.** Il n'y a rien à diagnostiquer.
+
+### `/couvreur-talence` : paradoxe de Simpson, pas un problème mobile
+
+L'écart agrégé de +10,6 rangs disparaît dès qu'on descend au niveau requête :
+
+| Requête | Device | Imp | Position |
+|---|---|---|---|
+| **couvreur talence** | **MOBILE** | 230 | **10,8** |
+| **couvreur talence** | DESKTOP | 183 | 15,0 |
+| réparation fuite toiture talence | DESKTOP | 92 | 7,4 |
+| entreprise de couverture talence | DESKTOP | 83 | 14,4 |
+| entreprise traitement toiture talence | MOBILE | 45 | 31,4 |
+
+Sur la requête principale, **le mobile est mieux placé de 4,2 rangs**. L'écart agrégé vient d'un effet de composition : le desktop est servi sur des requêtes où la page est bien placée et que le mobile ne voit presque pas, le mobile sur des requêtes profondes.
+
+→ **L'action n°6 du §3 est annulée.** Aucun signal technique mobile.
+
+### Ce que ça change au plan d'action
+
+Il reste **trois** actions site défendables, pas six :
+
+| # | Action | Preuve | Effort |
+|---|---|---|---|
+| 1 | `noindex` + retrait du sitemap des 4 pages jamais crawlées | « URL is unknown » / « Discovered – currently not indexed », aucun `lastCrawlTime`, 0 impression en 90 j | S |
+| 2 | Trancher `/couvreur-gironde` | 1 062 imp / **0 clic** / position 41,1 ; cannibalise la home (p9,1 contre p46,3) — **inchangé depuis 4 audits** | M |
+| 3 | Dé-optimiser `/contact` | 646 imp / **0 clic** / position **53,1**, et elle ranke sur « couvreur gironde » (301 imp) | S |
+
+Tout le reste relève de l'attente : le correctif du 8 septembre produit encore (panier constant −2,4 rangs, home −4,0 rangs et +2 clics), et y toucher brouillerait la mesure.
+
+**Leçon de méthode** : un écart de clics sur une page à faible CTR, et un écart de position agrégé entre devices, doivent être testés au niveau requête avant d'être annoncés comme des signaux. Je ne l'avais pas fait ; les deux sont tombés.
+
