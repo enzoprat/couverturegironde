@@ -1,28 +1,22 @@
 query,page,impressions,clics,position,ctr,ctr_cible,clics_potentiels
-nettoyage toiture bordeaux,/nettoyage-toiture-bordeaux,246,1,14.9,0.41,1.71,3.2
-velux bordeaux,/installation-velux-bordeaux,112,0,13.1,0,1.71,1.9
-zinguerie bassin arcachon,/couvreur-arcachon,97,0,7.3,0,1.71,1.7
-couverture arcachon,/couvreur-arcachon,81,0,11.7,0,1.71,1.4
-couvreur arcachon,/couvreur-arcachon,79,0,14.2,0,1.71,1.4
-entreprise hydrofuge toiture,/traitement-hydrofuge-toiture-bordeaux,71,0,14.4,0,1.71,1.2
-nettoyage de toiture bordeaux,/nettoyage-toiture-bordeaux,67,0,12.1,0,1.71,1.1
-zinguerie arcachon,/couvreur-arcachon,66,0,7.6,0,1.71,1.1
-installateur velux bordeaux,/installation-velux-bordeaux,51,0,14.7,0,1.71,0.9
-couvreur,/,44,0,11.4,0,1.71,0.8
-couvreur devis,/demande-devis,47,0,12.9,0,1.71,0.8
-entretien toiture gironde,/nettoyage-toiture-bordeaux,49,0,14.1,0,1.71,0.8
-gouttieres en zinc a leognan,/zinguerie-bordeaux,48,0,7.8,0,1.71,0.8
-pose velux bordeaux,/installation-velux-bordeaux,44,0,12.5,0,1.71,0.8
-réparation fuite toiture pessac,/reparation-toiture-pessac,49,0,9.9,0,1.71,0.8
-couvreur bordeaux bastide,/couvreur-bordeaux-rive-droite,35,0,8.7,0,1.71,0.6
-entreprise de couverture arcachon,/couvreur-arcachon,35,0,13.9,0,1.71,0.6
-réparation charpente gironde,/charpente-bordeaux,33,0,13,0,1.71,0.6
-réparation fuite toiture arcachon,/couvreur-arcachon,34,0,14,0,1.71,0.6
-traitement charpente bordeaux,/charpente-bordeaux,35,0,11.4,0,1.71,0.6
-traitement hydrofuge gironde,/traitement-hydrofuge-toiture-bordeaux,36,0,5.8,0,1.71,0.6
-démoussage eysines,/couvreur-eysines,31,0,9.8,0,1.71,0.5
-installation de toiture bac acier langon,/realisations/pose-toiture-bac-acier-lanton-2024,30,0,10.6,0,1.71,0.5
-nettoyage toiture pas cher,/nettoyage-toiture-bordeaux,32,0,6.3,0,1.71,0.5
-couvreur merignac,/,83,1,8.7,1.2,1.71,0.4
-demoussage toiture bordeaux,/nettoyage-toiture-bordeaux,38,1,10,2.63,1.71,0
-fuite toiture bordeaux,/urgence-fuite-toiture-bordeaux,40,1,4.5,2.5,1.71,0
+zinguerie bassin arcachon,/couvreur-arcachon,94,0,6.7,0,1.55,1.5
+velux bordeaux,/installation-velux-bordeaux,92,0,14,0,1.55,1.4
+couvreur arcachon,/couvreur-arcachon,76,0,14.6,0,1.55,1.2
+couverture arcachon,/couvreur-arcachon,71,0,11.5,0,1.55,1.1
+nettoyage de toiture bordeaux,/nettoyage-toiture-bordeaux,59,0,13.5,0,1.55,0.9
+zinguerie arcachon,/couvreur-arcachon,60,0,7.5,0,1.55,0.9
+couvreur,/,51,0,12.4,0,1.55,0.8
+démoussage bordeaux,/demoussage-toiture-bordeaux,54,0,12,0,1.55,0.8
+gouttieres en zinc a leognan,/zinguerie-bordeaux,44,0,10.1,0,1.55,0.7
+réparation fuite toiture pessac,/reparation-toiture-pessac,45,0,10.8,0,1.55,0.7
+couvreur devis,/demande-devis,41,0,13.4,0,1.55,0.6
+démoussage eysines,/couvreur-eysines,36,0,9.1,0,1.55,0.6
+couvreur bordeaux bastide,/couvreur-bordeaux-rive-droite,33,0,9.1,0,1.55,0.5
+demoussage toiture bordeaux,/nettoyage-toiture-bordeaux,30,0,9.7,0,1.55,0.5
+entreprise de couverture arcachon,/couvreur-arcachon,32,0,13.4,0,1.55,0.5
+installation de toiture bac acier langon,/realisations/pose-toiture-bac-acier-lanton-2024,30,0,13.8,0,1.55,0.5
+installation zinguerie gironde,/zinguerie-bordeaux,31,0,7.6,0,1.55,0.5
+pose velux bordeaux,/installation-velux-bordeaux,35,0,12.3,0,1.55,0.5
+traitement charpente bordeaux,/charpente-bordeaux,30,0,12.1,0,1.55,0.5
+traitement hydrofuge gironde,/traitement-hydrofuge-toiture-bordeaux,34,0,6.9,0,1.55,0.5
+couvreur merignac,/,82,1,8.9,1.22,1.55,0.3

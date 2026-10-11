@@ -1,61 +1,51 @@
 url,verdict,coverage,canonical_declaree,canonical_google,dernier_crawl
-/,PASS,Submitted and indexed,/,/,2026-10-04
-/couvreur-bordeaux,PASS,Submitted and indexed,/couvreur-bordeaux,/couvreur-bordeaux,2026-09-17
-/couvreur-gironde,PASS,Submitted and indexed,/couvreur-gironde,/couvreur-gironde,2026-09-17
+/,PASS,Submitted and indexed,/,/,2026-10-09
 /nettoyage-toiture-bordeaux,PASS,Submitted and indexed,/nettoyage-toiture-bordeaux,/nettoyage-toiture-bordeaux,2026-09-25
-/traitement-hydrofuge-toiture-bordeaux,PASS,Submitted and indexed,/traitement-hydrofuge-toiture-bordeaux,/traitement-hydrofuge-toiture-bordeaux,2026-09-10
-/traitement-toiture-bordeaux,PASS,Submitted and indexed,/traitement-toiture-bordeaux,/traitement-toiture-bordeaux,2026-09-10
-/reparation-toiture-bordeaux,PASS,Submitted and indexed,/reparation-toiture-bordeaux,/reparation-toiture-bordeaux,2026-09-20
-/urgence-fuite-toiture-bordeaux,PASS,Submitted and indexed,/urgence-fuite-toiture-bordeaux,/urgence-fuite-toiture-bordeaux,2026-09-19
-/fuite-toiture-tempete-bordeaux,PASS,Submitted and indexed,/fuite-toiture-tempete-bordeaux,/fuite-toiture-tempete-bordeaux,2026-07-13
-/reparation-toiture-apres-incendie-gironde,PASS,Submitted and indexed,/reparation-toiture-apres-incendie-gironde,/reparation-toiture-apres-incendie-gironde,2026-09-20
-/zinguerie-bordeaux,PASS,Submitted and indexed,/zinguerie-bordeaux,/zinguerie-bordeaux,2026-09-10
 /installation-velux-bordeaux,PASS,Submitted and indexed,/installation-velux-bordeaux,/installation-velux-bordeaux,2026-09-26
-/toiture-neuve-bordeaux,PASS,Submitted and indexed,/toiture-neuve-bordeaux,/toiture-neuve-bordeaux,2026-09-17
 /faitage-toiture-bordeaux,PASS,Submitted and indexed,/faitage-toiture-bordeaux,/faitage-toiture-bordeaux,2026-09-25
-/ornements-toiture-bordeaux,PASS,Submitted and indexed,/ornements-toiture-bordeaux,/ornements-toiture-bordeaux,2026-10-03
+/demande-devis,PASS,Submitted and indexed,/demande-devis,/demande-devis,2026-09-10
+/couvreur-arcachon,PASS,Submitted and indexed,/couvreur-arcachon,/couvreur-arcachon,2026-09-16
+/traitement-hydrofuge-toiture-bordeaux,PASS,Submitted and indexed,/traitement-hydrofuge-toiture-bordeaux,/traitement-hydrofuge-toiture-bordeaux,2026-09-10
+/couvreur-gironde,PASS,Submitted and indexed,/couvreur-gironde,/couvreur-gironde,2026-09-17
+/couvreur-bordeaux,PASS,Submitted and indexed,/couvreur-bordeaux,/couvreur-bordeaux,2026-09-17
+/zinguerie-bordeaux,PASS,Submitted and indexed,/zinguerie-bordeaux,/zinguerie-bordeaux,2026-10-09
+/couvreur-talence,PASS,Submitted and indexed,/couvreur-talence,/couvreur-talence,2026-09-04
+/urgence-fuite-toiture-bordeaux,PASS,Submitted and indexed,/urgence-fuite-toiture-bordeaux,/urgence-fuite-toiture-bordeaux,2026-09-19
 /charpente-bordeaux,PASS,Submitted and indexed,/charpente-bordeaux,/charpente-bordeaux,2026-06-22
-/guides/prix-demoussage-toiture-bordeaux,PASS,Submitted and indexed,/guides/prix-demoussage-toiture-bordeaux,/guides/prix-demoussage-toiture-bordeaux,2026-09-11
-/guides/aides-renovation-toiture-2026,NEUTRAL,Crawled - currently not indexed,/guides/aides-renovation-toiture-2026,/guides/aides-renovation-toiture-2026,2026-06-07
-/guides/quand-demousser-toiture-gironde,PASS,Submitted and indexed,/guides/quand-demousser-toiture-gironde,/guides/quand-demousser-toiture-gironde,2026-09-16
+/toiture-neuve-bordeaux,PASS,Submitted and indexed,/toiture-neuve-bordeaux,/toiture-neuve-bordeaux,2026-09-17
+/urgence,PASS,Submitted and indexed,/urgence,/urgence,2026-09-16
+/couvreur-eysines,PASS,Submitted and indexed,/couvreur-eysines,/couvreur-eysines,2026-09-16
+/traitement-toiture-bordeaux,PASS,Submitted and indexed,/traitement-toiture-bordeaux,/traitement-toiture-bordeaux,2026-09-10
+/contact,PASS,Submitted and indexed,/contact,/contact,2026-09-18
+/tarifs,PASS,Submitted and indexed,/tarifs,/tarifs,2026-09-11
+/couvreur-libourne,PASS,Submitted and indexed,/couvreur-libourne,/couvreur-libourne,2026-09-16
+/couvreur-begles,PASS,Submitted and indexed,/couvreur-begles,/couvreur-begles,2026-09-06
+/couvreur-bouscat,PASS,Submitted and indexed,/couvreur-bouscat,/couvreur-bouscat,2026-09-12
+/couvreur-cenon,PASS,Submitted and indexed,/couvreur-cenon,/couvreur-cenon,2026-09-17
 /couvreur-merignac,PASS,Submitted and indexed,/couvreur-merignac,/couvreur-merignac,2026-08-26
 /couvreur-pessac,PASS,Submitted and indexed,/couvreur-pessac,/couvreur-pessac,2026-09-19
-/couvreur-talence,PASS,Submitted and indexed,/couvreur-talence,/couvreur-talence,2026-09-04
-/couvreur-begles,PASS,Submitted and indexed,/couvreur-begles,/couvreur-begles,2026-09-06
-/couvreur-villenave-dornon,PASS,Submitted and indexed,/couvreur-villenave-dornon,/couvreur-villenave-dornon,2026-08-27
-/couvreur-bouscat,PASS,Submitted and indexed,/couvreur-bouscat,/couvreur-bouscat,2026-09-12
-/couvreur-gradignan,NEUTRAL,URL is unknown to Google,,,
-/couvreur-eysines,PASS,Submitted and indexed,/couvreur-eysines,/couvreur-eysines,2026-09-16
-/couvreur-arcachon,PASS,Submitted and indexed,/couvreur-arcachon,/couvreur-arcachon,2026-09-16
-/couvreur-libourne,PASS,Submitted and indexed,/couvreur-libourne,/couvreur-libourne,2026-09-16
+/ornements-toiture-bordeaux,PASS,Submitted and indexed,/ornements-toiture-bordeaux,/ornements-toiture-bordeaux,2026-10-03
+/realisations/creation-solin-zinc-jonction-mur-bordeaux-2024,PASS,Submitted and indexed,/realisations/creation-solin-zinc-jonction-mur-bordeaux-2024,/realisations/creation-solin-zinc-jonction-mur-bordeaux-2024,2026-09-30
+/realisations/demoussage-toiture-talence-lichens-2026,PASS,Submitted and indexed,/realisations/demoussage-toiture-talence-lichens-2026,/realisations/demoussage-toiture-talence-lichens-2026,2026-10-04
+/couvreur-villenave-dornon,PASS,Submitted and indexed,/couvreur-villenave-dornon,/couvreur-villenave-dornon,2026-10-06
+/realisations/creation-entablement-cheneau-zinc-bordeaux-2024,PASS,Submitted and indexed,/realisations/creation-entablement-cheneau-zinc-bordeaux-2024,/realisations/creation-entablement-cheneau-zinc-bordeaux-2024,2026-09-19
+/realisations/pose-toiture-bac-acier-lanton-2024,PASS,Submitted and indexed,/realisations/pose-toiture-bac-acier-lanton-2024,/realisations/pose-toiture-bac-acier-lanton-2024,2026-09-26
+/realisations/creation-capot-zinc-etancheite-cheminee-pessac-2024,PASS,Submitted and indexed,/realisations/creation-capot-zinc-etancheite-cheminee-pessac-2024,/realisations/creation-capot-zinc-etancheite-cheminee-pessac-2024,2026-10-04
+/reparation-toiture-bordeaux,PASS,Submitted and indexed,/reparation-toiture-bordeaux,/reparation-toiture-bordeaux,2026-09-20
 /reparation-toiture-pessac,PASS,Submitted and indexed,/reparation-toiture-pessac,/reparation-toiture-pessac,2026-07-03
-/reparation-toiture-talence,PASS,Submitted and indexed,/reparation-toiture-talence,/reparation-toiture-talence,2026-07-03
+/couvreur-bordeaux-rive-droite,PASS,Submitted and indexed,/couvreur-bordeaux-rive-droite,/couvreur-bordeaux-rive-droite,2026-09-06
+/a-propos,PASS,Submitted and indexed,/a-propos,/a-propos,2026-09-16
+/realisations/closoir-ventile-faitage-saint-aubin-de-medoc-2024,PASS,Submitted and indexed,/realisations/closoir-ventile-faitage-saint-aubin-de-medoc-2024,/realisations/closoir-ventile-faitage-saint-aubin-de-medoc-2024,2026-09-19
+/reparation-toiture-apres-incendie-gironde,PASS,Submitted and indexed,/reparation-toiture-apres-incendie-gironde,/reparation-toiture-apres-incendie-gironde,2026-09-20
 /reparation-toiture-merignac,PASS,Submitted and indexed,/reparation-toiture-merignac,/reparation-toiture-merignac,2026-07-03
 /capotage-toiture-bordeaux,PASS,Submitted and indexed,/capotage-toiture-bordeaux,/capotage-toiture-bordeaux,2026-07-03
-/zinguerie-arcachon,PASS,Submitted and indexed,/zinguerie-arcachon,/zinguerie-arcachon,2026-09-07
-/couvreur-cenon,PASS,Submitted and indexed,/couvreur-cenon,/couvreur-cenon,2026-09-17
-/couvreur-bordeaux-centre,NEUTRAL,URL is unknown to Google,,,
-/couvreur-bordeaux-chartrons,NEUTRAL,Discovered - currently not indexed,,,
-/couvreur-bordeaux-rive-droite,PASS,Submitted and indexed,/couvreur-bordeaux-rive-droite,/couvreur-bordeaux-rive-droite,2026-09-06
-/couvreur-bordeaux-lac,NEUTRAL,Discovered - currently not indexed,,,
-/nettoyage-toiture-pessac,NEUTRAL,Crawled - currently not indexed,/nettoyage-toiture-pessac,/nettoyage-toiture-pessac,2026-06-07
 /realisations,PASS,Submitted and indexed,/realisations,/realisations,2026-09-06
-/contact,PASS,Submitted and indexed,/contact,/contact,2026-09-18
-/a-propos,PASS,Submitted and indexed,/a-propos,/a-propos,2026-09-16
-/tarifs,PASS,Submitted and indexed,/tarifs,/tarifs,2026-09-11
-/urgence,PASS,Submitted and indexed,/urgence,/urgence,2026-09-16
-/demande-devis,PASS,Submitted and indexed,/demande-devis,/demande-devis,2026-09-10
-/mentions-legales,NEUTRAL,Discovered - currently not indexed,,,
-/politique-confidentialite,NEUTRAL,URL is unknown to Google,,,
-/cookies,NEUTRAL,Discovered - currently not indexed,,,
-/realisations/creation-entablement-cheneau-zinc-bordeaux-2024,PASS,Submitted and indexed,/realisations/creation-entablement-cheneau-zinc-bordeaux-2024,/realisations/creation-entablement-cheneau-zinc-bordeaux-2024,2026-09-19
-/realisations/creation-tour-cheminee-zinc-begles-2024,PASS,Submitted and indexed,/realisations/creation-tour-cheminee-zinc-begles-2024,/realisations/creation-tour-cheminee-zinc-begles-2024,2026-09-19
-/realisations/refection-couverture-tuile-canal-volige-pessac-2024,PASS,Submitted and indexed,/realisations/refection-couverture-tuile-canal-volige-pessac-2024,/realisations/refection-couverture-tuile-canal-volige-pessac-2024,2026-07-11
-/realisations/refection-complete-couverture-tuile-canal-le-bouscat-2024,PASS,Submitted and indexed,/realisations/refection-complete-couverture-tuile-canal-le-bouscat-2024,/realisations/refection-complete-couverture-tuile-canal-le-bouscat-2024,2026-07-11
-/realisations/pose-ecran-sous-toiture-hpv-merignac-2024,PASS,Submitted and indexed,/realisations/pose-ecran-sous-toiture-hpv-merignac-2024,/realisations/pose-ecran-sous-toiture-hpv-merignac-2024,2026-07-11
-/realisations/changement-closoir-ventile-faitage-andernos-les-bains-2024,PASS,Submitted and indexed,/realisations/changement-closoir-ventile-faitage-andernos-les-bains-2024,/realisations/changement-closoir-ventile-faitage-andernos-les-bains-2024,2026-07-11
-/realisations/demoussage-hydrofuge-toiture-sainte-helene-2024,PASS,Submitted and indexed,/realisations/demoussage-hydrofuge-toiture-sainte-helene-2024,/realisations/demoussage-hydrofuge-toiture-sainte-helene-2024,2026-07-28
-/realisations/changement-couverture-tuiles-pessac-2024,PASS,Submitted and indexed,/realisations/changement-couverture-tuiles-pessac-2024,/realisations/changement-couverture-tuiles-pessac-2024,2026-07-11
-/realisations/nettoyage-peinture-toiture-fibrociment-mios-2024,PASS,Submitted and indexed,/realisations/nettoyage-peinture-toiture-fibrociment-mios-2024,/realisations/nettoyage-peinture-toiture-fibrociment-mios-2024,2026-07-11
-/realisations/traitement-hydrofuge-toiture-velux-margaux-2024,PASS,Submitted and indexed,/realisations/traitement-hydrofuge-toiture-velux-margaux-2024,/realisations/traitement-hydrofuge-toiture-velux-margaux-2024,2026-07-11
-/realisations/pose-toiture-bac-acier-lanton-2024,PASS,Submitted and indexed,/realisations/pose-toiture-bac-acier-lanton-2024,/realisations/pose-toiture-bac-acier-lanton-2024,2026-09-26
+/demoussage-toiture-bordeaux,NEUTRAL,Page with redirect,/nettoyage-toiture-bordeaux,/nettoyage-toiture-bordeaux,2026-09-25
+/reparation-toiture-talence,PASS,Submitted and indexed,/reparation-toiture-talence,/reparation-toiture-talence,2026-07-03
+/guides/prix-demoussage-toiture-bordeaux,PASS,Submitted and indexed,/guides/prix-demoussage-toiture-bordeaux,/guides/prix-demoussage-toiture-bordeaux,2026-09-11
+/realisations/toiture-neuve-charpente-begles-2024,PASS,Submitted and indexed,/realisations/toiture-neuve-charpente-begles-2024,/realisations/toiture-neuve-charpente-begles-2024,2026-09-15
+/zinguerie-arcachon,PASS,Submitted and indexed,/zinguerie-arcachon,/zinguerie-arcachon,2026-09-07
+/realisations/refection-couverture-isolation-gujan-mestras-2024,PASS,Submitted and indexed,/realisations/refection-couverture-isolation-gujan-mestras-2024,/realisations/refection-couverture-isolation-gujan-mestras-2024,2026-07-11
+/realisations/renovation-faitage-bordeaux-centre-2024,PASS,Submitted and indexed,/realisations/renovation-faitage-bordeaux-centre-2024,/realisations/renovation-faitage-bordeaux-centre-2024,2026-06-10
+/realisations/traitement-hydrofuge-anti-mousse-toiture-merignac-2024,PASS,Submitted and indexed,/realisations/traitement-hydrofuge-anti-mousse-toiture-merignac-2024,/realisations/traitement-hydrofuge-anti-mousse-toiture-merignac-2024,2026-07-11
+/realisations/refection-complete-toiture-villenave-dornon-2024,PASS,Submitted and indexed,/realisations/refection-complete-toiture-villenave-dornon-2024,/realisations/refection-complete-toiture-villenave-dornon-2024,2026-07-12
