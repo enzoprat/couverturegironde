@@ -183,6 +183,21 @@ export function Footer() {
               {LEGAL.siren ? ` — SIREN ${LEGAL.siren}` : ''} —{' '}
               {NAP.streetAddress}, {NAP.postalCode} {NAP.addressLocality}
             </p>
+            {/* Crédit studio — unique lien vers pratstudio.fr sur tout le site.
+                L'ancre est la marque, jamais une expression commerciale : un
+                lien sur-optimisé répété dans les footers de plusieurs sites est
+                traité comme du spam par Google. */}
+            <p className="pt-1 text-[0.75rem] text-[var(--color-gris-400)]">
+              Réalisé par{' '}
+              <a
+                href="https://www.pratstudio.fr"
+                target="_blank"
+                rel="noopener"
+                className="rounded-sm text-[var(--color-gris-300)] underline-offset-2 transition-colors hover:text-[var(--color-pierre)] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-terre)]"
+              >
+                Prat Studio
+              </a>
+            </p>
           </div>
           {sections.legal && sections.legal.length > 0 && (
             <ul className="flex flex-wrap items-center gap-x-5 gap-y-1 text-[0.8125rem]">
