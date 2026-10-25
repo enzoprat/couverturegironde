@@ -213,3 +213,67 @@ Les positions 1, 3 et 4-5 restent à **1 036 impressions pour 2 clics**. Inchang
 [searchenginewatch.com](https://searchenginewatch.com/google-october-2026-update-rumors/) · [seroundtable.com](https://www.seroundtable.com/google-search-ranking-volatility-chatter-42317.html) · [seovendor.co](https://seovendor.co/google-algorithm-updates-october-2026/)
 
 **Prochain contrôle : 2026-11-08.**
+
+---
+
+## 7. Complément du 2026-10-25 — l'hypothèse « action manuelle » est écartée, et la nature du mouvement est identifiée
+
+**Vérification faite par le propriétaire du site** : « Actions manuelles » et « Sécurité et actions manuelles » n'affichent **aucune action requise**. L'hypothèse n°2 du §4.4 est éliminée.
+
+### Où les impressions sont parties
+
+Distribution par bande de position, **normalisée par jour** (14 jours avant, 10 jours après) :
+
+| Position | imp/jour avant | imp/jour après | Δ | Clics avant | Clics après |
+|---|---|---|---|---|---|
+| 1 – 3 | 11,6 | 14,1 | **+21 %** | 1 | **3** |
+| **4 – 10** | **17,5** | **5,7** | **−67 %** | 4 | **0** |
+| 11 – 20 | 54,9 | 35,9 | −35 % | 2 | 0 |
+| **21 – 50** | **116,5** | **154,9** | **+33 %** | 1 | 0 |
+| **51 +** | **28,1** | **68,0** | **+142 %** | 1 | 0 |
+
+**Le site n'a pas perdu de visibilité : il a perdu de la visibilité *utile*.** Les bandes profondes gonflent pendant que la bande 4-10 s'effondre. C'est un déplacement de toute la distribution vers le bas.
+
+### Ce n'est pas un changement de couverture
+
+| | Résultat |
+|---|---|
+| Requêtes ≥30 impressions présentes avant et **disparues** après | **0** |
+| Requêtes ≥30 impressions **nouvelles** après | **0** |
+
+**Le jeu de requêtes est strictement identique.** Google montre le site sur exactement les mêmes recherches, systématiquement plus bas. Ce n'est ni une perte de pertinence thématique, ni une désindexation, ni une dérive sémantique.
+
+### Ce qui est tombé de la bande 4-10
+
+| Requête | Avant | Après |
+|---|---|---|
+| zinguerie arcachon | 9,5 | **21,8** |
+| zinguerie bassin arcachon | 6,7 | **17,4** |
+| traitement hydrofuge gironde | 8,1 | 15,7 |
+| démoussage eysines | 9,6 | 14,8 |
+| fuites mise en eau toiture gironde | 6,7 | 11,4 |
+| réparation fuite toiture pessac | 9,9 | 11,7 |
+| couvreur bordeaux bastide | 9,8 | 11,2 |
+
+Ce sont des requêtes locales réelles, pas du bruit machine.
+
+### Nuance sur la bande 1-3 — ne pas sur-interpréter
+
+La bande 1-3 passe de 11,6 à 14,1 impressions/jour, mais **le nombre de requêtes qui s'y trouvent recule de 27 à 19** et le total d'impressions de 147 à 117. Par jour c'est à peu près stable, pas une amélioration.
+
+Les 3 clics de cette bande viennent **entièrement** d'une seule requête : « couverture gironde », la marque, passée de la position 4,8 à **2,6**. Le reste du top 3 est occupé par les formulations non naturelles déjà documentées (« pose couverture gironde », « couverture toit gironde », « service couverture gironde »), qui ne produisent aucun clic depuis le premier audit.
+
+### Ce que ça coûte réellement
+
+**La bande 4-10 produisait 4 clics en 14 jours. Elle en produit 0 en 10 jours.** Le coût direct mesuré de cette dégradation est d'environ **4 clics sur la période**.
+
+C'est un signal sérieux sur la trajectoire — la bande 4-10 est l'antichambre du top 3 — mais il faut garder la proportion : à ce stade, la perte business est marginale, et les clics totaux du site sont **en hausse** (51 contre 47).
+
+### Ce qui reste ouvert
+
+Avec l'action manuelle écartée, il reste deux hypothèses, et une seule est testable :
+
+1. **Mouvement algorithmique non confirmé** — cohérent avec la volatilité sectorielle rapportée du 9 au 16 octobre. **Non testable** : rien dans la GSC ne distingue un mouvement algorithmique d'un changement de SERP.
+2. **Densification de la SERP locale** (pack local élargi, AI Overview) — cohérent avec un effondrement spécifique de la bande 4-10 : sur une SERP plus dense, les résultats organiques 4 à 10 passent sous le pli et cessent d'être comptés comme vus. **Testable par l'export IA générative** : si la part IA est passée de 2,8 % à un niveau nettement supérieur depuis le 13 octobre, l'hypothèse se renforce.
+
+**L'export IA générative devient l'action n°1.**
