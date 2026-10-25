@@ -1,22 +1,14 @@
-query,page,impressions,clics,position,ctr,ctr_cible,clics_potentiels
-zinguerie bassin arcachon,/couvreur-arcachon,94,0,6.7,0,1.55,1.5
-velux bordeaux,/installation-velux-bordeaux,92,0,14,0,1.55,1.4
-couvreur arcachon,/couvreur-arcachon,76,0,14.6,0,1.55,1.2
-couverture arcachon,/couvreur-arcachon,71,0,11.5,0,1.55,1.1
-nettoyage de toiture bordeaux,/nettoyage-toiture-bordeaux,59,0,13.5,0,1.55,0.9
-zinguerie arcachon,/couvreur-arcachon,60,0,7.5,0,1.55,0.9
-couvreur,/,51,0,12.4,0,1.55,0.8
-démoussage bordeaux,/demoussage-toiture-bordeaux,54,0,12,0,1.55,0.8
-gouttieres en zinc a leognan,/zinguerie-bordeaux,44,0,10.1,0,1.55,0.7
-réparation fuite toiture pessac,/reparation-toiture-pessac,45,0,10.8,0,1.55,0.7
-couvreur devis,/demande-devis,41,0,13.4,0,1.55,0.6
-démoussage eysines,/couvreur-eysines,36,0,9.1,0,1.55,0.6
-couvreur bordeaux bastide,/couvreur-bordeaux-rive-droite,33,0,9.1,0,1.55,0.5
-demoussage toiture bordeaux,/nettoyage-toiture-bordeaux,30,0,9.7,0,1.55,0.5
-entreprise de couverture arcachon,/couvreur-arcachon,32,0,13.4,0,1.55,0.5
-installation de toiture bac acier langon,/realisations/pose-toiture-bac-acier-lanton-2024,30,0,13.8,0,1.55,0.5
-installation zinguerie gironde,/zinguerie-bordeaux,31,0,7.6,0,1.55,0.5
-pose velux bordeaux,/installation-velux-bordeaux,35,0,12.3,0,1.55,0.5
-traitement charpente bordeaux,/charpente-bordeaux,30,0,12.1,0,1.55,0.5
-traitement hydrofuge gironde,/traitement-hydrofuge-toiture-bordeaux,34,0,6.9,0,1.55,0.5
-couvreur merignac,/,82,1,8.9,1.22,1.55,0.3
+query,page,impressions,clics,position,clics_potentiels
+zinguerie bassin arcachon,/couvreur-arcachon,53,0,10.2,1.8
+couvreur,/,46,0,11.5,1.6
+démoussage bordeaux,/traitement-toiture-bordeaux,46,0,13,1.6
+devis gratuit toiture,/demande-devis,40,0,14.3,1.4
+prix nettoyage toiture hydrofuge bordeaux,/traitement-hydrofuge-toiture-bordeaux,40,0,4,1.4
+couvreur bordeaux bastide,/couvreur-bordeaux-rive-droite,38,0,10.3,1.3
+réparation fuite toiture pessac,/reparation-toiture-pessac,38,0,10.9,1.3
+zinguerie arcachon,/couvreur-arcachon,38,0,14,1.3
+couverture arcachon,/couvreur-arcachon,34,0,14.9,1.2
+démoussage eysines,/couvreur-eysines,34,0,10.9,1.2
+gouttieres en zinc a leognan,/zinguerie-bordeaux,35,0,14.7,1.2
+couvreur merignac,/,61,1,11.5,1.1
+traitement hydrofuge gironde,/traitement-hydrofuge-toiture-bordeaux,32,0,11.5,1.1
