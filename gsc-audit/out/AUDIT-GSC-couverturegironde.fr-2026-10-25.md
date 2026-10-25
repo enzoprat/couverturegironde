@@ -277,3 +277,66 @@ Avec l'action manuelle écartée, il reste deux hypothèses, et une seule est te
 2. **Densification de la SERP locale** (pack local élargi, AI Overview) — cohérent avec un effondrement spécifique de la bande 4-10 : sur une SERP plus dense, les résultats organiques 4 à 10 passent sous le pli et cessent d'être comptés comme vus. **Testable par l'export IA générative** : si la part IA est passée de 2,8 % à un niveau nettement supérieur depuis le 13 octobre, l'hypothèse se renforce.
 
 **L'export IA générative devient l'action n°1.**
+
+---
+
+## 8. L'hypothèse IA est réfutée à son tour — et je n'ai plus de cause testable
+
+Export IA générative du 2026-10-25 (Type « Web (textuel) », 28 derniers jours, 26/09 → 23/10).
+
+### Le test
+
+| | Impressions IA | Par jour |
+|---|---|---|
+| Avant le 13/10 (17 j) | 195 | **11,5** |
+| À partir du 13/10 (11 j) | 123 | **11,2** |
+| | | **−2,5 %** |
+
+**Aucune rupture.** La présence du site dans les AI Overviews est strictement plate de part et d'autre du 13 octobre, pendant que sa position moyenne s'effondrait de 7,9 rangs.
+
+### Et en absolu, l'IA recule
+
+| | 27/09 | 25/10 |
+|---|---|---|
+| Impressions IA | 418 | **318** (−24 %) |
+| Impressions web | 14 809 | 9 463 |
+| **Part IA** | 2,8 % | **3,4 %** |
+
+La part monte, mais **uniquement parce que les impressions web chutent plus vite que les impressions IA**. En valeur absolue, l'exposition IA du site a *diminué*. Lire ce 2,8 % → 3,4 % comme une progression de l'IA serait une erreur de dénominateur.
+
+`/faitage-toiture-bordeaux` reste la page la plus exposée (82 impressions sur 318, soit 26 % — même proportion qu'au 27/09).
+
+### ⚠️ Ce que ce rapport ne mesure PAS
+
+Le rapport « IA générative » de la Search Console couvre les **AI Overviews et l'AI Mode**. Il **ne mesure pas le pack local**, qui est une fonctionnalité de SERP distincte.
+
+**Réfuter « les AI Overviews ont causé la chute » ne réfute donc pas « le pack local s'est densifié ».** Cette dernière hypothèse reste entière — et elle n'est mesurable par aucune donnée de la Search Console.
+
+### État des hypothèses
+
+| # | Hypothèse | Statut |
+|---|---|---|
+| 1 | Changement sur le site | **Écartée** — aucun déploiement 27/09 → 19/10, tout sain techniquement |
+| 2 | Action manuelle / sécurité | **Écartée** — vérifié dans l'interface, aucune action requise |
+| 3 | Densification par AI Overview | **Écartée** — présence IA plate et en recul absolu |
+| 4 | Mouvement algorithmique non confirmé | **Ouverte, non testable** avec les données disponibles |
+| 5 | Densification du pack local | **Ouverte, non testable** — hors périmètre de la GSC |
+
+**Je ne peux pas déterminer la cause avec les données dont je dispose. Je ne vais pas en inventer une.**
+
+### La seule piste restante, et elle demande 10 minutes de ta part
+
+Les hypothèses 4 et 5 ne se distinguent que **en regardant les SERP elles-mêmes**. Je n'y ai pas accès — Google est bloqué dans le navigateur intégré et l'extension Chrome n'est pas connectée.
+
+**Observation manuelle à faire**, sur mobile de préférence, en navigation privée :
+
+| Requête | Position organique mesurée avant → après |
+|---|---|
+| `zinguerie arcachon` | 9,5 → 21,8 |
+| `zinguerie bassin arcachon` | 6,7 → 17,4 |
+| `traitement hydrofuge gironde` | 8,1 → 15,7 |
+| `démoussage eysines` | 9,6 → 14,8 |
+
+Pour chacune, noter **ce qui occupe l'écran avant le premier résultat organique** : pack local (combien de fiches ?), AI Overview, annonces, People Also Ask, carrousels. Si le pack local ou un nouveau bloc occupe désormais la hauteur qui était celle des résultats 4 à 10, l'hypothèse 5 est confirmée.
+
+C'est la seule chose qui peut encore faire avancer ce dossier.
